@@ -1,1 +1,4 @@
-# CS305-Group23
+# Flappy Bird
+COMPSYS305 Mini Project
+
+Authors: Dhvani Shah, Pooja Patel, Samantha Jermyn
