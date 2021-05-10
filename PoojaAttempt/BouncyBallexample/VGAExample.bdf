@@ -322,7 +322,7 @@ applicable agreement for further details.
 (symbol
 	(rect 88 232 280 376)
 	(text "bouncy_ball" (rect 5 0 64 12)(font "Arial" ))
-	(text "inst5" (rect 8 128 31 140)(font "Arial" ))
+	(text "inst6" (rect 8 128 31 140)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)

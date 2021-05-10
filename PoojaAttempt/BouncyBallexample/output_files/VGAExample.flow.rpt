@@ -1,6 +1,6 @@
 Flow report for VGAExample
-Mon May 10 15:10:59 2021
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Mon May 10 15:54:50 2021
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
 ---------------------
@@ -37,26 +37,26 @@ applicable agreement for further details.
 
 
 
-+--------------------------------------------------------------------------------------+
-; Flow Summary                                                                         ;
-+------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Mon May 10 15:10:55 2021           ;
-; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
-; Revision Name                      ; VGAExample                                      ;
-; Top-level Entity Name              ; VGAExample                                      ;
-; Family                             ; Cyclone III                                     ;
-; Device                             ; EP3C16F484C6                                    ;
-; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 121 / 15,408 ( < 1 % )                          ;
-;     Total combinational functions  ; 116 / 15,408 ( < 1 % )                          ;
-;     Dedicated logic registers      ; 58 / 15,408 ( < 1 % )                           ;
-; Total registers                    ; 58                                              ;
-; Total pins                         ; 8 / 347 ( 2 % )                                 ;
-; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 0 / 516,096 ( 0 % )                             ;
-; Embedded Multiplier 9-bit elements ; 0 / 112 ( 0 % )                                 ;
-; Total PLLs                         ; 1 / 4 ( 25 % )                                  ;
-+------------------------------------+-------------------------------------------------+
++----------------------------------------------------------------------------------+
+; Flow Summary                                                                     ;
++------------------------------------+---------------------------------------------+
+; Flow Status                        ; Successful - Mon May 10 15:54:44 2021       ;
+; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
+; Revision Name                      ; VGAExample                                  ;
+; Top-level Entity Name              ; VGAExample                                  ;
+; Family                             ; Cyclone III                                 ;
+; Device                             ; EP3C16F484C6                                ;
+; Timing Models                      ; Final                                       ;
+; Total logic elements               ; 129 / 15,408 ( < 1 % )                      ;
+;     Total combinational functions  ; 117 / 15,408 ( < 1 % )                      ;
+;     Dedicated logic registers      ; 58 / 15,408 ( < 1 % )                       ;
+; Total registers                    ; 58                                          ;
+; Total pins                         ; 8 / 347 ( 2 % )                             ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0 / 516,096 ( 0 % )                         ;
+; Embedded Multiplier 9-bit elements ; 0 / 112 ( 0 % )                             ;
+; Total PLLs                         ; 1 / 4 ( 25 % )                              ;
++------------------------------------+---------------------------------------------+
 
 
 +-----------------------------------------+
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/10/2021 15:10:41 ;
+; Start date & time ; 05/10/2021 15:54:26 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; VGAExample          ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+---------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 83689957108810.162061624103384        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 251053327267080.162061886611976       ; --            ; --          ; --         ;
 ; IP_TOOL_NAME                        ; ALTPLL                                ; --            ; --          ; --         ;
 ; IP_TOOL_VERSION                     ; 13.0                                  ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --         ;
@@ -98,11 +98,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 4632 MB             ; 00:00:03                           ;
-; Fitter                    ; 00:00:07     ; 1.0                     ; 4908 MB             ; 00:00:07                           ;
-; Assembler                 ; 00:00:01     ; 1.0                     ; 4542 MB             ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 4586 MB             ; 00:00:02                           ;
-; Total                     ; 00:00:14     ; --                      ; --                  ; 00:00:13                           ;
+; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 4654 MB             ; 00:00:02                           ;
+; Fitter                    ; 00:00:06     ; 2.0                     ; 5463 MB             ; 00:00:06                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 4543 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:05     ; 1.0                     ; 4630 MB             ; 00:00:02                           ;
+; Total                     ; 00:00:16     ; --                      ; --                  ; 00:00:11                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -111,10 +111,10 @@ applicable agreement for further details.
 +---------------------------+------------------+-----------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; DESKTOP-C0BN4UL  ; Windows 7 ; 6.2        ; x86_64         ;
-; Fitter                    ; DESKTOP-C0BN4UL  ; Windows 7 ; 6.2        ; x86_64         ;
-; Assembler                 ; DESKTOP-C0BN4UL  ; Windows 7 ; 6.2        ; x86_64         ;
-; TimeQuest Timing Analyzer ; DESKTOP-C0BN4UL  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; EN403697         ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; EN403697         ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; EN403697         ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; EN403697         ; Windows 7 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 

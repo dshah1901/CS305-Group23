@@ -1,8 +1,8 @@
 |VGAExample
 red_out <= VGA_SYNC:inst1.red_out
 clk => altpll0:inst.inclk0
-pb1 => bouncy_ball:inst5.pb1
-pb2 => bouncy_ball:inst5.pb2
+pb1 => bouncy_ball:inst6.pb1
+pb2 => bouncy_ball:inst6.pb2
 green_out <= VGA_SYNC:inst1.green_out
 blue_out <= VGA_SYNC:inst1.blue_out
 horiz_sync_out <= VGA_SYNC:inst1.horiz_sync_out
@@ -169,7 +169,7 @@ inclk[1] => pll1.CLK1
 locked <= locked.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|VGAExample|bouncy_ball:inst5
+|VGAExample|bouncy_ball:inst6
 pb1 => red.DATAIN
 pb2 => green.IN1
 clk => ~NO_FANOUT~
