@@ -85,8 +85,11 @@ set_location_assignment PIN_E3 -to sw7
 set_location_assignment PIN_E4 -to sw8
 set_location_assignment PIN_D2 -to sw9
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+set_location_assignment PIN_J6 -to red
+set_location_assignment PIN_H5 -to green
+set_location_assignment PIN_H6 -to blue
 set_global_assignment -name VHDL_FILE "../../Phase 1 code/vga_sync.vhd"
-set_global_assignment -name VHDL_FILE "../../Phase 1 code/ball.vhd"
+set_global_assignment -name VHDL_FILE "../../Phase 1 code/char_rom.vhd"
 set_global_assignment -name BDF_FILE VGAExample.bdf
 set_global_assignment -name QIP_FILE altpll0.qip
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
