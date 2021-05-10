@@ -322,7 +322,7 @@ applicable agreement for further details.
 (symbol
 	(rect 88 232 280 376)
 	(text "bouncy_ball" (rect 5 0 64 12)(font "Arial" ))
-	(text "inst7" (rect 8 128 31 140)(font "Arial" ))
+	(text "inst5" (rect 8 128 31 140)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -469,16 +469,6 @@ applicable agreement for further details.
 	(pt 448 296)
 )
 (connector
-	(pt 88 344)
-	(pt 64 344)
-	(bus)
-)
-(connector
-	(pt 64 344)
-	(pt 64 408)
-	(bus)
-)
-(connector
 	(pt 64 408)
 	(pt 776 408)
 	(bus)
@@ -496,16 +486,6 @@ applicable agreement for further details.
 (connector
 	(pt 792 440)
 	(pt 48 440)
-	(bus)
-)
-(connector
-	(pt 48 328)
-	(pt 48 440)
-	(bus)
-)
-(connector
-	(pt 48 328)
-	(pt 88 328)
 	(bus)
 )
 (connector
@@ -543,6 +523,26 @@ applicable agreement for further details.
 (connector
 	(pt 816 320)
 	(pt 816 472)
+)
+(connector
+	(pt 48 440)
+	(pt 48 328)
+	(bus)
+)
+(connector
+	(pt 48 328)
+	(pt 88 328)
+	(bus)
+)
+(connector
+	(pt 64 408)
+	(pt 64 344)
+	(bus)
+)
+(connector
+	(pt 64 344)
+	(pt 88 344)
+	(bus)
 )
 (junction (pt 384 192))
 (junction (pt 816 320))
