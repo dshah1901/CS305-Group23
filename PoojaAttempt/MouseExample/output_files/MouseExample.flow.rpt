@@ -1,6 +1,6 @@
 Flow report for MouseExample
-Tue May 11 13:58:23 2021
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Tue May 11 14:10:31 2021
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
 ---------------------
@@ -37,26 +37,26 @@ applicable agreement for further details.
 
 
 
-+--------------------------------------------------------------------------------------+
-; Flow Summary                                                                         ;
-+------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Tue May 11 13:58:18 2021           ;
-; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
-; Revision Name                      ; MouseExample                                    ;
-; Top-level Entity Name              ; MouseExample                                    ;
-; Family                             ; Cyclone III                                     ;
-; Device                             ; EP3C16F484C6                                    ;
-; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 165 / 15,408 ( 1 % )                            ;
-;     Total combinational functions  ; 128 / 15,408 ( < 1 % )                          ;
-;     Dedicated logic registers      ; 120 / 15,408 ( < 1 % )                          ;
-; Total registers                    ; 120                                             ;
-; Total pins                         ; 20 / 347 ( 6 % )                                ;
-; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 0 / 516,096 ( 0 % )                             ;
-; Embedded Multiplier 9-bit elements ; 0 / 112 ( 0 % )                                 ;
-; Total PLLs                         ; 1 / 4 ( 25 % )                                  ;
-+------------------------------------+-------------------------------------------------+
++----------------------------------------------------------------------------------+
+; Flow Summary                                                                     ;
++------------------------------------+---------------------------------------------+
+; Flow Status                        ; Successful - Tue May 11 14:10:27 2021       ;
+; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
+; Revision Name                      ; MouseExample                                ;
+; Top-level Entity Name              ; MouseExample                                ;
+; Family                             ; Cyclone III                                 ;
+; Device                             ; EP3C16F484C6                                ;
+; Timing Models                      ; Final                                       ;
+; Total logic elements               ; 170 / 15,408 ( 1 % )                        ;
+;     Total combinational functions  ; 128 / 15,408 ( < 1 % )                      ;
+;     Dedicated logic registers      ; 120 / 15,408 ( < 1 % )                      ;
+; Total registers                    ; 120                                         ;
+; Total pins                         ; 20 / 347 ( 6 % )                            ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0 / 516,096 ( 0 % )                         ;
+; Embedded Multiplier 9-bit elements ; 0 / 112 ( 0 % )                             ;
+; Total PLLs                         ; 1 / 4 ( 25 % )                              ;
++------------------------------------+---------------------------------------------+
 
 
 +-----------------------------------------+
@@ -64,31 +64,31 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/11/2021 13:58:00 ;
+; Start date & time ; 05/11/2021 14:10:13 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; MouseExample        ;
 +-------------------+---------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                ;
-+-------------------------------------+--------------------------------+---------------+-------------+------------+
-; Assignment Name                     ; Value                          ; Default Value ; Entity Name ; Section Id ;
-+-------------------------------------+--------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 83689957108810.162069828005768 ; --            ; --          ; --         ;
-; IP_TOOL_NAME                        ; ALTPLL                         ; --            ; --          ; --         ;
-; IP_TOOL_VERSION                     ; 13.0                           ; --            ; --          ; --         ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                             ; --            ; --          ; --         ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                              ; --            ; --          ; --         ;
-; MISC_FILE                           ; altpll0.bsf                    ; --            ; --          ; --         ;
-; MISC_FILE                           ; altpll0.cmp                    ; --            ; --          ; --         ;
-; MISC_FILE                           ; altpll0.ppf                    ; --            ; --          ; --         ;
-; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                           ; --            ; --          ; --         ;
-; PARTITION_COLOR                     ; 16764057                       ; --            ; --          ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING          ; --            ; --          ; Top        ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                         ; --            ; --          ; Top        ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                   ; --            ; --          ; --         ;
-+-------------------------------------+--------------------------------+---------------+-------------+------------+
++------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                 ;
++-------------------------------------+---------------------------------+---------------+-------------+------------+
+; Assignment Name                     ; Value                           ; Default Value ; Entity Name ; Section Id ;
++-------------------------------------+---------------------------------+---------------+-------------+------------+
+; COMPILER_SIGNATURE_ID               ; 251053328726733.162069901310940 ; --            ; --          ; --         ;
+; IP_TOOL_NAME                        ; ALTPLL                          ; --            ; --          ; --         ;
+; IP_TOOL_VERSION                     ; 13.0                            ; --            ; --          ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                              ; --            ; --          ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; altpll0.bsf                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; altpll0.cmp                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; altpll0.ppf                     ; --            ; --          ; --         ;
+; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                            ; --            ; --          ; --         ;
+; PARTITION_COLOR                     ; 16764057                        ; --            ; --          ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING           ; --            ; --          ; Top        ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                          ; --            ; --          ; Top        ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                    ; --            ; --          ; --         ;
++-------------------------------------+---------------------------------+---------------+-------------+------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -96,11 +96,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 4632 MB             ; 00:00:03                           ;
-; Fitter                    ; 00:00:11     ; 1.0                     ; 4911 MB             ; 00:00:10                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 4542 MB             ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 4579 MB             ; 00:00:03                           ;
-; Total                     ; 00:00:20     ; --                      ; --                  ; 00:00:18                           ;
+; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 4661 MB             ; 00:00:02                           ;
+; Fitter                    ; 00:00:06     ; 2.4                     ; 5590 MB             ; 00:00:06                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 4548 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 4646 MB             ; 00:00:02                           ;
+; Total                     ; 00:00:12     ; --                      ; --                  ; 00:00:11                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -109,10 +109,10 @@ applicable agreement for further details.
 +---------------------------+------------------+-----------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; DESKTOP-C0BN4UL  ; Windows 7 ; 6.2        ; x86_64         ;
-; Fitter                    ; DESKTOP-C0BN4UL  ; Windows 7 ; 6.2        ; x86_64         ;
-; Assembler                 ; DESKTOP-C0BN4UL  ; Windows 7 ; 6.2        ; x86_64         ;
-; TimeQuest Timing Analyzer ; DESKTOP-C0BN4UL  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; EN399249         ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; EN399249         ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; EN399249         ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; EN399249         ; Windows 7 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 
