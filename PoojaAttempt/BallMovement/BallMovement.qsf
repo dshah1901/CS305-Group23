@@ -41,7 +41,7 @@ set_global_assignment -name DEVICE EP3C16F484C6
 set_global_assignment -name TOP_LEVEL_ENTITY BallMovement
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "08:28:47  MAY 11, 2021"
-set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name LAST_QUARTUS_VERSION 13.0
 set_global_assignment -name VHDL_FILE "../../Phase 1 code/vga_sync.vhd"
 set_global_assignment -name VHDL_FILE "../../Phase 1 code/seven_seg.vhd"
 set_global_assignment -name VHDL_FILE "../../Phase 1 code/mouse.vhd"

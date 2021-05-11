@@ -1,9 +1,6 @@
 |BallMovement
 red_out <= VGA_SYNC:inst1.red_out
 inclk0 => altpll0:inst.inclk0
-pb1 => bouncy_ball:inst2.pb1
-pb2 => bouncy_ball:inst2.pb2
-left_button => left_button.IN0
 mouse_data <> MOUSE:inst4.mouse_data
 mouse_clk <> MOUSE:inst4.mouse_clk
 green_out <= VGA_SYNC:inst1.green_out
@@ -187,7 +184,27 @@ locked <= locked.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |BallMovement|bouncy_ball:inst2
+pb1 => ball_y_motion.OUTPUTSELECT
+pb1 => ball_y_motion.OUTPUTSELECT
+pb1 => ball_y_motion.OUTPUTSELECT
+pb1 => ball_y_motion.OUTPUTSELECT
+pb1 => ball_y_motion.OUTPUTSELECT
+pb1 => ball_y_motion.OUTPUTSELECT
+pb1 => ball_y_motion.OUTPUTSELECT
+pb1 => ball_y_motion.OUTPUTSELECT
+pb1 => ball_y_motion.OUTPUTSELECT
+pb1 => ball_y_motion.OUTPUTSELECT
 pb1 => red.DATAIN
+pb2 => ball_y_motion.OUTPUTSELECT
+pb2 => ball_y_motion.OUTPUTSELECT
+pb2 => ball_y_motion.OUTPUTSELECT
+pb2 => ball_y_motion.OUTPUTSELECT
+pb2 => ball_y_motion.OUTPUTSELECT
+pb2 => ball_y_motion.OUTPUTSELECT
+pb2 => ball_y_motion.OUTPUTSELECT
+pb2 => ball_y_motion.OUTPUTSELECT
+pb2 => ball_y_motion.OUTPUTSELECT
+pb2 => ball_y_motion.OUTPUTSELECT
 pb2 => green.IN1
 clk => ~NO_FANOUT~
 vert_sync => ball_y_pos[0].CLK
@@ -210,26 +227,6 @@ vert_sync => ball_y_motion[6].CLK
 vert_sync => ball_y_motion[7].CLK
 vert_sync => ball_y_motion[8].CLK
 vert_sync => ball_y_motion[9].CLK
-left_button => ball_y_motion.OUTPUTSELECT
-left_button => ball_y_motion.OUTPUTSELECT
-left_button => ball_y_motion.OUTPUTSELECT
-left_button => ball_y_motion.OUTPUTSELECT
-left_button => ball_y_motion.OUTPUTSELECT
-left_button => ball_y_motion.OUTPUTSELECT
-left_button => ball_y_motion.OUTPUTSELECT
-left_button => ball_y_motion.OUTPUTSELECT
-left_button => ball_y_motion.OUTPUTSELECT
-left_button => ball_y_motion.OUTPUTSELECT
-right_button => ball_y_motion.OUTPUTSELECT
-right_button => ball_y_motion.OUTPUTSELECT
-right_button => ball_y_motion.OUTPUTSELECT
-right_button => ball_y_motion.OUTPUTSELECT
-right_button => ball_y_motion.OUTPUTSELECT
-right_button => ball_y_motion.OUTPUTSELECT
-right_button => ball_y_motion.OUTPUTSELECT
-right_button => ball_y_motion.OUTPUTSELECT
-right_button => ball_y_motion.OUTPUTSELECT
-right_button => ball_y_motion.OUTPUTSELECT
 pixel_row[0] => Add2.IN20
 pixel_row[0] => LessThan3.IN22
 pixel_row[1] => Add2.IN19

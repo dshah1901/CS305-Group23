@@ -6,7 +6,7 @@ USE  IEEE.STD_LOGIC_SIGNED.all;
 
 ENTITY bouncy_ball IS
 	PORT
-		( pb1, pb2, clk, vert_sync, left_button, right_button: IN std_logic;
+		( pb1, pb2, clk, vert_sync: IN std_logic;
           pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
 		  red, green, blue 			: OUT std_logic);		
 END bouncy_ball;
@@ -37,17 +37,17 @@ Green <= (not pb2) and (not ball_on);
 Blue <=  not ball_on;
 
 
-Move_Ball: process (vert_sync, right_button, left_button)  	
+Move_Ball: process (vert_sync)  	
 begin
 	-- Move ball once every vertical sync
 	if (rising_edge(vert_sync)) then			
 		-- Bounce off top or bottom of the screen
-		if (right_button = '1') then
+		if (pb1 = '1') then
 			ball_y_motion <= - CONV_STD_LOGIC_VECTOR(2,10);
 			if (ball_y_pos <= size) then
 				ball_y_motion <=  CONV_STD_LOGIC_VECTOR(0,10);
 			end if;
-		elsif (left_button = '1') then
+		elsif (pb2 = '1') then
 			ball_y_motion <= CONV_STD_LOGIC_VECTOR(2,10);
 			if (('0' & ball_y_pos >= conv_std_logic_vector(479,10) - size )) then
 				ball_y_motion <=  CONV_STD_LOGIC_VECTOR(0,10);

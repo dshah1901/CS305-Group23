@@ -1,6 +1,6 @@
 Analysis & Synthesis report for BallMovement
-Tue May 11 13:17:23 2021
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Tue May 11 13:49:41 2021
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
 ---------------------
@@ -10,11 +10,23 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis IP Cores Summary
-  6. Source assignments for char_rom:inst5|altsyncram:altsyncram_component|altsyncram_5v91:auto_generated
-  7. Parameter Settings for User Entity Instance: altpll0:inst|altpll:altpll_component
-  8. Parameter Settings for User Entity Instance: char_rom:inst5|altsyncram:altsyncram_component
-  9. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis IP Cores Summary
+ 10. State Machine - |BallMovement|MOUSE:inst4|mouse_state
+ 11. Registers Removed During Synthesis
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Source assignments for char_rom:inst5|altsyncram:altsyncram_component|altsyncram_5v91:auto_generated
+ 16. Parameter Settings for User Entity Instance: altpll0:inst|altpll:altpll_component
+ 17. Parameter Settings for User Entity Instance: char_rom:inst5|altsyncram:altsyncram_component
+ 18. altpll Parameter Settings by Entity Instance
+ 19. altsyncram Parameter Settings by Entity Instance
+ 20. Elapsed Time Per Partition
+ 21. Analysis & Synthesis Messages
 
 
 
@@ -37,24 +49,24 @@ applicable agreement for further details.
 
 
 
-+--------------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                         ;
-+------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Tue May 11 13:17:23 2021               ;
-; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
-; Revision Name                      ; BallMovement                                    ;
-; Top-level Entity Name              ; BallMovement                                    ;
-; Family                             ; Cyclone III                                     ;
-; Total logic elements               ; N/A until Partition Merge                       ;
-;     Total combinational functions  ; N/A until Partition Merge                       ;
-;     Dedicated logic registers      ; N/A until Partition Merge                       ;
-; Total registers                    ; N/A until Partition Merge                       ;
-; Total pins                         ; N/A until Partition Merge                       ;
-; Total virtual pins                 ; N/A until Partition Merge                       ;
-; Total memory bits                  ; N/A until Partition Merge                       ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                       ;
-; Total PLLs                         ; N/A until Partition Merge                       ;
-+------------------------------------+-------------------------------------------------+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue May 11 13:49:41 2021       ;
+; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
+; Revision Name                      ; BallMovement                                ;
+; Top-level Entity Name              ; BallMovement                                ;
+; Family                             ; Cyclone III                                 ;
+; Total logic elements               ; 309                                         ;
+;     Total combinational functions  ; 247                                         ;
+;     Dedicated logic registers      ; 176                                         ;
+; Total registers                    ; 176                                         ;
+; Total pins                         ; 22                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 2,048                                       ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 1                                           ;
++------------------------------------+---------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------+
@@ -144,24 +156,200 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 
 
-Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
-+-------------------------------------+
-; Parallel Compilation                ;
-+----------------------------+--------+
-; Processors                 ; Number ;
-+----------------------------+--------+
-; Number detected on machine ; 12     ;
-; Maximum allowed            ; 1      ;
-+----------------------------+--------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 8           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-8         ;   0.0%      ;
++----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                                                                                            ;
-+--------+--------------+---------+--------------+--------------+----------------------------+-------------------------------------------------------------------------------------+
-; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance            ; IP Include File                                                                     ;
-+--------+--------------+---------+--------------+--------------+----------------------------+-------------------------------------------------------------------------------------+
-; Altera ; ALTPLL       ; 13.0    ; N/A          ; N/A          ; |BallMovement|altpll0:inst ; C:/Users/patel/Documents/GitHub/CS305-Group23/PoojaAttempt/BallMovement/altpll0.vhd ;
-+--------+--------------+---------+--------------+--------------+----------------------------+-------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                              ;
++------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path   ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                  ; Library ;
++------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------------------+---------+
+; ../../Phase 1 code/vga_sync.vhd    ; yes             ; User VHDL File                     ; //files.auckland.ac.nz/myhome/Documents/GitHub/CS305-Group23/Phase 1 code/vga_sync.vhd                        ;         ;
+; ../../Phase 1 code/seven_seg.vhd   ; yes             ; User VHDL File                     ; //files.auckland.ac.nz/myhome/Documents/GitHub/CS305-Group23/Phase 1 code/seven_seg.vhd                       ;         ;
+; ../../Phase 1 code/mouse.vhd       ; yes             ; User VHDL File                     ; //files.auckland.ac.nz/myhome/Documents/GitHub/CS305-Group23/Phase 1 code/mouse.vhd                           ;         ;
+; ../../Phase 1 code/char_rom.vhd    ; yes             ; User VHDL File                     ; //files.auckland.ac.nz/myhome/Documents/GitHub/CS305-Group23/Phase 1 code/char_rom.vhd                        ;         ;
+; ../../Phase 1 code/bouncy_ball.vhd ; yes             ; User VHDL File                     ; //files.auckland.ac.nz/myhome/Documents/GitHub/CS305-Group23/Phase 1 code/bouncy_ball.vhd                     ;         ;
+; altpll0.vhd                        ; yes             ; User Wizard-Generated File         ; //files.auckland.ac.nz/myhome/Documents/GitHub/CS305-Group23/PoojaAttempt/BallMovement/altpll0.vhd            ;         ;
+; BallMovement.bdf                   ; yes             ; User Block Diagram/Schematic File  ; //files.auckland.ac.nz/myhome/Documents/GitHub/CS305-Group23/PoojaAttempt/BallMovement/BallMovement.bdf       ;         ;
+; altpll.tdf                         ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/altpll.tdf                                                     ;         ;
+; aglobal130.inc                     ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/aglobal130.inc                                                 ;         ;
+; stratix_pll.inc                    ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/stratix_pll.inc                                                ;         ;
+; stratixii_pll.inc                  ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/stratixii_pll.inc                                              ;         ;
+; cycloneii_pll.inc                  ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/cycloneii_pll.inc                                              ;         ;
+; db/altpll0_altpll.v                ; yes             ; Auto-Generated Megafunction        ; //files.auckland.ac.nz/myhome/Documents/GitHub/CS305-Group23/PoojaAttempt/BallMovement/db/altpll0_altpll.v    ;         ;
+; altsyncram.tdf                     ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/altsyncram.tdf                                                 ;         ;
+; stratix_ram_block.inc              ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/stratix_ram_block.inc                                          ;         ;
+; lpm_mux.inc                        ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/lpm_mux.inc                                                    ;         ;
+; lpm_decode.inc                     ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/lpm_decode.inc                                                 ;         ;
+; a_rdenreg.inc                      ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/a_rdenreg.inc                                                  ;         ;
+; altrom.inc                         ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/altrom.inc                                                     ;         ;
+; altram.inc                         ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/altram.inc                                                     ;         ;
+; altdpram.inc                       ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/altdpram.inc                                                   ;         ;
+; db/altsyncram_5v91.tdf             ; yes             ; Auto-Generated Megafunction        ; //files.auckland.ac.nz/myhome/Documents/GitHub/CS305-Group23/PoojaAttempt/BallMovement/db/altsyncram_5v91.tdf ;         ;
++------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                ;
++---------------------------------------------+------------------------------+
+; Resource                                    ; Usage                        ;
++---------------------------------------------+------------------------------+
+; Estimated Total logic elements              ; 309                          ;
+;                                             ;                              ;
+; Total combinational functions               ; 247                          ;
+; Logic element usage by number of LUT inputs ;                              ;
+;     -- 4 input functions                    ; 89                           ;
+;     -- 3 input functions                    ; 80                           ;
+;     -- <=2 input functions                  ; 78                           ;
+;                                             ;                              ;
+; Logic elements by mode                      ;                              ;
+;     -- normal mode                          ; 161                          ;
+;     -- arithmetic mode                      ; 86                           ;
+;                                             ;                              ;
+; Total registers                             ; 176                          ;
+;     -- Dedicated logic registers            ; 176                          ;
+;     -- I/O registers                        ; 0                            ;
+;                                             ;                              ;
+; I/O pins                                    ; 22                           ;
+; Total memory bits                           ; 2048                         ;
+; Embedded Multiplier 9-bit elements          ; 0                            ;
+; Total PLLs                                  ; 1                            ;
+;     -- PLLs                                 ; 1                            ;
+;                                             ;                              ;
+; Maximum fan-out node                        ; MOUSE:inst4|MOUSE_CLK_FILTER ;
+; Maximum fan-out                             ; 93                           ;
+; Total fan-out                               ; 1379                         ;
+; Average fan-out                             ; 2.88                         ;
++---------------------------------------------+------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                         ; Library Name ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------+--------------+
+; |BallMovement                             ; 247 (1)           ; 176 (0)      ; 2048        ; 0            ; 0       ; 0         ; 22   ; 0            ; |BallMovement                                                                               ;              ;
+;    |MOUSE:inst4|                          ; 110 (110)         ; 118 (118)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BallMovement|MOUSE:inst4                                                                   ;              ;
+;    |VGA_SYNC:inst1|                       ; 63 (63)           ; 48 (48)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BallMovement|VGA_SYNC:inst1                                                                ;              ;
+;    |altpll0:inst|                         ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BallMovement|altpll0:inst                                                                  ;              ;
+;       |altpll:altpll_component|           ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BallMovement|altpll0:inst|altpll:altpll_component                                          ;              ;
+;          |altpll0_altpll:auto_generated|  ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BallMovement|altpll0:inst|altpll:altpll_component|altpll0_altpll:auto_generated            ;              ;
+;    |bouncy_ball:inst2|                    ; 55 (55)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BallMovement|bouncy_ball:inst2                                                             ;              ;
+;    |char_rom:inst5|                       ; 4 (4)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |BallMovement|char_rom:inst5                                                                ;              ;
+;       |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |BallMovement|char_rom:inst5|altsyncram:altsyncram_component                                ;              ;
+;          |altsyncram_5v91:auto_generated| ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |BallMovement|char_rom:inst5|altsyncram:altsyncram_component|altsyncram_5v91:auto_generated ;              ;
+;    |seven_seg:inst6|                      ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BallMovement|seven_seg:inst6                                                               ;              ;
+;    |seven_seg:inst7|                      ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BallMovement|seven_seg:inst7                                                               ;              ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                        ;
++------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+-------------+
+; Name                                                                                     ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF         ;
++------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+-------------+
+; char_rom:inst5|altsyncram:altsyncram_component|altsyncram_5v91:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 512          ; 8            ; --           ; --           ; 4096 ; tcgrom1.mif ;
++------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                                           ;
++--------+--------------+---------+--------------+--------------+----------------------------+----------------------------------------------------------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance            ; IP Include File                                                                                    ;
++--------+--------------+---------+--------------+--------------+----------------------------+----------------------------------------------------------------------------------------------------+
+; Altera ; ALTPLL       ; 13.0    ; N/A          ; N/A          ; |BallMovement|altpll0:inst ; //files.auckland.ac.nz/myhome/Documents/GitHub/CS305-Group23/PoojaAttempt/BallMovement/altpll0.vhd ;
++--------+--------------+---------+--------------+--------------+----------------------------+----------------------------------------------------------------------------------------------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |BallMovement|MOUSE:inst4|mouse_state                                                                                                                                                   ;
++-------------------------------+---------------------------+--------------------------+-------------------------------+---------------------------+--------------------------+---------------------------+
+; Name                          ; mouse_state.INPUT_PACKETS ; mouse_state.WAIT_CMD_ACK ; mouse_state.WAIT_OUTPUT_READY ; mouse_state.LOAD_COMMAND2 ; mouse_state.LOAD_COMMAND ; mouse_state.INHIBIT_TRANS ;
++-------------------------------+---------------------------+--------------------------+-------------------------------+---------------------------+--------------------------+---------------------------+
+; mouse_state.INHIBIT_TRANS     ; 0                         ; 0                        ; 0                             ; 0                         ; 0                        ; 0                         ;
+; mouse_state.LOAD_COMMAND      ; 0                         ; 0                        ; 0                             ; 0                         ; 1                        ; 1                         ;
+; mouse_state.LOAD_COMMAND2     ; 0                         ; 0                        ; 0                             ; 1                         ; 0                        ; 1                         ;
+; mouse_state.WAIT_OUTPUT_READY ; 0                         ; 0                        ; 1                             ; 0                         ; 0                        ; 1                         ;
+; mouse_state.WAIT_CMD_ACK      ; 0                         ; 1                        ; 0                             ; 0                         ; 0                        ; 1                         ;
+; mouse_state.INPUT_PACKETS     ; 1                         ; 0                        ; 0                             ; 0                         ; 0                        ; 1                         ;
++-------------------------------+---------------------------+--------------------------+-------------------------------+---------------------------+--------------------------+---------------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                      ;
++----------------------------------------+------------------------------------------------+
+; Register name                          ; Reason for Removal                             ;
++----------------------------------------+------------------------------------------------+
+; MOUSE:inst4|CHAROUT[4..7]              ; Stuck at VCC due to stuck port data_in         ;
+; MOUSE:inst4|CHAROUT[3]                 ; Stuck at GND due to stuck port data_in         ;
+; MOUSE:inst4|CHAROUT[2]                 ; Stuck at VCC due to stuck port data_in         ;
+; MOUSE:inst4|CHAROUT[0,1]               ; Stuck at GND due to stuck port data_in         ;
+; MOUSE:inst4|SHIFTOUT[10]               ; Stuck at VCC due to stuck port data_in         ;
+; bouncy_ball:inst2|ball_y_motion[0]     ; Stuck at GND due to stuck port data_in         ;
+; bouncy_ball:inst2|ball_y_motion[2..9]  ; Merged with bouncy_ball:inst2|ball_y_motion[1] ;
+; bouncy_ball:inst2|ball_y_pos[0]        ; Stuck at GND due to stuck port data_in         ;
+; MOUSE:inst4|cursor_row[9]              ; Stuck at GND due to stuck port data_in         ;
+; VGA_SYNC:inst1|pixel_row[9]            ; Stuck at GND due to stuck port data_in         ;
+; Total Number of Removed Registers = 21 ;                                                ;
++----------------------------------------+------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 176   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 20    ;
+; Number of registers using Asynchronous Clear ; 16    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 120   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; MOUSE:inst4|send_char                  ; 3       ;
+; MOUSE:inst4|SHIFTOUT[3]                ; 1       ;
+; MOUSE:inst4|SHIFTOUT[5]                ; 1       ;
+; MOUSE:inst4|SHIFTOUT[6]                ; 1       ;
+; MOUSE:inst4|SHIFTOUT[7]                ; 1       ;
+; MOUSE:inst4|SHIFTOUT[8]                ; 1       ;
+; Total number of inverted registers = 6 ;         ;
++----------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
+; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |BallMovement|MOUSE:inst4|new_cursor_column[4] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |BallMovement|VGA_SYNC:inst1|v_count[5]        ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; Yes        ; |BallMovement|MOUSE:inst4|cursor_row[6]        ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; Yes        ; |BallMovement|MOUSE:inst4|cursor_column[5]     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------+
@@ -608,28 +796,74 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++----------------------------------------------------------------------+
+; altpll Parameter Settings by Entity Instance                         ;
++-------------------------------+--------------------------------------+
+; Name                          ; Value                                ;
++-------------------------------+--------------------------------------+
+; Number of entity instances    ; 1                                    ;
+; Entity Instance               ; altpll0:inst|altpll:altpll_component ;
+;     -- OPERATION_MODE         ; NORMAL                               ;
+;     -- PLL_TYPE               ; AUTO                                 ;
+;     -- PRIMARY_CLOCK          ; INCLK0                               ;
+;     -- INCLK0_INPUT_FREQUENCY ; 20000                                ;
+;     -- INCLK1_INPUT_FREQUENCY ; 0                                    ;
+;     -- VCO_MULTIPLY_BY        ; 0                                    ;
+;     -- VCO_DIVIDE_BY          ; 0                                    ;
++-------------------------------+--------------------------------------+
+
+
++--------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                           ;
++-------------------------------------------+------------------------------------------------+
+; Name                                      ; Value                                          ;
++-------------------------------------------+------------------------------------------------+
+; Number of entity instances                ; 1                                              ;
+; Entity Instance                           ; char_rom:inst5|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; ROM                                            ;
+;     -- WIDTH_A                            ; 8                                              ;
+;     -- NUMWORDS_A                         ; 512                                            ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                   ;
+;     -- WIDTH_B                            ; 1                                              ;
+;     -- NUMWORDS_B                         ; 1                                              ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                         ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                   ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                           ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                      ;
++-------------------------------------------+------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
-    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue May 11 13:17:22 2021
+    Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
+    Info: Processing started: Tue May 11 13:49:37 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off BallMovement -c BallMovement
-Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 2 design units, including 1 entities, in source file /users/patel/documents/github/cs305-group23/phase 1 code/vga_sync.vhd
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file //files.auckland.ac.nz/myhome/documents/github/cs305-group23/phase 1 code/vga_sync.vhd
     Info (12022): Found design unit 1: VGA_SYNC-a
     Info (12023): Found entity 1: VGA_SYNC
-Info (12021): Found 2 design units, including 1 entities, in source file /users/patel/documents/github/cs305-group23/phase 1 code/seven_seg.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file //files.auckland.ac.nz/myhome/documents/github/cs305-group23/phase 1 code/seven_seg.vhd
     Info (12022): Found design unit 1: seven_seg-arc
     Info (12023): Found entity 1: seven_seg
-Info (12021): Found 2 design units, including 1 entities, in source file /users/patel/documents/github/cs305-group23/phase 1 code/mouse.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file //files.auckland.ac.nz/myhome/documents/github/cs305-group23/phase 1 code/mouse.vhd
     Info (12022): Found design unit 1: MOUSE-behavior
     Info (12023): Found entity 1: MOUSE
-Info (12021): Found 2 design units, including 1 entities, in source file /users/patel/documents/github/cs305-group23/phase 1 code/char_rom.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file //files.auckland.ac.nz/myhome/documents/github/cs305-group23/phase 1 code/char_rom.vhd
     Info (12022): Found design unit 1: char_rom-SYN
     Info (12023): Found entity 1: char_rom
-Info (12021): Found 2 design units, including 1 entities, in source file /users/patel/documents/github/cs305-group23/phase 1 code/bouncy_ball.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file //files.auckland.ac.nz/myhome/documents/github/cs305-group23/phase 1 code/bouncy_ball.vhd
     Info (12022): Found design unit 1: bouncy_ball-behavior
     Info (12023): Found entity 1: bouncy_ball
 Info (12021): Found 2 design units, including 1 entities, in source file altpll0.vhd
@@ -638,8 +872,6 @@ Info (12021): Found 2 design units, including 1 entities, in source file altpll0
 Info (12021): Found 1 design units, including 1 entities, in source file ballmovement.bdf
     Info (12023): Found entity 1: BallMovement
 Info (12127): Elaborating entity "BallMovement" for the top level hierarchy
-Warning (275012): Pin "pb1" overlaps another pin, block, or symbol
-Warning (275012): Pin "pb2" overlaps another pin, block, or symbol
 Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_SYNC:inst1"
 Info (12128): Elaborating entity "altpll0" for hierarchy "altpll0:inst"
 Info (12128): Elaborating entity "altpll" for hierarchy "altpll0:inst|altpll:altpll_component"
@@ -732,13 +964,23 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alts
     Info (12023): Found entity 1: altsyncram_5v91
 Info (12128): Elaborating entity "altsyncram_5v91" for hierarchy "char_rom:inst5|altsyncram:altsyncram_component|altsyncram_5v91:auto_generated"
 Info (12128): Elaborating entity "seven_seg" for hierarchy "seven_seg:inst6"
-Error (12014): Net "left_button", which fans out to "bouncy_ball:inst2|left_button", cannot be assigned more than one value File: C:/Users/patel/Documents/GitHub/CS305-Group23/Phase 1 code/bouncy_ball.vhd Line: 9
-    Error (12015): Net is fed by "left_button"
-    Error (12015): Net is fed by "MOUSE:inst4|left_button" File: C:/Users/patel/Documents/GitHub/CS305-Group23/Phase 1 code/mouse.vhd Line: 13
-Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 3 errors, 8 warnings
-    Error: Peak virtual memory: 4631 megabytes
-    Error: Processing ended: Tue May 11 13:17:24 2021
-    Error: Elapsed time: 00:00:02
-    Error: Total CPU time (on all processors): 00:00:02
+Info (13000): Registers with preset signals will power-up high
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info (286030): Timing-Driven Synthesis is running
+Info (17036): Removed 1 MSB VCC or GND address nodes from RAM block "char_rom:inst5|altsyncram:altsyncram_component|altsyncram_5v91:auto_generated|ALTSYNCRAM"
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 344 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 1 input pins
+    Info (21059): Implemented 19 output pins
+    Info (21060): Implemented 2 bidirectional pins
+    Info (21061): Implemented 313 logic cells
+    Info (21064): Implemented 8 RAM segments
+    Info (21065): Implemented 1 PLLs
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4684 megabytes
+    Info: Processing ended: Tue May 11 13:49:41 2021
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:02
 
 
