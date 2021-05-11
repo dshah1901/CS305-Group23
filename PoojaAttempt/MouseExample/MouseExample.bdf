@@ -271,7 +271,7 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 760 448 816 464))
+	(annotation_block (location)(rect 760 472 816 488))
 )
 (pin
 	(output)
@@ -323,40 +323,6 @@ applicable agreement for further details.
 		(line (pt 78 12)(pt 82 8))
 	)
 	(annotation_block (location)(rect 760 440 816 456))
-)
-(pin
-	(output)
-	(rect 576 472 752 488)
-	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "seg1[7]" (rect 90 0 126 12)(font "Arial" ))
-	(pt 0 8)
-	(drawing
-		(line (pt 0 8)(pt 52 8))
-		(line (pt 52 4)(pt 78 4))
-		(line (pt 52 12)(pt 78 12))
-		(line (pt 52 12)(pt 52 4))
-		(line (pt 78 4)(pt 82 8))
-		(line (pt 82 8)(pt 78 12))
-		(line (pt 78 12)(pt 82 8))
-	)
-	(annotation_block (location)(rect 768 480 824 496))
-)
-(pin
-	(output)
-	(rect 912 408 1088 424)
-	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "seg0[7]" (rect 90 0 126 12)(font "Arial" ))
-	(pt 0 8)
-	(drawing
-		(line (pt 0 8)(pt 52 8))
-		(line (pt 52 4)(pt 78 4))
-		(line (pt 52 12)(pt 78 12))
-		(line (pt 52 12)(pt 52 4))
-		(line (pt 78 4)(pt 82 8))
-		(line (pt 82 8)(pt 78 12))
-		(line (pt 78 12)(pt 82 8))
-	)
-	(annotation_block (location)(rect 1128 416 1184 432))
 )
 (pin
 	(bidir)
@@ -556,8 +522,8 @@ applicable agreement for further details.
 )
 (symbol
 	(rect 168 208 360 288)
-	(text "BCD2SevenSeg" (rect 5 0 85 12)(font "Arial" ))
-	(text "inst6" (rect 8 64 31 76)(font "Arial" ))
+	(text "seven_seg" (rect 5 0 59 12)(font "Arial" ))
+	(text "inst1" (rect 8 64 31 76)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -566,17 +532,10 @@ applicable agreement for further details.
 		(line (pt 0 32)(pt 16 32)(line_width 3))
 	)
 	(port
-		(pt 0 48)
-		(input)
-		(text "all_off" (rect 0 0 31 12)(font "Arial" ))
-		(text "all_off" (rect 21 43 52 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
 		(pt 192 32)
 		(output)
-		(text "LED_out[7..0]" (rect 0 0 68 12)(font "Arial" ))
-		(text "LED_out[7..0]" (rect 114 27 182 39)(font "Arial" ))
+		(text "LED_out[6..0]" (rect 0 0 68 12)(font "Arial" ))
+		(text "LED_out[6..0]" (rect 114 27 182 39)(font "Arial" ))
 		(line (pt 192 32)(pt 176 32)(line_width 3))
 	)
 	(drawing
@@ -585,8 +544,8 @@ applicable agreement for further details.
 )
 (symbol
 	(rect 168 320 360 400)
-	(text "BCD2SevenSeg" (rect 5 0 85 12)(font "Arial" ))
-	(text "inst7" (rect 8 64 31 76)(font "Arial" ))
+	(text "seven_seg" (rect 5 0 59 12)(font "Arial" ))
+	(text "inst2" (rect 8 64 31 76)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -595,17 +554,10 @@ applicable agreement for further details.
 		(line (pt 0 32)(pt 16 32)(line_width 3))
 	)
 	(port
-		(pt 0 48)
-		(input)
-		(text "all_off" (rect 0 0 31 12)(font "Arial" ))
-		(text "all_off" (rect 21 43 52 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
 		(pt 192 32)
 		(output)
-		(text "LED_out[7..0]" (rect 0 0 68 12)(font "Arial" ))
-		(text "LED_out[7..0]" (rect 114 27 182 39)(font "Arial" ))
+		(text "LED_out[6..0]" (rect 0 0 68 12)(font "Arial" ))
+		(text "LED_out[6..0]" (rect 114 27 182 39)(font "Arial" ))
 		(line (pt 192 32)(pt 176 32)(line_width 3))
 	)
 	(drawing
@@ -633,7 +585,7 @@ applicable agreement for further details.
 	(pt 88 136)
 )
 (connector
-	(text "mouse_row[9..0]" (rect 752 120 833 132)(font "Arial" ))
+	(text "mouse_row[9..0]" (rect 752 112 833 124)(font "Arial" ))
 	(pt 752 136)
 	(pt 784 136)
 	(bus)
@@ -727,22 +679,14 @@ applicable agreement for further details.
 	(pt 584 456)
 )
 (connector
-	(text "seg0[7..0]" (rect 360 224 409 236)(font "Arial" ))
+	(text "seg0[6..0]" (rect 360 224 409 236)(font "Arial" ))
 	(pt 360 240)
 	(pt 384 240)
 	(bus)
 )
 (connector
-	(text "seg1[7..0]" (rect 360 336 409 348)(font "Arial" ))
+	(text "seg1[6..0]" (rect 360 336 409 348)(font "Arial" ))
 	(pt 360 352)
 	(pt 392 352)
 	(bus)
-)
-(connector
-	(pt 576 480)
-	(pt 528 480)
-)
-(connector
-	(pt 912 416)
-	(pt 864 416)
 )
