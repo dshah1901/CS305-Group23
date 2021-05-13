@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Mon May 10 15:54:29 2021
+Analysis & Synthesis Status : Successful - Thu May 13 18:00:41 2021
 Quartus II 64-Bit Version : 13.0.0 Build 156 04/24/2013 SJ Full Version
 Revision Name : VGAExample
 Top-level Entity Name : VGAExample
 Family : Cyclone III
-Total logic elements : 138
-    Total combinational functions : 117
-    Dedicated logic registers : 58
-Total registers : 58
+Total logic elements : 143
+    Total combinational functions : 120
+    Dedicated logic registers : 57
+Total registers : 57
 Total pins : 8
 Total virtual pins : 0
 Total memory bits : 0

@@ -87,8 +87,8 @@ set_location_assignment PIN_D2 -to sw9
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_global_assignment -name VHDL_FILE "../../MiniProject Resources/ball.vhd"
 set_global_assignment -name VHDL_FILE "../../Phase 1 code/vga_sync.vhd"
-set_global_assignment -name BDF_FILE VGAExample.bdf
 set_global_assignment -name QIP_FILE altpll0.qip
+set_global_assignment -name VHDL_FILE "../../MiniProject Resources/pipes.vhd"
+set_global_assignment -name VHDL_FILE "../../MiniProject Resources/boo_pipe.vhd"
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
