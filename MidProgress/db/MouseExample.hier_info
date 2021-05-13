@@ -5,7 +5,7 @@ mouse_data <> MOUSE:inst3.mouse_data
 mouse_clk <> MOUSE:inst3.mouse_clk
 seg1_dec <= MOUSE:inst3.right_button
 red_out <= VGA_SYNC:inst.red_out
-sw1 => char_rom:inst6.sw1
+sw1 => char_rom:inst8.sw1
 pb1 => bouncy_ball:inst2.pb1
 green_out <= VGA_SYNC:inst.green_out
 blue_out <= VGA_SYNC:inst.blue_out
@@ -345,7 +345,7 @@ pixel_column[8] <= pixel_column[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 pixel_column[9] <= pixel_column[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MouseExample|char_rom:inst6
+|MouseExample|char_rom:inst8
 character_address[0] => altsyncram:altsyncram_component.address_a[3]
 character_address[1] => altsyncram:altsyncram_component.address_a[4]
 character_address[2] => altsyncram:altsyncram_component.address_a[5]
@@ -363,7 +363,7 @@ sw1 => rom_mux_output.OUTPUTSELECT
 rom_mux_output <= rom_mux_output.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MouseExample|char_rom:inst6|altsyncram:altsyncram_component
+|MouseExample|char_rom:inst8|altsyncram:altsyncram_component
 wren_a => ~NO_FANOUT~
 rden_a => ~NO_FANOUT~
 wren_b => ~NO_FANOUT~
@@ -413,7 +413,7 @@ eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|MouseExample|char_rom:inst6|altsyncram:altsyncram_component|altsyncram_5v91:auto_generated
+|MouseExample|char_rom:inst8|altsyncram:altsyncram_component|altsyncram_5v91:auto_generated
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR
