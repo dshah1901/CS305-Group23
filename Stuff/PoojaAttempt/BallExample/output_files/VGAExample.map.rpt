@@ -1,6 +1,6 @@
 Analysis & Synthesis report for VGAExample
-Thu May 13 14:17:49 2021
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Thu May 13 14:28:26 2021
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
 ---------------------
@@ -43,24 +43,24 @@ applicable agreement for further details.
 
 
 
-+--------------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                         ;
-+------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu May 13 14:17:49 2021           ;
-; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
-; Revision Name                      ; VGAExample                                      ;
-; Top-level Entity Name              ; VGAExample                                      ;
-; Family                             ; Cyclone III                                     ;
-; Total logic elements               ; 94                                              ;
-;     Total combinational functions  ; 77                                              ;
-;     Dedicated logic registers      ; 43                                              ;
-; Total registers                    ; 43                                              ;
-; Total pins                         ; 6                                               ;
-; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 0                                               ;
-; Embedded Multiplier 9-bit elements ; 0                                               ;
-; Total PLLs                         ; 1                                               ;
-+------------------------------------+-------------------------------------------------+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu May 13 14:28:26 2021       ;
+; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
+; Revision Name                      ; VGAExample                                  ;
+; Top-level Entity Name              ; VGAExample                                  ;
+; Family                             ; Cyclone III                                 ;
+; Total logic elements               ; 85                                          ;
+;     Total combinational functions  ; 63                                          ;
+;     Dedicated logic registers      ; 48                                          ;
+; Total registers                    ; 48                                          ;
+; Total pins                         ; 6                                           ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 1                                           ;
++------------------------------------+---------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------+
@@ -150,33 +150,39 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 
 
-Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
-+-------------------------------------+
-; Parallel Compilation                ;
-+----------------------------+--------+
-; Processors                 ; Number ;
-+----------------------------+--------+
-; Number detected on machine ; 12     ;
-; Maximum allowed            ; 1      ;
-+----------------------------+--------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 8           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-8         ;   0.0%      ;
++----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                         ;
-+--------------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path     ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                           ; Library ;
-+--------------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------------------------+---------+
-; ../../MiniProject Resources/ball.vhd ; yes             ; User VHDL File                     ; C:/Users/patel/Documents/Homework/Homework 2021/Compsys 305/CS305-Group23/MiniProject Resources/ball.vhd               ;         ;
-; ../../Phase 1 code/vga_sync.vhd      ; yes             ; User VHDL File                     ; C:/Users/patel/Documents/Homework/Homework 2021/Compsys 305/CS305-Group23/Phase 1 code/vga_sync.vhd                    ;         ;
-; VGAExample.bdf                       ; yes             ; User Block Diagram/Schematic File  ; C:/Users/patel/Documents/Homework/Homework 2021/Compsys 305/CS305-Group23/PoojaAttempt/BallExample/VGAExample.bdf      ;         ;
-; altpll0.vhd                          ; yes             ; User Wizard-Generated File         ; C:/Users/patel/Documents/Homework/Homework 2021/Compsys 305/CS305-Group23/PoojaAttempt/BallExample/altpll0.vhd         ;         ;
-; altpll.tdf                           ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altpll.tdf                                                           ;         ;
-; aglobal130.inc                       ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                                                       ;         ;
-; stratix_pll.inc                      ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_pll.inc                                                      ;         ;
-; stratixii_pll.inc                    ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratixii_pll.inc                                                    ;         ;
-; cycloneii_pll.inc                    ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/cycloneii_pll.inc                                                    ;         ;
-; db/altpll0_altpll.v                  ; yes             ; Auto-Generated Megafunction        ; C:/Users/patel/Documents/Homework/Homework 2021/Compsys 305/CS305-Group23/PoojaAttempt/BallExample/db/altpll0_altpll.v ;         ;
-+--------------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                  ;
++--------------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path     ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                    ; Library ;
++--------------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------------------+---------+
+; ../../MiniProject Resources/ball.vhd ; yes             ; User VHDL File                     ; //files.auckland.ac.nz/myhome/Documents/GitHub/CS305-Group23/Stuff/MiniProject Resources/ball.vhd               ;         ;
+; ../../Phase 1 code/vga_sync.vhd      ; yes             ; User VHDL File                     ; //files.auckland.ac.nz/myhome/Documents/GitHub/CS305-Group23/Stuff/Phase 1 code/vga_sync.vhd                    ;         ;
+; VGAExample.bdf                       ; yes             ; User Block Diagram/Schematic File  ; //files.auckland.ac.nz/myhome/Documents/GitHub/CS305-Group23/Stuff/PoojaAttempt/BallExample/VGAExample.bdf      ;         ;
+; altpll0.vhd                          ; yes             ; User Wizard-Generated File         ; //files.auckland.ac.nz/myhome/Documents/GitHub/CS305-Group23/Stuff/PoojaAttempt/BallExample/altpll0.vhd         ;         ;
+; altpll.tdf                           ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/altpll.tdf                                                       ;         ;
+; aglobal130.inc                       ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/aglobal130.inc                                                   ;         ;
+; stratix_pll.inc                      ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/stratix_pll.inc                                                  ;         ;
+; stratixii_pll.inc                    ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/stratixii_pll.inc                                                ;         ;
+; cycloneii_pll.inc                    ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/cycloneii_pll.inc                                                ;         ;
+; db/altpll0_altpll.v                  ; yes             ; Auto-Generated Megafunction        ; //files.auckland.ac.nz/myhome/Documents/GitHub/CS305-Group23/Stuff/PoojaAttempt/BallExample/db/altpll0_altpll.v ;         ;
++--------------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------+
@@ -184,20 +190,20 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                               ;
 +---------------------------------------------+-------------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 94                                                                                  ;
+; Estimated Total logic elements              ; 85                                                                                  ;
 ;                                             ;                                                                                     ;
-; Total combinational functions               ; 77                                                                                  ;
+; Total combinational functions               ; 63                                                                                  ;
 ; Logic element usage by number of LUT inputs ;                                                                                     ;
-;     -- 4 input functions                    ; 34                                                                                  ;
-;     -- 3 input functions                    ; 6                                                                                   ;
-;     -- <=2 input functions                  ; 37                                                                                  ;
+;     -- 4 input functions                    ; 33                                                                                  ;
+;     -- 3 input functions                    ; 4                                                                                   ;
+;     -- <=2 input functions                  ; 26                                                                                  ;
 ;                                             ;                                                                                     ;
 ; Logic elements by mode                      ;                                                                                     ;
-;     -- normal mode                          ; 50                                                                                  ;
-;     -- arithmetic mode                      ; 27                                                                                  ;
+;     -- normal mode                          ; 45                                                                                  ;
+;     -- arithmetic mode                      ; 18                                                                                  ;
 ;                                             ;                                                                                     ;
-; Total registers                             ; 43                                                                                  ;
-;     -- Dedicated logic registers            ; 43                                                                                  ;
+; Total registers                             ; 48                                                                                  ;
+;     -- Dedicated logic registers            ; 48                                                                                  ;
 ;     -- I/O registers                        ; 0                                                                                   ;
 ;                                             ;                                                                                     ;
 ; I/O pins                                    ; 6                                                                                   ;
@@ -206,9 +212,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;     -- PLLs                                 ; 1                                                                                   ;
 ;                                             ;                                                                                     ;
 ; Maximum fan-out node                        ; altpll0:inst|altpll:altpll_component|altpll0_altpll:auto_generated|wire_pll1_clk[0] ;
-; Maximum fan-out                             ; 44                                                                                  ;
-; Total fan-out                               ; 338                                                                                 ;
-; Average fan-out                             ; 2.54                                                                                ;
+; Maximum fan-out                             ; 49                                                                                  ;
+; Total fan-out                               ; 324                                                                                 ;
+; Average fan-out                             ; 2.61                                                                                ;
 +---------------------------------------------+-------------------------------------------------------------------------------------+
 
 
@@ -217,23 +223,23 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node               ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                            ; Library Name ;
 +------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------+--------------+
-; |VGAExample                              ; 77 (0)            ; 43 (0)       ; 0           ; 0            ; 0       ; 0         ; 6    ; 0            ; |VGAExample                                                                    ; work         ;
-;    |VGA_SYNC:inst5|                      ; 66 (66)           ; 43 (43)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGAExample|VGA_SYNC:inst5                                                     ; work         ;
-;    |altpll0:inst|                        ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGAExample|altpll0:inst                                                       ; work         ;
-;       |altpll:altpll_component|          ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGAExample|altpll0:inst|altpll:altpll_component                               ; work         ;
-;          |altpll0_altpll:auto_generated| ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGAExample|altpll0:inst|altpll:altpll_component|altpll0_altpll:auto_generated ; work         ;
-;    |ball:inst1|                          ; 11 (11)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGAExample|ball:inst1                                                         ; work         ;
+; |VGAExample                              ; 63 (0)            ; 48 (0)       ; 0           ; 0            ; 0       ; 0         ; 6    ; 0            ; |VGAExample                                                                    ;              ;
+;    |VGA_SYNC:inst5|                      ; 57 (57)           ; 48 (48)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGAExample|VGA_SYNC:inst5                                                     ;              ;
+;    |altpll0:inst|                        ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGAExample|altpll0:inst                                                       ;              ;
+;       |altpll:altpll_component|          ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGAExample|altpll0:inst|altpll:altpll_component                               ;              ;
+;          |altpll0_altpll:auto_generated| ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGAExample|altpll0:inst|altpll:altpll_component|altpll0_altpll:auto_generated ;              ;
+;    |ball:inst2|                          ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGAExample|ball:inst2                                                         ;              ;
 +------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                                                                                                                     ;
-+--------+--------------+---------+--------------+--------------+--------------------------+----------------------------------------------------------------------------------------------------------------+
-; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance          ; IP Include File                                                                                                ;
-+--------+--------------+---------+--------------+--------------+--------------------------+----------------------------------------------------------------------------------------------------------------+
-; Altera ; ALTPLL       ; 13.0    ; N/A          ; N/A          ; |VGAExample|altpll0:inst ; C:/Users/patel/Documents/Homework/Homework 2021/Compsys 305/CS305-Group23/PoojaAttempt/BallExample/altpll0.vhd ;
-+--------+--------------+---------+--------------+--------------+--------------------------+----------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                                              ;
++--------+--------------+---------+--------------+--------------+--------------------------+---------------------------------------------------------------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance          ; IP Include File                                                                                         ;
++--------+--------------+---------+--------------+--------------+--------------------------+---------------------------------------------------------------------------------------------------------+
+; Altera ; ALTPLL       ; 13.0    ; N/A          ; N/A          ; |VGAExample|altpll0:inst ; //files.auckland.ac.nz/myhome/Documents/GitHub/CS305-Group23/Stuff/PoojaAttempt/BallExample/altpll0.vhd ;
++--------+--------------+---------+--------------+--------------+--------------------------+---------------------------------------------------------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------+
@@ -241,9 +247,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------+----------------------------------------+
 ; Register name                         ; Reason for Removal                     ;
 +---------------------------------------+----------------------------------------+
-; VGA_SYNC:inst5|pixel_column[0..4]     ; Lost fanout                            ;
 ; VGA_SYNC:inst5|pixel_row[9]           ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 6 ;                                        ;
+; Total Number of Removed Registers = 1 ;                                        ;
 +---------------------------------------+----------------------------------------+
 
 
@@ -252,12 +257,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 43    ;
+; Total registers                              ; 48    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 16    ;
+; Number of registers using Clock Enable       ; 21    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -676,14 +681,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
-    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu May 13 14:17:46 2021
+    Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
+    Info: Processing started: Thu May 13 14:28:23 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off VGAExample -c VGAExample
-Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 2 design units, including 1 entities, in source file /users/patel/documents/homework/homework 2021/compsys 305/cs305-group23/miniproject resources/ball.vhd
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file //files.auckland.ac.nz/myhome/documents/github/cs305-group23/stuff/miniproject resources/ball.vhd
     Info (12022): Found design unit 1: ball-behavior
     Info (12023): Found entity 1: ball
-Info (12021): Found 2 design units, including 1 entities, in source file /users/patel/documents/homework/homework 2021/compsys 305/cs305-group23/phase 1 code/vga_sync.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file //files.auckland.ac.nz/myhome/documents/github/cs305-group23/stuff/phase 1 code/vga_sync.vhd
     Info (12022): Found design unit 1: VGA_SYNC-a
     Info (12023): Found entity 1: VGA_SYNC
 Info (12021): Found 1 design units, including 1 entities, in source file vgaexample.bdf
@@ -755,20 +760,19 @@ Info (12133): Instantiated megafunction "altpll0:inst|altpll:altpll_component" w
 Info (12021): Found 1 design units, including 1 entities, in source file db/altpll0_altpll.v
     Info (12023): Found entity 1: altpll0_altpll
 Info (12128): Elaborating entity "altpll0_altpll" for hierarchy "altpll0:inst|altpll:altpll_component|altpll0_altpll:auto_generated"
-Info (12128): Elaborating entity "ball" for hierarchy "ball:inst1"
+Info (12128): Elaborating entity "ball" for hierarchy "ball:inst2"
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 5 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 105 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 95 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 5 output pins
-    Info (21061): Implemented 98 logic cells
+    Info (21061): Implemented 88 logic cells
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4632 megabytes
-    Info: Processing ended: Thu May 13 14:17:49 2021
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4683 megabytes
+    Info: Processing ended: Thu May 13 14:28:26 2021
     Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
 
 

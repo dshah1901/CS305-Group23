@@ -288,7 +288,7 @@ applicable agreement for further details.
 (symbol
 	(rect 88 232 280 344)
 	(text "ball" (rect 5 0 21 12)(font "Arial" ))
-	(text "inst1" (rect 8 96 31 108)(font "Arial" ))
+	(text "inst2" (rect 8 96 31 108)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
