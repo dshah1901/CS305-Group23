@@ -1,5 +1,5 @@
 Analysis & Synthesis report for VGAExample
-Thu May 13 14:28:26 2021
+Thu May 13 15:14:48 2021
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
@@ -14,13 +14,14 @@ Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis IP Cores Summary
-  9. Registers Removed During Synthesis
- 10. General Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Parameter Settings for User Entity Instance: altpll0:inst|altpll:altpll_component
- 13. altpll Parameter Settings by Entity Instance
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
+  9. Logic Cells Representing Combinational Loops
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: altpll0:inst|altpll:altpll_component
+ 14. altpll Parameter Settings by Entity Instance
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
 
 
 
@@ -46,13 +47,13 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu May 13 14:28:26 2021       ;
+; Analysis & Synthesis Status        ; Successful - Thu May 13 15:14:48 2021       ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
 ; Revision Name                      ; VGAExample                                  ;
 ; Top-level Entity Name              ; VGAExample                                  ;
 ; Family                             ; Cyclone III                                 ;
-; Total logic elements               ; 85                                          ;
-;     Total combinational functions  ; 63                                          ;
+; Total logic elements               ; 123                                         ;
+;     Total combinational functions  ; 101                                         ;
 ;     Dedicated logic registers      ; 48                                          ;
 ; Total registers                    ; 48                                          ;
 ; Total pins                         ; 6                                           ;
@@ -190,17 +191,17 @@ applicable agreement for further details.
 +---------------------------------------------+-------------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                               ;
 +---------------------------------------------+-------------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 85                                                                                  ;
+; Estimated Total logic elements              ; 123                                                                                 ;
 ;                                             ;                                                                                     ;
-; Total combinational functions               ; 63                                                                                  ;
+; Total combinational functions               ; 101                                                                                 ;
 ; Logic element usage by number of LUT inputs ;                                                                                     ;
-;     -- 4 input functions                    ; 33                                                                                  ;
-;     -- 3 input functions                    ; 4                                                                                   ;
-;     -- <=2 input functions                  ; 26                                                                                  ;
+;     -- 4 input functions                    ; 29                                                                                  ;
+;     -- 3 input functions                    ; 23                                                                                  ;
+;     -- <=2 input functions                  ; 49                                                                                  ;
 ;                                             ;                                                                                     ;
 ; Logic elements by mode                      ;                                                                                     ;
-;     -- normal mode                          ; 45                                                                                  ;
-;     -- arithmetic mode                      ; 18                                                                                  ;
+;     -- normal mode                          ; 48                                                                                  ;
+;     -- arithmetic mode                      ; 53                                                                                  ;
 ;                                             ;                                                                                     ;
 ; Total registers                             ; 48                                                                                  ;
 ;     -- Dedicated logic registers            ; 48                                                                                  ;
@@ -213,8 +214,8 @@ applicable agreement for further details.
 ;                                             ;                                                                                     ;
 ; Maximum fan-out node                        ; altpll0:inst|altpll:altpll_component|altpll0_altpll:auto_generated|wire_pll1_clk[0] ;
 ; Maximum fan-out                             ; 49                                                                                  ;
-; Total fan-out                               ; 324                                                                                 ;
-; Average fan-out                             ; 2.61                                                                                ;
+; Total fan-out                               ; 407                                                                                 ;
+; Average fan-out                             ; 2.51                                                                                ;
 +---------------------------------------------+-------------------------------------------------------------------------------------+
 
 
@@ -223,12 +224,12 @@ applicable agreement for further details.
 +------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node               ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                            ; Library Name ;
 +------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------+--------------+
-; |VGAExample                              ; 63 (0)            ; 48 (0)       ; 0           ; 0            ; 0       ; 0         ; 6    ; 0            ; |VGAExample                                                                    ;              ;
-;    |VGA_SYNC:inst5|                      ; 57 (57)           ; 48 (48)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGAExample|VGA_SYNC:inst5                                                     ;              ;
+; |VGAExample                              ; 101 (0)           ; 48 (0)       ; 0           ; 0            ; 0       ; 0         ; 6    ; 0            ; |VGAExample                                                                    ;              ;
+;    |VGA_SYNC:inst5|                      ; 59 (59)           ; 48 (48)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGAExample|VGA_SYNC:inst5                                                     ;              ;
 ;    |altpll0:inst|                        ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGAExample|altpll0:inst                                                       ;              ;
 ;       |altpll:altpll_component|          ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGAExample|altpll0:inst|altpll:altpll_component                               ;              ;
 ;          |altpll0_altpll:auto_generated| ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGAExample|altpll0:inst|altpll:altpll_component|altpll0_altpll:auto_generated ;              ;
-;    |ball:inst2|                          ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGAExample|ball:inst2                                                         ;              ;
+;    |ball:inst8|                          ; 42 (42)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGAExample|ball:inst8                                                         ;              ;
 +------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -240,6 +241,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+--------------------------+---------------------------------------------------------------------------------------------------------+
 ; Altera ; ALTPLL       ; 13.0    ; N/A          ; N/A          ; |VGAExample|altpll0:inst ; //files.auckland.ac.nz/myhome/Documents/GitHub/CS305-Group23/Stuff/PoojaAttempt/BallExample/altpll0.vhd ;
 +--------+--------------+---------+--------------+--------------+--------------------------+---------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------+
+; Logic Cells Representing Combinational Loops               ;
++--------------------------------------------------------+---+
+; Logic Cell Name                                        ;   ;
++--------------------------------------------------------+---+
+; ball:inst8|LessThan0~0                                 ;   ;
+; ball:inst8|LessThan0~1                                 ;   ;
+; ball:inst8|LessThan0~2                                 ;   ;
+; ball:inst8|LessThan0~3                                 ;   ;
+; ball:inst8|LessThan0~4                                 ;   ;
+; ball:inst8|LessThan0~5                                 ;   ;
+; ball:inst8|LessThan0~6                                 ;   ;
+; ball:inst8|LessThan0~7                                 ;   ;
+; ball:inst8|LessThan0~8                                 ;   ;
+; Number of logic cells representing combinational loops ; 9 ;
++--------------------------------------------------------+---+
+Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +--------------------------------------------------------------------------------+
@@ -682,7 +702,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
-    Info: Processing started: Thu May 13 14:28:23 2021
+    Info: Processing started: Thu May 13 15:14:45 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off VGAExample -c VGAExample
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file //files.auckland.ac.nz/myhome/documents/github/cs305-group23/stuff/miniproject resources/ball.vhd
@@ -760,18 +780,20 @@ Info (12133): Instantiated megafunction "altpll0:inst|altpll:altpll_component" w
 Info (12021): Found 1 design units, including 1 entities, in source file db/altpll0_altpll.v
     Info (12023): Found entity 1: altpll0_altpll
 Info (12128): Elaborating entity "altpll0_altpll" for hierarchy "altpll0:inst|altpll:altpll_component|altpll0_altpll:auto_generated"
-Info (12128): Elaborating entity "ball" for hierarchy "ball:inst2"
+Info (12128): Elaborating entity "ball" for hierarchy "ball:inst8"
+Warning (10492): VHDL Process Statement warning at ball.vhd(49): signal "ball_x_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ball.vhd(53): signal "ball_x_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 95 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 134 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 5 output pins
-    Info (21061): Implemented 88 logic cells
+    Info (21061): Implemented 127 logic cells
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4683 megabytes
-    Info: Processing ended: Thu May 13 14:28:26 2021
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4666 megabytes
+    Info: Processing ended: Thu May 13 15:14:48 2021
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:02
 
