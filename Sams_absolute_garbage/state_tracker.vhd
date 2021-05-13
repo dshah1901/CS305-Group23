@@ -14,7 +14,8 @@ end entity state_tracker;
 
 architecture beh of state_tracker is
 type state_type is (s0, s1, s2, s3, s4, s5, s6);
-signal state, next_state: state_type;
+signal state: state_type := s0;
+signal next_state: state_type;
 
 begin
 
