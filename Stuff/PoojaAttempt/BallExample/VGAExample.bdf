@@ -288,7 +288,7 @@ applicable agreement for further details.
 (symbol
 	(rect 88 232 280 344)
 	(text "ball" (rect 5 0 21 12)(font "Arial" ))
-	(text "inst2" (rect 8 96 31 108)(font "Arial" ))
+	(text "inst8" (rect 8 96 31 108)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -372,30 +372,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 72 296)
-	(pt 72 376)
-	(bus)
-)
-(connector
-	(pt 72 296)
-	(pt 88 296)
-	(bus)
-)
-(connector
-	(pt 56 280)
-	(pt 56 392)
-	(bus)
-)
-(connector
-	(pt 56 280)
-	(pt 88 280)
-	(bus)
-)
-(connector
-	(pt 72 192)
-	(pt 72 264)
-)
-(connector
 	(pt 72 192)
 	(pt 384 192)
 )
@@ -406,34 +382,6 @@ applicable agreement for further details.
 (connector
 	(pt 384 192)
 	(pt 384 208)
-)
-(connector
-	(pt 88 264)
-	(pt 72 264)
-)
-(connector
-	(pt 280 264)
-	(pt 408 264)
-)
-(connector
-	(pt 408 224)
-	(pt 408 264)
-)
-(connector
-	(pt 432 240)
-	(pt 432 280)
-)
-(connector
-	(pt 432 280)
-	(pt 280 280)
-)
-(connector
-	(pt 280 296)
-	(pt 448 296)
-)
-(connector
-	(pt 448 296)
-	(pt 448 256)
 )
 (connector
 	(pt 384 208)
@@ -460,5 +408,57 @@ applicable agreement for further details.
 	(pt 752 304)
 	(pt 776 304)
 	(bus)
+)
+(connector
+	(pt 72 376)
+	(pt 72 296)
+	(bus)
+)
+(connector
+	(pt 72 296)
+	(pt 88 296)
+	(bus)
+)
+(connector
+	(pt 56 392)
+	(pt 56 280)
+	(bus)
+)
+(connector
+	(pt 56 280)
+	(pt 88 280)
+	(bus)
+)
+(connector
+	(pt 72 192)
+	(pt 72 264)
+)
+(connector
+	(pt 72 264)
+	(pt 88 264)
+)
+(connector
+	(pt 408 264)
+	(pt 280 264)
+)
+(connector
+	(pt 408 224)
+	(pt 408 264)
+)
+(connector
+	(pt 432 240)
+	(pt 432 280)
+)
+(connector
+	(pt 432 280)
+	(pt 280 280)
+)
+(connector
+	(pt 448 296)
+	(pt 280 296)
+)
+(connector
+	(pt 448 256)
+	(pt 448 296)
 )
 (junction (pt 384 192))

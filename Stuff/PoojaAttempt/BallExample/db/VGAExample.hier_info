@@ -167,7 +167,7 @@ inclk[1] => pll1.CLK1
 locked <= locked.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|VGAExample|ball:inst2
+|VGAExample|ball:inst8
 clk => ~NO_FANOUT~
 pixel_row[0] => Add2.IN20
 pixel_row[0] => LessThan3.IN20
