@@ -6,7 +6,7 @@ use ieee.numeric_std.all;
 
 entity text_display is 
 	port(
-		enable: in std_logic;
+		--enable: in std_logic;
 		clk_25Mhz : in std_logic;
 		pixel_row, pixel_column : in std_logic_vector (9 downto 0);
 		char_data_out : out std_logic
