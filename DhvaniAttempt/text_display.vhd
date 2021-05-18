@@ -9,11 +9,7 @@ entity text_display is
 		enable: in std_logic;
 		clk_25Mhz : in std_logic;
 		pixel_row, pixel_column : in std_logic_vector (9 downto 0);
-		state_out: in std_logic_vector(3 downto 0);
 		char_data_out : out std_logic;
-		sw0 : in std_logic;
-		level : in std_logic_vector(1 downto 0);
-		pointOnes, pointsTens : in std_logic_vector(3 downto 0)
 	);
 end entity text_display;
 
