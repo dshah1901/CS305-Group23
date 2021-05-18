@@ -91,6 +91,7 @@ set_location_assignment PIN_D2 -to sw9
 set_location_assignment PIN_G21 -to inclk0
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name VHDL_FILE ../DhvaniAttempt/text_display.vhd
 set_global_assignment -name VHDL_FILE VHDLcode/vga_sync.vhd
 set_global_assignment -name VHDL_FILE VHDLcode/seven_seg.vhd
 set_global_assignment -name VHDL_FILE VHDLcode/mouse.vhd
