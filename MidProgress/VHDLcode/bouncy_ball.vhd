@@ -44,7 +44,7 @@ begin
 		-- Bounce off top or bottom of the screen
 		
 		if (pb1 = '1') then
-			if (  or left_button = '1') then
+			if (left_button = '1') then
 				ball_y_motion <= - CONV_STD_LOGIC_VECTOR(2,10);
 			elsif ((ball_y_pos <= size)or pb2 = '1') then 
 				ball_y_motion <= CONV_STD_LOGIC_VECTOR(2,10);

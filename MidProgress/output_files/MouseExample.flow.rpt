@@ -1,5 +1,5 @@
 Flow report for MouseExample
-Thu May 13 13:38:14 2021
+Tue May 18 14:10:50 2021
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,15 +40,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Thu May 13 13:38:09 2021           ;
+; Flow Status                        ; Successful - Tue May 18 14:10:41 2021           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; MouseExample                                    ;
 ; Top-level Entity Name              ; MouseExample                                    ;
 ; Family                             ; Cyclone III                                     ;
 ; Device                             ; EP3C16F484C6                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 295 / 15,408 ( 2 % )                            ;
-;     Total combinational functions  ; 253 / 15,408 ( 2 % )                            ;
+; Total logic elements               ; 298 / 15,408 ( 2 % )                            ;
+;     Total combinational functions  ; 250 / 15,408 ( 2 % )                            ;
 ;     Dedicated logic registers      ; 179 / 15,408 ( 1 % )                            ;
 ; Total registers                    ; 179                                             ;
 ; Total pins                         ; 27 / 347 ( 8 % )                                ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/13/2021 13:37:46 ;
+; Start date & time ; 05/18/2021 14:10:03 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; MouseExample        ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+---------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 83689957108810.162086986506012        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 83689957108810.162130380319776        ; --            ; --          ; --         ;
 ; IP_TOOL_NAME                        ; ALTPLL                                ; --            ; --          ; --         ;
 ; IP_TOOL_VERSION                     ; 13.0                                  ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --         ;
@@ -98,11 +98,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:05     ; 1.0                     ; 4633 MB             ; 00:00:04                           ;
-; Fitter                    ; 00:00:13     ; 1.0                     ; 4916 MB             ; 00:00:11                           ;
-; Assembler                 ; 00:00:03     ; 1.0                     ; 4550 MB             ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 4590 MB             ; 00:00:04                           ;
-; Total                     ; 00:00:25     ; --                      ; --                  ; 00:00:21                           ;
+; Analysis & Synthesis      ; 00:00:08     ; 1.0                     ; 4633 MB             ; 00:00:07                           ;
+; Fitter                    ; 00:00:23     ; 1.0                     ; 4900 MB             ; 00:00:22                           ;
+; Assembler                 ; 00:00:04     ; 1.0                     ; 4546 MB             ; 00:00:03                           ;
+; TimeQuest Timing Analyzer ; 00:00:07     ; 1.0                     ; 4590 MB             ; 00:00:07                           ;
+; Total                     ; 00:00:42     ; --                      ; --                  ; 00:00:39                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

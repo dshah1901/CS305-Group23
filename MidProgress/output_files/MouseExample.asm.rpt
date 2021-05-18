@@ -1,5 +1,5 @@
 Assembler report for MouseExample
-Thu May 13 13:38:09 2021
+Tue May 18 14:10:41 2021
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Thu May 13 13:38:09 2021 ;
+; Assembler Status      ; Successful - Tue May 18 14:10:41 2021 ;
 ; Revision Name         ; MouseExample                          ;
 ; Top-level Entity Name ; MouseExample                          ;
 ; Family                ; Cyclone III                           ;
@@ -92,8 +92,8 @@ applicable agreement for further details.
 ; Option         ; Setting                                                                                          ;
 +----------------+--------------------------------------------------------------------------------------------------+
 ; Device         ; EP3C16F484C6                                                                                     ;
-; JTAG usercode  ; 0x000F152E                                                                                       ;
-; Checksum       ; 0x000F152E                                                                                       ;
+; JTAG usercode  ; 0x000F35D5                                                                                       ;
+; Checksum       ; 0x000F35D5                                                                                       ;
 +----------------+--------------------------------------------------------------------------------------------------+
 
 
@@ -103,14 +103,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu May 13 13:38:06 2021
+    Info: Processing started: Tue May 18 14:10:37 2021
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off MouseExample -c MouseExample
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4550 megabytes
-    Info: Processing ended: Thu May 13 13:38:09 2021
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Peak virtual memory: 4546 megabytes
+    Info: Processing ended: Tue May 18 14:10:41 2021
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:04
 
 

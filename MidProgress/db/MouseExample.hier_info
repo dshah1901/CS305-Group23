@@ -6,7 +6,7 @@ mouse_clk <> MOUSE:inst3.mouse_clk
 seg1_dec <= MOUSE:inst3.right_button
 red_out <= VGA_SYNC:inst.red_out
 sw1 => char_rom:inst8.sw1
-pb1 => bouncy_ball:inst2.pb1
+pb1 => bouncy_ball:inst1.pb1
 green_out <= VGA_SYNC:inst.green_out
 blue_out <= VGA_SYNC:inst.blue_out
 horiz_sync_out <= VGA_SYNC:inst.horiz_sync_out
@@ -504,7 +504,7 @@ q_a[6] <= ram_block1a6.PORTADATAOUT
 q_a[7] <= ram_block1a7.PORTADATAOUT
 
 
-|MouseExample|bouncy_ball:inst2
+|MouseExample|bouncy_ball:inst1
 pb1 => ball_y_motion.OUTPUTSELECT
 pb1 => ball_y_motion.OUTPUTSELECT
 pb1 => ball_y_motion.OUTPUTSELECT
@@ -538,7 +538,16 @@ vert_sync => ball_y_motion[6].CLK
 vert_sync => ball_y_motion[7].CLK
 vert_sync => ball_y_motion[8].CLK
 vert_sync => ball_y_motion[9].CLK
-left_button => Move_Ball.IN1
+left_button => ball_y_motion.OUTPUTSELECT
+left_button => ball_y_motion.OUTPUTSELECT
+left_button => ball_y_motion.OUTPUTSELECT
+left_button => ball_y_motion.OUTPUTSELECT
+left_button => ball_y_motion.OUTPUTSELECT
+left_button => ball_y_motion.OUTPUTSELECT
+left_button => ball_y_motion.OUTPUTSELECT
+left_button => ball_y_motion.OUTPUTSELECT
+left_button => ball_y_motion.OUTPUTSELECT
+left_button => ball_y_motion.OUTPUTSELECT
 left_button => green.IN1
 pixel_row[0] => Add2.IN20
 pixel_row[0] => LessThan3.IN22

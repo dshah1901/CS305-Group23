@@ -91,8 +91,6 @@ set_location_assignment PIN_D2 -to sw9
 set_location_assignment PIN_G21 -to inclk0
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
-set_global_assignment -name VHDL_FILE VHDLcode/ball.vhd
 set_global_assignment -name VHDL_FILE VHDLcode/vga_sync.vhd
 set_global_assignment -name VHDL_FILE VHDLcode/seven_seg.vhd
 set_global_assignment -name VHDL_FILE VHDLcode/mouse.vhd
@@ -101,3 +99,4 @@ set_global_assignment -name VHDL_FILE VHDLcode/bouncy_ball.vhd
 set_global_assignment -name QIP_FILE VHDLcode/altpll0.qip
 set_global_assignment -name BDF_FILE MouseExample.bdf
 set_global_assignment -name VHDL_FILE "../../../Homework/Homework 2021/Compsys 305/CS305-Group23/MiniProject Resources/ball.vhd"
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
