@@ -2,6 +2,6 @@
 <LOG_ROOT>
 	<PROJECT NAME="MouseExample">
 		<CBX_INST_ENTRY INSTANCE_NAME="|MouseExample|altpll0:inst9|altpll:altpll_component" CBX_FILE_NAME="altpll0_altpll.v"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|MouseExample|char_rom:inst8|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_5v91.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MouseExample|text_display:inst2|char_rom:char_data|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_5v91.tdf"/>
 	</PROJECT>
 </LOG_ROOT>
