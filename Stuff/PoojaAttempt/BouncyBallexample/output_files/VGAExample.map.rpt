@@ -1,6 +1,6 @@
 Analysis & Synthesis report for VGAExample
-Tue May 18 13:59:01 2021
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Tue May 18 15:57:59 2021
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
 ---------------------
@@ -14,7 +14,7 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis IP Cores Summary
-  9. State Machine - |VGAExample|MOUSE:inst6|mouse_state
+  9. State Machine - |VGAExample|MOUSE:inst5|mouse_state
  10. Registers Removed During Synthesis
  11. General Register Statistics
  12. Inverted Register Statistics
@@ -45,24 +45,24 @@ applicable agreement for further details.
 
 
 
-+--------------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                         ;
-+------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue May 18 13:59:01 2021           ;
-; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
-; Revision Name                      ; VGAExample                                      ;
-; Top-level Entity Name              ; VGAExample                                      ;
-; Family                             ; Cyclone III                                     ;
-; Total logic elements               ; 225                                             ;
-;     Total combinational functions  ; 176                                             ;
-;     Dedicated logic registers      ; 126                                             ;
-; Total registers                    ; 126                                             ;
-; Total pins                         ; 11                                              ;
-; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 0                                               ;
-; Embedded Multiplier 9-bit elements ; 0                                               ;
-; Total PLLs                         ; 1                                               ;
-+------------------------------------+-------------------------------------------------+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue May 18 15:57:59 2021       ;
+; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
+; Revision Name                      ; VGAExample                                  ;
+; Top-level Entity Name              ; VGAExample                                  ;
+; Family                             ; Cyclone III                                 ;
+; Total logic elements               ; 368                                         ;
+;     Total combinational functions  ; 303                                         ;
+;     Dedicated logic registers      ; 188                                         ;
+; Total registers                    ; 188                                         ;
+; Total pins                         ; 31                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 1                                           ;
++------------------------------------+---------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------+
@@ -70,6 +70,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP3C16F484C6       ;                    ;
 ; Top-level entity name                                                      ; VGAExample         ; VGAExample         ;
 ; Family name                                                                ; Cyclone III        ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
@@ -151,67 +152,74 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 
 
-Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
-+-------------------------------------+
-; Parallel Compilation                ;
-+----------------------------+--------+
-; Processors                 ; Number ;
-+----------------------------+--------+
-; Number detected on machine ; 12     ;
-; Maximum allowed            ; 1      ;
-+----------------------------+--------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 8           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-8         ;   0.0%      ;
++----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                             ;
-+------------------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path         ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                           ; Library ;
-+------------------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------------+---------+
-; ../../../MiniProject Resources/mouse.vhd ; yes             ; User VHDL File                     ; C:/Users/patel/Documents/GitHub/CS305-Group23/MiniProject Resources/mouse.vhd                          ;         ;
-; ../../../DhvaniAttempt/bird.vhd          ; yes             ; User VHDL File                     ; C:/Users/patel/Documents/GitHub/CS305-Group23/DhvaniAttempt/bird.vhd                                   ;         ;
-; ../../Phase 1 code/vga_sync.vhd          ; yes             ; User VHDL File                     ; C:/Users/patel/Documents/GitHub/CS305-Group23/Stuff/Phase 1 code/vga_sync.vhd                          ;         ;
-; VGAExample.bdf                           ; yes             ; User Block Diagram/Schematic File  ; C:/Users/patel/Documents/GitHub/CS305-Group23/Stuff/PoojaAttempt/BouncyBallexample/VGAExample.bdf      ;         ;
-; altpll0.vhd                              ; yes             ; User Wizard-Generated File         ; C:/Users/patel/Documents/GitHub/CS305-Group23/Stuff/PoojaAttempt/BouncyBallexample/altpll0.vhd         ;         ;
-; altpll.tdf                               ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altpll.tdf                                           ;         ;
-; aglobal130.inc                           ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                                       ;         ;
-; stratix_pll.inc                          ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_pll.inc                                      ;         ;
-; stratixii_pll.inc                        ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratixii_pll.inc                                    ;         ;
-; cycloneii_pll.inc                        ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/cycloneii_pll.inc                                    ;         ;
-; db/altpll0_altpll.v                      ; yes             ; Auto-Generated Megafunction        ; C:/Users/patel/Documents/GitHub/CS305-Group23/Stuff/PoojaAttempt/BouncyBallexample/db/altpll0_altpll.v ;         ;
-+------------------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                            ;
++------------------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path         ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                          ; Library ;
++------------------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------------------------+---------+
+; ../../../MiniProject Resources/mouse.vhd ; yes             ; User VHDL File                     ; //files.auckland.ac.nz/myhome/Documents/GitHub/CS305-Group23/MiniProject Resources/mouse.vhd                          ;         ;
+; ../../MiniProject Resources/boo_pipe.vhd ; yes             ; User VHDL File                     ; //files.auckland.ac.nz/myhome/Documents/GitHub/CS305-Group23/Stuff/MiniProject Resources/boo_pipe.vhd                 ;         ;
+; ../../Phase 1 code/vga_sync.vhd          ; yes             ; User VHDL File                     ; //files.auckland.ac.nz/myhome/Documents/GitHub/CS305-Group23/Stuff/Phase 1 code/vga_sync.vhd                          ;         ;
+; ../../Phase 1 code/bouncy_ball.vhd       ; yes             ; User VHDL File                     ; //files.auckland.ac.nz/myhome/Documents/GitHub/CS305-Group23/Stuff/Phase 1 code/bouncy_ball.vhd                       ;         ;
+; VGAExample.bdf                           ; yes             ; User Block Diagram/Schematic File  ; //files.auckland.ac.nz/myhome/Documents/GitHub/CS305-Group23/Stuff/PoojaAttempt/BouncyBallexample/VGAExample.bdf      ;         ;
+; altpll0.vhd                              ; yes             ; User Wizard-Generated File         ; //files.auckland.ac.nz/myhome/Documents/GitHub/CS305-Group23/Stuff/PoojaAttempt/BouncyBallexample/altpll0.vhd         ;         ;
+; altpll.tdf                               ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/altpll.tdf                                                             ;         ;
+; aglobal130.inc                           ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/aglobal130.inc                                                         ;         ;
+; stratix_pll.inc                          ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/stratix_pll.inc                                                        ;         ;
+; stratixii_pll.inc                        ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/stratixii_pll.inc                                                      ;         ;
+; cycloneii_pll.inc                        ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/cycloneii_pll.inc                                                      ;         ;
+; db/altpll0_altpll.v                      ; yes             ; Auto-Generated Megafunction        ; //files.auckland.ac.nz/myhome/Documents/GitHub/CS305-Group23/Stuff/PoojaAttempt/BouncyBallexample/db/altpll0_altpll.v ;         ;
++------------------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                                                                       ;
-+---------------------------------------------+-------------------------------------------------------------------------------------+
-; Resource                                    ; Usage                                                                               ;
-+---------------------------------------------+-------------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 225                                                                                 ;
-;                                             ;                                                                                     ;
-; Total combinational functions               ; 176                                                                                 ;
-; Logic element usage by number of LUT inputs ;                                                                                     ;
-;     -- 4 input functions                    ; 54                                                                                  ;
-;     -- 3 input functions                    ; 54                                                                                  ;
-;     -- <=2 input functions                  ; 68                                                                                  ;
-;                                             ;                                                                                     ;
-; Logic elements by mode                      ;                                                                                     ;
-;     -- normal mode                          ; 106                                                                                 ;
-;     -- arithmetic mode                      ; 70                                                                                  ;
-;                                             ;                                                                                     ;
-; Total registers                             ; 126                                                                                 ;
-;     -- Dedicated logic registers            ; 126                                                                                 ;
-;     -- I/O registers                        ; 0                                                                                   ;
-;                                             ;                                                                                     ;
-; I/O pins                                    ; 11                                                                                  ;
-; Embedded Multiplier 9-bit elements          ; 0                                                                                   ;
-; Total PLLs                                  ; 1                                                                                   ;
-;     -- PLLs                                 ; 1                                                                                   ;
-;                                             ;                                                                                     ;
-; Maximum fan-out node                        ; altpll0:inst|altpll:altpll_component|altpll0_altpll:auto_generated|wire_pll1_clk[0] ;
-; Maximum fan-out                             ; 77                                                                                  ;
-; Total fan-out                               ; 862                                                                                 ;
-; Average fan-out                             ; 2.64                                                                                ;
-+---------------------------------------------+-------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                ;
++---------------------------------------------+------------------------------+
+; Resource                                    ; Usage                        ;
++---------------------------------------------+------------------------------+
+; Estimated Total logic elements              ; 368                          ;
+;                                             ;                              ;
+; Total combinational functions               ; 303                          ;
+; Logic element usage by number of LUT inputs ;                              ;
+;     -- 4 input functions                    ; 93                           ;
+;     -- 3 input functions                    ; 87                           ;
+;     -- <=2 input functions                  ; 123                          ;
+;                                             ;                              ;
+; Logic elements by mode                      ;                              ;
+;     -- normal mode                          ; 167                          ;
+;     -- arithmetic mode                      ; 136                          ;
+;                                             ;                              ;
+; Total registers                             ; 188                          ;
+;     -- Dedicated logic registers            ; 188                          ;
+;     -- I/O registers                        ; 0                            ;
+;                                             ;                              ;
+; I/O pins                                    ; 31                           ;
+; Embedded Multiplier 9-bit elements          ; 0                            ;
+; Total PLLs                                  ; 1                            ;
+;     -- PLLs                                 ; 1                            ;
+;                                             ;                              ;
+; Maximum fan-out node                        ; MOUSE:inst5|MOUSE_CLK_FILTER ;
+; Maximum fan-out                             ; 95                           ;
+; Total fan-out                               ; 1468                         ;
+; Average fan-out                             ; 2.64                         ;
++---------------------------------------------+------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -219,29 +227,30 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node               ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                            ; Library Name ;
 +------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------+--------------+
-; |VGAExample                              ; 176 (0)           ; 126 (0)      ; 0           ; 0            ; 0       ; 0         ; 11   ; 0            ; |VGAExample                                                                    ; work         ;
-;    |MOUSE:inst6|                         ; 51 (51)           ; 65 (65)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGAExample|MOUSE:inst6                                                        ; work         ;
-;    |VGA_SYNC:inst1|                      ; 65 (65)           ; 48 (48)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGAExample|VGA_SYNC:inst1                                                     ; work         ;
-;    |altpll0:inst|                        ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGAExample|altpll0:inst                                                       ; work         ;
-;       |altpll:altpll_component|          ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGAExample|altpll0:inst|altpll:altpll_component                               ; work         ;
-;          |altpll0_altpll:auto_generated| ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGAExample|altpll0:inst|altpll:altpll_component|altpll0_altpll:auto_generated ; work         ;
-;    |bird:inst4|                          ; 60 (60)           ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGAExample|bird:inst4                                                         ; work         ;
+; |VGAExample                              ; 303 (1)           ; 188 (0)      ; 0           ; 0            ; 0       ; 0         ; 31   ; 0            ; |VGAExample                                                                    ;              ;
+;    |MOUSE:inst5|                         ; 111 (111)         ; 120 (120)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGAExample|MOUSE:inst5                                                        ;              ;
+;    |VGA_SYNC:inst1|                      ; 73 (73)           ; 48 (48)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGAExample|VGA_SYNC:inst1                                                     ;              ;
+;    |altpll0:inst|                        ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGAExample|altpll0:inst                                                       ;              ;
+;       |altpll:altpll_component|          ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGAExample|altpll0:inst|altpll:altpll_component                               ;              ;
+;          |altpll0_altpll:auto_generated| ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGAExample|altpll0:inst|altpll:altpll_component|altpll0_altpll:auto_generated ;              ;
+;    |boo_pipe:inst2|                      ; 63 (63)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGAExample|boo_pipe:inst2                                                     ;              ;
+;    |bouncy_ball:inst4|                   ; 55 (55)           ; 11 (11)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGAExample|bouncy_ball:inst4                                                  ;              ;
 +------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                                                                                                     ;
-+--------+--------------+---------+--------------+--------------+--------------------------+------------------------------------------------------------------------------------------------+
-; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance          ; IP Include File                                                                                ;
-+--------+--------------+---------+--------------+--------------+--------------------------+------------------------------------------------------------------------------------------------+
-; Altera ; ALTPLL       ; 13.0    ; N/A          ; N/A          ; |VGAExample|altpll0:inst ; C:/Users/patel/Documents/GitHub/CS305-Group23/Stuff/PoojaAttempt/BouncyBallexample/altpll0.vhd ;
-+--------+--------------+---------+--------------+--------------+--------------------------+------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                                                    ;
++--------+--------------+---------+--------------+--------------+--------------------------+---------------------------------------------------------------------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance          ; IP Include File                                                                                               ;
++--------+--------------+---------+--------------+--------------+--------------------------+---------------------------------------------------------------------------------------------------------------+
+; Altera ; ALTPLL       ; 13.0    ; N/A          ; N/A          ; |VGAExample|altpll0:inst ; //files.auckland.ac.nz/myhome/Documents/GitHub/CS305-Group23/Stuff/PoojaAttempt/BouncyBallexample/altpll0.vhd ;
++--------+--------------+---------+--------------+--------------+--------------------------+---------------------------------------------------------------------------------------------------------------+
 
 
 Encoding Type:  One-Hot
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |VGAExample|MOUSE:inst6|mouse_state                                                                                                                                                     ;
+; State Machine - |VGAExample|MOUSE:inst5|mouse_state                                                                                                                                                     ;
 +-------------------------------+---------------------------+--------------------------+-------------------------------+---------------------------+--------------------------+---------------------------+
 ; Name                          ; mouse_state.INPUT_PACKETS ; mouse_state.WAIT_CMD_ACK ; mouse_state.WAIT_OUTPUT_READY ; mouse_state.LOAD_COMMAND2 ; mouse_state.LOAD_COMMAND ; mouse_state.INHIBIT_TRANS ;
 +-------------------------------+---------------------------+--------------------------+-------------------------------+---------------------------+--------------------------+---------------------------+
@@ -254,22 +263,27 @@ Encoding Type:  One-Hot
 +-------------------------------+---------------------------+--------------------------+-------------------------------+---------------------------+--------------------------+---------------------------+
 
 
-+----------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                               ;
-+----------------------------------------+-----------------------------------------+
-; Register name                          ; Reason for Removal                      ;
-+----------------------------------------+-----------------------------------------+
-; MOUSE:inst6|CHAROUT[4..7]              ; Stuck at VCC due to stuck port data_in  ;
-; MOUSE:inst6|CHAROUT[3]                 ; Stuck at GND due to stuck port data_in  ;
-; MOUSE:inst6|CHAROUT[2]                 ; Stuck at VCC due to stuck port data_in  ;
-; MOUSE:inst6|CHAROUT[0,1]               ; Stuck at GND due to stuck port data_in  ;
-; MOUSE:inst6|SHIFTOUT[10]               ; Stuck at VCC due to stuck port data_in  ;
-; bird:inst4|ball_y_motion[2,4,5,7..9]   ; Merged with bird:inst4|ball_y_motion[0] ;
-; bird:inst4|ball_y_motion[6]            ; Merged with bird:inst4|ball_y_motion[3] ;
-; bird:inst4|ball_y_motion[3]            ; Stuck at GND due to stuck port data_in  ;
-; VGA_SYNC:inst1|pixel_row[9]            ; Stuck at GND due to stuck port data_in  ;
-; Total Number of Removed Registers = 18 ;                                         ;
-+----------------------------------------+-----------------------------------------+
++-----------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                      ;
++----------------------------------------+------------------------------------------------+
+; Register name                          ; Reason for Removal                             ;
++----------------------------------------+------------------------------------------------+
+; bouncy_ball:inst4|ball_y_motion[0]     ; Stuck at GND due to stuck port data_in         ;
+; MOUSE:inst5|CHAROUT[4..7]              ; Stuck at VCC due to stuck port data_in         ;
+; MOUSE:inst5|CHAROUT[3]                 ; Stuck at GND due to stuck port data_in         ;
+; MOUSE:inst5|CHAROUT[2]                 ; Stuck at VCC due to stuck port data_in         ;
+; MOUSE:inst5|CHAROUT[0,1]               ; Stuck at GND due to stuck port data_in         ;
+; MOUSE:inst5|SHIFTOUT[10]               ; Stuck at VCC due to stuck port data_in         ;
+; boo_pipe:inst2|pipe_x_motion[3..9]     ; Merged with boo_pipe:inst2|pipe_x_motion[2]    ;
+; bouncy_ball:inst4|ball_y_motion[3..9]  ; Merged with bouncy_ball:inst4|ball_y_motion[2] ;
+; bouncy_ball:inst4|ball_y_pos[0]        ; Stuck at GND due to stuck port data_in         ;
+; boo_pipe:inst2|pipe_x_motion[0]        ; Stuck at GND due to stuck port data_in         ;
+; boo_pipe:inst2|pipe_x_motion[1,2]      ; Stuck at VCC due to stuck port data_in         ;
+; boo_pipe:inst2|pipe_x_pos[0]           ; Stuck at GND due to stuck port data_in         ;
+; MOUSE:inst5|cursor_row[9]              ; Stuck at GND due to stuck port data_in         ;
+; VGA_SYNC:inst1|pixel_row[9]            ; Stuck at GND due to stuck port data_in         ;
+; Total Number of Removed Registers = 31 ;                                                ;
++----------------------------------------+------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -277,12 +291,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 126   ;
+; Total registers                              ; 188   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Synchronous Load   ; 20    ;
 ; Number of registers using Asynchronous Clear ; 16    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 68    ;
+; Number of registers using Clock Enable       ; 123   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -292,25 +306,26 @@ Encoding Type:  One-Hot
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; bird:inst4|mclicked                    ; 1       ;
-; MOUSE:inst6|send_char                  ; 3       ;
-; MOUSE:inst6|SHIFTOUT[3]                ; 1       ;
-; MOUSE:inst6|SHIFTOUT[5]                ; 1       ;
-; MOUSE:inst6|SHIFTOUT[6]                ; 1       ;
-; MOUSE:inst6|SHIFTOUT[7]                ; 1       ;
-; MOUSE:inst6|SHIFTOUT[8]                ; 1       ;
-; Total number of inverted registers = 7 ;         ;
+; MOUSE:inst5|send_char                  ; 3       ;
+; MOUSE:inst5|SHIFTOUT[3]                ; 1       ;
+; MOUSE:inst5|SHIFTOUT[5]                ; 1       ;
+; MOUSE:inst5|SHIFTOUT[6]                ; 1       ;
+; MOUSE:inst5|SHIFTOUT[7]                ; 1       ;
+; MOUSE:inst5|SHIFTOUT[8]                ; 1       ;
+; Total number of inverted registers = 6 ;         ;
 +----------------------------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                        ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |VGAExample|VGA_SYNC:inst1|v_count[0]   ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |VGAExample|bird:inst4|ball_y_motion[0] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
+; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |VGAExample|MOUSE:inst5|new_cursor_column[5] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |VGAExample|VGA_SYNC:inst1|v_count[8]        ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; Yes        ; |VGAExample|MOUSE:inst5|cursor_column[9]     ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; Yes        ; |VGAExample|MOUSE:inst5|cursor_row[0]        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------+
@@ -709,7 +724,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -718,26 +733,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
-    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue May 18 13:58:54 2021
+    Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
+    Info: Processing started: Tue May 18 15:57:55 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off VGAExample -c VGAExample
-Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 2 design units, including 1 entities, in source file /users/patel/documents/github/cs305-group23/miniproject resources/mouse.vhd
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file //files.auckland.ac.nz/myhome/documents/github/cs305-group23/miniproject resources/mouse.vhd
     Info (12022): Found design unit 1: MOUSE-behavior
     Info (12023): Found entity 1: MOUSE
-Info (12021): Found 2 design units, including 1 entities, in source file /users/patel/documents/github/cs305-group23/dhvaniattempt/bird.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file //files.auckland.ac.nz/myhome/documents/github/cs305-group23/dhvaniattempt/bird.vhd
     Info (12022): Found design unit 1: bird-behavior
     Info (12023): Found entity 1: bird
-Info (12021): Found 2 design units, including 1 entities, in source file /users/patel/documents/github/cs305-group23/stuff/miniproject resources/pipes.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file //files.auckland.ac.nz/myhome/documents/github/cs305-group23/stuff/miniproject resources/pipes.vhd
     Info (12022): Found design unit 1: pipes-behavior
     Info (12023): Found entity 1: pipes
-Info (12021): Found 2 design units, including 1 entities, in source file /users/patel/documents/github/cs305-group23/stuff/miniproject resources/boo_pipe.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file //files.auckland.ac.nz/myhome/documents/github/cs305-group23/stuff/miniproject resources/boo_pipe.vhd
     Info (12022): Found design unit 1: boo_pipe-behavior
     Info (12023): Found entity 1: boo_pipe
-Info (12021): Found 2 design units, including 1 entities, in source file /users/patel/documents/github/cs305-group23/stuff/phase 1 code/vga_sync.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file //files.auckland.ac.nz/myhome/documents/github/cs305-group23/stuff/phase 1 code/vga_sync.vhd
     Info (12022): Found design unit 1: VGA_SYNC-a
     Info (12023): Found entity 1: VGA_SYNC
-Info (12021): Found 2 design units, including 1 entities, in source file /users/patel/documents/github/cs305-group23/stuff/phase 1 code/bouncy_ball.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file //files.auckland.ac.nz/myhome/documents/github/cs305-group23/stuff/phase 1 code/bouncy_ball.vhd
     Info (12022): Found design unit 1: bouncy_ball-behavior
     Info (12023): Found entity 1: bouncy_ball
 Info (12021): Found 1 design units, including 1 entities, in source file vgaexample.bdf
@@ -809,8 +824,10 @@ Info (12133): Instantiated megafunction "altpll0:inst|altpll:altpll_component" w
 Info (12021): Found 1 design units, including 1 entities, in source file db/altpll0_altpll.v
     Info (12023): Found entity 1: altpll0_altpll
 Info (12128): Elaborating entity "altpll0_altpll" for hierarchy "altpll0:inst|altpll:altpll_component|altpll0_altpll:auto_generated"
-Info (12128): Elaborating entity "bird" for hierarchy "bird:inst4"
-Info (12128): Elaborating entity "MOUSE" for hierarchy "MOUSE:inst6"
+Info (12128): Elaborating entity "boo_pipe" for hierarchy "boo_pipe:inst2"
+Warning (10036): Verilog HDL or VHDL warning at boo_pipe.vhd(16): object "pipe_on" assigned a value but never read
+Info (12128): Elaborating entity "bouncy_ball" for hierarchy "bouncy_ball:inst4"
+Info (12128): Elaborating entity "MOUSE" for hierarchy "MOUSE:inst5"
 Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(25): object "CHARIN" assigned a value but never read
 Warning (10492): VHDL Process Statement warning at mouse.vhd(151): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at mouse.vhd(155): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
@@ -818,21 +835,24 @@ Warning (10492): VHDL Process Statement warning at mouse.vhd(156): signal "CHARO
 Warning (10492): VHDL Process Statement warning at mouse.vhd(157): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "mouse_cursor_row[9]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "pb1"
     Warning (15610): No output dependent on input pin "pb2"
-Info (21057): Implemented 242 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 405 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 6 output pins
+    Info (21059): Implemented 26 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 230 logic cells
+    Info (21061): Implemented 373 logic cells
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 4632 megabytes
-    Info: Processing ended: Tue May 18 13:59:01 2021
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:07
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 4666 megabytes
+    Info: Processing ended: Tue May 18 15:58:00 2021
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:02
 
 

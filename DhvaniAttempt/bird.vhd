@@ -33,7 +33,7 @@ ball_on <= '1' when ( ('0' & ball_x_pos <= '0' & pixel_column + size) and ('0' &
 
 -- Colours for pixel data on video signal
 -- Changing the background and ball colour by pushbuttons
-Red <=  pb1;
+Red <=  ball_on;
 Green <= (not left_button) and (not ball_on);
 Blue <=  not ball_on;
 

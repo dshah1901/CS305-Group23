@@ -1,16 +1,16 @@
-Fitter Status : Failed - Tue May 18 13:59:06 2021
-Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Fitter Status : Successful - Tue May 18 15:58:07 2021
+Quartus II 64-Bit Version : 13.0.0 Build 156 04/24/2013 SJ Full Version
 Revision Name : VGAExample
 Top-level Entity Name : VGAExample
 Family : Cyclone III
-Device : EP3C5F256C6
+Device : EP3C16F484C6
 Timing Models : Final
-Total logic elements : 225 / 5,136 ( 4 % )
-    Total combinational functions : 176 / 5,136 ( 3 % )
-    Dedicated logic registers : 126 / 5,136 ( 2 % )
-Total registers : 126
-Total pins : 11 / 183 ( 6 % )
+Total logic elements : 346 / 15,408 ( 2 % )
+    Total combinational functions : 304 / 15,408 ( 2 % )
+    Dedicated logic registers : 188 / 15,408 ( 1 % )
+Total registers : 188
+Total pins : 31 / 347 ( 9 % )
 Total virtual pins : 0
-Total memory bits : 0 / 423,936 ( 0 % )
-Embedded Multiplier 9-bit elements : 0 / 46 ( 0 % )
-Total PLLs : 1 / 2 ( 50 % )
+Total memory bits : 0 / 516,096 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 112 ( 0 % )
+Total PLLs : 1 / 4 ( 25 % )
