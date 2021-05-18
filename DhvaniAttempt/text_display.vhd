@@ -4,7 +4,7 @@ use ieee.std_logic_arith.all;
 use IEEE.STD_LOGIC_UNSIGNED.all;
 use ieee.numeric_std.all;
 
-entity text_controller is 
+entity text_display is 
 	port(
 		enable: in std_logic;
 		clk_25Mhz : in std_logic;
@@ -15,9 +15,9 @@ entity text_controller is
 		level : in std_logic_vector(1 downto 0);
 		pointOnes, pointsTens : in std_logic_vector(3 downto 0)
 	);
-end entity text_controller;
+end entity text_display;
 
-architecture behaviour of text_controller is
+architecture behaviour of text_display is
 	
 	component char_rom
 		port
@@ -52,4 +52,4 @@ architecture behaviour of text_controller is
 		font_col_sel<=pixel_column (3 downto 1);
 		char_data_out<= '0' when ((pixel_row)<= std_logic_vector(to_unsigned(0,10)) OR ((pixel_row)<= std_logic_vector(to_unsigned(448,10))) OR(pixel_column)>= std_logic_vector(to_unsigned(450,10)))
 			else char_data_int;
-end architecture;
+end architecture text_display;
