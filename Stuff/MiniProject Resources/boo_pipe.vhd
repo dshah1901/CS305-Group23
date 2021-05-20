@@ -16,34 +16,33 @@ architecture behavior of boo_pipe is
 SIGNAL pipe_on,pipe_top,pipe_bottom					: std_logic;
 SIGNAL wedge 					: std_logic_vector(9 DOWNTO 0);  
 SIGNAL t_pipe_y_pos,b_pipe_y_pos				: std_logic_vector(9 DOWNTO 0);
-SIGNAL height					: std_logic_vector(9 DOWNTO 0);
+SIGNAL height, b_height					: std_logic_vector(9 DOWNTO 0);
 SiGNAL pipe_x_pos				: std_logic_vector(9 DOWNTO 0);
 SIGNAL pipe_x_motion			: std_logic_vector(9 DOWNTO 0);
 
 BEGIN           
 
-wedge <= CONV_STD_LOGIC_VECTOR(30,10);
+wedge <= CONV_STD_LOGIC_VECTOR(25,10);
 height <= CONV_STD_LOGIC_VECTOR(100,10);
+b_height <= CONV_STD_LOGIC_VECTOR(200,10);
 
 -- pipe_x_pos and pipe_y_pos show the (x,y) for the centre of pipe
 t_pipe_y_pos <= CONV_STD_LOGIC_VECTOR(100,10);
 --b_pipe_y_pos <= CONV_STD_LOGIC_VECTOR(380,10);
-b_pipe_y_pos <= CONV_STD_LOGIC_VECTOR(379,10);
+b_pipe_y_pos <= CONV_STD_LOGIC_VECTOR(279,10);
 
 pipe_top <= '1' when ( ('0' & pipe_x_pos <= '0' & pixel_column + wedge) and ('0' & pixel_column <= '0' & pipe_x_pos + wedge) 	-- x_pos - size <= pixel_column <= x_pos + size
 					and ('0' & t_pipe_y_pos <= pixel_row + height) and ('0' & pixel_row <= t_pipe_y_pos + height) )  else	-- y_pos - size <= pixel_row <= y_pos + size
 			'0';
 
-pipe_bottom <= '1' when ( ('0' & pipe_x_pos <= '0' & pixel_column + wedge) and ('0' & pixel_column <= '0' & pipe_x_pos + wedge) 	-- x_pos - size <= pixel_column <= x_pos + size
-				and ('0' & b_pipe_y_pos <= pixel_row + height) and ('0' & pixel_row <= b_pipe_y_pos + height) )  else	-- y_pos - size <= pixel_row <= y_pos + size
-		'0';
+--pipe_bottom <= '1' when ( ('0' & pipe_x_pos <= '0' & pixel_column + wedge) and ('0' & pixel_column <= '0' & pipe_x_pos + wedge) 	-- x_pos - size <= pixel_column <= x_pos + size
+--				and ('0' & b_pipe_y_pos <= pixel_row + height) and ('0' & pixel_row <= b_pipe_y_pos + height) )  else	-- y_pos - size <= pixel_row <= y_pos + size
+--		'0';
 
 --Trying something here			
---pipe_bottom <= '1' when ( ('0' & pipe_x_pos <= '0' & pixel_column + wedge) and ('0' & pixel_column <= '0' & pipe_x_pos + wedge) 	-- x_pos - size <= pixel_column <= x_pos + size
-				--and ('0' & b_pipe_y_pos <= pixel_row + height) and ('0' & pixel_row <= b_pipe_y_pos + height) )	-- y_pos - size <= pixel_row <= y_pos + size
-		--'0';		
-			
-			
+pipe_bottom  <= '1' when ( ('0' & pipe_x_pos <= pixel_column + wedge) and ('0' & pixel_column <= pipe_x_pos + wedge) 	-- x_pos - size <= pixel_column <= x_pos + size
+					and ('0' & b_pipe_y_pos <= pixel_row + b_height) and ( '0' & pixel_row <= b_pipe_y_pos + b_height) )  else	-- y_pos - size <= pixel_row <= y_pos + size
+			'0';					
 			
 pipe_on <= pipe_top or pipe_bottom;
 
