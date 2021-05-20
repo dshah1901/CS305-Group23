@@ -28,20 +28,20 @@ height <= CONV_STD_LOGIC_VECTOR(100,10);
 -- pipe_x_pos and pipe_y_pos show the (x,y) for the centre of pipe
 t_pipe_y_pos <= CONV_STD_LOGIC_VECTOR(100,10);
 --b_pipe_y_pos <= CONV_STD_LOGIC_VECTOR(380,10);
-b_pipe_y_pos <= CONV_STD_LOGIC_VECTOR(479,10);
+b_pipe_y_pos <= CONV_STD_LOGIC_VECTOR(379,10);
 
 pipe_top <= '1' when ( ('0' & pipe_x_pos <= '0' & pixel_column + wedge) and ('0' & pixel_column <= '0' & pipe_x_pos + wedge) 	-- x_pos - size <= pixel_column <= x_pos + size
 					and ('0' & t_pipe_y_pos <= pixel_row + height) and ('0' & pixel_row <= t_pipe_y_pos + height) )  else	-- y_pos - size <= pixel_row <= y_pos + size
 			'0';
 
---pipe_bottom <= '1' when ( ('0' & pipe_x_pos <= '0' & pixel_column + wedge) and ('0' & pixel_column <= '0' & pipe_x_pos + wedge) 	-- x_pos - size <= pixel_column <= x_pos + size
---					and ('0' & b_pipe_y_pos <= pixel_row + height) and ('0' & pixel_row <= b_pipe_y_pos + height) )  else	-- y_pos - size <= pixel_row <= y_pos + size
---			'0';
+pipe_bottom <= '1' when ( ('0' & pipe_x_pos <= '0' & pixel_column + wedge) and ('0' & pixel_column <= '0' & pipe_x_pos + wedge) 	-- x_pos - size <= pixel_column <= x_pos + size
+				and ('0' & b_pipe_y_pos <= pixel_row + height) and ('0' & pixel_row <= b_pipe_y_pos + height) )  else	-- y_pos - size <= pixel_row <= y_pos + size
+		'0';
 
 --Trying something here			
-pipe_bottom <= '1' when ( ('0' & pipe_x_pos <= '0' & pixel_column + wedge) and ('0' & pixel_column <= '0' & pipe_x_pos + wedge) 	-- x_pos - size <= pixel_column <= x_pos + size
-				and ('0' & b_pipe_y_pos <= pixel_row + height) )  else	-- y_pos - size <= pixel_row <= y_pos + size
-		'0';		
+--pipe_bottom <= '1' when ( ('0' & pipe_x_pos <= '0' & pixel_column + wedge) and ('0' & pixel_column <= '0' & pipe_x_pos + wedge) 	-- x_pos - size <= pixel_column <= x_pos + size
+				--and ('0' & b_pipe_y_pos <= pixel_row + height) and ('0' & pixel_row <= b_pipe_y_pos + height) )	-- y_pos - size <= pixel_row <= y_pos + size
+		--'0';		
 			
 			
 			
