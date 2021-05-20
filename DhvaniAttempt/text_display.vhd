@@ -45,6 +45,7 @@ architecture behaviour of text_display is
     ;
 		font_row_sel<=pixel_row(3 downto 1);
 		font_col_sel<=pixel_column (3 downto 1);
-		char_data_out<= '0' when ((pixel_row)<= std_logic_vector(to_unsigned(0,10)) OR ((pixel_row)<= std_logic_vector(to_unsigned(448,10))) OR(pixel_column)>= std_logic_vector(to_unsigned(450,10)))
-			else char_data_int;
+		char_data_out <= char_data_int;
+		--'0' when ((pixel_row)<= std_logic_vector(to_unsigned(0,10)) OR ((pixel_row)<= std_logic_vector(to_unsigned(448,10))) OR(pixel_column)>= std_logic_vector(to_unsigned(450,10)))
+			--else char_data_int;
 end architecture;
