@@ -11,7 +11,7 @@ ENTITY char_rom IS
 	(
 		character_address	:	IN STD_LOGIC_VECTOR (5 DOWNTO 0);
 		font_row, font_col	:	IN STD_LOGIC_VECTOR (2 DOWNTO 0);
-		clock,sw1				: 	IN STD_LOGIC ;
+		clock				: 	IN STD_LOGIC ;
 		rom_mux_output		:	OUT STD_LOGIC
 	);
 END char_rom;
@@ -53,7 +53,7 @@ BEGIN
 		address_aclr_a => "NONE",
 		clock_enable_input_a => "BYPASS",
 		clock_enable_output_a => "BYPASS",
-		init_file => "tcgrom1.mif",
+		init_file => "tcgrom.mif",
 		intended_device_family => "Cyclone III",
 		lpm_hint => "ENABLE_RUNTIME_MOD=NO",
 		lpm_type => "altsyncram",
@@ -72,6 +72,6 @@ BEGIN
 	);
 
 	rom_address <= character_address & font_row;
-	rom_mux_output <= rom_data (CONV_INTEGER(NOT font_col(2 DOWNTO 0))) when sw1= '1' else '0';
+	rom_mux_output <= rom_data (CONV_INTEGER(NOT font_col(2 DOWNTO 0)));
 
 END SYN;
