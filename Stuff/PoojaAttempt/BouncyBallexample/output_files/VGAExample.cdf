@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP3C16F484) Path("//files.auckland.ac.nz/myhome/Documents/GitHub/CS305-Group23/PoojaAttempt/BouncyBallexample/output_files/") File("VGAExample.sof") MfrSpec(OpMask(1));
+		Device PartName(EP3C16F484) Path("/Documents/GitHub/CS305-Group23/Stuff/PoojaAttempt/BouncyBallexample/output_files/") File("VGAExample.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

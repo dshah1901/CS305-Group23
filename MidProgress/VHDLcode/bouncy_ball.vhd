@@ -23,7 +23,7 @@ BEGIN
 
 size <= CONV_STD_LOGIC_VECTOR(8,10);
 -- ball_x_pos and ball_y_pos show the (x,y) for the centre of ball
-ball_x_pos <= CONV_STD_LOGIC_VECTOR(590,11);
+ball_x_pos <= CONV_STD_LOGIC_VECTOR(250,11);
 
 ball_on <= '1' when ( ('0' & ball_x_pos <= '0' & pixel_column + size) and ('0' & pixel_column <= '0' & ball_x_pos + size) 	-- x_pos - size <= pixel_column <= x_pos + size
 					and ('0' & ball_y_pos <= pixel_row + size) and ('0' & pixel_row <= ball_y_pos + size) )  else	-- y_pos - size <= pixel_row <= y_pos + size
@@ -44,7 +44,7 @@ begin
 		-- Bounce off top or bottom of the screen
 		
 		if (pb1 = '1') then
-			if (  or left_button = '1') then
+			if (left_button = '1') then
 				ball_y_motion <= - CONV_STD_LOGIC_VECTOR(2,10);
 			elsif ((ball_y_pos <= size)or pb2 = '1') then 
 				ball_y_motion <= CONV_STD_LOGIC_VECTOR(2,10);
