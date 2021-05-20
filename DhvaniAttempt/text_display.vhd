@@ -35,16 +35,48 @@ architecture behaviour of text_display is
 			clock=>clk_25Mhz,
 			rom_mux_output=>char_data_int
 		);
-
-		character_address <="010100" when ((pixel_column <= std_logic_vector(to_unsigned(16,10))) AND(pixel_row >= std_logic_vector(to_unsigned(400,10)))AND(pixel_row <= std_logic_vector(to_unsigned(462,10))))--T
-			else "010010" when ((pixel_column <= std_logic_vector(to_unsigned(32,10)))AND(pixel_row >= std_logic_vector(to_unsigned(400,10)))AND(pixel_row <= std_logic_vector(to_unsigned(462,10))))--R
-			else "000001" when ((pixel_column <= std_logic_vector(to_unsigned(48,10)))AND(pixel_row >= std_logic_vector(to_unsigned(400,10)))AND(pixel_row <= std_logic_vector(to_unsigned(462,10))))--A
-			else "001001" when ((pixel_column <= std_logic_vector(to_unsigned(64,10)))AND(pixel_row >= std_logic_vector(to_unsigned(400,10)))AND(pixel_row <= std_logic_vector(to_unsigned(462,10))))--I
-			else "000101" when ((pixel_column <= std_logic_vector(to_unsigned(80,10)))AND(pixel_row >= std_logic_vector(to_unsigned(400,10)))AND(pixel_row <= std_logic_vector(to_unsigned(462,10))))--N
-			else "001110" when ((pixel_column <= std_logic_vector(to_unsigned(96,10)))AND(pixel_row >= std_logic_vector(to_unsigned(400,10)))AND(pixel_row <= std_logic_vector(to_unsigned(462,10))))--space
-    ;
-		font_row_sel<=pixel_row(3 downto 1);
-		font_col_sel<=pixel_column (3 downto 1);
-		char_data_out<= '0' when ((pixel_row)<= std_logic_vector(to_unsigned(0,10)) OR ((pixel_row)<= std_logic_vector(to_unsigned(448,10))) OR(pixel_column)>= std_logic_vector(to_unsigned(450,10)))
-			else char_data_int;
+	process(clk, pixel_row, pixel_column)
+        begin
+         if rising_edge(clk) then
+					if ((128 <= pixel_row) and (pixel_row < 192) and (128 <= pixel_column) and (pixel_column < 512)) then -- FLOPPY
+						font_col <= pixel_column(5 downto 3);
+						font_row <= pixel_row(5 downto 3);
+						if ((128 <= pixel_row) and (pixel_row < 192) and (128 <= pixel_column) and (pixel_column < 192)) then 
+							character_address <= conv_std_logic_vector(6,6); -- F
+							red <= rom_mux;
+							green <= '0';
+							blue <= '0';
+						elsif ((128 <= pixel_row) and (pixel_row < 192) and (192 <= pixel_column) and (pixel_column < 256)) then 
+							character_address <= conv_std_logic_vector(12,6); -- L
+							red <= rom_mux;
+							green <= rom_mux;
+							blue <= '0';
+						elsif ((128 <= pixel_row) and (pixel_row < 192) and (256 <= pixel_column) and (pixel_column < 320)) then 
+							character_address <= conv_std_logic_vector(1,6); -- A
+							red <= '0';
+							green <= rom_mux;
+							blue <= '0';
+						elsif ((128 <= pixel_row) and (pixel_row < 192) and (320 <= pixel_column) and (pixel_column < 384)) then 
+							character_address <= conv_std_logic_vector(16,6); -- P
+							red <= '0';
+							green <= rom_mux;
+							blue <= rom_mux;
+						elsif ((128 <= pixel_row) and (pixel_row < 192) and (384 <= pixel_column) and (pixel_column < 448)) then 
+							character_address <= conv_std_logic_vector(16,6); -- P
+							red <= '0';
+							green <= '0';
+							blue <= rom_mux;
+						elsif ((128 <= pixel_row) and (pixel_row < 192) and (448 <= pixel_column) and (pixel_column < 512)) then 
+							character_address <= conv_std_logic_vector(25,6); -- Y
+							red <= rom_mux;
+							green <= '0';
+							blue <= rom_mux;
+						else
+							red <= '0';
+							green <= '0';
+							blue <= '0';
+						end if;
+                end if;
+            end if;
+        end process;
 end architecture;
