@@ -34,7 +34,7 @@ applicable agreement for further details.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 824 280 880 296))
+	(annotation_block (location)(rect 848 240 904 256))
 )
 (pin
 	(input)
@@ -51,13 +51,13 @@ applicable agreement for further details.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 832 296 880 312))
+	(annotation_block (location)(rect 872 296 920 312))
 )
 (pin
 	(input)
 	(rect -48 72 120 88)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "clk" (rect 5 0 20 12)(font "Arial" ))
+	(text "clk" (rect 5 0 19 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -485,56 +485,6 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 632 256 848 400)
-	(text "bird" (rect 5 0 22 12)(font "Arial" ))
-	(text "inst7" (rect 8 128 31 140)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "left_button" (rect 0 0 53 12)(font "Arial" ))
-		(text "left_button" (rect 21 27 74 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "clk" (rect 0 0 14 12)(font "Arial" ))
-		(text "clk" (rect 21 43 35 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "vert_sync" (rect 0 0 50 12)(font "Arial" ))
-		(text "vert_sync" (rect 21 59 71 71)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "pixel_row[9..0]" (rect 0 0 70 12)(font "Arial" ))
-		(text "pixel_row[9..0]" (rect 21 75 91 87)(font "Arial" ))
-		(line (pt 0 80)(pt 16 80)(line_width 3))
-	)
-	(port
-		(pt 0 96)
-		(input)
-		(text "pixel_column[9..0]" (rect 0 0 89 12)(font "Arial" ))
-		(text "pixel_column[9..0]" (rect 21 91 110 103)(font "Arial" ))
-		(line (pt 0 96)(pt 16 96)(line_width 3))
-	)
-	(port
-		(pt 216 32)
-		(output)
-		(text "o_bird_on" (rect 0 0 47 12)(font "Arial" ))
-		(text "o_bird_on" (rect 156 27 203 39)(font "Arial" ))
-		(line (pt 216 32)(pt 200 32))
-	)
-	(drawing
-		(rectangle (rect 16 16 200 128))
-	)
-)
-(symbol
 	(rect 1048 240 1240 416)
 	(text "pipes" (rect 5 0 30 12)(font "Arial" ))
 	(text "inst8" (rect 8 160 31 172)(font "Arial" ))
@@ -612,6 +562,56 @@ applicable agreement for further details.
 		(rectangle (rect 16 16 176 160))
 	)
 )
+(symbol
+	(rect 632 256 840 400)
+	(text "bouncy_ball" (rect 5 0 64 12)(font "Arial" ))
+	(text "inst1" (rect 8 128 31 140)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "left_button" (rect 0 0 53 12)(font "Arial" ))
+		(text "left_button" (rect 21 27 74 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "clk" (rect 0 0 14 12)(font "Arial" ))
+		(text "clk" (rect 21 43 35 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "vert_sync" (rect 0 0 50 12)(font "Arial" ))
+		(text "vert_sync" (rect 21 59 71 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "pixel_row[9..0]" (rect 0 0 70 12)(font "Arial" ))
+		(text "pixel_row[9..0]" (rect 21 75 91 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "pixel_column[9..0]" (rect 0 0 89 12)(font "Arial" ))
+		(text "pixel_column[9..0]" (rect 21 91 110 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 3))
+	)
+	(port
+		(pt 208 32)
+		(output)
+		(text "o_ball_on" (rect 0 0 46 12)(font "Arial" ))
+		(text "o_ball_on" (rect 149 27 195 39)(font "Arial" ))
+		(line (pt 208 32)(pt 192 32))
+	)
+	(drawing
+		(rectangle (rect 16 16 192 128))
+	)
+)
 (connector
 	(pt 120 96)
 	(pt 96 96)
@@ -672,26 +672,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 616 352)
-	(pt 616 584)
-	(bus)
-)
-(connector
-	(pt 616 352)
-	(pt 632 352)
-	(bus)
-)
-(connector
-	(pt 632 336)
-	(pt 600 336)
-	(bus)
-)
-(connector
-	(pt 600 336)
-	(pt 600 608)
-	(bus)
-)
-(connector
 	(pt 1520 608)
 	(pt 1520 128)
 	(bus)
@@ -704,21 +684,6 @@ applicable agreement for further details.
 (connector
 	(pt 1048 368)
 	(pt 1040 368)
-	(bus)
-)
-(connector
-	(pt 1040 368)
-	(pt 1040 608)
-	(bus)
-)
-(connector
-	(pt 1520 608)
-	(pt 1040 608)
-	(bus)
-)
-(connector
-	(pt 1040 608)
-	(pt 600 608)
 	(bus)
 )
 (connector
@@ -740,10 +705,6 @@ applicable agreement for further details.
 	(pt 1016 584)
 	(pt 1560 584)
 	(bus)
-)
-(connector
-	(pt 848 288)
-	(pt 872 288)
 )
 (connector
 	(pt 872 336)
@@ -829,7 +790,46 @@ applicable agreement for further details.
 	(pt 968 632)
 	(pt 584 632)
 )
-(junction (pt 1040 608))
+(connector
+	(pt 840 288)
+	(pt 872 288)
+)
+(connector
+	(pt 1040 368)
+	(pt 1040 608)
+	(bus)
+)
+(connector
+	(pt 600 608)
+	(pt 1040 608)
+	(bus)
+)
+(connector
+	(pt 1040 608)
+	(pt 1520 608)
+	(bus)
+)
+(connector
+	(pt 600 352)
+	(pt 600 608)
+	(bus)
+)
+(connector
+	(pt 600 352)
+	(pt 632 352)
+	(bus)
+)
+(connector
+	(pt 616 336)
+	(pt 616 584)
+	(bus)
+)
+(connector
+	(pt 616 336)
+	(pt 632 336)
+	(bus)
+)
 (junction (pt 1016 584))
 (junction (pt 1624 128))
 (junction (pt 968 632))
+(junction (pt 1040 608))
