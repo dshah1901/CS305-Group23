@@ -6,7 +6,7 @@ USE  IEEE.STD_LOGIC_SIGNED.all;
 
 ENTITY VGA_control IS
 	PORT
-		(enable,reset, clk, ball_on									: IN std_logic;
+		(enable,reset, clk, ball_on, text_on						: IN std_logic;
 			pipe1,pipe2,pipe3,pipe4,pipe5 							: IN std_logic;
 			coin_on, heart_on 											: in std_logic;
 			pix_row, pix_col												: in std_logic_vector (9 downto 0);
