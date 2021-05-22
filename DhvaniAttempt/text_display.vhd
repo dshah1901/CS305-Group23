@@ -42,26 +42,26 @@ architecture behaviour of text_display is
 			if ((128 <= pixel_row) and (pixel_row < 192) and (128 <= pixel_column) and (pixel_column < 512)) then -- FLAPPY
 						font_col <= pixel_column(5 downto 3); -- To change the font size
 						font_row <= pixel_row(5 downto 3);
-						if ((128 <= pixel_row) and (pixel_row < 192) and (156 <= pixel_column) and (pixel_column < 220)) then 
+						if ((128 <= pixel_row) and (pixel_row < 192) and (192 <= pixel_column) and (pixel_column < 256)) then 
 							character_address <= conv_std_logic_vector(20,6); -- T
 							charOn <= '1';
-						elsif ((128 <= pixel_row) and (pixel_row < 220) and (284 <= pixel_column) and (pixel_column < 320)) then 
+						elsif ((128 <= pixel_row) and (pixel_row < 192) and (256 <= pixel_column) and (pixel_column < 320)) then 
 							character_address <= conv_std_logic_vector(18,6); -- R
 							charOn <= '1';
-						elsif ((128 <= pixel_row) and (pixel_row < 284) and (348 <= pixel_column) and (pixel_column < 384)) then 
+						elsif ((128 <= pixel_row) and (pixel_row < 192) and (320 <= pixel_column) and (pixel_column < 384)) then 
 							character_address <= conv_std_logic_vector(1,6); -- A
 							charOn <= '1';
-						elsif ((128 <= pixel_row) and (pixel_row < 192) and (348 <= pixel_column) and (pixel_column < 412)) then 
+						elsif ((128 <= pixel_row) and (pixel_row < 192) and (384 <= pixel_column) and (pixel_column < 448)) then 
 							character_address <= conv_std_logic_vector(9,6); -- I
 							charOn <= '1';
-						elsif ((128 <= pixel_row) and (pixel_row < 192) and (412 <= pixel_column) and (pixel_column < 476)) then 
+						elsif ((128 <= pixel_row) and (pixel_row < 192) and (448 <= pixel_column) and (pixel_column < )) then 
 							character_address <= conv_std_logic_vector(14,6); -- N
 							charOn <= '1';
 						else
 							charOn <= '0';
 						end if;
 			end if;
-			if ((256 <= pixel_row) and (pixel_row < 256) and (320 <= pixel_column) and (pixel_column < 512)) then -- FLAPPY
+			if ((192 <= pixel_row) and (pixel_row < 256) and (128 <= pixel_column) and (pixel_column < 512)) then -- FLAPPY
 					font_col <= pixel_column(5 downto 3); -- To change the font size
 					font_row <= pixel_row(5 downto 3);
 					if ((128 <= pixel_row) and (pixel_row < 192) and (192 <= pixel_column) and (pixel_column < 256)) then 
