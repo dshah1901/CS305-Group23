@@ -201,23 +201,6 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 488 304 520 336)
-	(text "GND" (rect 8 16 29 26)(font "Arial" (font_size 6)))
-	(text "inst4" (rect 3 21 26 33)(font "Arial" )(invisible))
-	(port
-		(pt 16 0)
-		(output)
-		(text "1" (rect 18 0 23 12)(font "Courier New" (bold))(invisible))
-		(text "1" (rect 18 0 23 12)(font "Courier New" (bold))(invisible))
-		(line (pt 16 8)(pt 16 0))
-	)
-	(drawing
-		(line (pt 8 8)(pt 16 16))
-		(line (pt 16 16)(pt 24 8))
-		(line (pt 8 8)(pt 24 8))
-	)
-)
-(symbol
 	(rect 528 176 752 352)
 	(text "VGA_SYNC" (rect 5 0 65 12)(font "Arial" ))
 	(text "inst5" (rect 8 160 31 172)(font "Arial" ))
@@ -303,9 +286,9 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 136 224 368 336)
+	(rect 136 224 328 336)
 	(text "text_display" (rect 5 0 65 12)(font "Arial" ))
-	(text "inst2" (rect 8 96 31 108)(font "Arial" ))
+	(text "inst1" (rect 8 96 31 108)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -328,14 +311,28 @@ applicable agreement for further details.
 		(line (pt 0 64)(pt 16 64)(line_width 3))
 	)
 	(port
-		(pt 232 32)
+		(pt 192 32)
 		(output)
-		(text "char_data_out" (rect 0 0 69 12)(font "Arial" ))
-		(text "char_data_out" (rect 153 27 222 39)(font "Arial" ))
-		(line (pt 232 32)(pt 216 32))
+		(text "red" (rect 0 0 15 12)(font "Arial" ))
+		(text "red" (rect 159 27 174 39)(font "Arial" ))
+		(line (pt 192 32)(pt 176 32))
+	)
+	(port
+		(pt 192 48)
+		(output)
+		(text "green" (rect 0 0 27 12)(font "Arial" ))
+		(text "green" (rect 149 43 176 55)(font "Arial" ))
+		(line (pt 192 48)(pt 176 48))
+	)
+	(port
+		(pt 192 64)
+		(output)
+		(text "blue" (rect 0 0 20 12)(font "Arial" ))
+		(text "blue" (rect 155 59 175 71)(font "Arial" ))
+		(line (pt 192 64)(pt 176 64))
 	)
 	(drawing
-		(rectangle (rect 16 16 216 96))
+		(rectangle (rect 16 16 176 96))
 	)
 )
 (connector
@@ -364,32 +361,12 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 464 224)
-	(pt 528 224)
-)
-(connector
 	(pt 464 240)
 	(pt 528 240)
 )
 (connector
-	(pt 464 224)
-	(pt 464 240)
-)
-(connector
-	(pt 464 240)
-	(pt 464 256)
-)
-(connector
 	(pt 504 256)
 	(pt 528 256)
-)
-(connector
-	(pt 504 256)
-	(pt 504 304)
-)
-(connector
-	(pt 368 256)
-	(pt 464 256)
 )
 (connector
 	(pt 800 288)
@@ -454,5 +431,32 @@ applicable agreement for further details.
 	(pt 776 400)
 	(bus)
 )
+(connector
+	(pt 328 256)
+	(pt 440 256)
+)
+(connector
+	(pt 440 256)
+	(pt 440 224)
+)
+(connector
+	(pt 440 224)
+	(pt 528 224)
+)
+(connector
+	(pt 328 272)
+	(pt 464 272)
+)
+(connector
+	(pt 464 240)
+	(pt 464 272)
+)
+(connector
+	(pt 328 288)
+	(pt 504 288)
+)
+(connector
+	(pt 504 256)
+	(pt 504 288)
+)
 (junction (pt 384 208))
-(junction (pt 464 240))

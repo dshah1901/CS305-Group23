@@ -8,7 +8,7 @@ entity text_display is
 	port(
 		clk_25Mhz : in std_logic;
 		pixel_row, pixel_column : in std_logic_vector (9 downto 0);
-		cred, green, blue: out std_logic
+		red, green, blue: out std_logic
 	);
 end entity text_display;
 
@@ -34,14 +34,14 @@ architecture behaviour of text_display is
 			character_address=> character_address,
 			font_row=> font_row,font_col => font_col,
 			clock=>clk_25Mhz,
-			rom_mux_output=>char_data_int
+			rom_mux_output=>rom_mux_output
 		);
 
 		textDisplay : Process (pixel_row, pixel_column)
 		begin
 			if ((128 <= pixel_row) and (pixel_row < 192) and (128 <= pixel_column) and (pixel_column < 512)) then -- FLAPPY
-						font_col <= pixel_column(5 downto 3);
-						font_row <= pixel_row(5 downto 3);
+						font_col <= pixel_column(4 downto 2);
+						font_row <= pixel_row(4 downto 2);
 						if ((128 <= pixel_row) and (pixel_row < 192) and (128 <= pixel_column) and (pixel_column < 192)) then 
 							character_address <= conv_std_logic_vector(6,6); -- F
 							charOn <= '1';
