@@ -24,8 +24,8 @@ signal f_death 			: std_logic;
 begin
 
 
-death <= f_death
-score <= f_score
+death <= f_death;
+score <= f_score;
 
 process (pix_row,pix_col)
 begin
@@ -60,7 +60,7 @@ begin
 				score <= f_score + CONV_STD_LOGIC_VECTOR(1,7);
 			end if;
 		end if;
-	end if 
-end process
+	end if;
+end process;
 
 end beh;
