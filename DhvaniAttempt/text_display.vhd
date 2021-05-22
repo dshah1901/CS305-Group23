@@ -54,7 +54,7 @@ architecture behaviour of text_display is
 						elsif ((192 <= pixel_row) and (pixel_row < 256) and (384 <= pixel_column) and (pixel_column < 448)) then 
 							character_address <= conv_std_logic_vector(9,6); -- I
 							charOn <= '1';
-						elsif ((192 <= pixel_row) and (pixel_row < 256) and (448 <= pixel_column) and (pixel_column < 512)) then 
+						elsif ((192 <= pixel_row) and (pixel_row < 256) and (448 <= pixel_column) and (pixel_column < )) then 
 							character_address <= conv_std_logic_vector(14,6); -- N
 							charOn <= '1';
 						else
