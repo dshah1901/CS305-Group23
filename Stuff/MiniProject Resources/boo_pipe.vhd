@@ -29,9 +29,9 @@ b_height <= CONV_STD_LOGIC_VECTOR(200,10);
 -- pipe_x_pos and pipe_y_pos show the (x,y) for the centre of pipe
 t_pipe_y_pos <= CONV_STD_LOGIC_VECTOR(100,10);
 --b_pipe_y_pos <= CONV_STD_LOGIC_VECTOR(380,10);
-b_pipe_y_pos <= CONV_STD_LOGIC_VECTOR(279,10);
+b_pipe_y_pos <= CONV_STD_LOGIC_VECTOR(280,10);
 
-pipe_top <= '1' when ( ('0' & pipe_x_pos <= '0' & pixel_column + wedge) and ('0' & pixel_column <= '0' & pipe_x_pos + wedge) 	-- x_pos - size <= pixel_column <= x_pos + size
+pipe_top <= '1' when ( ('0' & pipe_x_pos <= '0' & pixel_column + wedge+ wedge) and ('0' & pixel_column <= '0' & pipe_x_pos ) 	-- x_pos - size <= pixel_column <= x_pos + size
 					and ('0' & t_pipe_y_pos <= pixel_row + height) and ('0' & pixel_row <= t_pipe_y_pos + height) )  else	-- y_pos - size <= pixel_row <= y_pos + size
 			'0';
 
@@ -40,18 +40,17 @@ pipe_top <= '1' when ( ('0' & pipe_x_pos <= '0' & pixel_column + wedge) and ('0'
 --		'0';
 
 --Trying something here			
-pipe_bottom  <= '1' when ( ('0' & pipe_x_pos <= pixel_column + wedge) and ('0' & pixel_column <= pipe_x_pos + wedge) 	-- x_pos - size <= pixel_column <= x_pos + size
-					and ('0' & b_pipe_y_pos <= pixel_row + b_height) and ( '0' & pixel_row <= b_pipe_y_pos + b_height) )  else	-- y_pos - size <= pixel_row <= y_pos + size
+pipe_bottom  <= '1' when ( ('0' & pipe_x_pos <='0' & pixel_column + wedge+ wedge) and ('0' & pixel_column <= '0' & pipe_x_pos ) 	-- x_pos - size <= pixel_column <= x_pos + size
+					and ('0' & b_pipe_y_pos  <= pixel_row) and ( '0' & pixel_row <= b_pipe_y_pos + b_height) )  else	-- y_pos - size <= pixel_row <= y_pos + size
 			'0';					
 			
 pipe_on <= pipe_top or pipe_bottom;
 
 -- Colours for pixel data on video signal
 -- Changing the background and pipe colour by pushbuttons
-Red <=  in_ball_on;
-Green <=  pipe_top;
-Blue <=  pipe_bottom;
-
+Red <=  not (in_ball_on or pipe_on);
+Green <=  not (in_ball_on or pipe_on);
+Blue <=  not (in_ball_on or pipe_on);
 
 Move_pipe: process (vert_sync)  	
 begin

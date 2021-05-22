@@ -27,7 +27,7 @@ height <= CONV_STD_LOGIC_VECTOR(440,10);
 pipes_y_pos <= CONV_STD_LOGIC_VECTOR(40,10);
 
 
-pipes_on <= '1' when ( ('0' & pipes_x_pos <= pixel_column + wedge) and ('0' & pixel_column <= pipes_x_pos + wedge) 	-- x_pos - size <= pixel_column <= x_pos + size
+pipes_on <= '1' when ( ('0' & pipes_x_pos <= pixel_column+ wedge + wedge) and ('0' & pixel_column <= pipes_x_pos ) 	-- x_pos - size <= pixel_column <= x_pos + size
 					and ('0' & pipes_y_pos <= pixel_row + height) and ('0' & pixel_row <= pipes_y_pos + height) )  else	-- y_pos - size <= pixel_row <= y_pos + size
 			'0';
 
@@ -44,13 +44,13 @@ begin
 	-- Move pipe once every vertical sync
 	if (rising_edge(vert_sync)) then			
 		-- Bounce off top or bottom of the screen
-		if ( ('0' & pipe_x_pos >= CONV_STD_LOGIC_VECTOR(629,10) - wedge) ) then
-			pipe_x_motion <= - CONV_STD_LOGIC_VECTOR(2,10);
-		elsif (pipe_x_pos <= wedge+wedge) then 
+		if ( ('0' & pipes_x_pos >= CONV_STD_LOGIC_VECTOR(629,10) - wedge) ) then
+			pipe_x_motion <= CONV_STD_LOGIC_VECTOR(2,10);
+		elsif (pipes_x_pos <= wedge+wedge) then 
 			pipe_x_motion <= CONV_STD_LOGIC_VECTOR(2,10);
 		end if;
 		-- Compute next pipe Y position
-		pipe_x_pos <= pipe_x_pos + pipe_x_motion;
+		pipes_x_pos <= pipes_x_pos + pipe_x_motion;
 	end if;
 end process Move_pipe;
 
