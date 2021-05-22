@@ -7,9 +7,9 @@ USE  IEEE.STD_LOGIC_SIGNED.all;
 
 Entity state_tracker is 
 	port(clk, death, left_click, right_click 	: in std_logic;
-			score 										: in std_logic_vector(5 downto 0);
+			score 										: in std_logic_vector(6 downto 0);
 			enable, reset 								: out std_logic ;
-			difficulty 									: out std_logic_vector(2 downto 0));
+			difficulty 									: out std_logic_vector(1 downto 0));
 
 end entity state_tracker;
 

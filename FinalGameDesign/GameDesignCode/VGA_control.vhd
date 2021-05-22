@@ -6,7 +6,7 @@ USE  IEEE.STD_LOGIC_SIGNED.all;
 
 ENTITY VGA_control IS
 	PORT
-		(enable,reset, clk, ball_on, text_on ,vga_synch			: IN std_logic;
+		(enable,reset, clk, ball_on, text_on ,vga_sync			: IN std_logic;
 			pipe1									 							: IN std_logic;
 			coin_on, heart_on 											: in std_logic;
 			pix_row, pix_col												: in std_logic_vector (9 downto 0);
@@ -25,11 +25,9 @@ begin
 
 
 death <= f_death;
-score <= f_score;
 red <= not (ball_on and pipe1);
 green <= not (ball_on and pipe1);
 blue <= not (ball_on and pipe1);
-
 
 process (pix_row,pix_col)
 begin
@@ -45,7 +43,7 @@ begin
 				f_death <= '1';
 			else
 				health <= health - CONV_STD_LOGIC_VECTOR(1,2);
-				wait until not (ball_on = '1'  and (pipe1 = '1'));
+				--wait until not (ball_on = '1'  and (pipe1 = '1'));
 			end if;
 		elsif(ball_on = '1' and heart_on = '1') then
 			if ( "11" >  health) then
@@ -62,10 +60,11 @@ begin
 			f_score_tracker <= f_score_tracker + CONV_STD_LOGIC_VECTOR(1,6);
 			if (f_score_tracker = "111100") then
 				f_score_tracker <= "000000";
-				score <= f_score + CONV_STD_LOGIC_VECTOR(1,7);
+				f_score <= f_score + CONV_STD_LOGIC_VECTOR(1,7);
 			end if;
 		end if;
 	end if;
+	score <= f_score;
 end process;
 
 end beh;

@@ -61,8 +61,8 @@ applicable agreement for further details.
 	(port
 		(pt 0 112)
 		(input)
-		(text "vga_synch" (rect 0 0 46 12)(font "Arial" ))
-		(text "vga_synch" (rect 21 107 67 119)(font "Arial" ))
+		(text "vga_sync" (rect 0 0 41 12)(font "Arial" ))
+		(text "vga_sync" (rect 21 107 62 119)(font "Arial" ))
 		(line (pt 0 112)(pt 16 112)(line_width 1))
 	)
 	(port
@@ -110,8 +110,8 @@ applicable agreement for further details.
 	(port
 		(pt 192 48)
 		(output)
-		(text "greem" (rect 0 0 25 12)(font "Arial" ))
-		(text "greem" (rect 146 43 171 55)(font "Arial" ))
+		(text "green" (rect 0 0 22 12)(font "Arial" ))
+		(text "green" (rect 149 43 171 55)(font "Arial" ))
 		(line (pt 192 48)(pt 176 48)(line_width 1))
 	)
 	(port

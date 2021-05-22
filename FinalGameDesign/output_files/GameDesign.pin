@@ -83,10 +83,10 @@ GND+                         : A12       :        :                   :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : A13       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A14       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A15       :        :                   :         : 7         :                
-mouse_cursor_row[0]          : A16       : output : 2.5 V             :         : 7         : N              
-mouse_cursor_row[7]          : A17       : output : 2.5 V             :         : 7         : N              
-mouse_cursor_column[6]       : A18       : output : 2.5 V             :         : 7         : N              
-mouse_cursor_column[5]       : A19       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : A16       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : A17       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : A18       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : A19       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A20       :        :                   :         : 7         :                
 VCCIO7                       : A21       : power  :                   : 2.5V    : 7         :                
 GND                          : A22       : gnd    :                   :         :           :                
@@ -149,10 +149,10 @@ GND+                         : B12       :        :                   :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : B13       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B14       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B15       :        :                   :         : 7         :                
-mouse_cursor_row[4]          : B16       : output : 2.5 V             :         : 7         : N              
-mouse_cursor_row[1]          : B17       : output : 2.5 V             :         : 7         : N              
-mouse_cursor_column[2]       : B18       : output : 2.5 V             :         : 7         : N              
-mouse_cursor_column[0]       : B19       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : B16       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : B17       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : B18       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : B19       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B20       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B21       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B22       :        :                   :         : 6         :                
@@ -170,7 +170,7 @@ GND                          : C11       : gnd    :                   :         
 GND                          : C12       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C13       :        :                   :         : 7         :                
 GND                          : C14       : gnd    :                   :         :           :                
-mouse_cursor_column[3]       : C15       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C15       :        :                   :         : 7         :                
 GND                          : C16       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C17       :        :                   :         : 7         :                
 GND                          : C18       : gnd    :                   :         :           :                
@@ -192,7 +192,7 @@ VCCIO8                       : D11       : power  :                   : 2.5V    
 VCCIO7                       : D12       : power  :                   : 2.5V    : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D13       :        :                   :         : 7         :                
 VCCIO7                       : D14       : power  :                   : 2.5V    : 7         :                
-mouse_cursor_row[2]          : D15       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D15       :        :                   :         : 7         :                
 VCCIO7                       : D16       : power  :                   : 2.5V    : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D17       :        :                   :         : 7         :                
 VCCIO7                       : D18       : power  :                   : 2.5V    : 7         :                
@@ -214,15 +214,15 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : E11       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : E12       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E13       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E14       :        :                   :         : 7         :                
-mouse_cursor_row[3]          : E15       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : E15       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E16       :        :                   :         : 7         :                
 VCCD_PLL2                    : E17       : power  :                   : 1.2V    :           :                
 GNDA2                        : E18       : gnd    :                   :         :           :                
 VCCIO6                       : E19       : power  :                   : 2.5V    : 6         :                
 GND                          : E20       : gnd    :                   :         :           :                
-right_button                 : E21       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : E21       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E22       :        :                   :         : 6         :                
-pb2                          : F1        : input  : 2.5 V             :         : 1         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : F1        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F2        :        :                   :         : 1         :                
 GND                          : F3        : gnd    :                   :         :           :                
 VCCIO1                       : F4        : power  :                   : 2.5V    : 1         :                
@@ -233,20 +233,20 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : F8        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : F9        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F10       :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F11       :        :                   :         : 7         :                
-mouse_cursor_row[6]          : F12       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : F12       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F13       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F14       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F15       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F16       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F17       :        :                   :         : 6         :                
 VCCA2                        : F18       : power  :                   : 2.5V    :           :                
-mouse_cursor_column[8]       : F19       : output : 2.5 V             :         : 6         : N              
-mouse_cursor_column[9]       : F20       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : F19       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F20       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F21       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F22       :        :                   :         : 6         :                
 GND+                         : G1        :        :                   :         : 1         :                
 GND+                         : G2        :        :                   :         : 1         :                
-pb1                          : G3        : input  : 2.5 V             :         : 1         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : G3        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G4        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G5        :        :                   :         : 1         :                
 VCCA3                        : G6        : power  :                   : 2.5V    :           :                
@@ -256,12 +256,12 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : G9        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : G10       :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G11       :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G12       :        :                   :         : 7         :                
-mouse_cursor_row[5]          : G13       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : G13       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G14       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G15       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G16       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G17       :        :                   :         : 6         :                
-mouse_cursor_column[7]       : G18       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : G18       :        :                   :         : 6         :                
 VCCIO6                       : G19       : power  :                   : 2.5V    : 6         :                
 GND                          : G20       : gnd    :                   :         :           :                
 clk                          : G21       : input  : 2.5 V             :         : 6         : Y              
@@ -278,9 +278,9 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : H9        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : H10       :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : H11       :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : H12       :        :                   :         : 7         :                
-mouse_cursor_row[8]          : H13       : output : 2.5 V             :         : 7         : N              
-mouse_cursor_column[4]       : H14       : output : 2.5 V             :         : 7         : N              
-mouse_cursor_column[1]       : H15       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : H13       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : H14       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : H15       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : H16       :        :                   :         : 6         :                
 red_out                      : H17       : output : 2.5 V             :         : 6         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : H18       :        :                   :         : 6         :                
@@ -542,7 +542,7 @@ GND                          : Y9        : gnd    :                   :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y10       :        :                   :         : 3         :                
 GND                          : Y11       : gnd    :                   :         :           :                
 GND                          : Y12       : gnd    :                   :         :           :                
-mouse_cursor_row[9]          : Y13       : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y13       :        :                   :         : 4         :                
 VCCIO4                       : Y14       : power  :                   : 2.5V    : 4         :                
 GND                          : Y15       : gnd    :                   :         :           :                
 GND                          : Y16       : gnd    :                   :         :           :                
