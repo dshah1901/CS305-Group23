@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for GameDesign
-Sat May 22 14:53:01 2021
+Sat May 22 15:28:24 2021
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
@@ -4229,7 +4229,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
-    Info: Processing started: Sat May 22 14:52:57 2021
+    Info: Processing started: Sat May 22 15:28:19 2021
 Info: Command: quartus_sta GameDesign -c GameDesign
 Info: qsta_default_script.tcl version: #1
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -4345,9 +4345,9 @@ Info (332146): Worst-case minimum pulse width slack is -1.000
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4678 megabytes
-    Info: Processing ended: Sat May 22 14:53:01 2021
-    Info: Elapsed time: 00:00:04
+    Info: Peak virtual memory: 4659 megabytes
+    Info: Processing ended: Sat May 22 15:28:24 2021
+    Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:02
 
 

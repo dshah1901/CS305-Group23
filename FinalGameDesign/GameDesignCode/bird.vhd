@@ -6,9 +6,10 @@ USE  IEEE.STD_LOGIC_SIGNED.all;
 
 ENTITY bird IS
 	PORT
-		( left_button, clk, vert_sync: IN std_logic;
-          pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
-		  o_bird_on 			: OUT std_logic);		
+		( left_button, clk, vert_sync, enable, reset				: IN std_logic;
+				pixel_row, pixel_column									: IN std_logic_vector(9 DOWNTO 0);
+				difficulty 													: in std_logic_vector(2 downto 0);
+				o_bird_on 													: OUT std_logic);		
 END bird;
 
 architecture behavior of bird is
@@ -36,26 +37,25 @@ Move_bird: process (vert_sync)
 begin
 	-- Move bird once every vertical sync
 	if (rising_edge(vert_sync)) then			
-		-- Bounce off top or bottom of the screen
-		if (bird_y_pos <= size) then
-			bird_y_motion <= CONV_STD_LOGIC_VECTOR(2,10);
-		elsif (left_button = '1') then
-			bird_y_motion <= -CONV_STD_LOGIC_VECTOR(2,10);
-		elsif('0' & bird_y_pos >= conv_std_logic_vector(479,10) - size) then 
+		if (reset = '1') then
+			bird_y_pos <=CONV_STD_LOGIC_VECTOR(200,10);
 			bird_y_motion <= CONV_STD_LOGIC_VECTOR(0,10);
-		else 
-			bird_y_motion <= CONV_STD_LOGIC_VECTOR(2,10);
+		elsif (enable = '1') then
+			if (bird_y_pos <= size) then
+				bird_y_motion <= CONV_STD_LOGIC_VECTOR(2,10);
+			elsif (left_button = '1') then
+				bird_y_motion <= -CONV_STD_LOGIC_VECTOR(2,10);
+			elsif('0' & bird_y_pos >= conv_std_logic_vector(479,10) - size) then 
+				bird_y_motion <= CONV_STD_LOGIC_VECTOR(0,10);
+			else 
+				bird_y_motion <= CONV_STD_LOGIC_VECTOR(2,10);
+			end if;
 		end if;
-
-
---		if (('0' & bird_y_pos >= conv_std_logic_vector(479,10) - size )) then
---			bird_y_motion <= - CONV_STD_LOGIC_VECTOR(0,10);
---		elsif (bird_y_pos <= size) then
---			bird_y_motion <= CONV_STD_LOGIC_VECTOR(2,10);
---		end if;
-
+		
+		
 		-- Compute next bird Y position
 		bird_y_pos <= bird_y_pos + bird_y_motion;
+		
 	end if;
 end process Move_bird;
 

@@ -49,13 +49,13 @@ architecture behaviour of text_display is
 						elsif ((128 <= pixel_row) and (pixel_row < 192) and (192 <= pixel_column) and (pixel_column < 256)) then 
 							character_address <= conv_std_logic_vector(18,6); -- R
 							charOn <= '1';
-						elsif ((128 <= pixel_row) and (pixel_row < 192) and (320 <= pixel_column) and (pixel_column < 320)) then 
+						elsif ((128 <= pixel_row) and (pixel_row < 192) and (256 <= pixel_column) and (pixel_column < 320)) then 
 							character_address <= conv_std_logic_vector(1,6); -- A
 							charOn <= '1';
 						elsif ((128 <= pixel_row) and (pixel_row < 192) and (320 <= pixel_column) and (pixel_column < 384)) then 
 							character_address <= conv_std_logic_vector(9,6); -- I
 							charOn <= '1';
-						elsif ((128 <= pixel_row) and (pixel_row < 192) and (348 <= pixel_column) and (pixel_column < 348)) then 
+						elsif ((128 <= pixel_row) and (pixel_row < 192) and (384 <= pixel_column) and (pixel_column < 449)) then 
 							character_address <= conv_std_logic_vector(14,6); -- N
 							charOn <= '1';
 						else
@@ -117,7 +117,7 @@ architecture behaviour of text_display is
 					elsif ((256 <= pixel_row) and (pixel_row < 320) and (256 <= pixel_column) and (pixel_column < 320)) then 
 						character_address <= conv_std_logic_vector(13,6); -- M
 						charOn <= '1';
-					elsif ((256 <= pixel_row) and (pixel_row < 320) and (320 <= pixel_column) and (pixel_column < 348)) then 
+					elsif ((256 <= pixel_row) and (pixel_row < 320) and (320 <= pixel_column) and (pixel_column < 384))then 
 						character_address <= conv_std_logic_vector(5,6); -- E
 						charOn <= '1';
 					else
