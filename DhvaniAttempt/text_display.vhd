@@ -61,6 +61,28 @@ architecture behaviour of text_display is
 							charOn <= '0';
 						end if;
 			end if;
+			if ((192 <= pixel_row) and (pixel_row < 200) and (128 <= pixel_column) and (pixel_column < 512)) then -- FLAPPY
+						font_col <= pixel_column(3 downto 1); -- To change the font size
+						font_row <= pixel_row(3 downto 1);
+						if ((192 <= pixel_row) and (pixel_row < 200) and (192 <= pixel_column) and (pixel_column < 200)) then 
+							character_address <= conv_std_logic_vector(20,6); -- T
+							charOn <= '1';
+						elsif ((192 <= pixel_row) and (pixel_row < 200) and (200 <= pixel_column) and (pixel_column < 208)) then 
+							character_address <= conv_std_logic_vector(18,6); -- R
+							charOn <= '1';
+						elsif ((192 <= pixel_row) and (pixel_row < 200) and (208 <= pixel_column) and (pixel_column < 216)) then 
+							character_address <= conv_std_logic_vector(1,6); -- A
+							charOn <= '1';
+						elsif ((192 <= pixel_row) and (pixel_row < 200) and (216 <= pixel_column) and (pixel_column < 224)) then 
+							character_address <= conv_std_logic_vector(9,6); -- I
+							charOn <= '1';
+						elsif ((192 <= pixel_row) and (pixel_row < 200) and (224 <= pixel_column) and (pixel_column < 232)) then 
+							character_address <= conv_std_logic_vector(14,6); -- N
+							charOn <= '1';
+						else
+							charOn <= '0';
+						end if;
+			end if;
 			if ((256 <= pixel_row) and (pixel_row < 320) and (128 <= pixel_column) and (pixel_column < 512)) then -- FLAPPY
 					font_col <= pixel_column(5 downto 3); -- To change the font size
 					font_row <= pixel_row(5 downto 3);
