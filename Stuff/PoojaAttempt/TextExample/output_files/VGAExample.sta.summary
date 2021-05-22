@@ -3,36 +3,36 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'inst|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -6.185
-TNS   : -20.259
+Slack : -4.806
+TNS   : -17.735
 
 Type  : Slow 1200mV 85C Model Setup 'VGA_SYNC:inst5|pixel_column[7]'
-Slack : -0.915
-TNS   : -1.678
+Slack : -0.101
+TNS   : -0.101
 
-Type  : Slow 1200mV 85C Model Setup 'VGA_SYNC:inst5|pixel_column[2]'
-Slack : 0.459
+Type  : Slow 1200mV 85C Model Setup 'VGA_SYNC:inst5|pixel_column[6]'
+Slack : 0.216
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'VGA_SYNC:inst5|pixel_column[7]'
-Slack : -3.987
-TNS   : -24.502
+Type  : Slow 1200mV 85C Model Hold 'VGA_SYNC:inst5|pixel_column[6]'
+Slack : -2.822
+TNS   : -11.473
 
-Type  : Slow 1200mV 85C Model Hold 'VGA_SYNC:inst5|pixel_column[2]'
-Slack : -3.550
-TNS   : -17.412
+Type  : Slow 1200mV 85C Model Hold 'VGA_SYNC:inst5|pixel_column[7]'
+Slack : -2.641
+TNS   : -26.022
 
 Type  : Slow 1200mV 85C Model Hold 'inst|altpll_component|auto_generated|pll1|clk[0]'
 Slack : 0.359
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'VGA_SYNC:inst5|pixel_column[7]'
-Slack : -1.542
-TNS   : -62.432
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'VGA_SYNC:inst5|pixel_column[6]'
+Slack : 0.160
+TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'VGA_SYNC:inst5|pixel_column[2]'
-Slack : -0.572
-TNS   : -16.339
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'VGA_SYNC:inst5|pixel_column[7]'
+Slack : 0.186
+TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
 Slack : 9.825
@@ -43,76 +43,76 @@ Slack : 19.737
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'inst|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -5.431
-TNS   : -17.530
+Slack : -4.163
+TNS   : -15.180
 
 Type  : Slow 1200mV 0C Model Setup 'VGA_SYNC:inst5|pixel_column[7]'
-Slack : -0.905
-TNS   : -2.343
+Slack : -0.206
+TNS   : -0.408
 
-Type  : Slow 1200mV 0C Model Setup 'VGA_SYNC:inst5|pixel_column[2]'
-Slack : 0.378
+Type  : Slow 1200mV 0C Model Setup 'VGA_SYNC:inst5|pixel_column[6]'
+Slack : 0.102
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'VGA_SYNC:inst5|pixel_column[7]'
-Slack : -3.594
-TNS   : -20.654
+Type  : Slow 1200mV 0C Model Hold 'VGA_SYNC:inst5|pixel_column[6]'
+Slack : -2.335
+TNS   : -9.595
 
-Type  : Slow 1200mV 0C Model Hold 'VGA_SYNC:inst5|pixel_column[2]'
-Slack : -3.182
-TNS   : -15.425
+Type  : Slow 1200mV 0C Model Hold 'VGA_SYNC:inst5|pixel_column[7]'
+Slack : -2.175
+TNS   : -21.554
 
 Type  : Slow 1200mV 0C Model Hold 'inst|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 0.313
+Slack : 0.312
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'VGA_SYNC:inst5|pixel_column[6]'
+Slack : 0.240
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'VGA_SYNC:inst5|pixel_column[7]'
-Slack : -1.336
-TNS   : -53.585
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'VGA_SYNC:inst5|pixel_column[2]'
-Slack : -0.429
-TNS   : -12.187
+Slack : 0.266
+TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : 9.785
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'inst|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 19.741
+Slack : 19.742
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'inst|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -3.440
-TNS   : -11.233
+Slack : -2.668
+TNS   : -9.777
 
 Type  : Fast 1200mV 0C Model Setup 'VGA_SYNC:inst5|pixel_column[7]'
-Slack : -0.160
-TNS   : -0.160
-
-Type  : Fast 1200mV 0C Model Setup 'VGA_SYNC:inst5|pixel_column[2]'
-Slack : 0.563
+Slack : 0.197
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'VGA_SYNC:inst5|pixel_column[7]'
-Slack : -2.381
-TNS   : -14.589
+Type  : Fast 1200mV 0C Model Setup 'VGA_SYNC:inst5|pixel_column[6]'
+Slack : 0.311
+TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'VGA_SYNC:inst5|pixel_column[2]'
-Slack : -2.200
-TNS   : -10.828
+Type  : Fast 1200mV 0C Model Hold 'VGA_SYNC:inst5|pixel_column[6]'
+Slack : -1.555
+TNS   : -6.514
+
+Type  : Fast 1200mV 0C Model Hold 'VGA_SYNC:inst5|pixel_column[7]'
+Slack : -1.457
+TNS   : -14.732
 
 Type  : Fast 1200mV 0C Model Hold 'inst|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 0.188
+Slack : 0.187
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'VGA_SYNC:inst5|pixel_column[6]'
+Slack : 0.199
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'VGA_SYNC:inst5|pixel_column[7]'
-Slack : -0.727
-TNS   : -22.770
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'VGA_SYNC:inst5|pixel_column[2]'
-Slack : -0.240
-TNS   : -2.877
+Slack : 0.209
+TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : 9.585
