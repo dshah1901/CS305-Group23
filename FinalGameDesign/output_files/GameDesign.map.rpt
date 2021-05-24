@@ -1,5 +1,5 @@
 Analysis & Synthesis report for GameDesign
-Sat May 22 16:52:21 2021
+Mon May 24 14:20:44 2021
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
@@ -14,17 +14,18 @@ Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis IP Cores Summary
-  9. State Machine - |GameDesign|MOUSE:inst14|mouse_state
- 10. State Machine - |GameDesign|state_tracker:inst19|next_state
- 11. Registers Removed During Synthesis
- 12. Removed Registers Triggering Further Register Optimizations
- 13. General Register Statistics
- 14. Inverted Register Statistics
- 15. Multiplexer Restructuring Statistics (Restructuring Performed)
- 16. Parameter Settings for User Entity Instance: altpll0:inst2|altpll:altpll_component
- 17. altpll Parameter Settings by Entity Instance
- 18. Elapsed Time Per Partition
- 19. Analysis & Synthesis Messages
+  9. State Machine - |GameDesign|state_tracker:inst4|state
+ 10. State Machine - |GameDesign|state_tracker:inst4|next_state
+ 11. State Machine - |GameDesign|MOUSE:inst14|mouse_state
+ 12. Registers Removed During Synthesis
+ 13. Removed Registers Triggering Further Register Optimizations
+ 14. General Register Statistics
+ 15. Inverted Register Statistics
+ 16. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 17. Parameter Settings for User Entity Instance: altpll0:inst2|altpll:altpll_component
+ 18. altpll Parameter Settings by Entity Instance
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
 
 
 
@@ -50,15 +51,15 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat May 22 16:52:21 2021       ;
+; Analysis & Synthesis Status        ; Successful - Mon May 24 14:20:44 2021       ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
 ; Revision Name                      ; GameDesign                                  ;
 ; Top-level Entity Name              ; GameDesign                                  ;
 ; Family                             ; Cyclone III                                 ;
-; Total logic elements               ; 120                                         ;
-;     Total combinational functions  ; 101                                         ;
-;     Dedicated logic registers      ; 79                                          ;
-; Total registers                    ; 79                                          ;
+; Total logic elements               ; 276                                         ;
+;     Total combinational functions  ; 229                                         ;
+;     Dedicated logic registers      ; 131                                         ;
+; Total registers                    ; 131                                         ;
 ; Total pins                         ; 8                                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -163,11 +164,12 @@ applicable agreement for further details.
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-8         ;   0.0%      ;
+;     Processor 2            ; < 0.1%      ;
+;     Processors 3-8         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -198,20 +200,20 @@ applicable agreement for further details.
 +---------------------------------------------+--------------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                                ;
 +---------------------------------------------+--------------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 120                                                                                  ;
+; Estimated Total logic elements              ; 276                                                                                  ;
 ;                                             ;                                                                                      ;
-; Total combinational functions               ; 101                                                                                  ;
+; Total combinational functions               ; 229                                                                                  ;
 ; Logic element usage by number of LUT inputs ;                                                                                      ;
-;     -- 4 input functions                    ; 41                                                                                   ;
-;     -- 3 input functions                    ; 16                                                                                   ;
-;     -- <=2 input functions                  ; 44                                                                                   ;
+;     -- 4 input functions                    ; 63                                                                                   ;
+;     -- 3 input functions                    ; 63                                                                                   ;
+;     -- <=2 input functions                  ; 103                                                                                  ;
 ;                                             ;                                                                                      ;
 ; Logic elements by mode                      ;                                                                                      ;
-;     -- normal mode                          ; 73                                                                                   ;
-;     -- arithmetic mode                      ; 28                                                                                   ;
+;     -- normal mode                          ; 114                                                                                  ;
+;     -- arithmetic mode                      ; 115                                                                                  ;
 ;                                             ;                                                                                      ;
-; Total registers                             ; 79                                                                                   ;
-;     -- Dedicated logic registers            ; 79                                                                                   ;
+; Total registers                             ; 131                                                                                  ;
+;     -- Dedicated logic registers            ; 131                                                                                  ;
 ;     -- I/O registers                        ; 0                                                                                    ;
 ;                                             ;                                                                                      ;
 ; I/O pins                                    ; 8                                                                                    ;
@@ -220,9 +222,9 @@ applicable agreement for further details.
 ;     -- PLLs                                 ; 1                                                                                    ;
 ;                                             ;                                                                                      ;
 ; Maximum fan-out node                        ; altpll0:inst2|altpll:altpll_component|altpll0_altpll:auto_generated|wire_pll1_clk[0] ;
-; Maximum fan-out                             ; 58                                                                                   ;
-; Total fan-out                               ; 521                                                                                  ;
-; Average fan-out                             ; 2.62                                                                                 ;
+; Maximum fan-out                             ; 77                                                                                   ;
+; Total fan-out                               ; 990                                                                                  ;
+; Average fan-out                             ; 2.61                                                                                 ;
 +---------------------------------------------+--------------------------------------------------------------------------------------+
 
 
@@ -231,12 +233,14 @@ applicable agreement for further details.
 +------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node               ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                             ; Library Name ;
 +------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------+--------------+
-; |GameDesign                              ; 101 (0)           ; 79 (0)       ; 0           ; 0            ; 0       ; 0         ; 8    ; 0            ; |GameDesign                                                                     ;              ;
-;    |MOUSE:inst14|                        ; 45 (45)           ; 50 (50)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GameDesign|MOUSE:inst14                                                        ;              ;
-;    |VGA_SYNC:inst|                       ; 56 (56)           ; 29 (29)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GameDesign|VGA_SYNC:inst                                                       ;              ;
+; |GameDesign                              ; 229 (0)           ; 131 (0)      ; 0           ; 0            ; 0       ; 0         ; 8    ; 0            ; |GameDesign                                                                     ;              ;
+;    |MOUSE:inst14|                        ; 53 (53)           ; 63 (63)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GameDesign|MOUSE:inst14                                                        ;              ;
+;    |VGA_SYNC:inst|                       ; 57 (57)           ; 48 (48)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GameDesign|VGA_SYNC:inst                                                       ;              ;
 ;    |altpll0:inst2|                       ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GameDesign|altpll0:inst2                                                       ;              ;
 ;       |altpll:altpll_component|          ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GameDesign|altpll0:inst2|altpll:altpll_component                               ;              ;
 ;          |altpll0_altpll:auto_generated| ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GameDesign|altpll0:inst2|altpll:altpll_component|altpll0_altpll:auto_generated ;              ;
+;    |bird:inst12|                         ; 60 (60)           ; 11 (11)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GameDesign|bird:inst12                                                         ;              ;
+;    |pipes:inst5|                         ; 59 (59)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GameDesign|pipes:inst5                                                         ;              ;
 +------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -248,6 +252,36 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+---------------------------+---------------------------------------------------------------------------------------------------------+
 ; Altera ; ALTPLL       ; 13.0    ; N/A          ; N/A          ; |GameDesign|altpll0:inst2 ; //files.auckland.ac.nz/myhome/Documents/GitHub/CS305-Group23/FinalGameDesign/GameDesignCode/altpll0.vhd ;
 +--------+--------------+---------+--------------+--------------+---------------------------+---------------------------------------------------------------------------------------------------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------------------+
+; State Machine - |GameDesign|state_tracker:inst4|state                                                               ;
++--------------------+--------------------+--------------+--------------+--------------+----------------+-------------+
+; Name               ; state.death_screen ; state.level3 ; state.level2 ; state.level1 ; state.training ; state.start ;
++--------------------+--------------------+--------------+--------------+--------------+----------------+-------------+
+; state.start        ; 0                  ; 0            ; 0            ; 0            ; 0              ; 0           ;
+; state.training     ; 0                  ; 0            ; 0            ; 0            ; 1              ; 1           ;
+; state.level1       ; 0                  ; 0            ; 0            ; 1            ; 0              ; 1           ;
+; state.level2       ; 0                  ; 0            ; 1            ; 0            ; 0              ; 1           ;
+; state.level3       ; 0                  ; 1            ; 0            ; 0            ; 0              ; 1           ;
+; state.death_screen ; 1                  ; 0            ; 0            ; 0            ; 0              ; 1           ;
++--------------------+--------------------+--------------+--------------+--------------+----------------+-------------+
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |GameDesign|state_tracker:inst4|next_state                                                                                             ;
++-------------------------+-------------------------+-------------------+-------------------+-------------------+---------------------+------------------+
+; Name                    ; next_state.death_screen ; next_state.level3 ; next_state.level2 ; next_state.level1 ; next_state.training ; next_state.start ;
++-------------------------+-------------------------+-------------------+-------------------+-------------------+---------------------+------------------+
+; next_state.start        ; 0                       ; 0                 ; 0                 ; 0                 ; 0                   ; 0                ;
+; next_state.training     ; 0                       ; 0                 ; 0                 ; 0                 ; 1                   ; 1                ;
+; next_state.level1       ; 0                       ; 0                 ; 0                 ; 1                 ; 0                   ; 1                ;
+; next_state.level2       ; 0                       ; 0                 ; 1                 ; 0                 ; 0                   ; 1                ;
+; next_state.level3       ; 0                       ; 1                 ; 0                 ; 0                 ; 0                   ; 1                ;
+; next_state.death_screen ; 1                       ; 0                 ; 0                 ; 0                 ; 0                   ; 1                ;
++-------------------------+-------------------------+-------------------+-------------------+-------------------+---------------------+------------------+
 
 
 Encoding Type:  One-Hot
@@ -265,67 +299,49 @@ Encoding Type:  One-Hot
 +-------------------------------+---------------------------+--------------------------+-------------------------------+---------------------------+--------------------------+---------------------------+
 
 
-Encoding Type:  One-Hot
-+--------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |GameDesign|state_tracker:inst19|next_state                                                                                            ;
-+-------------------------+-------------------------+-------------------+-------------------+-------------------+------------------+---------------------+
-; Name                    ; next_state.death_screen ; next_state.level3 ; next_state.level2 ; next_state.level1 ; next_state.start ; next_state.training ;
-+-------------------------+-------------------------+-------------------+-------------------+-------------------+------------------+---------------------+
-; next_state.training     ; 0                       ; 0                 ; 0                 ; 0                 ; 0                ; 0                   ;
-; next_state.start        ; 0                       ; 0                 ; 0                 ; 0                 ; 1                ; 1                   ;
-; next_state.level1       ; 0                       ; 0                 ; 0                 ; 1                 ; 0                ; 1                   ;
-; next_state.level2       ; 0                       ; 0                 ; 1                 ; 0                 ; 0                ; 1                   ;
-; next_state.level3       ; 0                       ; 1                 ; 0                 ; 0                 ; 0                ; 1                   ;
-; next_state.death_screen ; 1                       ; 0                 ; 0                 ; 0                 ; 0                ; 1                   ;
-+-------------------------+-------------------------+-------------------+-------------------+-------------------+------------------+---------------------+
++----------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                     ;
++---------------------------------------------+------------------------------------------+
+; Register name                               ; Reason for Removal                       ;
++---------------------------------------------+------------------------------------------+
+; bird:inst12|bird_y_motion[0]                ; Stuck at GND due to stuck port data_in   ;
+; MOUSE:inst14|CHAROUT[4..7]                  ; Stuck at VCC due to stuck port data_in   ;
+; MOUSE:inst14|CHAROUT[3]                     ; Stuck at GND due to stuck port data_in   ;
+; MOUSE:inst14|CHAROUT[2]                     ; Stuck at VCC due to stuck port data_in   ;
+; MOUSE:inst14|CHAROUT[0,1]                   ; Stuck at GND due to stuck port data_in   ;
+; MOUSE:inst14|SHIFTOUT[10]                   ; Stuck at VCC due to stuck port data_in   ;
+; pipes:inst5|pipe_x_motion[2..9]             ; Merged with pipes:inst5|pipe_x_motion[0] ;
+; bird:inst12|bird_y_motion[3..9]             ; Merged with bird:inst12|bird_y_motion[2] ;
+; pipes:inst5|pipe_x_motion[0]                ; Stuck at GND due to stuck port data_in   ;
+; bird:inst12|bird_y_pos[0]                   ; Stuck at GND due to stuck port data_in   ;
+; pipes:inst5|pipes_x_pos[0]                  ; Stuck at GND due to stuck port data_in   ;
+; VGA_SYNC:inst|pixel_row[9]                  ; Stuck at GND due to stuck port data_in   ;
+; pipes:inst5|pipe_x_motion[1]                ; Stuck at VCC due to stuck port data_in   ;
+; MOUSE:inst14|right_button                   ; Lost fanout                              ;
+; MOUSE:inst14|PACKET_CHAR1[1]                ; Lost fanout                              ;
+; state_tracker:inst4|state.start             ; Lost fanout                              ;
+; state_tracker:inst4|state.training          ; Lost fanout                              ;
+; state_tracker:inst4|state.level1            ; Lost fanout                              ;
+; state_tracker:inst4|state.level2            ; Lost fanout                              ;
+; state_tracker:inst4|state.level3            ; Lost fanout                              ;
+; state_tracker:inst4|state.death_screen      ; Lost fanout                              ;
+; state_tracker:inst4|next_state.start        ; Lost fanout                              ;
+; state_tracker:inst4|next_state.training     ; Lost fanout                              ;
+; state_tracker:inst4|next_state.level1       ; Lost fanout                              ;
+; state_tracker:inst4|next_state.level2       ; Lost fanout                              ;
+; state_tracker:inst4|next_state.level3       ; Lost fanout                              ;
+; state_tracker:inst4|next_state.death_screen ; Lost fanout                              ;
+; Total Number of Removed Registers = 44      ;                                          ;
++---------------------------------------------+------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                    ;
-+----------------------------------------------+----------------------------------------+
-; Register name                                ; Reason for Removal                     ;
-+----------------------------------------------+----------------------------------------+
-; bird:inst13|bird_y_motion[0..9]              ; Stuck at GND due to stuck port data_in ;
-; MOUSE:inst14|CHAROUT[4..7]                   ; Stuck at VCC due to stuck port data_in ;
-; MOUSE:inst14|CHAROUT[3]                      ; Stuck at GND due to stuck port data_in ;
-; MOUSE:inst14|CHAROUT[2]                      ; Stuck at VCC due to stuck port data_in ;
-; MOUSE:inst14|CHAROUT[0,1]                    ; Stuck at GND due to stuck port data_in ;
-; MOUSE:inst14|SHIFTOUT[10]                    ; Stuck at VCC due to stuck port data_in ;
-; bird:inst13|bird_y_pos[1..9]                 ; Merged with bird:inst13|bird_y_pos[0]  ;
-; bird:inst13|bird_y_pos[0]                    ; Stuck at GND due to stuck port data_in ;
-; VGA_SYNC:inst|pixel_row[9]                   ; Stuck at GND due to stuck port data_in ;
-; VGA_SYNC:inst|pixel_row[0..8]                ; Lost fanout                            ;
-; VGA_SYNC:inst|pixel_column[0..9]             ; Lost fanout                            ;
-; MOUSE:inst14|left_button                     ; Lost fanout                            ;
-; MOUSE:inst14|right_button                    ; Lost fanout                            ;
-; MOUSE:inst14|PACKET_CHAR1[0]                 ; Lost fanout                            ;
-; MOUSE:inst14|PACKET_COUNT[0,1]               ; Lost fanout                            ;
-; MOUSE:inst14|PACKET_CHAR1[1]                 ; Lost fanout                            ;
-; MOUSE:inst14|SHIFTIN[0..8]                   ; Lost fanout                            ;
-; state_tracker:inst19|next_state.training     ; Lost fanout                            ;
-; state_tracker:inst19|next_state.start        ; Lost fanout                            ;
-; state_tracker:inst19|next_state.level1       ; Lost fanout                            ;
-; state_tracker:inst19|next_state.level2       ; Lost fanout                            ;
-; state_tracker:inst19|next_state.level3       ; Lost fanout                            ;
-; state_tracker:inst19|next_state.death_screen ; Lost fanout                            ;
-; Total Number of Removed Registers = 70       ;                                        ;
-+----------------------------------------------+----------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                  ;
-+----------------------------+---------------------------+-------------------------------------------------------------------------------------+
-; Register name              ; Reason for Removal        ; Registers Removed due to This Register                                              ;
-+----------------------------+---------------------------+-------------------------------------------------------------------------------------+
-; MOUSE:inst14|right_button  ; Lost Fanouts              ; MOUSE:inst14|PACKET_CHAR1[1], MOUSE:inst14|SHIFTIN[1], MOUSE:inst14|SHIFTIN[2],     ;
-;                            ;                           ; MOUSE:inst14|SHIFTIN[3], MOUSE:inst14|SHIFTIN[4], MOUSE:inst14|SHIFTIN[5],          ;
-;                            ;                           ; MOUSE:inst14|SHIFTIN[6], MOUSE:inst14|SHIFTIN[7], MOUSE:inst14|SHIFTIN[8]           ;
-; VGA_SYNC:inst|pixel_row[9] ; Stuck at GND              ; VGA_SYNC:inst|pixel_row[8], VGA_SYNC:inst|pixel_row[7], VGA_SYNC:inst|pixel_row[6], ;
-;                            ; due to stuck port data_in ; VGA_SYNC:inst|pixel_row[5], VGA_SYNC:inst|pixel_row[4], VGA_SYNC:inst|pixel_row[3], ;
-;                            ;                           ; VGA_SYNC:inst|pixel_row[2]                                                          ;
-; MOUSE:inst14|left_button   ; Lost Fanouts              ; MOUSE:inst14|PACKET_CHAR1[0], MOUSE:inst14|PACKET_COUNT[1],                         ;
-;                            ;                           ; MOUSE:inst14|PACKET_COUNT[0], MOUSE:inst14|SHIFTIN[0]                               ;
-+----------------------------+---------------------------+-------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                             ;
++---------------------------+--------------------+----------------------------------------+
+; Register name             ; Reason for Removal ; Registers Removed due to This Register ;
++---------------------------+--------------------+----------------------------------------+
+; MOUSE:inst14|right_button ; Lost Fanouts       ; MOUSE:inst14|PACKET_CHAR1[1]           ;
++---------------------------+--------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -333,12 +349,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 79    ;
+; Total registers                              ; 131   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 16    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 34    ;
+; Number of registers using Clock Enable       ; 62    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -358,14 +374,16 @@ Encoding Type:  One-Hot
 +----------------------------------------+---------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |GameDesign|VGA_SYNC:inst|v_count[9]        ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |GameDesign|state_tracker:inst19|next_state ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |GameDesign|VGA_SYNC:inst|v_count[9]      ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |GameDesign|state_tracker:inst4|Selector1 ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 6 LEs                ; 10 LEs                 ; No         ; |GameDesign|state_tracker:inst4|Selector5 ;
+; 13:1               ; 2 bits    ; 16 LEs        ; 2 LEs                ; 14 LEs                 ; No         ; |GameDesign|state_tracker:inst4|Selector3 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
 
 
 +------------------------------------------------------------------------------------+
@@ -774,7 +792,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
-    Info: Processing started: Sat May 22 16:52:18 2021
+    Info: Processing started: Mon May 24 14:20:41 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off GameDesign -c GameDesign
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file gamedesigncode/state_tracker.vhd
@@ -801,8 +819,6 @@ Info (12021): Found 2 design units, including 1 entities, in source file gamedes
     Info (12022): Found design unit 1: altpll0-SYN
     Info (12023): Found entity 1: altpll0
 Info (12127): Elaborating entity "GameDesign" for the top level hierarchy
-Warning (275011): Block or symbol "GND" of instance "inst15" overlaps another block or symbol
-Warning (275011): Block or symbol "GND" of instance "inst16" overlaps another block or symbol
 Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_SYNC:inst"
 Info (12128): Elaborating entity "altpll0" for hierarchy "altpll0:inst2"
 Info (12128): Elaborating entity "altpll" for hierarchy "altpll0:inst2|altpll:altpll_component"
@@ -866,74 +882,33 @@ Info (12133): Instantiated megafunction "altpll0:inst2|altpll:altpll_component" 
 Info (12021): Found 1 design units, including 1 entities, in source file db/altpll0_altpll.v
     Info (12023): Found entity 1: altpll0_altpll
 Info (12128): Elaborating entity "altpll0_altpll" for hierarchy "altpll0:inst2|altpll:altpll_component|altpll0_altpll:auto_generated"
-Info (12128): Elaborating entity "VGA_control" for hierarchy "VGA_control:inst21"
-Warning (10492): VHDL Process Statement warning at VGA_control.vhd(34): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at VGA_control.vhd(40): signal "enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at VGA_control.vhd(41): signal "ball_on" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at VGA_control.vhd(41): signal "pipe1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at VGA_control.vhd(42): signal "health" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at VGA_control.vhd(45): signal "health" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at VGA_control.vhd(48): signal "ball_on" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at VGA_control.vhd(48): signal "heart_on" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at VGA_control.vhd(49): signal "health" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at VGA_control.vhd(50): signal "health" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at VGA_control.vhd(56): signal "ball_on" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at VGA_control.vhd(56): signal "coin_on" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at VGA_control.vhd(57): signal "f_score" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at VGA_control.vhd(59): signal "pipe1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at VGA_control.vhd(60): signal "f_score_tracker" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at VGA_control.vhd(61): signal "f_score_tracker" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at VGA_control.vhd(63): signal "f_score" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at VGA_control.vhd(67): signal "f_score" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10631): VHDL Process Statement warning at VGA_control.vhd(32): inferring latch(es) for signal or variable "f_score", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at VGA_control.vhd(32): inferring latch(es) for signal or variable "health", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at VGA_control.vhd(32): inferring latch(es) for signal or variable "f_death", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at VGA_control.vhd(32): inferring latch(es) for signal or variable "f_score_tracker", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "f_score_tracker[0]" at VGA_control.vhd(32)
-Info (10041): Inferred latch for "f_score_tracker[1]" at VGA_control.vhd(32)
-Info (10041): Inferred latch for "f_score_tracker[2]" at VGA_control.vhd(32)
-Info (10041): Inferred latch for "f_score_tracker[3]" at VGA_control.vhd(32)
-Info (10041): Inferred latch for "f_score_tracker[4]" at VGA_control.vhd(32)
-Info (10041): Inferred latch for "f_score_tracker[5]" at VGA_control.vhd(32)
-Info (10041): Inferred latch for "f_death" at VGA_control.vhd(32)
-Info (10041): Inferred latch for "health[0]" at VGA_control.vhd(32)
-Info (10041): Inferred latch for "health[1]" at VGA_control.vhd(32)
-Info (10041): Inferred latch for "f_score[0]" at VGA_control.vhd(32)
-Info (10041): Inferred latch for "f_score[1]" at VGA_control.vhd(32)
-Info (10041): Inferred latch for "f_score[2]" at VGA_control.vhd(32)
-Info (10041): Inferred latch for "f_score[3]" at VGA_control.vhd(32)
-Info (10041): Inferred latch for "f_score[4]" at VGA_control.vhd(32)
-Info (10041): Inferred latch for "f_score[5]" at VGA_control.vhd(32)
-Info (10041): Inferred latch for "f_score[6]" at VGA_control.vhd(32)
-Info (12128): Elaborating entity "state_tracker" for hierarchy "state_tracker:inst19"
-Warning (10540): VHDL Signal Declaration warning at state_tracker.vhd(18): used explicit default value for signal "state" because signal was never assigned a value
-Warning (10036): Verilog HDL or VHDL warning at state_tracker.vhd(19): object "next_state" assigned a value but never read
+Info (12128): Elaborating entity "VGA_control" for hierarchy "VGA_control:inst10"
+Warning (10541): VHDL Signal Declaration warning at VGA_control.vhd(14): used implicit default value for signal "score" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at VGA_control.vhd(23): used implicit default value for signal "f_death" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Info (12128): Elaborating entity "bird" for hierarchy "bird:inst12"
 Info (12128): Elaborating entity "MOUSE" for hierarchy "MOUSE:inst14"
 Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(25): object "CHARIN" assigned a value but never read
 Warning (10492): VHDL Process Statement warning at mouse.vhd(151): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at mouse.vhd(155): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at mouse.vhd(156): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at mouse.vhd(157): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Info (12128): Elaborating entity "bird" for hierarchy "bird:inst13"
-Info (12128): Elaborating entity "pipes" for hierarchy "pipes:inst10"
-Warning (10541): VHDL Signal Declaration warning at pipes.vhd(11): used implicit default value for signal "o_pipe_on" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10036): Verilog HDL or VHDL warning at pipes.vhd(16): object "pipe_on" assigned a value but never read
-Warning (12001): Port "difficulty[2]" does not exist in entity definition of "state_tracker".  The port's range differs between the entity definition and its actual instantiation, "state_tracker:inst19".
+Info (12128): Elaborating entity "state_tracker" for hierarchy "state_tracker:inst4"
+Info (12128): Elaborating entity "pipes" for hierarchy "pipes:inst5"
 Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 40 registers lost all their fanouts during netlist optimizations.
+Info (17049): 14 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 131 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 289 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 5 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 122 logic cells
+    Info (21061): Implemented 280 logic cells
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 34 warnings
-    Info: Peak virtual memory: 4687 megabytes
-    Info: Processing ended: Sat May 22 16:52:21 2021
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 4666 megabytes
+    Info: Processing ended: Mon May 24 14:20:44 2021
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:02
 

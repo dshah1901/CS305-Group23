@@ -6,10 +6,10 @@ USE  IEEE.STD_LOGIC_SIGNED.all;
 
 ENTITY bird IS
 	PORT
-		( left_button, clk, vert_sync, enable, reset				: IN std_logic;
+		( left_button, clk, vert_sync, reset						: IN std_logic;
 				pixel_row, pixel_column									: IN std_logic_vector(9 DOWNTO 0);
-				difficulty 													: in std_logic_vector(2 downto 0);
-				o_bird_on 													: OUT std_logic);		
+				difficulty 													: in std_logic_vector(1 downto 0);
+				o_bird_on 													: OUT std_logic);
 END bird;
 
 architecture behavior of bird is
@@ -27,9 +27,9 @@ size <= CONV_STD_LOGIC_VECTOR(8,10);
 bird_x_pos <= CONV_STD_LOGIC_VECTOR(100,11);
 
 bird_on <= '1' when ( ('0' & bird_x_pos <= '0' & pixel_column + size) and ('0' & pixel_column <= '0' & bird_x_pos + size) 	-- x_pos - size <= pixel_column <= x_pos + size
-					and ('0' & bird_y_pos <= pixel_row + size) and ('0' & pixel_row <= bird_y_pos + size) )  else	-- y_pos - size <= pixel_row <= y_pos + size
+					and ('0' & bird_y_pos <= pixel_row + size) and ('0' & pixel_row <= bird_y_pos + size))  else	-- y_pos - size <= pixel_row <= y_pos + size
 			'0';
-o_bird_on <=bird_on;
+o_bird_on <= not bird_on;
 
 -- Colours for pixel data on video signal
 -- Changing the background and bird colour by pushbuttons
@@ -37,10 +37,7 @@ Move_bird: process (vert_sync)
 begin
 	-- Move bird once every vertical sync
 	if (rising_edge(vert_sync)) then			
-		if (reset = '1') then
-			bird_y_pos <=CONV_STD_LOGIC_VECTOR(200,10);
-			bird_y_motion <= CONV_STD_LOGIC_VECTOR(0,10);
-		elsif (enable = '1') then
+		
 			if (bird_y_pos <= size) then
 				bird_y_motion <= CONV_STD_LOGIC_VECTOR(2,10);
 			elsif (left_button = '1') then
@@ -50,11 +47,11 @@ begin
 			else 
 				bird_y_motion <= CONV_STD_LOGIC_VECTOR(2,10);
 			end if;
-		end if;
+			bird_y_pos <= bird_y_pos + bird_y_motion;
 		
 		
 		-- Compute next bird Y position
-		bird_y_pos <= bird_y_pos + bird_y_motion;
+		
 		
 	end if;
 end process Move_bird;

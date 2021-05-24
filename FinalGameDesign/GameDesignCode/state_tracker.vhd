@@ -20,7 +20,7 @@ signal next_state: state_type;
 
 begin
 
-process (clk) -- state changes
+process (clk,left_click,right_click,death) -- state changes
 begin
 	if (rising_edge(clk)) then
 		case state is 
@@ -55,6 +55,8 @@ begin
 				next_state <= start ;
 			end if;
   		end case;
+		
+		state <= next_state;
 	end if;
 end process;
 
