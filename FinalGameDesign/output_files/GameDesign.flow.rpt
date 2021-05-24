@@ -1,5 +1,5 @@
 Flow report for GameDesign
-Mon May 24 14:20:59 2021
+Mon May 24 14:51:46 2021
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
@@ -40,15 +40,15 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Mon May 24 14:20:54 2021       ;
+; Flow Status                        ; Successful - Mon May 24 14:51:42 2021       ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
 ; Revision Name                      ; GameDesign                                  ;
 ; Top-level Entity Name              ; GameDesign                                  ;
 ; Family                             ; Cyclone III                                 ;
 ; Device                             ; EP3C16F484C6                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 259 / 15,408 ( 2 % )                        ;
-;     Total combinational functions  ; 230 / 15,408 ( 1 % )                        ;
+; Total logic elements               ; 266 / 15,408 ( 2 % )                        ;
+;     Total combinational functions  ; 232 / 15,408 ( 2 % )                        ;
 ;     Dedicated logic registers      ; 131 / 15,408 ( < 1 % )                      ;
 ; Total registers                    ; 131                                         ;
 ; Total pins                         ; 8 / 347 ( 2 % )                             ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/24/2021 14:20:42 ;
+; Start date & time ; 05/24/2021 14:51:30 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; GameDesign          ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+---------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 251053328739622.162182284105132       ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 251053328739622.162182469005020       ; --            ; --          ; --         ;
 ; IP_TOOL_NAME                        ; ALTPLL                                ; --            ; --          ; --         ;
 ; IP_TOOL_VERSION                     ; 13.0                                  ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --         ;
@@ -98,10 +98,10 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 4666 MB             ; 00:00:02                           ;
-; Fitter                    ; 00:00:06     ; 1.0                     ; 5621 MB             ; 00:00:07                           ;
-; Assembler                 ; 00:00:01     ; 1.0                     ; 4556 MB             ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 4646 MB             ; 00:00:01                           ;
+; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 4687 MB             ; 00:00:02                           ;
+; Fitter                    ; 00:00:05     ; 3.5                     ; 5591 MB             ; 00:00:06                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 4552 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 4646 MB             ; 00:00:02                           ;
 ; Total                     ; 00:00:12     ; --                      ; --                  ; 00:00:11                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 

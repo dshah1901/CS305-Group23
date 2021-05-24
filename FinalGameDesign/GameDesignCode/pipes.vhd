@@ -14,7 +14,7 @@ END pipes;
 
 architecture behavior of pipes is
 
-SIGNAL pipes_on					: std_logic;
+SIGNAL pipes_on				: std_logic;
 SIGNAL wedge 					: std_logic_vector(9 DOWNTO 0);
 SIGNAL height					: std_logic_vector(9 downto 0);  
 SIGNAL pipes_y_pos, pipes_x_pos	: std_logic_vector(9 DOWNTO 0);
@@ -39,18 +39,22 @@ pipe_on <=  not(pipes_on);
 -- Turn off Green and Blue when displaying square
 
 
-Move_pipe: process (vert_sync)  	
+Move_pipe: process (vert_sync) 
+ 	
 begin
 	-- Move pipe once every vertical sync
-	if (rising_edge(vert_sync)) then			
+	if (rising_edge(vert_sync)) then
+		pipe_x_motion <= CONV_STD_LOGIC_VECTOR(2,10);
+		
 		-- Bounce off top or bottom of the screen
-		if ( ('0' & pipes_x_pos >= CONV_STD_LOGIC_VECTOR(629,10) - wedge) ) then
-			pipe_x_motion <= CONV_STD_LOGIC_VECTOR(2,10);
-		elsif (pipes_x_pos <= wedge+wedge) then 
-			pipe_x_motion <= CONV_STD_LOGIC_VECTOR(2,10);
+		if (('0' & pipes_x_pos <= CONV_STD_LOGIC_VECTOR(0,11))) then
+			pipes_x_pos <= CONV_STD_LOGIC_VECTOR(700,10);
+		else 
+			pipes_x_pos <= pipes_x_pos - pipe_x_motion;
 		end if;
+		
 		-- Compute next pipe Y position
-		pipes_x_pos <= pipes_x_pos - pipe_x_motion;
+		
 	end if;
 end process Move_pipe;
 
