@@ -24,8 +24,8 @@ signal f_death										: std_logic;
 begin
 
 death <= f_death;
-red <= (pipe1 and ball_on);
-green <= (pipe2 and ball_on);
+red <= (pipe1 and ball_on and heart_on and coin_on);
+green <= (pipe2 and ball_on and coin_on);
 blue <= (pipe3 and ball_on);
 
 
