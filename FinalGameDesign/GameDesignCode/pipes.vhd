@@ -63,10 +63,18 @@ begin
 		
 		if reset = '1' then
 			case pipe_num is
-				when "00" => pipes_x_pos <= CONV_STD_LOGIC_VECTOR(200,10);
-				when "01" => pipes_x_pos <= CONV_STD_LOGIC_VECTOR(400,10);
-				when "10" => pipes_x_pos <= CONV_STD_LOGIC_VECTOR(600,10);
-				when others => pipes_x_pos <= CONV_STD_LOGIC_VECTOR(800,10);
+				when "00" => 
+				pipes_x_pos <= CONV_STD_LOGIC_VECTOR(300,10);
+				send <= "1110";
+				when "01" => 
+				pipes_x_pos <= CONV_STD_LOGIC_VECTOR(500,10);
+				send <= "1011";
+				when "10" => 
+				pipes_x_pos <= CONV_STD_LOGIC_VECTOR(700,10);
+				send <= "0101";
+				when others => 
+				pipes_x_pos <= CONV_STD_LOGIC_VECTOR(900,10);
+				send <= "1000";
 			end case;
 		-- Bounce off top or bottom of the scree
 		elsif (('0' & pipes_x_pos <= CONV_STD_LOGIC_VECTOR(0,11))) then
