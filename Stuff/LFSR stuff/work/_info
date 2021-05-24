@@ -42,17 +42,17 @@ Elfsr_generator
 Z13 w1621776182
 R2
 R3
-R4
-R5
-R6
+Z14 dC:\Users\patel\Documents\GitHub\CS305-Group23\Stuff\LFSR stuff
+Z15 8C:/Users/patel/Documents/GitHub/CS305-Group23/Stuff/LFSR stuff/LFSR_generator.vhd
+Z16 FC:/Users/patel/Documents/GitHub/CS305-Group23/Stuff/LFSR stuff/LFSR_generator.vhd
 l0
 L5
 VZX[Z6XRU06WRP0e2W7>nc2
 R7
 32
-Z14 !s108 1621776339.817000
-R9
-R10
+Z17 !s108 1621815600.901000
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/patel/Documents/GitHub/CS305-Group23/Stuff/LFSR stuff/LFSR_generator.vhd|
+Z19 !s107 C:/Users/patel/Documents/GitHub/CS305-Group23/Stuff/LFSR stuff/LFSR_generator.vhd|
 R11
 R12
 !s100 KAL6VB_@`5W8]H=RE=XB]2
@@ -67,19 +67,19 @@ V`TH9bSOmTOmAVNl2dji@z1
 !s100 Y_?RCXD7mU:e=nePTS?3A2
 R7
 32
-R14
-R9
-R10
+R17
+R18
+R19
 R11
 R12
 !i10b 1
 Elfsr_tb
-Z15 w1621776333
+Z20 w1621815557
 R2
 R3
-R4
-Z16 8C:/altera/13.0sp1/test_bench
-Z17 FC:/altera/13.0sp1/test_bench
+R14
+Z21 8C:/Users/patel/Documents/GitHub/CS305-Group23/Stuff/LFSR stuff/test_bench.vhd
+Z22 FC:/Users/patel/Documents/GitHub/CS305-Group23/Stuff/LFSR stuff/test_bench.vhd
 l0
 L4
 VfC]<lPDH5>gP@Vgi9a:?o1
@@ -87,24 +87,24 @@ VfC]<lPDH5>gP@Vgi9a:?o1
 R7
 32
 !i10b 1
-Z18 !s108 1621776339.918000
-Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/altera/13.0sp1/test_bench|
-Z20 !s107 C:/altera/13.0sp1/test_bench|
+Z23 !s108 1621815601.138000
+Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/patel/Documents/GitHub/CS305-Group23/Stuff/LFSR stuff/test_bench.vhd|
+Z25 !s107 C:/Users/patel/Documents/GitHub/CS305-Group23/Stuff/LFSR stuff/test_bench.vhd|
 R11
 R12
 Abehavioral
 R2
 R3
-Z21 DEx4 work 7 lfsr_tb 0 22 fC]<lPDH5>gP@Vgi9a:?o1
+Z26 DEx4 work 7 lfsr_tb 0 22 fC]<lPDH5>gP@Vgi9a:?o1
 l22
 L8
-V^O2::@PEK]ifm:OdcQk2z1
-!s100 z9jL7=<QYcB>EC@=U6?iZ3
+Z27 V^O2::@PEK]ifm:OdcQk2z1
+Z28 !s100 z9jL7=<QYcB>EC@=U6?iZ3
 R7
 32
 !i10b 1
-R18
-R19
-R20
+R23
+R24
+R25
 R11
 R12
