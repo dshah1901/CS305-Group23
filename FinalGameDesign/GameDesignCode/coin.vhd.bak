@@ -1,0 +1,15 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.all;
+USE  IEEE.STD_LOGIC_ARITH.all;
+USE  IEEE.STD_LOGIC_UNSIGNED.all;
+
+Entity coin is
+port (vert_sync, reset in std_logic;
+		  pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
+		  red, green, blue 			: OUT std_logic);
+end coin;
+
+architecture behaviour of coin is
+end behaviour;
+
+		  
