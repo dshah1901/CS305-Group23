@@ -10,18 +10,18 @@ entity lfsr_generator is
 end lfsr_generator;
 
 architecture behaviour of lfsr_generator is
-  signal reg : std_logic_vector(3 downto 0);
+  signal reg : std_logic_vector(4 downto 1);
   begin
-    lfsr <=  reg(3 downto 0);
-    process (clk, reset, seed)
+    lfsr <=  reg(4 downto 1);
+    process (clk, reset)
       begin
         if (reset = '1') then
           reg <= seed;
         elsif rising_edge(clk) then
-          reg(3) <= reg(0);
-          reg(2) <= reg(3) xor reg(0);
+          reg(4) <= reg(1);
+          reg(3) <= reg(4) xor reg(1);
+          reg(2) <= reg(3);
           reg(1) <= reg(2);
-          reg(0) <= reg(1);
         end if;
       end process;   
 end behaviour;
