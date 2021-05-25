@@ -17,10 +17,33 @@ END VGA_control;
 architecture beh of VGA_control is
 begin
 
-red <= (ball_on AND HEArt_on);
-green <= (ball_on AND COIN_ON);
-blue <= (pipe3 AND PIPE1 AND PIPE2 and ball_on);
-
-
-
+process(vert_sync)
+if rising_edge(vert_sync) then
+if (pipe1 or pipe2 or pipe3 and not(ball_on or heart_on or coin_on)) then
+red<= '0';
+green<= '1';
+blue<= '0';
+elsif (BALl_on AND NOT(pipe1 or pipe2 or pipe3)) THEN
+red <= '0';
+green <= '0';
+blue <= '1';
+ELSIF (heart_on and not (pipe1 or pipe2 or pipe3 or ball_on or coin_on)) then
+red <= '1';
+green <= '0';
+blue <= '0';
+elsIF (coin_on and not(pipe1 or pipe2 or pipe3 or ball_on or heart_on)) then
+red <= '1';
+green <= '1';
+blue <= '0';
+elsif (text_on and not (pipe1 or pipe2 or pipe3 or ball_on or heart_on or coin_on)) then
+red <= '0';
+blue <= '0';
+green <= '0';
+elsif not(text_on or pipe1 or pipe2 or pipe3 or ball_on or heart_on or coin_on) then
+red <= '1';
+green <= '1';
+blue <= '1';
+end if;
+end if;
+end process;
 end beh;
