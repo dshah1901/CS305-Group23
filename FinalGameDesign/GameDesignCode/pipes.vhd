@@ -67,19 +67,19 @@ begin
 				pipes_x_pos <= CONV_STD_LOGIC_VECTOR(200,10);
 				send <= "0111";
 				when "01" => 
-				pipes_x_pos <= CONV_STD_LOGIC_VECTOR(400,10);
+				pipes_x_pos <= CONV_STD_LOGIC_VECTOR(450,10);
 				send <= "1101";
 				when "10" => 
-				pipes_x_pos <= CONV_STD_LOGIC_VECTOR(600,10);
+				pipes_x_pos <= CONV_STD_LOGIC_VECTOR(700,10);
 				send <= "0010";
 				when others => 
-				pipes_x_pos <= CONV_STD_LOGIC_VECTOR(800,10);
+				pipes_x_pos <= CONV_STD_LOGIC_VECTOR(950,10);
 				send <= "1001";
 			end case;
 		-- Bounce off top or bottom of the scree
 		elsif (('0' & pipes_x_pos <= CONV_STD_LOGIC_VECTOR(0,11))) then
 			case lfsr1 is
-				when "0001" => gap_y_pos <= CONV_STD_LOGIC_VECTOR(100,10);
+				when "0001" => gap_y_pos <= CONV_STD_LOGIC_VECTOR(150,10);
 				when "0010" => gap_y_pos <= CONV_STD_LOGIC_VECTOR(380,10);
 				when "0011" => gap_y_pos <= CONV_STD_LOGIC_VECTOR(190,10);
 				when "0100" => gap_y_pos <= CONV_STD_LOGIC_VECTOR(240,10);
