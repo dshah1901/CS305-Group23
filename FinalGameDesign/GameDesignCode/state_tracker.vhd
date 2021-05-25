@@ -50,10 +50,12 @@ begin
 			if (death = '1') then
 				next_state <= death_screen;
 			end if ;
-		when others =>
+		when death_screen =>
 			if (left_click = '1' or right_click = '1') then
 				next_state <= start ;
 			end if;
+		when others =>
+			next_state <= level1 ;
   		end case;
 		
 		state <= next_state;

@@ -39,17 +39,21 @@ begin
 	if (rising_edge(vert_sync)) then			
 		
 			if (bird_y_pos <= size) then
-				bird_y_motion <= CONV_STD_LOGIC_VECTOR(2,10);
+				bird_y_motion <= CONV_STD_LOGIC_VECTOR(2,10)+ ("00000000" & difficulty);
 			elsif (left_button = '1') then
-				bird_y_motion <= -CONV_STD_LOGIC_VECTOR(2,10);
+				bird_y_motion <= -(CONV_STD_LOGIC_VECTOR(2,10) + ("00000000" & difficulty)) ;
 			elsif('0' & bird_y_pos >= conv_std_logic_vector(479,10) - size) then 
 				bird_y_motion <= CONV_STD_LOGIC_VECTOR(0,10);
 			else 
-				bird_y_motion <= CONV_STD_LOGIC_VECTOR(2,10);
+				bird_y_motion <= CONV_STD_LOGIC_VECTOR(2,10) ;
 			end if;
 			bird_y_pos <= bird_y_pos + bird_y_motion;
 		
-		
+			
+			if (reset='1') then
+				bird_y_pos <= CONV_STD_LOGIC_VECTOR(200,10);
+			end if;
+			
 		-- Compute next bird Y position
 		
 		

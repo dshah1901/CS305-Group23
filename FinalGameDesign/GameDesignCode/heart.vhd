@@ -31,7 +31,6 @@ radius <= CONV_STD_LOGIC_VECTOR(10, 10);
 random: LFSR_generator
 port map (Clk => clk, reset => '1', seed => send, lfsr => lfsr1);
 -- pipe_x_pos and pipe_y_pos show the (x,y) for the centre of pipe
-heart_y_pos <= CONV_STD_LOGIC_VECTOR(100,10);
 
 heart_on <= '1' when ( ('0' & heart_x_pos <= pixel_column + radius) and ('0' & pixel_column <= heart_x_pos + radius) 	-- x_pos - radius <= pixel_column <= x_pos + radius
 					and ('0' & heart_y_pos <= pixel_row + radius) and ('0' & pixel_row <= heart_y_pos + radius) )  else	-- y_pos - radius <= pixel_row <= y_pos + radius
@@ -46,10 +45,10 @@ begin
 		
 		if reset = '1' then
 				heart_x_pos <= CONV_STD_LOGIC_VECTOR(850,10);
-				count <= "000000000";
+				count <= "0000000000";
 		-- Bounce off top or bottom of the scree
 		elsif (('0' & heart_x_pos <= CONV_STD_LOGIC_VECTOR(0,11))) then
-			heart_on <= '0'
+			--heart_on <= '0';
 			case lfsr1 is
 				when "0001" => heart_y_pos <= CONV_STD_LOGIC_VECTOR(30,10);
 				when "0010" => heart_y_pos <= CONV_STD_LOGIC_VECTOR(60,10);
@@ -76,9 +75,9 @@ begin
 			if (count < CONV_STD_LOGIC_VECTOR(500,9)) then
 				count <= count + "000000001";
 			else
-				heart_on <= '1';
+				--heart_on <= '1';
 				heart_x_pos <= CONV_STD_LOGIC_VECTOR(980,10);
-				count <= "000000000";
+				count <= "0000000000";
 			end if;
 		else 
 			heart_x_pos <= heart_x_pos - heart_x_motion;

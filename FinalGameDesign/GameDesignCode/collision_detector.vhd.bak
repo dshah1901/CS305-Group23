@@ -1,0 +1,15 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.all;
+USE  IEEE.STD_LOGIC_ARITH.all;
+USE  IEEE.STD_LOGIC_UNSIGNED.all;
+
+
+
+ENTITY collision_detector IS
+	generic( pipe_num :   std_logic_vector(1 DOWNTO 0));
+	PORT
+		( clk, vert_sync, reset										: IN std_logic;
+		  bird,pipe1,pipe2,pipe3,heart,coin						: IN std_logic;
+		  death					 										: OUT std_logic
+		  score					 										: OUT std_logic_vector(6 downto 0));		
+END collision_detector;

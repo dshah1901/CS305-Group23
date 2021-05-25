@@ -64,13 +64,16 @@ begin
 		if reset = '1' then
 			case pipe_num is
 				when "00" => 
-				pipes_x_pos <= CONV_STD_LOGIC_VECTOR(200,10);
+				pipes_x_pos <= CONV_STD_LOGIC_VECTOR(400,10);
+				gap_y_pos <= CONV_STD_LOGIC_VECTOR(400,10);
 				send <= "0111";
 				when "01" => 
-				pipes_x_pos <= CONV_STD_LOGIC_VECTOR(450,10);
+				pipes_x_pos <= CONV_STD_LOGIC_VECTOR(650,10);
+				gap_y_pos <= CONV_STD_LOGIC_VECTOR(300,10);
 				send <= "1101";
 				when "10" => 
-				pipes_x_pos <= CONV_STD_LOGIC_VECTOR(700,10);
+				pipes_x_pos <= CONV_STD_LOGIC_VECTOR(900,10);
+				gap_y_pos <= CONV_STD_LOGIC_VECTOR(200,10);
 				send <= "0010";
 				when others => 
 				pipes_x_pos <= CONV_STD_LOGIC_VECTOR(950,10);
