@@ -18,28 +18,29 @@ architecture beh of VGA_control is
 begin
 
 process(vert_sync)
+begin
 if rising_edge(vert_sync) then
-if (pipe1 or pipe2 or pipe3 and not(ball_on or heart_on or coin_on)) then
+if (text_on= '0' or pipe1 = '1' or pipe2 = '1' or pipe3 = '1' or ball_on='0' or heart_on='0' or coin_on='0') then
 red<= '0';
 green<= '1';
 blue<= '0';
-elsif (BALl_on AND NOT(pipe1 or pipe2 or pipe3)) THEN
+elsif (text_on= '0' or pipe1 = '0' or pipe2 = '0' or pipe3 = '0' or ball_on='1' or heart_on='0' or coin_on='0') THEN
 red <= '0';
 green <= '0';
 blue <= '1';
-ELSIF (heart_on and not (pipe1 or pipe2 or pipe3 or ball_on or coin_on)) then
+ELSIF (text_on= '0' or pipe1 = '0' or pipe2 = '0' or pipe3 = '0' or ball_on='0' or heart_on='1' or coin_on='0') then
 red <= '1';
 green <= '0';
 blue <= '0';
-elsIF (coin_on and not(pipe1 or pipe2 or pipe3 or ball_on or heart_on)) then
+elsIF (text_on= '0' or pipe1 = '0' or pipe2 = '0' or pipe3 = '0' or ball_on='0' or heart_on='0' or coin_on='1') then
 red <= '1';
 green <= '1';
 blue <= '0';
-elsif (text_on and not (pipe1 or pipe2 or pipe3 or ball_on or heart_on or coin_on)) then
+elsif (text_on= '1' or pipe1 = '0' or pipe2 = '0' or pipe3 = '0' or ball_on='0' or heart_on='0' or coin_on='0') then
 red <= '0';
 blue <= '0';
 green <= '0';
-elsif not(text_on or pipe1 or pipe2 or pipe3 or ball_on or heart_on or coin_on) then
+elsif ( text_on = '0' or pipe1 = '0' or pipe2 = '0' or pipe3 = '0' or ball_on='0' or heart_on='0' or coin_on='0') then
 red <= '1';
 green <= '1';
 blue <= '1';
