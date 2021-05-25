@@ -20,27 +20,27 @@ begin
 process(vert_sync)
 begin
 if rising_edge(vert_sync) then
-if (text_on= '0' or pipe1 = '1' or pipe2 = '1' or pipe3 = '1' or ball_on='0' or heart_on='0' or coin_on='0') then
+if (ball_on = '0') then
 red<= '0';
-green<= '1';
-blue<= '0';
-elsif (text_on= '0' or pipe1 = '0' or pipe2 = '0' or pipe3 = '0' or ball_on='1' or heart_on='0' or coin_on='0') THEN
-red <= '0';
-green <= '0';
-blue <= '1';
-ELSIF (text_on= '0' or pipe1 = '0' or pipe2 = '0' or pipe3 = '0' or ball_on='0' or heart_on='1' or coin_on='0') then
+green<= '0';
+blue<= '1';
+elsif (heart_on='1') THEN
 red <= '1';
 green <= '0';
 blue <= '0';
-elsIF (text_on= '0' or pipe1 = '0' or pipe2 = '0' or pipe3 = '0' or ball_on='0' or heart_on='0' or coin_on='1') then
+ELSIF (coin_on='1') then
 red <= '1';
 green <= '1';
 blue <= '0';
-elsif (text_on= '1' or pipe1 = '0' or pipe2 = '0' or pipe3 = '0' or ball_on='0' or heart_on='0' or coin_on='0') then
+elsIF (text_on= '1') then
+red <= '0';
+green <= '1';
+blue <= '0';
+elsif ( pipe1 = '1' or pipe2 = '1' or pipe3 = '1') then
 red <= '0';
 blue <= '0';
-green <= '0';
-elsif ( text_on = '0' or pipe1 = '0' or pipe2 = '0' or pipe3 = '0' or ball_on='0' or heart_on='0' or coin_on='0') then
+green <= '1';
+else
 red <= '1';
 green <= '1';
 blue <= '1';
