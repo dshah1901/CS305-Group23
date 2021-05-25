@@ -50,13 +50,13 @@ set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_location_assignment PIN_K21 -to blue_out
+set_location_assignment PIN_K18 -to blue_out
 set_location_assignment PIN_G21 -to clk
-set_location_assignment PIN_J17 -to green_out
+set_location_assignment PIN_J21 -to green_out
 set_location_assignment PIN_L21 -to horiz_sync_out
 set_location_assignment PIN_P22 -to mouse_clk
 set_location_assignment PIN_P21 -to mouse_data
-set_location_assignment PIN_H17 -to red_out
+set_location_assignment PIN_H21 -to red_out
 set_location_assignment PIN_D13 -to seg0_dec
 set_location_assignment PIN_B15 -to seg1_dec
 set_location_assignment PIN_L22 -to vert_sync_out
@@ -90,7 +90,6 @@ set_location_assignment PIN_D2 -to sw9
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
-set_global_assignment -name VHDL_FILE GameDesignCode/coin.vhd
 set_global_assignment -name VHDL_FILE GameDesignCode/LFSR_generator.vhd
 set_global_assignment -name VHDL_FILE GameDesignCode/state_tracker.vhd
 set_global_assignment -name VHDL_FILE GameDesignCode/VGA_control.vhd
@@ -100,5 +99,4 @@ set_global_assignment -name VHDL_FILE GameDesignCode/vga_sync.vhd
 set_global_assignment -name VHDL_FILE GameDesignCode/mouse.vhd
 set_global_assignment -name BDF_FILE GameDesign.bdf
 set_global_assignment -name QIP_FILE GameDesignCode/altpll0.qip
-set_global_assignment -name VHDL_FILE GameDesignCode/heart.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

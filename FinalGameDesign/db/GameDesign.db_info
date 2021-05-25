@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-Quartus_Version = Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-Version_Index = 302049280
-Creation_Time = Tue May 25 09:39:30 2021
-=======
 Quartus_Version = Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 Version_Index = 302029824
-Creation_Time = Mon May 24 14:41:10 2021
->>>>>>> parent of 949f1f7... LFSR varies the seed value so they dont all have the same gap
+Creation_Time = Tue May 25 14:09:06 2021
