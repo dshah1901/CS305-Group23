@@ -8,32 +8,36 @@ USE  IEEE.STD_LOGIC_UNSIGNED.all;
 ENTITY collision_detector IS
 	PORT
 		( clk, vert_sync, reset, enable															: IN std_logic;
-		  bird,pipe1,pipe2,pipe3,heart,coin														: IN std_logic;
-		  death,coin_reset, heart_reset					 										: OUT std_logic;
+		  bird, pipe1, pipe2, pipe3, heart, coin 	: IN std_logic;
+		  death, coin_reset, heart_reset, f_damage1, f_damage2, f_damage3					 									: OUT std_logic;
 		  pix_row, pix_col																			: in std_logic_vector (9 downto 0);
 		  score					 																		: OUT std_logic_vector(6 downto 0));		
 END collision_detector;
 
 
 architecture behaviour of collision_detector is
-  signal f_death, f_health, f_coin,damage1,damage2,damage3														: std_logic;
+  signal f_death, f_health, f_coin, damage1, damage2, damage3														: std_logic;
   signal score_tracker, f_score_tracker																				: std_logic_vector(6 downto 0);
   signal health																												: std_logic_vector(1 downto 0);
   
  begin
     
-
+	 f_damage1 <= damage1;
+	 f_damage2 <= damage2;
+	 f_damage3 <= damage3;
 	 death <= f_death;
 	 score <= score_tracker;
 	 heart_reset <= f_health;
 	 coin_reset <=f_coin;
 	 
 	 
-process (clk,pix_row,pix_col)
+process (vert_sync, pix_row, pix_col)
 begin
+	if rising_edge(vert_sync) then
 	if (reset = '1') then
 		health <= "11";
 		f_death <= '0';
+		damage1 <= '0';
 		score_tracker <= "0000000";
 	--HEALTH TRACKER
 	elsif (enable = '1') then
@@ -81,7 +85,8 @@ begin
 		else
 			f_health <= '0';
 		end if;
-	
+		
+		end if;
 	
 	-- SCORE TRACKER
 	

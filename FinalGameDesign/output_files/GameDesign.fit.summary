@@ -1,15 +1,15 @@
-Fitter Status : Successful - Tue May 25 16:36:26 2021
+Fitter Status : Successful - Tue May 25 17:51:10 2021
 Quartus II 64-Bit Version : 13.0.0 Build 156 04/24/2013 SJ Full Version
 Revision Name : GameDesign
 Top-level Entity Name : GameDesign
 Family : Cyclone III
 Device : EP3C16F484C6
 Timing Models : Final
-Total logic elements : 481 / 15,408 ( 3 % )
-    Total combinational functions : 439 / 15,408 ( 3 % )
-    Dedicated logic registers : 198 / 15,408 ( 1 % )
-Total registers : 198
-Total pins : 8 / 347 ( 2 % )
+Total logic elements : 700 / 15,408 ( 5 % )
+    Total combinational functions : 659 / 15,408 ( 4 % )
+    Dedicated logic registers : 266 / 15,408 ( 2 % )
+Total registers : 266
+Total pins : 12 / 347 ( 3 % )
 Total virtual pins : 0
 Total memory bits : 0 / 516,096 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 112 ( 0 % )

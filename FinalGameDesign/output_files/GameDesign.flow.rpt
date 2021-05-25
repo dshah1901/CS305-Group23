@@ -1,5 +1,5 @@
 Flow report for GameDesign
-Tue May 25 16:36:38 2021
+Tue May 25 17:51:22 2021
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
@@ -40,18 +40,18 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue May 25 16:36:31 2021       ;
+; Flow Status                        ; Successful - Tue May 25 17:51:16 2021       ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
 ; Revision Name                      ; GameDesign                                  ;
 ; Top-level Entity Name              ; GameDesign                                  ;
 ; Family                             ; Cyclone III                                 ;
 ; Device                             ; EP3C16F484C6                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 481 / 15,408 ( 3 % )                        ;
-;     Total combinational functions  ; 439 / 15,408 ( 3 % )                        ;
-;     Dedicated logic registers      ; 198 / 15,408 ( 1 % )                        ;
-; Total registers                    ; 198                                         ;
-; Total pins                         ; 8 / 347 ( 2 % )                             ;
+; Total logic elements               ; 700 / 15,408 ( 5 % )                        ;
+;     Total combinational functions  ; 659 / 15,408 ( 4 % )                        ;
+;     Dedicated logic registers      ; 266 / 15,408 ( 2 % )                        ;
+; Total registers                    ; 266                                         ;
+; Total pins                         ; 12 / 347 ( 3 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 516,096 ( 0 % )                         ;
 ; Embedded Multiplier 9-bit elements ; 0 / 112 ( 0 % )                             ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/25/2021 16:36:13 ;
+; Start date & time ; 05/25/2021 17:50:58 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; GameDesign          ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+---------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 251053328768776.162191737311864       ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 251053328768776.162192185710764       ; --            ; --          ; --         ;
 ; IP_TOOL_NAME                        ; ALTPLL                                ; --            ; --          ; --         ;
 ; IP_TOOL_VERSION                     ; 13.0                                  ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --         ;
@@ -98,11 +98,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:04     ; 1.0                     ; 4687 MB             ; 00:00:02                           ;
-; Fitter                    ; 00:00:07     ; 3.3                     ; 5594 MB             ; 00:00:10                           ;
-; Assembler                 ; 00:00:01     ; 1.0                     ; 4552 MB             ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:05     ; 1.0                     ; 4659 MB             ; 00:00:02                           ;
-; Total                     ; 00:00:17     ; --                      ; --                  ; 00:00:15                           ;
+; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 4679 MB             ; 00:00:02                           ;
+; Fitter                    ; 00:00:07     ; 2.0                     ; 5612 MB             ; 00:00:08                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 4548 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:05     ; 1.0                     ; 4663 MB             ; 00:00:02                           ;
+; Total                     ; 00:00:17     ; --                      ; --                  ; 00:00:13                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

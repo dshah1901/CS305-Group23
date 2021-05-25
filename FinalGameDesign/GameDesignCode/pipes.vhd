@@ -26,7 +26,7 @@ SIGNAL wedge 					: std_logic_vector(9 DOWNTO 0);
 SIGNAL height, gap_height					: std_logic_vector(9 downto 0);  
 SIGNAL pipes_y_pos, pipes_x_pos, gap_y_pos	: std_logic_vector(9 DOWNTO 0);
 SIGNAL pipe_x_motion			: std_logic_vector(9 DOWNTO 0);
-Signal send						: std_logic_vector(3 downto 0) := "0100";
+Signal send						: std_logic_vector(3 downto 0) := "1110";
 signal lfsr1 						: std_logic_vector(3 downto 0);
 
 BEGIN           
@@ -34,7 +34,7 @@ BEGIN
 random: LFSR_generator
 port map (Clk => clk, reset => '1', seed => send, lfsr => lfsr1);
 
-wedge <= CONV_STD_LOGIC_VECTOR(30,10);
+wedge <= CONV_STD_LOGIC_VECTOR(25,10);
 height <= CONV_STD_LOGIC_VECTOR(440,10);
 gap_height <= CONV_STD_LOGIC_VECTOR(80,10);
 -- pipe_x_pos and pipe_y_pos show the (x,y) for the centre of ball
@@ -66,18 +66,18 @@ begin
 				when "00" => 
 				pipes_x_pos <= CONV_STD_LOGIC_VECTOR(400,10);
 				gap_y_pos <= CONV_STD_LOGIC_VECTOR(400,10);
-				send <= "0111";
+				send <= "1000";
 				when "01" => 
 				pipes_x_pos <= CONV_STD_LOGIC_VECTOR(650,10);
 				gap_y_pos <= CONV_STD_LOGIC_VECTOR(300,10);
-				send <= "1101";
+				send <= "0101";
 				when "10" => 
 				pipes_x_pos <= CONV_STD_LOGIC_VECTOR(900,10);
 				gap_y_pos <= CONV_STD_LOGIC_VECTOR(200,10);
-				send <= "0010";
+				send <= "1101";
 				when others => 
 				pipes_x_pos <= CONV_STD_LOGIC_VECTOR(950,10);
-				send <= "1001";
+				send <= "0010";
 			end case;
 		-- Bounce off top or bottom of the scree
 		elsif (('0' & pipes_x_pos <= CONV_STD_LOGIC_VECTOR(0,11))) then

@@ -47,8 +47,8 @@ applicable agreement for further details.
 	(port
 		(pt 0 80)
 		(input)
-		(text "vga_sync" (rect 0 0 41 12)(font "Arial" ))
-		(text "vga_sync" (rect 21 75 62 87)(font "Arial" ))
+		(text "vert_sync" (rect 0 0 42 12)(font "Arial" ))
+		(text "vert_sync" (rect 21 75 63 87)(font "Arial" ))
 		(line (pt 0 80)(pt 16 80)(line_width 1))
 	)
 	(port

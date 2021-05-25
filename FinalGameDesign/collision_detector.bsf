@@ -131,9 +131,30 @@ applicable agreement for further details.
 	(port
 		(pt 200 80)
 		(output)
+		(text "f_damage1" (rect 0 0 44 12)(font "Arial" ))
+		(text "f_damage1" (rect 135 75 179 87)(font "Arial" ))
+		(line (pt 200 80)(pt 184 80)(line_width 1))
+	)
+	(port
+		(pt 200 96)
+		(output)
+		(text "f_damage2" (rect 0 0 46 12)(font "Arial" ))
+		(text "f_damage2" (rect 133 91 179 103)(font "Arial" ))
+		(line (pt 200 96)(pt 184 96)(line_width 1))
+	)
+	(port
+		(pt 200 112)
+		(output)
+		(text "f_damage3" (rect 0 0 46 12)(font "Arial" ))
+		(text "f_damage3" (rect 133 107 179 119)(font "Arial" ))
+		(line (pt 200 112)(pt 184 112)(line_width 1))
+	)
+	(port
+		(pt 200 128)
+		(output)
 		(text "score[6..0]" (rect 0 0 42 12)(font "Arial" ))
-		(text "score[6..0]" (rect 137 75 179 87)(font "Arial" ))
-		(line (pt 200 80)(pt 184 80)(line_width 3))
+		(text "score[6..0]" (rect 137 123 179 135)(font "Arial" ))
+		(line (pt 200 128)(pt 184 128)(line_width 3))
 	)
 	(drawing
 		(rectangle (rect 16 16 184 224)(line_width 1))

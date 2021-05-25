@@ -6,7 +6,7 @@ USE  IEEE.STD_LOGIC_SIGNED.all;
 
 ENTITY VGA_control IS
 	PORT
-		(clk, ball_on, text_on ,vga_sync								: IN std_logic;
+		(clk, ball_on, text_on ,vert_sync								: IN std_logic;
 			pipe1, pipe2, pipe3				 							: IN std_logic;
 			coin_on, heart_on 											: in std_logic;
 			pix_row, pix_col												: in std_logic_vector (9 downto 0);
@@ -17,9 +17,9 @@ END VGA_control;
 architecture beh of VGA_control is
 begin
 
-red <= (pipe1 and ball_on);
-green <= (pipe2 and ball_on);
-blue <= (pipe3 and ball_on);
+red <= (ball_on AND HEArt_on);
+green <= (ball_on AND COIN_ON);
+blue <= (pipe3 AND PIPE1 AND PIPE2 and ball_on);
 
 
 
