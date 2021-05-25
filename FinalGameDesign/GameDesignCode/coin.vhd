@@ -48,7 +48,8 @@ begin
 				coin_x_pos <= CONV_STD_LOGIC_VECTOR(850,10);
 				count <= "000000000";
 		-- Bounce off top or bottom of the scree
-		elsif (('0' & coin_x_pos <= CONV_STD_LOGIC_VECTOR(0,11))) then
+		elsif (('0' & coin_x_pos <= CONV_STD_LOGIC_VECTOR(0,11))) then 
+			coin <= '0';
 			case lfsr1 is
 				when "0001" => coin_y_pos <= CONV_STD_LOGIC_VECTOR(30,10);
 				when "0010" => coin_y_pos <= CONV_STD_LOGIC_VECTOR(60,10);
@@ -74,7 +75,8 @@ begin
 			
 			if (count < "100101100") then
 				count <= count + "000000001";
-			else 
+			else
+				coin_on <= '1';
 				coin_x_pos <= CONV_STD_LOGIC_VECTOR(800,10);
 				count <= "000000000";
 			end if;

@@ -49,6 +49,7 @@ begin
 				count <= "000000000";
 		-- Bounce off top or bottom of the scree
 		elsif (('0' & heart_x_pos <= CONV_STD_LOGIC_VECTOR(0,11))) then
+			heart_on <= '0'
 			case lfsr1 is
 				when "0001" => heart_y_pos <= CONV_STD_LOGIC_VECTOR(30,10);
 				when "0010" => heart_y_pos <= CONV_STD_LOGIC_VECTOR(60,10);
@@ -74,7 +75,8 @@ begin
 			
 			if (count < CONV_STD_LOGIC_VECTOR(500,9)) then
 				count <= count + "000000001";
-			else 
+			else
+				heart_on <= '1';
 				heart_x_pos <= CONV_STD_LOGIC_VECTOR(980,10);
 				count <= "000000000";
 			end if;
