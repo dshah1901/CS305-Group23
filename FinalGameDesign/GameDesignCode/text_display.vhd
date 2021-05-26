@@ -61,7 +61,6 @@ architecture behaviour of text_display is
 							character_address <= conv_std_logic_vector(14,6); -- N
 							charOn <= '1';
 						else
-							character_address <= conv_std_logic_vector(32,6); -- Space 
 							charOn <= '0';
 						end if;	
 				end if;
@@ -104,8 +103,7 @@ architecture behaviour of text_display is
 						elsif ((192 <= pixel_row) and (pixel_row < 224) and (544 <= pixel_column) and (pixel_column < 576)) then 
 							character_address <= conv_std_logic_vector(93,6); -- ]
 							charOn <= '1';
-						else
-							character_address <= conv_std_logic_vector(32,6); -- Space 
+						else 
 							charOn <= '0';
 						end if;
 				end if;
@@ -125,7 +123,6 @@ architecture behaviour of text_display is
 						character_address <= conv_std_logic_vector(5,6); -- E
 						charOn <= '1';
 					else
-						character_address <= conv_std_logic_vector(32,6); -- Space 
 						charOn <= '0';
 					end if;
 				end if;
@@ -172,7 +169,6 @@ architecture behaviour of text_display is
 							character_address <= conv_std_logic_vector(93,6); -- ]
 							charOn <= '1';
 						else
-							character_address <= conv_std_logic_vector(32,6); -- Space 
 							charOn <= '0';
 						end if;
 				end if;
@@ -183,8 +179,7 @@ architecture behaviour of text_display is
 						if ((128 <= pixel_row) and (pixel_row < 192) and (128 <= pixel_column) and (pixel_column < 192)) then 
 							character_address <= conv_std_logic_vector(32,6); -- T
 							charOn <= '1';
-						else
-							character_address <= conv_std_logic_vector(32,6); -- Space 
+						else 
 							charOn <= '0';
 						end if;	
 				end if;
@@ -205,7 +200,6 @@ architecture behaviour of text_display is
 							character_address <= conv_std_logic_vector(5,6); -- E
 							charOn <= '1';
 						else
-							character_address <= conv_std_logic_vector(32,6); -- Space 
 							charOn <= '0';
 						end if;	
 				end if;
@@ -225,12 +219,45 @@ architecture behaviour of text_display is
 						character_address <= conv_std_logic_vector(18,6); -- R
 						charOn <= '1';
 					else
-						character_address <= conv_std_logic_vector(32,6); -- Space 
 						charOn <= '0';
 					end if;
+				end if;
+				if ((320 <= pixel_row) and (pixel_row < 352) and (128 <= pixel_column) and (pixel_column < 608)) then -- [PRESS PB2]
+						font_col <= pixel_column(4 downto 2); -- To change the font size
+						font_row <= pixel_row(4 downto 2);
+						if ((320 <= pixel_row) and (pixel_row < 352) and (192 <= pixel_column) and (pixel_column < 224)) then 
+							character_address <= conv_std_logic_vector(16,6); -- P
+							charOn <= '1';
+						elsif ((320 <= pixel_row) and (pixel_row < 352) and (224 <= pixel_column) and (pixel_column < 256)) then 
+							character_address <= conv_std_logic_vector(18,6); -- R
+							charOn <= '1';
+						elsif ((320 <= pixel_row) and (pixel_row < 352) and (256 <= pixel_column) and (pixel_column < 288)) then 
+							character_address <= conv_std_logic_vector(5,6); -- E
+							charOn <= '1';
+						elsif ((320 <= pixel_row) and (pixel_row < 352) and (288 <= pixel_column) and (pixel_column < 320)) then 
+							character_address <= conv_std_logic_vector(19,6); -- S
+							charOn <= '1';
+						elsif ((320 <= pixel_row) and (pixel_row < 352) and (320 <= pixel_column) and (pixel_column < 352)) then 
+							character_address <= conv_std_logic_vector(19,6); -- S
+							charOn <= '1';
+						elsif ((320 <= pixel_row) and (pixel_row < 352) and (352 <= pixel_column) and (pixel_column < 384)) then 
+							character_address <= conv_std_logic_vector(32,6); -- Space
+							charOn <= '1';
+						elsif ((320 <= pixel_row) and (pixel_row < 352) and (384 <= pixel_column) and (pixel_column < 416)) then 
+							character_address <= conv_std_logic_vector(16,6); -- P
+							charOn <= '1';
+						elsif ((320 <= pixel_row) and (pixel_row < 352) and (416 <= pixel_column) and (pixel_column < 448)) then 
+							character_address <= conv_std_logic_vector(2,6); -- B
+							charOn <= '1';
+						elsif ((320 <= pixel_row) and (pixel_row < 352) and (448 <= pixel_column) and (pixel_column < 480)) then 
+							character_address <= conv_std_logic_vector(50,6); -- 2
+							charOn <= '1';
+						else
+							charOn <= '0';
+						end if;
 				end if;
 			end if;
 		end process;
 
-		text_on <= rom_mux_output and charOn;
+		text_on <= (rom_mux_output and charOn);
 end architecture;
