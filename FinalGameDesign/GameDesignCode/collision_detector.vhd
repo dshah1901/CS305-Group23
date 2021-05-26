@@ -7,10 +7,10 @@ USE  IEEE.STD_LOGIC_UNSIGNED.all;
 
 ENTITY collision_detector IS
 	PORT
-		( clk, vert_sync, reset, enable															: IN std_logic;
-		  bird, pipe1, pipe2, pipe3, heart, coin 	: IN std_logic;
-		  death, coin_reset, heart_reset, f_damage1, f_damage2, f_damage3					 									: OUT std_logic;
-		  pix_row, pix_col																			: in std_logic_vector (9 downto 0);
+		( clk, vert_sync, reset, enable																													: IN std_logic;
+		  bird, pipe1, pipe2, pipe3, heart, coin,text_on 																										: IN std_logic;
+		  death, coin_reset, heart_reset, f_damage1, f_damage2, f_damage3, red,green,blue					 									: OUT std_logic;
+		  pix_row, pix_col																												: in std_logic_vector (9 downto 0);
 		  score					 																		: OUT std_logic_vector(6 downto 0));		
 END collision_detector;
 
@@ -19,6 +19,7 @@ architecture behaviour of collision_detector is
   signal f_death, f_health, f_coin, damage1, damage2, damage3														: std_logic;
   signal score_tracker, f_score_tracker																				: std_logic_vector(6 downto 0);
   signal health																												: std_logic_vector(1 downto 0);
+  signal counter																												: std_logic_vector(4 downto 0);
   
  begin
     
@@ -29,64 +30,84 @@ architecture behaviour of collision_detector is
 	 score <= score_tracker;
 	 heart_reset <= f_health;
 	 coin_reset <=f_coin;
+	
+	
 	 
+process(clk)
+begin
+if rising_edge(clk) then
+		if (bird = '0') then
+		red<= '0';
+		green<= '0';
+		blue<= '1';
+		elsif (heart='1') THEN
+		red <= '1';
+		green <= '0';
+		blue <= '0';
+		ELSIF (coin='1') then
+		red <= '1';
+		green <= '1';
+		blue <= '0';
+		elsIF (text_on= '1') then
+		red <= '0';
+		green <= '1';
+		blue <= '0';
+		elsif ( pipe1 = '1' or pipe2 = '1' or pipe3 = '1') then
+		red <= '0';
+		blue <= '0';
+		green <= '1';
+		else
+		red <= '1';
+		green <= '1';
+		blue <= '1';
+		end if;
+end if;
+end process;
+
 	 
 process (vert_sync, pix_row, pix_col)
 begin
 	if rising_edge(vert_sync) then
-	if (reset = '1') then
+		if (reset = '1') then
 		health <= "11";
 		f_death <= '0';
+		
 		damage1 <= '0';
+		damage2 <= '0';
+		damage3 <= '0';
+		
 		score_tracker <= "0000000";
 	--HEALTH TRACKER
-	elsif (enable = '1') then
+		elsif (enable = '1') then
 	
 		-- decrease health
-		if (bird = '1'  and pipe1 = '0' and damage1 = '0') then
+		if (bird = '1'  and  pipe1 = '1' and damage1 = '0') then
 			damage1 <= '1';
-			damage2 <= '0';
-			damage3 <= '0';
-			if ( health = "00") then
-				f_death <= '1';
-			else
-				health <= health - CONV_STD_LOGIC_VECTOR(1,2);
-				
-			end if;
-		elsif (bird = '1'  and  pipe2 = '0'and damage2 = '0' ) then
-			damage1 <= '0';
-			damage2 <= '1';
-			damage3 <= '0';
-			if ( health = "00") then
-				f_death <= '1';
-			else
-				health <= health - CONV_STD_LOGIC_VECTOR(1,2);
-			end if;
-			
-		elsif (bird = '1'  and  pipe3 = '0' and damage3 = '0' ) then
-			damage1 <= '0';
-			damage2 <= '0';
+		elsif (bird = '1'  and  pipe2 = '1' and damage2 = '0' ) then
+			damage2 <= '1';			
+		elsif (bird = '1'  and  pipe3 = '1' and damage3 = '0' ) then
 			damage3 <= '1';
-			if ( health = "00") then
-				f_death <= '1';
-			else
-				health <= health - CONV_STD_LOGIC_VECTOR(1,2);
-			end if;
-			
+		else
+			if (counter = "11110") then
+				damage1 <= '0';
+				damage2 <= '0';
+				damage3 <= '0';
+				counter<="00000";
+			end if; 
+			counter<= counter + "00001";
+		end if;			
 			
 			
 			
 		-- increase health	
-		elsif(bird = '1' and heart = '1') then
-			if ( "11" >  health) then
-				health <= health + CONV_STD_LOGIC_VECTOR(1,2);
-				f_health <= '0';
-			end if;
-		else
-			f_health <= '0';
-		end if;
-		
-		end if;
+--		if(bird = '1' and heart = '1') then
+--			if ( "11" >  health) then
+--				health <= health + CONV_STD_LOGIC_VECTOR(1,2);
+--				f_health <= '0';
+--			end if;
+--		else
+--			f_health <= '0';
+--		end if;
 	
 	-- SCORE TRACKER
 	
@@ -105,6 +126,9 @@ begin
 --				score_tracker <= score_tracker + CONV_STD_LOGIC_VECTOR(1,7);
 --			end if;
 --		end if;
+
+	
+	end if;
 	end if;
 end process;
 

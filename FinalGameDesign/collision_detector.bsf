@@ -20,9 +20,9 @@ applicable agreement for further details.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 216 256)
+	(rect 16 16 216 288)
 	(text "collision_detector" (rect 5 0 71 12)(font "Arial" ))
-	(text "inst" (rect 8 224 20 236)(font "Arial" ))
+	(text "inst" (rect 8 256 20 268)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -96,16 +96,23 @@ applicable agreement for further details.
 	(port
 		(pt 0 192)
 		(input)
-		(text "pix_row[9..0]" (rect 0 0 50 12)(font "Arial" ))
-		(text "pix_row[9..0]" (rect 21 187 71 199)(font "Arial" ))
-		(line (pt 0 192)(pt 16 192)(line_width 3))
+		(text "text_on" (rect 0 0 29 12)(font "Arial" ))
+		(text "text_on" (rect 21 187 50 199)(font "Arial" ))
+		(line (pt 0 192)(pt 16 192)(line_width 1))
 	)
 	(port
 		(pt 0 208)
 		(input)
-		(text "pix_col[9..0]" (rect 0 0 47 12)(font "Arial" ))
-		(text "pix_col[9..0]" (rect 21 203 68 215)(font "Arial" ))
+		(text "pix_row[9..0]" (rect 0 0 50 12)(font "Arial" ))
+		(text "pix_row[9..0]" (rect 21 203 71 215)(font "Arial" ))
 		(line (pt 0 208)(pt 16 208)(line_width 3))
+	)
+	(port
+		(pt 0 224)
+		(input)
+		(text "pix_col[9..0]" (rect 0 0 47 12)(font "Arial" ))
+		(text "pix_col[9..0]" (rect 21 219 68 231)(font "Arial" ))
+		(line (pt 0 224)(pt 16 224)(line_width 3))
 	)
 	(port
 		(pt 200 32)
@@ -152,11 +159,32 @@ applicable agreement for further details.
 	(port
 		(pt 200 128)
 		(output)
+		(text "red" (rect 0 0 12 12)(font "Arial" ))
+		(text "red" (rect 167 123 179 135)(font "Arial" ))
+		(line (pt 200 128)(pt 184 128)(line_width 1))
+	)
+	(port
+		(pt 200 144)
+		(output)
+		(text "green" (rect 0 0 22 12)(font "Arial" ))
+		(text "green" (rect 157 139 179 151)(font "Arial" ))
+		(line (pt 200 144)(pt 184 144)(line_width 1))
+	)
+	(port
+		(pt 200 160)
+		(output)
+		(text "blue" (rect 0 0 15 12)(font "Arial" ))
+		(text "blue" (rect 164 155 179 167)(font "Arial" ))
+		(line (pt 200 160)(pt 184 160)(line_width 1))
+	)
+	(port
+		(pt 200 176)
+		(output)
 		(text "score[6..0]" (rect 0 0 42 12)(font "Arial" ))
-		(text "score[6..0]" (rect 137 123 179 135)(font "Arial" ))
-		(line (pt 200 128)(pt 184 128)(line_width 3))
+		(text "score[6..0]" (rect 137 171 179 183)(font "Arial" ))
+		(line (pt 200 176)(pt 184 176)(line_width 3))
 	)
 	(drawing
-		(rectangle (rect 16 16 184 224)(line_width 1))
+		(rectangle (rect 16 16 184 256)(line_width 1))
 	)
 )

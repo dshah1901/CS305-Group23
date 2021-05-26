@@ -48,10 +48,9 @@ gap_on <= '1' when (('0' & pipes_x_pos <= pixel_column+ wedge + wedge) and ('0' 
 					and ('0' & gap_y_pos <= pixel_row + gap_height) and ('0' & pixel_row <= gap_y_pos )) else
 					'0';
 
--- Colours for pixel data on video signal
--- Keeping background white and square in red
-pipe_on <=  not(pipes_on and not gap_on);
--- Turn off Green and Blue when displaying square
+pipe_on <= (pipes_on and not gap_on);
+
+
 
 
 Move_pipe: process (vert_sync) 

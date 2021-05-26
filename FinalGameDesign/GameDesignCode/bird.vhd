@@ -24,7 +24,7 @@ BEGIN
 
 size <= CONV_STD_LOGIC_VECTOR(8,10);
 -- bird_x_pos and bird_y_pos show the (x,y) for the centre of bird
-bird_x_pos <= CONV_STD_LOGIC_VECTOR(100,11);
+bird_x_pos <= CONV_STD_LOGIC_VECTOR(120,11);
 
 bird_on <= '1' when ( ('0' & bird_x_pos <= '0' & pixel_column + size) and ('0' & pixel_column <= '0' & bird_x_pos + size) 	-- x_pos - size <= pixel_column <= x_pos + size
 					and ('0' & bird_y_pos <= pixel_row + size) and ('0' & pixel_row <= bird_y_pos + size))  else	-- y_pos - size <= pixel_row <= y_pos + size
