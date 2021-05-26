@@ -7,8 +7,8 @@ USE  IEEE.STD_LOGIC_UNSIGNED.all;
 
 ENTITY collision_detector IS
 	PORT
-		( clk, vert_sync, reset, enable																													: IN std_logic;
-		  bird, pipe1, pipe2, pipe3, heart, coin,text_on 																										: IN std_logic;
+		( clk, vert_sync, reset, enable,start_screen, stat_screen, death_show																			: IN std_logic;
+		  bird, pipe1, pipe2, pipe3, heart, coin, text_on 																										: IN std_logic;
 		  death, coin_reset, heart_reset, f_damage1, f_damage2, f_damage3, red,green,blue					 									: OUT std_logic;
 		  pix_row, pix_col																												: in std_logic_vector (9 downto 0);
 		  score					 																		: OUT std_logic_vector(6 downto 0));		
@@ -36,7 +36,18 @@ architecture behaviour of collision_detector is
 process(clk)
 begin
 if rising_edge(clk) then
-		if (bird = '0') then
+	if (start_screen = '1') then
+		if (text_on= '1') then
+		red <= '0';
+		green <= '1';
+		blue <= '0';
+		end if;
+	elsif (stat_screen = '1') then
+		IF (text_on= '1') then
+		red <= '0';
+		green <= '0';
+		blue <= '0';
+		elsif (bird = '0') then
 		red<= '0';
 		green<= '0';
 		blue<= '1';
@@ -48,10 +59,6 @@ if rising_edge(clk) then
 		red <= '1';
 		green <= '1';
 		blue <= '0';
-		elsIF (text_on= '1') then
-		red <= '0';
-		green <= '1';
-		blue <= '0';
 		elsif ( pipe1 = '1' or pipe2 = '1' or pipe3 = '1') then
 		red <= '0';
 		blue <= '0';
@@ -61,6 +68,13 @@ if rising_edge(clk) then
 		green <= '1';
 		blue <= '1';
 		end if;
+	elsif (death_show = '1') then
+		IF (text_on= '1') then
+		red <= '0';
+		green <= '0';
+		blue <= '0';
+		end if;
+	end if;
 end if;
 end process;
 
@@ -81,20 +95,16 @@ begin
 		elsif (enable = '1') then
 	
 		-- decrease health
-		if (bird = '1'  and  pipe1 = '1' and damage1 = '0') then
+		if (bird = '1'  and  pipe1 = '1') then
 			damage1 <= '1';
-		elsif (bird = '1'  and  pipe2 = '1' and damage2 = '0' ) then
+		elsif (bird = '1'  and  pipe2 = '1') then
 			damage2 <= '1';			
-		elsif (bird = '1'  and  pipe3 = '1' and damage3 = '0' ) then
+		elsif (bird = '1'  and  pipe3 = '1' ) then
 			damage3 <= '1';
 		else
-			if (counter = "11110") then
 				damage1 <= '0';
 				damage2 <= '0';
 				damage3 <= '0';
-				counter<="00000";
-			end if; 
-			counter<= counter + "00001";
 		end if;			
 			
 			

@@ -75,9 +75,30 @@ applicable agreement for further details.
 	(port
 		(pt 192 64)
 		(output)
+		(text "start_screen" (rect 0 0 50 12)(font "Arial" ))
+		(text "start_screen" (rect 121 59 171 71)(font "Arial" ))
+		(line (pt 192 64)(pt 176 64)(line_width 1))
+	)
+	(port
+		(pt 192 80)
+		(output)
+		(text "stat_screen" (rect 0 0 47 12)(font "Arial" ))
+		(text "stat_screen" (rect 124 75 171 87)(font "Arial" ))
+		(line (pt 192 80)(pt 176 80)(line_width 1))
+	)
+	(port
+		(pt 192 96)
+		(output)
+		(text "death_show" (rect 0 0 47 12)(font "Arial" ))
+		(text "death_show" (rect 124 91 171 103)(font "Arial" ))
+		(line (pt 192 96)(pt 176 96)(line_width 1))
+	)
+	(port
+		(pt 192 112)
+		(output)
 		(text "difficulty[1..0]" (rect 0 0 51 12)(font "Arial" ))
-		(text "difficulty[1..0]" (rect 120 59 171 71)(font "Arial" ))
-		(line (pt 192 64)(pt 176 64)(line_width 3))
+		(text "difficulty[1..0]" (rect 120 107 171 119)(font "Arial" ))
+		(line (pt 192 112)(pt 176 112)(line_width 3))
 	)
 	(drawing
 		(rectangle (rect 16 16 176 128)(line_width 1))

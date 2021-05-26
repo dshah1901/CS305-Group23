@@ -1,5 +1,5 @@
 
-State Machine - |GameDesign|state_tracker:inst4|state
+State Machine - |GameDesign|state_tracker:inst5|state
 Name state.death_screen state.level3 state.level2 state.level1 state.training state.start 
 state.start 0 0 0 0 0 0 
 state.training 0 0 0 0 1 1 
@@ -8,7 +8,7 @@ state.level2 0 0 1 0 0 1
 state.level3 0 1 0 0 0 1 
 state.death_screen 1 0 0 0 0 1 
 
-State Machine - |GameDesign|state_tracker:inst4|next_state
+State Machine - |GameDesign|state_tracker:inst5|next_state
 Name next_state.death_screen next_state.level3 next_state.level2 next_state.level1 next_state.training next_state.start 
 next_state.start 0 0 0 0 0 0 
 next_state.training 0 0 0 0 1 1 

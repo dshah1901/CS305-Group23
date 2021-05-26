@@ -43,7 +43,7 @@ architecture behaviour of text_display is
 		-- Initial Screen
 			if(start_screen = '1') then
 				if ((128 <= pixel_row) and (pixel_row < 192) and (128 <= pixel_column) and (pixel_column < 512)) then -- TRAIN
-						font_col <= pixel_column(5 downto 3); -- To change the font size
+					   font_col <= pixel_column(5 downto 3); -- To change the font size
 						font_row <= pixel_row(5 downto 3);
 						if ((128 <= pixel_row) and (pixel_row < 192) and (128 <= pixel_column) and (pixel_column < 192)) then 
 							character_address <= conv_std_logic_vector(20,6); -- T
@@ -62,7 +62,7 @@ architecture behaviour of text_display is
 							charOn <= '1';
 						else
 							charOn <= '0';
-						end if;
+						end if;	
 				end if;
 				if ((192 <= pixel_row) and (pixel_row < 256) and (128 <= pixel_column) and (pixel_column < 576)) then -- [LEFT CLICK]
 						font_col <= pixel_column(4 downto 2); -- To change the font size

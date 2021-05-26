@@ -1,5 +1,5 @@
 Analysis & Synthesis report for GameDesign
-Wed May 26 12:58:03 2021
+Wed May 26 13:51:28 2021
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
@@ -14,26 +14,30 @@ Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis IP Cores Summary
-  9. State Machine - |GameDesign|state_tracker:inst4|state
- 10. State Machine - |GameDesign|state_tracker:inst4|next_state
+  9. State Machine - |GameDesign|state_tracker:inst5|state
+ 10. State Machine - |GameDesign|state_tracker:inst5|next_state
  11. State Machine - |GameDesign|MOUSE:inst14|mouse_state
  12. Registers Removed During Synthesis
  13. Removed Registers Triggering Further Register Optimizations
  14. General Register Statistics
  15. Inverted Register Statistics
  16. Multiplexer Restructuring Statistics (Restructuring Performed)
- 17. Parameter Settings for User Entity Instance: altpll0:inst2|altpll:altpll_component
- 18. Parameter Settings for User Entity Instance: pipes:inst13
- 19. Parameter Settings for User Entity Instance: pipes:inst18
- 20. Parameter Settings for User Entity Instance: pipes:inst10
- 21. altpll Parameter Settings by Entity Instance
- 22. Port Connectivity Checks: "coin:inst11|lfsr_generator:random"
- 23. Port Connectivity Checks: "heart:inst16|lfsr_generator:random"
- 24. Port Connectivity Checks: "pipes:inst10|lfsr_generator:random"
- 25. Port Connectivity Checks: "pipes:inst18|lfsr_generator:random"
- 26. Port Connectivity Checks: "pipes:inst13|lfsr_generator:random"
- 27. Elapsed Time Per Partition
- 28. Analysis & Synthesis Messages
+ 17. Source assignments for text_display:inst7|char_rom:char_data|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated
+ 18. Parameter Settings for User Entity Instance: altpll0:inst2|altpll:altpll_component
+ 19. Parameter Settings for User Entity Instance: pipes:inst13
+ 20. Parameter Settings for User Entity Instance: pipes:inst18
+ 21. Parameter Settings for User Entity Instance: pipes:inst10
+ 22. Parameter Settings for User Entity Instance: text_display:inst7|char_rom:char_data|altsyncram:altsyncram_component
+ 23. altpll Parameter Settings by Entity Instance
+ 24. altsyncram Parameter Settings by Entity Instance
+ 25. Port Connectivity Checks: "text_display:inst7|char_rom:char_data"
+ 26. Port Connectivity Checks: "coin:inst11|lfsr_generator:random"
+ 27. Port Connectivity Checks: "heart:inst16|lfsr_generator:random"
+ 28. Port Connectivity Checks: "pipes:inst10|lfsr_generator:random"
+ 29. Port Connectivity Checks: "pipes:inst18|lfsr_generator:random"
+ 30. Port Connectivity Checks: "pipes:inst13|lfsr_generator:random"
+ 31. Elapsed Time Per Partition
+ 32. Analysis & Synthesis Messages
 
 
 
@@ -59,15 +63,15 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed May 26 12:58:03 2021       ;
+; Analysis & Synthesis Status        ; Successful - Wed May 26 13:51:28 2021       ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
 ; Revision Name                      ; GameDesign                                  ;
 ; Top-level Entity Name              ; GameDesign                                  ;
 ; Family                             ; Cyclone III                                 ;
-; Total logic elements               ; 702                                         ;
-;     Total combinational functions  ; 649                                         ;
-;     Dedicated logic registers      ; 267                                         ;
-; Total registers                    ; 267                                         ;
+; Total logic elements               ; 695                                         ;
+;     Total combinational functions  ; 642                                         ;
+;     Dedicated logic registers      ; 262                                         ;
+; Total registers                    ; 262                                         ;
 ; Total pins                         ; 12                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -185,6 +189,8 @@ applicable agreement for further details.
 +---------------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path      ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                       ; Library ;
 +---------------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------------------------+---------+
+; GameDesignCode/char_rom.vhd           ; yes             ; User VHDL File                     ; //files.auckland.ac.nz/myhome/Documents/GitHub/CS305-Group23/FinalGameDesign/GameDesignCode/char_rom.vhd           ;         ;
+; GameDesignCode/text_display.vhd       ; yes             ; User VHDL File                     ; //files.auckland.ac.nz/myhome/Documents/GitHub/CS305-Group23/FinalGameDesign/GameDesignCode/text_display.vhd       ;         ;
 ; GameDesignCode/heart.vhd              ; yes             ; User VHDL File                     ; //files.auckland.ac.nz/myhome/Documents/GitHub/CS305-Group23/FinalGameDesign/GameDesignCode/heart.vhd              ;         ;
 ; GameDesignCode/coin.vhd               ; yes             ; User VHDL File                     ; //files.auckland.ac.nz/myhome/Documents/GitHub/CS305-Group23/FinalGameDesign/GameDesignCode/coin.vhd               ;         ;
 ; GameDesignCode/LFSR_generator.vhd     ; yes             ; User VHDL File                     ; //files.auckland.ac.nz/myhome/Documents/GitHub/CS305-Group23/FinalGameDesign/GameDesignCode/LFSR_generator.vhd     ;         ;
@@ -202,6 +208,15 @@ applicable agreement for further details.
 ; stratixii_pll.inc                     ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/stratixii_pll.inc                                                   ;         ;
 ; cycloneii_pll.inc                     ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/cycloneii_pll.inc                                                   ;         ;
 ; db/altpll0_altpll.v                   ; yes             ; Auto-Generated Megafunction        ; //files.auckland.ac.nz/myhome/Documents/GitHub/CS305-Group23/FinalGameDesign/db/altpll0_altpll.v                   ;         ;
+; altsyncram.tdf                        ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/altsyncram.tdf                                                      ;         ;
+; stratix_ram_block.inc                 ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/stratix_ram_block.inc                                               ;         ;
+; lpm_mux.inc                           ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/lpm_mux.inc                                                         ;         ;
+; lpm_decode.inc                        ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/lpm_decode.inc                                                      ;         ;
+; a_rdenreg.inc                         ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/a_rdenreg.inc                                                       ;         ;
+; altrom.inc                            ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/altrom.inc                                                          ;         ;
+; altram.inc                            ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/altram.inc                                                          ;         ;
+; altdpram.inc                          ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/altdpram.inc                                                        ;         ;
+; db/altsyncram_kt91.tdf                ; yes             ; Auto-Generated Megafunction        ; //files.auckland.ac.nz/myhome/Documents/GitHub/CS305-Group23/FinalGameDesign/db/altsyncram_kt91.tdf                ;         ;
 +---------------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -210,20 +225,20 @@ applicable agreement for further details.
 +---------------------------------------------+-----------------------------+
 ; Resource                                    ; Usage                       ;
 +---------------------------------------------+-----------------------------+
-; Estimated Total logic elements              ; 702                         ;
+; Estimated Total logic elements              ; 695                         ;
 ;                                             ;                             ;
-; Total combinational functions               ; 649                         ;
+; Total combinational functions               ; 642                         ;
 ; Logic element usage by number of LUT inputs ;                             ;
-;     -- 4 input functions                    ; 163                         ;
-;     -- 3 input functions                    ; 250                         ;
-;     -- <=2 input functions                  ; 236                         ;
+;     -- 4 input functions                    ; 160                         ;
+;     -- 3 input functions                    ; 247                         ;
+;     -- <=2 input functions                  ; 235                         ;
 ;                                             ;                             ;
 ; Logic elements by mode                      ;                             ;
-;     -- normal mode                          ; 303                         ;
-;     -- arithmetic mode                      ; 346                         ;
+;     -- normal mode                          ; 299                         ;
+;     -- arithmetic mode                      ; 343                         ;
 ;                                             ;                             ;
-; Total registers                             ; 267                         ;
-;     -- Dedicated logic registers            ; 267                         ;
+; Total registers                             ; 262                         ;
+;     -- Dedicated logic registers            ; 262                         ;
 ;     -- I/O registers                        ; 0                           ;
 ;                                             ;                             ;
 ; I/O pins                                    ; 12                          ;
@@ -232,8 +247,8 @@ applicable agreement for further details.
 ;     -- PLLs                                 ; 1                           ;
 ;                                             ;                             ;
 ; Maximum fan-out node                        ; VGA_SYNC:inst|vert_sync_out ;
-; Maximum fan-out                             ; 148                         ;
-; Total fan-out                               ; 2680                        ;
+; Maximum fan-out                             ; 143                         ;
+; Total fan-out                               ; 2647                        ;
 ; Average fan-out                             ; 2.84                        ;
 +---------------------------------------------+-----------------------------+
 
@@ -243,20 +258,20 @@ applicable agreement for further details.
 +------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node               ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                             ; Library Name ;
 +------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------+--------------+
-; |GameDesign                              ; 649 (1)           ; 267 (0)      ; 0           ; 0            ; 0       ; 0         ; 12   ; 0            ; |GameDesign                                                                     ;              ;
-;    |MOUSE:inst14|                        ; 52 (52)           ; 65 (65)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GameDesign|MOUSE:inst14                                                        ;              ;
+; |GameDesign                              ; 642 (1)           ; 262 (0)      ; 0           ; 0            ; 0       ; 0         ; 12   ; 0            ; |GameDesign                                                                     ;              ;
+;    |MOUSE:inst14|                        ; 53 (53)           ; 65 (65)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GameDesign|MOUSE:inst14                                                        ;              ;
 ;    |VGA_SYNC:inst|                       ; 57 (57)           ; 48 (48)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GameDesign|VGA_SYNC:inst                                                       ;              ;
 ;    |altpll0:inst2|                       ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GameDesign|altpll0:inst2                                                       ;              ;
 ;       |altpll:altpll_component|          ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GameDesign|altpll0:inst2|altpll:altpll_component                               ;              ;
 ;          |altpll0_altpll:auto_generated| ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GameDesign|altpll0:inst2|altpll:altpll_component|altpll0_altpll:auto_generated ;              ;
-;    |bird:inst12|                         ; 64 (64)           ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GameDesign|bird:inst12                                                         ;              ;
+;    |bird:inst12|                         ; 65 (65)           ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GameDesign|bird:inst12                                                         ;              ;
 ;    |coin:inst11|                         ; 120 (120)         ; 31 (31)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GameDesign|coin:inst11                                                         ;              ;
-;    |collision_detector:inst1|            ; 26 (26)           ; 11 (11)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GameDesign|collision_detector:inst1                                            ;              ;
-;    |heart:inst16|                        ; 106 (106)         ; 31 (31)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GameDesign|heart:inst16                                                        ;              ;
+;    |collision_detector:inst8|            ; 15 (15)           ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GameDesign|collision_detector:inst8                                            ;              ;
+;    |heart:inst16|                        ; 108 (108)         ; 31 (31)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GameDesign|heart:inst16                                                        ;              ;
 ;    |pipes:inst10|                        ; 91 (91)           ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GameDesign|pipes:inst10                                                        ;              ;
 ;    |pipes:inst13|                        ; 65 (65)           ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GameDesign|pipes:inst13                                                        ;              ;
 ;    |pipes:inst18|                        ; 65 (65)           ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GameDesign|pipes:inst18                                                        ;              ;
-;    |state_tracker:inst4|                 ; 2 (2)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GameDesign|state_tracker:inst4                                                 ;              ;
+;    |state_tracker:inst5|                 ; 2 (2)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GameDesign|state_tracker:inst5                                                 ;              ;
 +------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -272,7 +287,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 Encoding Type:  One-Hot
 +---------------------------------------------------------------------------------------------------------------------+
-; State Machine - |GameDesign|state_tracker:inst4|state                                                               ;
+; State Machine - |GameDesign|state_tracker:inst5|state                                                               ;
 +--------------------+--------------------+--------------+--------------+--------------+----------------+-------------+
 ; Name               ; state.death_screen ; state.level3 ; state.level2 ; state.level1 ; state.training ; state.start ;
 +--------------------+--------------------+--------------+--------------+--------------+----------------+-------------+
@@ -287,7 +302,7 @@ Encoding Type:  One-Hot
 
 Encoding Type:  One-Hot
 +--------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |GameDesign|state_tracker:inst4|next_state                                                                                             ;
+; State Machine - |GameDesign|state_tracker:inst5|next_state                                                                                             ;
 +-------------------------+-------------------------+-------------------+-------------------+-------------------+---------------------+------------------+
 ; Name                    ; next_state.death_screen ; next_state.level3 ; next_state.level2 ; next_state.level1 ; next_state.training ; next_state.start ;
 +-------------------------+-------------------------+-------------------+-------------------+-------------------+---------------------+------------------+
@@ -340,8 +355,8 @@ Encoding Type:  One-Hot
 ; pipes:inst13|pipe_x_motion[1]                ; Stuck at VCC due to stuck port data_in                  ;
 ; pipes:inst13|pipe_x_motion[2..9]             ; Stuck at GND due to stuck port data_in                  ;
 ; pipes:inst13|lfsr_generator:random|reg[0..3] ; Stuck at VCC due to stuck port aload                    ;
-; collision_detector:inst1|score_tracker[0..6] ; Stuck at GND due to stuck port data_in                  ;
-; collision_detector:inst1|f_death             ; Stuck at GND due to stuck port data_in                  ;
+; collision_detector:inst8|score_tracker[0..6] ; Stuck at GND due to stuck port data_in                  ;
+; collision_detector:inst8|f_death             ; Stuck at GND due to stuck port data_in                  ;
 ; coin:inst11|coin_y_pos[0,9]                  ; Stuck at GND due to stuck port data_in                  ;
 ; heart:inst16|heart_y_pos[0,9]                ; Stuck at GND due to stuck port data_in                  ;
 ; MOUSE:inst14|CHAROUT[4..7]                   ; Stuck at VCC due to stuck port data_in                  ;
@@ -362,14 +377,14 @@ Encoding Type:  One-Hot
 ; pipes:inst18|pipes_x_pos[0]                  ; Stuck at GND due to stuck port data_in                  ;
 ; pipes:inst13|pipes_x_pos[0]                  ; Stuck at GND due to stuck port data_in                  ;
 ; VGA_SYNC:inst|pixel_row[9]                   ; Stuck at GND due to stuck port data_in                  ;
-; state_tracker:inst4|state.training           ; Lost fanout                                             ;
-; state_tracker:inst4|next_state.training      ; Lost fanout                                             ;
-; state_tracker:inst4|state.level2             ; Merged with state_tracker:inst4|state.death_screen      ;
-; state_tracker:inst4|state.level3             ; Merged with state_tracker:inst4|state.death_screen      ;
-; state_tracker:inst4|next_state.level2        ; Merged with state_tracker:inst4|next_state.death_screen ;
-; state_tracker:inst4|next_state.level3        ; Merged with state_tracker:inst4|next_state.death_screen ;
-; state_tracker:inst4|next_state.death_screen  ; Stuck at GND due to stuck port data_in                  ;
-; state_tracker:inst4|state.death_screen       ; Stuck at GND due to stuck port data_in                  ;
+; state_tracker:inst5|state.training           ; Lost fanout                                             ;
+; state_tracker:inst5|next_state.training      ; Lost fanout                                             ;
+; state_tracker:inst5|state.level2             ; Merged with state_tracker:inst5|state.death_screen      ;
+; state_tracker:inst5|state.level3             ; Merged with state_tracker:inst5|state.death_screen      ;
+; state_tracker:inst5|next_state.level2        ; Merged with state_tracker:inst5|next_state.death_screen ;
+; state_tracker:inst5|next_state.level3        ; Merged with state_tracker:inst5|next_state.death_screen ;
+; state_tracker:inst5|next_state.death_screen  ; Stuck at GND due to stuck port data_in                  ;
+; state_tracker:inst5|state.death_screen       ; Stuck at GND due to stuck port data_in                  ;
 ; Total Number of Removed Registers = 117      ;                                                         ;
 +----------------------------------------------+---------------------------------------------------------+
 
@@ -389,8 +404,8 @@ Encoding Type:  One-Hot
 ;                                             ; due to stuck port aload   ; pipes:inst18|lfsr_generator:random|reg[1]                                          ;
 ; pipes:inst13|lfsr_generator:random|reg[0]   ; Stuck at VCC              ; pipes:inst13|lfsr_generator:random|reg[2],                                         ;
 ;                                             ; due to stuck port aload   ; pipes:inst13|lfsr_generator:random|reg[1]                                          ;
-; state_tracker:inst4|state.training          ; Lost Fanouts              ; state_tracker:inst4|next_state.training                                            ;
-; state_tracker:inst4|next_state.death_screen ; Stuck at GND              ; state_tracker:inst4|state.death_screen                                             ;
+; state_tracker:inst5|state.training          ; Lost Fanouts              ; state_tracker:inst5|next_state.training                                            ;
+; state_tracker:inst5|next_state.death_screen ; Stuck at GND              ; state_tracker:inst5|state.death_screen                                             ;
 ;                                             ; due to stuck port data_in ;                                                                                    ;
 +---------------------------------------------+---------------------------+------------------------------------------------------------------------------------+
 
@@ -400,12 +415,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 267   ;
+; Total registers                              ; 262   ;
 ; Number of registers using Synchronous Clear  ; 38    ;
 ; Number of registers using Synchronous Load   ; 56    ;
 ; Number of registers using Asynchronous Clear ; 16    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 143   ;
+; Number of registers using Clock Enable       ; 142   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -415,18 +430,18 @@ Encoding Type:  One-Hot
 +-----------------------------------------+---------+
 ; Inverted Register                       ; Fan out ;
 +-----------------------------------------+---------+
-; pipes:inst18|send[1]                    ; 11      ;
-; pipes:inst18|send[2]                    ; 11      ;
-; pipes:inst18|send[3]                    ; 10      ;
-; pipes:inst10|send[1]                    ; 11      ;
-; pipes:inst10|send[2]                    ; 11      ;
-; pipes:inst10|send[3]                    ; 10      ;
 ; pipes:inst13|send[1]                    ; 11      ;
 ; pipes:inst13|send[2]                    ; 11      ;
 ; pipes:inst13|send[3]                    ; 10      ;
-; coin:inst11|send[0]                     ; 11      ;
+; pipes:inst10|send[1]                    ; 11      ;
+; pipes:inst10|send[2]                    ; 11      ;
+; pipes:inst10|send[3]                    ; 10      ;
+; pipes:inst18|send[1]                    ; 11      ;
+; pipes:inst18|send[2]                    ; 11      ;
+; pipes:inst18|send[3]                    ; 10      ;
 ; heart:inst16|send[0]                    ; 11      ;
 ; heart:inst16|send[1]                    ; 11      ;
+; coin:inst11|send[0]                     ; 11      ;
 ; MOUSE:inst14|send_char                  ; 3       ;
 ; MOUSE:inst14|SHIFTOUT[3]                ; 1       ;
 ; MOUSE:inst14|SHIFTOUT[5]                ; 1       ;
@@ -449,7 +464,7 @@ Encoding Type:  One-Hot
 ; 3:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |GameDesign|pipes:inst18|pipes_x_pos[1]   ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |GameDesign|pipes:inst13|gap_y_pos[6]     ;
 ; 3:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |GameDesign|pipes:inst13|pipes_x_pos[3]   ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |GameDesign|collision_detector:inst1|red  ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |GameDesign|collision_detector:inst8|red  ;
 ; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |GameDesign|coin:inst11|coin_x_pos[5]     ;
 ; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |GameDesign|coin:inst11|count[7]          ;
 ; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |GameDesign|heart:inst16|heart_x_pos[1]   ;
@@ -457,8 +472,17 @@ Encoding Type:  One-Hot
 ; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |GameDesign|pipes:inst10|send[3]          ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |GameDesign|pipes:inst18|send[3]          ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |GameDesign|pipes:inst13|send[3]          ;
-; 9:1                ; 6 bits    ; 36 LEs        ; 12 LEs               ; 24 LEs                 ; No         ; |GameDesign|state_tracker:inst4|Selector5 ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 12 LEs               ; 24 LEs                 ; No         ; |GameDesign|state_tracker:inst5|Selector5 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for text_display:inst7|char_rom:char_data|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated ;
++---------------------------------+--------------------+------+---------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                            ;
++---------------------------------+--------------------+------+---------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                             ;
++---------------------------------+--------------------+------+---------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------+
@@ -865,6 +889,67 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++--------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: text_display:inst7|char_rom:char_data|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+--------------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                                   ;
++------------------------------------+----------------------+--------------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                                ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                             ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                           ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                           ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                         ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                                ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                                                ;
+; WIDTH_A                            ; 8                    ; Signed Integer                                         ;
+; WIDTHAD_A                          ; 9                    ; Signed Integer                                         ;
+; NUMWORDS_A                         ; 512                  ; Signed Integer                                         ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                                ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                                ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                                ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                                ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                                ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                                ;
+; WIDTH_B                            ; 1                    ; Untyped                                                ;
+; WIDTHAD_B                          ; 1                    ; Untyped                                                ;
+; NUMWORDS_B                         ; 1                    ; Untyped                                                ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                                ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                                ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                                ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                                ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                                ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                                ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                                ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                                ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                                ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                                ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                                         ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                                ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                                ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                                ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                                ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                                ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                                ;
+; INIT_FILE                          ; tcgrom.mif           ; Untyped                                                ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                                ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                                ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                                ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                                ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                                ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                                ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                                ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                                ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                                ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                                ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                                ;
+; DEVICE_FAMILY                      ; Cyclone III          ; Untyped                                                ;
+; CBXI_PARAMETER                     ; altsyncram_kt91      ; Untyped                                                ;
++------------------------------------+----------------------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-----------------------------------------------------------------------+
 ; altpll Parameter Settings by Entity Instance                          ;
 +-------------------------------+---------------------------------------+
@@ -880,6 +965,35 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- VCO_MULTIPLY_BY        ; 0                                     ;
 ;     -- VCO_DIVIDE_BY          ; 0                                     ;
 +-------------------------------+---------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                                  ;
++-------------------------------------------+-----------------------------------------------------------------------+
+; Name                                      ; Value                                                                 ;
++-------------------------------------------+-----------------------------------------------------------------------+
+; Number of entity instances                ; 1                                                                     ;
+; Entity Instance                           ; text_display:inst7|char_rom:char_data|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; ROM                                                                   ;
+;     -- WIDTH_A                            ; 8                                                                     ;
+;     -- NUMWORDS_A                         ; 512                                                                   ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                          ;
+;     -- WIDTH_B                            ; 1                                                                     ;
+;     -- NUMWORDS_B                         ; 1                                                                     ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                                ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                          ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                  ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                             ;
++-------------------------------------------+-----------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "text_display:inst7|char_rom:char_data"                                                                                                      ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                      ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; sw1  ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------+
@@ -942,9 +1056,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
-    Info: Processing started: Wed May 26 12:57:58 2021
+    Info: Processing started: Wed May 26 13:51:23 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off GameDesign -c GameDesign
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file gamedesigncode/char_rom.vhd
+    Info (12022): Found design unit 1: char_rom-SYN
+    Info (12023): Found entity 1: char_rom
+Info (12021): Found 2 design units, including 1 entities, in source file gamedesigncode/text_display.vhd
+    Info (12022): Found design unit 1: text_display-behaviour
+    Info (12023): Found entity 1: text_display
 Info (12021): Found 2 design units, including 1 entities, in source file gamedesigncode/heart.vhd
     Info (12022): Found design unit 1: heart-behavior
     Info (12023): Found entity 1: heart
@@ -1044,7 +1164,7 @@ Info (12133): Instantiated megafunction "altpll0:inst2|altpll:altpll_component" 
 Info (12021): Found 1 design units, including 1 entities, in source file db/altpll0_altpll.v
     Info (12023): Found entity 1: altpll0_altpll
 Info (12128): Elaborating entity "altpll0_altpll" for hierarchy "altpll0:inst2|altpll:altpll_component|altpll0_altpll:auto_generated"
-Info (12128): Elaborating entity "collision_detector" for hierarchy "collision_detector:inst1"
+Info (12128): Elaborating entity "collision_detector" for hierarchy "collision_detector:inst8"
 Warning (10541): VHDL Signal Declaration warning at collision_detector.vhd(19): used implicit default value for signal "f_health" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Warning (10541): VHDL Signal Declaration warning at collision_detector.vhd(19): used implicit default value for signal "f_coin" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Warning (10036): Verilog HDL or VHDL warning at collision_detector.vhd(21): object "health" assigned a value but never read
@@ -1054,7 +1174,7 @@ Warning (10492): VHDL Process Statement warning at mouse.vhd(151): signal "CHARO
 Warning (10492): VHDL Process Statement warning at mouse.vhd(155): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at mouse.vhd(156): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at mouse.vhd(157): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Info (12128): Elaborating entity "state_tracker" for hierarchy "state_tracker:inst4"
+Info (12128): Elaborating entity "state_tracker" for hierarchy "state_tracker:inst5"
 Info (12128): Elaborating entity "bird" for hierarchy "bird:inst12"
 Info (12128): Elaborating entity "pipes" for hierarchy "pipes:inst13"
 Info (12128): Elaborating entity "lfsr_generator" for hierarchy "pipes:inst13|lfsr_generator:random"
@@ -1062,6 +1182,57 @@ Info (12128): Elaborating entity "pipes" for hierarchy "pipes:inst18"
 Info (12128): Elaborating entity "pipes" for hierarchy "pipes:inst10"
 Info (12128): Elaborating entity "heart" for hierarchy "heart:inst16"
 Info (12128): Elaborating entity "coin" for hierarchy "coin:inst11"
+Info (12128): Elaborating entity "text_display" for hierarchy "text_display:inst7"
+Warning (10492): VHDL Process Statement warning at text_display.vhd(44): signal "start_screen" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at text_display.vhd(41): inferring latch(es) for signal or variable "font_col", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at text_display.vhd(41): inferring latch(es) for signal or variable "font_row", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at text_display.vhd(41): inferring latch(es) for signal or variable "character_address", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at text_display.vhd(41): inferring latch(es) for signal or variable "charOn", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "charOn" at text_display.vhd(41)
+Info (10041): Inferred latch for "character_address[0]" at text_display.vhd(41)
+Info (10041): Inferred latch for "character_address[1]" at text_display.vhd(41)
+Info (10041): Inferred latch for "character_address[2]" at text_display.vhd(41)
+Info (10041): Inferred latch for "character_address[3]" at text_display.vhd(41)
+Info (10041): Inferred latch for "character_address[4]" at text_display.vhd(41)
+Info (10041): Inferred latch for "character_address[5]" at text_display.vhd(41)
+Info (10041): Inferred latch for "font_row[0]" at text_display.vhd(41)
+Info (10041): Inferred latch for "font_row[1]" at text_display.vhd(41)
+Info (10041): Inferred latch for "font_row[2]" at text_display.vhd(41)
+Info (10041): Inferred latch for "font_col[0]" at text_display.vhd(41)
+Info (10041): Inferred latch for "font_col[1]" at text_display.vhd(41)
+Info (10041): Inferred latch for "font_col[2]" at text_display.vhd(41)
+Info (12128): Elaborating entity "char_rom" for hierarchy "text_display:inst7|char_rom:char_data"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "text_display:inst7|char_rom:char_data|altsyncram:altsyncram_component"
+Info (12130): Elaborated megafunction instantiation "text_display:inst7|char_rom:char_data|altsyncram:altsyncram_component"
+Info (12133): Instantiated megafunction "text_display:inst7|char_rom:char_data|altsyncram:altsyncram_component" with the following parameter:
+    Info (12134): Parameter "address_aclr_a" = "NONE"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "tcgrom.mif"
+    Info (12134): Parameter "intended_device_family" = "Cyclone III"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "512"
+    Info (12134): Parameter "operation_mode" = "ROM"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "widthad_a" = "9"
+    Info (12134): Parameter "width_a" = "8"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_kt91.tdf
+    Info (12023): Found entity 1: altsyncram_kt91
+Info (12128): Elaborating entity "altsyncram_kt91" for hierarchy "text_display:inst7|char_rom:char_data|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated"
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "text_display:inst7|char_rom:char_data|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated|q_a[0]"
+        Warning (14320): Synthesized away node "text_display:inst7|char_rom:char_data|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated|q_a[1]"
+        Warning (14320): Synthesized away node "text_display:inst7|char_rom:char_data|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated|q_a[2]"
+        Warning (14320): Synthesized away node "text_display:inst7|char_rom:char_data|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated|q_a[3]"
+        Warning (14320): Synthesized away node "text_display:inst7|char_rom:char_data|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated|q_a[4]"
+        Warning (14320): Synthesized away node "text_display:inst7|char_rom:char_data|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated|q_a[5]"
+        Warning (14320): Synthesized away node "text_display:inst7|char_rom:char_data|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated|q_a[6]"
+        Warning (14320): Synthesized away node "text_display:inst7|char_rom:char_data|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated|q_a[7]"
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
@@ -1070,15 +1241,15 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 2 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 721 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 714 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 9 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 708 logic cells
+    Info (21061): Implemented 701 logic cells
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 4682 megabytes
-    Info: Processing ended: Wed May 26 12:58:03 2021
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 26 warnings
+    Info: Peak virtual memory: 4688 megabytes
+    Info: Processing ended: Wed May 26 13:51:28 2021
     Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:03
 

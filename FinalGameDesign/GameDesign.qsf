@@ -90,6 +90,12 @@ set_location_assignment PIN_D2 -to sw9
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+set_location_assignment PIN_J1 -to death
+set_location_assignment PIN_B1 -to f_damage1
+set_location_assignment PIN_B2 -to f_damage2
+set_location_assignment PIN_C2 -to f_damage3
+set_global_assignment -name VHDL_FILE GameDesignCode/char_rom.vhd
+set_global_assignment -name VHDL_FILE GameDesignCode/text_display.vhd
 set_global_assignment -name VHDL_FILE GameDesignCode/heart.vhd
 set_global_assignment -name VHDL_FILE GameDesignCode/coin.vhd
 set_global_assignment -name VHDL_FILE GameDesignCode/LFSR_generator.vhd
@@ -102,8 +108,4 @@ set_global_assignment -name VHDL_FILE GameDesignCode/mouse.vhd
 set_global_assignment -name BDF_FILE GameDesign.bdf
 set_global_assignment -name QIP_FILE GameDesignCode/altpll0.qip
 set_global_assignment -name VHDL_FILE GameDesignCode/collision_detector.vhd
-set_location_assignment PIN_J1 -to death
-set_location_assignment PIN_B1 -to f_damage1
-set_location_assignment PIN_B2 -to f_damage2
-set_location_assignment PIN_C2 -to f_damage3
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

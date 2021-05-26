@@ -8,7 +8,7 @@ USE  IEEE.STD_LOGIC_SIGNED.all;
 Entity state_tracker is 
 	port(clk, death, left_click, right_click 	: in std_logic;
 			score 										: in std_logic_vector(6 downto 0);
-			enable, reset,start_screen, stat_screen, death_screen 								: out std_logic ;
+			enable, reset,start_screen, stat_screen, death_show 								: out std_logic ;
 			difficulty 									: out std_logic_vector(1 downto 0));
 
 end entity state_tracker;
@@ -71,42 +71,42 @@ begin
 			difficulty <= "00";
 			start_screen <='1';
 			stat_screen <='0';
-			death_screen <= '0';
+			death_show  <= '0';
 		when training =>
 			enable <= '1';
 			reset <= '0';
 			difficulty <= "00";
 			start_screen <='0';
 			stat_screen <='1';
-			death_screen <= '0';
+			death_show  <= '0';
 		when level1 =>
 			enable <= '1';
 			reset <= '0';
 			difficulty <= "01";
 			start_screen <='0';
 			stat_screen <='1';
-			death_screen <= '0';
+			death_show  <= '0';
 		when level2 =>
 			enable <= '1';
 			reset <= '0';
 			difficulty <= "10";
 			start_screen <='0';
 			stat_screen <='1';
-			death_screen <= '0';
+			death_show  <= '0';
 		when level3 =>
 			enable <= '1';
 			reset <= '0';
 			difficulty <= "11";
 			start_screen <='0';
 			stat_screen <='1';
-			death_screen <= '0';
+			death_show  <= '0';
 		when others =>
 			enable <= '1';
 			reset <= '0';
 			difficulty <= "00";
 			start_screen <='0';
 			stat_screen <='0';
-			death_screen <= '1';
+			death_show  <= '1';
   		end case;
 end process;
 
