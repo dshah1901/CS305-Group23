@@ -250,7 +250,7 @@ architecture behaviour of text_display is
 							character_address <= conv_std_logic_vector(2,6); -- B
 							charOn <= '1';
 						elsif ((320 <= pixel_row) and (pixel_row < 352) and (448 <= pixel_column) and (pixel_column < 480)) then 
-							character_address <= conv_std_logic_vector(49,6); -- 1
+							character_address <= conv_std_logic_vector(50,6); -- 1
 							charOn <= '1';
 						else
 							charOn <= '0';
