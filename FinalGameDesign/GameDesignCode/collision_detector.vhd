@@ -17,17 +17,17 @@ END collision_detector;
 
 
 architecture behaviour of collision_detector is
-  signal f_death, f_health, f_coin, damage1, damage2, damage3													: std_logic;
-  signal took_damage1,took_damage2,took_damage3																		: std_logic;
+  signal f_death, f_health, f_coin, damage1, damage2, damage3, damage4										: std_logic;
+  signal took_damage1,took_damage2																						: std_logic;
   signal score_tracker, f_score_tracker																				: std_logic_vector(6 downto 0);
   signal health																												: std_logic_vector(1 downto 0);
   signal counter																												: std_logic_vector(4 downto 0);
   
  begin
     
-	 f_damage1 <= damage1;
-	 f_damage2 <= damage2;
-	 f_damage3 <= damage2;
+	 f_damage1 <= damage2 and damage1;
+	 f_damage2 <= damage3 and damage4;
+	 f_damage3 <= '0';
 	 death <= f_death;
 	 score <= score_tracker;
 	 heart_reset <= f_health;
@@ -36,22 +36,57 @@ architecture behaviour of collision_detector is
 	
 	
 	
-process(clk)
+process(vert_sync) -- damage_detector
 begin
 if (rising_edge(vert_sync)) then
-	if( (gap1_lc < "00000101010") or ("00000101010" < gap1_lc + "00001001110" )) then --ga1_1c <
-		damage2 <='1';
-		if ( (gap1_br <= bird_br) or ( bird_br<= gap1_br-"00001010000")) then
-			damage1 <= '1';
-		else
-			damage1 <= '0';
-		end if;
+	if( (gap1_lc <= CONV_STD_LOGIC_VECTOR(58,11)) and (CONV_STD_LOGIC_VECTOR(42,11) <= gap1_lc + CONV_STD_LOGIC_VECTOR(60,11) )) then --ga1_1c 
+		damage1 <='1';
 	else
-		damage2 <='0';
+		damage1 <='0';
 	end if;
+	if ( (gap1_br + CONV_STD_LOGIC_VECTOR(80,11) <= bird_br) or ( bird_br + CONV_STD_LOGIC_VECTOR(176,11) <= gap1_br)) then -- turns on when bird touches outside rows
+		damage2 <= '1';
+	else
+		damage2 <= '0';
+	end if;	
+	
+	if( (gap2_lc <= CONV_STD_LOGIC_VECTOR(58,11)) and (CONV_STD_LOGIC_VECTOR(42,11) <= gap2_lc + CONV_STD_LOGIC_VECTOR(60,11) )) then --ga1_1c 
+		damage3 <='1';
+	else
+		damage3 <='0';
+	end if;
+	if ( (gap2_br + CONV_STD_LOGIC_VECTOR(80,11) <= bird_br) or ( bird_br + CONV_STD_LOGIC_VECTOR(176,11) <= gap2_br)) then -- turns on when bird touches outside rows
+		damage4 <= '1';
+	else
+		damage4 <= '0';
+	end if;
+	took_damage1<= damage2 and damage1;
+	took_damage2 <= damage3 and damage4;
 end if;
 end process;
 	 
+	 
+process (took_damage1,took_damage2) -- take damage 
+begin
+
+if (falling_edge (took_damage1)) then
+	health <= health - CONV_STD_LOGIC_VECTOR(1,2); 
+end if;
+
+if (falling_edge (took_damage2)) then
+	health <= health - CONV_STD_LOGIC_VECTOR(1,2);
+end if;
+
+if (health <= "00") then
+	f_death <= '1';
+end if;
+end process;	 
+	 
+	 
+	 
+
+	 
+
 process(clk)
 begin
 if rising_edge(clk) then

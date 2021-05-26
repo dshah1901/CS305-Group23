@@ -51,7 +51,7 @@ gap_on <= '1' when (('0' & pipes_x_pos <= pixel_column+ wedge + wedge) and ('0' 
 
 pipe_on <= (pipes_on and not gap_on);
 gap_bot_row <= '0' & gap_y_pos + gap_height;
-gap_left_col <= '0' & pipes_x_pos + wedge + wedge;
+gap_left_col <= '0' & pipes_x_pos;
 
 
 
