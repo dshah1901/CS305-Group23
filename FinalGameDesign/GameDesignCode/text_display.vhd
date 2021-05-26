@@ -6,9 +6,10 @@ use ieee.numeric_std.all;
 
 entity text_display is 
 	port(
-		clk_25Mhz : in std_logic;
-		pixel_row, pixel_column : in std_logic_vector (9 downto 0);
-		red, green, blue: out std_logic
+		clk_25Mhz																								: in std_logic;
+		pixel_row, pixel_column 																: in std_logic_vector (9 downto 0);
+		start_screen, stat_screen, death_show   								: in std_logic ;
+		text_on: out std_logic
 	);
 end entity text_display;
 
@@ -40,7 +41,8 @@ architecture behaviour of text_display is
 		textDisplay : Process (pixel_row, pixel_column)
 		begin
 		-- Initial Screen
-			if ((128 <= pixel_row) and (pixel_row < 192) and (128 <= pixel_column) and (pixel_column < 512)) then -- TRAIN
+			if(start_screen = '1') then
+				if ((128 <= pixel_row) and (pixel_row < 192) and (128 <= pixel_column) and (pixel_column < 512)) then -- TRAIN
 						font_col <= pixel_column(5 downto 3); -- To change the font size
 						font_row <= pixel_row(5 downto 3);
 						if ((128 <= pixel_row) and (pixel_row < 192) and (128 <= pixel_column) and (pixel_column < 192)) then 
@@ -61,8 +63,8 @@ architecture behaviour of text_display is
 						else
 							charOn <= '0';
 						end if;
-			end if;
-			if ((192 <= pixel_row) and (pixel_row < 256) and (128 <= pixel_column) and (pixel_column < 576)) then -- [LEFT CLICK]
+				end if;
+				if ((192 <= pixel_row) and (pixel_row < 256) and (128 <= pixel_column) and (pixel_column < 576)) then -- [LEFT CLICK]
 						font_col <= pixel_column(4 downto 2); -- To change the font size
 						font_row <= pixel_row(4 downto 2);
 						if ((192 <= pixel_row) and (pixel_row < 224) and (192 <= pixel_column) and (pixel_column < 224)) then 
@@ -104,8 +106,8 @@ architecture behaviour of text_display is
 						else
 							charOn <= '0';
 						end if;
-			end if;
-			if ((256 <= pixel_row) and (pixel_row < 320) and (128 <= pixel_column) and (pixel_column < 512)) then -- GAME
+				end if;
+				if ((256 <= pixel_row) and (pixel_row < 320) and (128 <= pixel_column) and (pixel_column < 512)) then -- GAME
 					font_col <= pixel_column(5 downto 3); -- To change the font size
 					font_row <= pixel_row(5 downto 3);
 					if ((256 <= pixel_row) and (pixel_row < 320) and (128 <= pixel_column) and (pixel_column < 192)) then 
@@ -123,8 +125,8 @@ architecture behaviour of text_display is
 					else
 						charOn <= '0';
 					end if;
-			end if;
-			if ((320 <= pixel_row) and (pixel_row < 352) and (128 <= pixel_column) and (pixel_column < 608)) then -- [RIGHT CLICK]
+				end if;
+				if ((320 <= pixel_row) and (pixel_row < 352) and (128 <= pixel_column) and (pixel_column < 608)) then -- [RIGHT CLICK]
 						font_col <= pixel_column(4 downto 2); -- To change the font size
 						font_row <= pixel_row(4 downto 2);
 						if ((320 <= pixel_row) and (pixel_row < 352) and (192 <= pixel_column) and (pixel_column < 224)) then 
@@ -169,10 +171,11 @@ architecture behaviour of text_display is
 						else
 							charOn <= '0';
 						end if;
-				END IF;
+				end if;
+			--elsif(stat_screen = '1') then
+			--elsif(death_show =  '1') then
+			end if;
 		end process;
 
-		red <= '0' OR (charOn AND rom_mux_output);
-		green <=	'0' OR (charOn AND rom_mux_output);
-		blue <= '0' OR (charOn AND rom_mux_output);
+		text_on <= '0' OR (charOn AND rom_mux_output);
 end architecture;
