@@ -6,6 +6,7 @@ USE  IEEE.STD_LOGIC_UNSIGNED.all;
 Entity coin is
 port (vert_sync, clk, reset 				:in std_logic;
 		  pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
+		  coin_br						:out std_logic_vector(10 downTO 0);
 		  coin_on 			: OUT std_logic);
 end coin;
 
@@ -36,7 +37,7 @@ port map (Clk => clk, reset => '1', seed => send, lfsr => lfsr1);
 coin_on <= '1' when ( ('0' & coin_x_pos <= pixel_column + radius) and ('0' & pixel_column <= coin_x_pos + radius) 	-- x_pos - radius <= pixel_column <= x_pos + radius
 					and ('0' & coin_y_pos <= pixel_row + radius) and ('0' & pixel_row <= coin_y_pos + radius) and (iscoin='1'))  else	-- y_pos - radius <= pixel_row <= y_pos + radius
 			'0';					
-			
+coin_br <= '0' & coin_y_pos + conv_STD_LOGIC_VECTOR(10,11);		
 Move_coin: process (vert_sync) 
  	
 begin
