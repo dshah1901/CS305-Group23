@@ -575,11 +575,10 @@ pixel_column[9] => LessThan30.IN11
 pixel_column[9] => LessThan33.IN11
 pixel_column[9] => LessThan36.IN11
 pixel_column[9] => LessThan37.IN11
-start_screen => character_address[0].IN1
-start_screen => font_row[1].IN1
+start_screen => font_col[1].IN1
 stat_screen => ~NO_FANOUT~
 death_show => ~NO_FANOUT~
-text_on <= text_on.DB_MAX_OUTPUT_PORT_TYPE
+text_on <= char_rom:char_data.rom_mux_output
 
 
 |VGAExample|text_display:inst2|char_rom:char_data

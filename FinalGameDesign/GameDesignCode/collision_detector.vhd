@@ -39,8 +39,12 @@ if rising_edge(clk) then
 	if (start_screen = '1') then
 		if (text_on= '1') then
 		red <= '0';
-		green <= '1';
+		green <= '0';
 		blue <= '0';
+		else
+		red <= '1';
+		green <= '1';
+		blue <= '1';
 		end if;
 	elsif (stat_screen = '1') then
 		IF (text_on= '1') then

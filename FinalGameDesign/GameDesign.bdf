@@ -190,6 +190,22 @@ applicable agreement for further details.
 	(annotation_block (location)(rect 1464 408 1520 424))
 )
 (pin
+	(output)
+	(rect 432 488 608 504)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "text_on" (rect 90 0 126 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
 	(bidir)
 	(rect 280 248 456 264)
 	(text "BIDIR" (rect 1 0 25 10)(font "Arial" (font_size 6)))
@@ -1535,14 +1551,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 1248 48)
-	(pt 1280 48)
-)
-(connector
-	(pt 1280 64)
-	(pt 1256 64)
-)
-(connector
 	(pt 1264 80)
 	(pt 1280 80)
 )
@@ -1663,10 +1671,6 @@ applicable agreement for further details.
 	(pt 200 624)
 )
 (connector
-	(pt 400 576)
-	(pt 456 576)
-)
-(connector
 	(pt 456 576)
 	(pt 456 816)
 )
@@ -1765,14 +1769,6 @@ applicable agreement for further details.
 	(pt 1240 416)
 )
 (connector
-	(pt 1248 48)
-	(pt 1248 416)
-)
-(connector
-	(pt 1256 64)
-	(pt 1256 432)
-)
-(connector
 	(pt 1256 432)
 	(pt 1240 432)
 )
@@ -1825,10 +1821,6 @@ applicable agreement for further details.
 (connector
 	(pt 1000 816)
 	(pt 1000 528)
-)
-(connector
-	(pt 1040 408)
-	(pt 1040 400)
 )
 (connector
 	(pt 976 824)
@@ -1908,10 +1900,6 @@ applicable agreement for further details.
 	(pt 1040 512)
 )
 (connector
-	(pt 1000 528)
-	(pt 1040 528)
-)
-(connector
 	(pt 1016 544)
 	(pt 1040 544)
 	(bus)
@@ -1970,6 +1958,42 @@ applicable agreement for further details.
 	(pt 952 232)
 	(pt 952 400)
 )
+(connector
+	(pt 1000 528)
+	(pt 1040 528)
+)
+(connector
+	(pt 1256 64)
+	(pt 1256 432)
+)
+(connector
+	(pt 1256 64)
+	(pt 1280 64)
+)
+(connector
+	(pt 1248 48)
+	(pt 1248 416)
+)
+(connector
+	(pt 1248 48)
+	(pt 1280 48)
+)
+(connector
+	(pt 408 576)
+	(pt 408 496)
+)
+(connector
+	(pt 408 496)
+	(pt 432 496)
+)
+(connector
+	(pt 400 576)
+	(pt 408 576)
+)
+(connector
+	(pt 408 576)
+	(pt 456 576)
+)
 (junction (pt 1624 128))
 (junction (pt 616 608))
 (junction (pt 600 624))
@@ -2002,3 +2026,4 @@ applicable agreement for further details.
 (junction (pt 160 480))
 (junction (pt 1040 704))
 (junction (pt 144 464))
+(junction (pt 408 576))

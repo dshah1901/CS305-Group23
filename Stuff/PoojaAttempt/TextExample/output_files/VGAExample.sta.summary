@@ -3,43 +3,43 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'inst|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -4.870
-TNS   : -26.211
+Slack : -4.574
+TNS   : -25.632
 
 Type  : Slow 1200mV 85C Model Setup 'MOUSE:inst4|left_button'
-Slack : -1.586
-TNS   : -16.650
+Slack : -2.180
+TNS   : -22.619
 
 Type  : Slow 1200mV 85C Model Setup 'MOUSE:inst4|MOUSE_CLK_FILTER'
-Slack : -1.426
-TNS   : -39.070
+Slack : -1.540
+TNS   : -39.999
 
 Type  : Slow 1200mV 85C Model Hold 'MOUSE:inst4|left_button'
-Slack : -1.083
-TNS   : -7.483
+Slack : -0.874
+TNS   : -2.599
 
 Type  : Slow 1200mV 85C Model Hold 'inst|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -0.184
-TNS   : -0.184
+Slack : -0.186
+TNS   : -0.186
 
 Type  : Slow 1200mV 85C Model Hold 'MOUSE:inst4|MOUSE_CLK_FILTER'
-Slack : -0.140
-TNS   : -0.177
+Slack : -0.132
+TNS   : -0.180
 
 Type  : Slow 1200mV 85C Model Recovery 'MOUSE:inst4|MOUSE_CLK_FILTER'
-Slack : 0.072
+Slack : 0.051
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Removal 'MOUSE:inst4|MOUSE_CLK_FILTER'
-Slack : -0.048
-TNS   : -0.438
+Slack : -0.203
+TNS   : -0.458
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'MOUSE:inst4|MOUSE_CLK_FILTER'
 Slack : -1.000
 TNS   : -35.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'MOUSE:inst4|left_button'
-Slack : 0.352
+Slack : 0.431
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
@@ -47,39 +47,39 @@ Slack : 9.825
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'inst|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 19.736
+Slack : 19.731
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'inst|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -4.181
-TNS   : -22.056
+Slack : -3.914
+TNS   : -21.501
 
 Type  : Slow 1200mV 0C Model Setup 'MOUSE:inst4|left_button'
-Slack : -1.569
-TNS   : -16.446
+Slack : -2.073
+TNS   : -21.654
 
 Type  : Slow 1200mV 0C Model Setup 'MOUSE:inst4|MOUSE_CLK_FILTER'
-Slack : -1.166
-TNS   : -31.628
+Slack : -1.266
+TNS   : -32.686
 
 Type  : Slow 1200mV 0C Model Hold 'MOUSE:inst4|left_button'
-Slack : -0.786
-TNS   : -3.963
+Slack : -0.570
+TNS   : -1.234
 
 Type  : Slow 1200mV 0C Model Hold 'inst|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -0.290
-TNS   : -0.290
+Slack : -0.292
+TNS   : -0.292
 
 Type  : Slow 1200mV 0C Model Hold 'MOUSE:inst4|MOUSE_CLK_FILTER'
-Slack : 0.015
-TNS   : 0.000
+Slack : -0.017
+TNS   : -0.017
 
 Type  : Slow 1200mV 0C Model Recovery 'MOUSE:inst4|MOUSE_CLK_FILTER'
-Slack : -0.014
-TNS   : -0.154
+Slack : -0.062
+TNS   : -0.930
 
 Type  : Slow 1200mV 0C Model Removal 'MOUSE:inst4|MOUSE_CLK_FILTER'
-Slack : 0.161
+Slack : 0.031
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'MOUSE:inst4|MOUSE_CLK_FILTER'
@@ -87,7 +87,7 @@ Slack : -1.000
 TNS   : -35.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'MOUSE:inst4|left_button'
-Slack : 0.425
+Slack : 0.443
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
@@ -95,47 +95,47 @@ Slack : 9.785
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'inst|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 19.740
+Slack : 19.742
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'inst|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -2.729
-TNS   : -14.292
+Slack : -2.508
+TNS   : -13.829
 
 Type  : Fast 1200mV 0C Model Setup 'MOUSE:inst4|left_button'
-Slack : -0.608
-TNS   : -5.472
+Slack : -0.930
+TNS   : -9.212
 
 Type  : Fast 1200mV 0C Model Setup 'MOUSE:inst4|MOUSE_CLK_FILTER'
-Slack : -0.347
-TNS   : -6.799
+Slack : -0.411
+TNS   : -6.554
 
 Type  : Fast 1200mV 0C Model Hold 'MOUSE:inst4|left_button'
-Slack : -0.619
-TNS   : -4.375
+Slack : -0.509
+TNS   : -1.567
 
 Type  : Fast 1200mV 0C Model Hold 'inst|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -0.135
-TNS   : -0.135
+Slack : -0.137
+TNS   : -0.137
 
 Type  : Fast 1200mV 0C Model Hold 'MOUSE:inst4|MOUSE_CLK_FILTER'
-Slack : -0.002
-TNS   : -0.002
+Slack : -0.013
+TNS   : -0.015
 
 Type  : Fast 1200mV 0C Model Recovery 'MOUSE:inst4|MOUSE_CLK_FILTER'
-Slack : 0.263
+Slack : 0.217
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'MOUSE:inst4|MOUSE_CLK_FILTER'
-Slack : 0.042
-TNS   : 0.000
+Slack : -0.018
+TNS   : -0.018
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'MOUSE:inst4|MOUSE_CLK_FILTER'
 Slack : -1.000
 TNS   : -35.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'MOUSE:inst4|left_button'
-Slack : 0.314
+Slack : 0.368
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'

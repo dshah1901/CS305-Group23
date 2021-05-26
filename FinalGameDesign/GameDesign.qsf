@@ -94,7 +94,8 @@ set_location_assignment PIN_J1 -to death
 set_location_assignment PIN_B1 -to f_damage1
 set_location_assignment PIN_B2 -to f_damage2
 set_location_assignment PIN_C2 -to f_damage3
-set_global_assignment -name VHDL_FILE GameDesignCode/char_rom.vhd
+set_location_assignment PIN_E1 -to text_on
+set_global_assignment -name VHDL_FILE "../Stuff/Phase 1 code/char_rom.vhd"
 set_global_assignment -name VHDL_FILE GameDesignCode/text_display.vhd
 set_global_assignment -name VHDL_FILE GameDesignCode/heart.vhd
 set_global_assignment -name VHDL_FILE GameDesignCode/coin.vhd

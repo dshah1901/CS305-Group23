@@ -11,6 +11,7 @@ death <= collision_detector:inst8.death
 f_damage1 <= collision_detector:inst8.f_damage1
 f_damage2 <= collision_detector:inst8.f_damage2
 f_damage3 <= collision_detector:inst8.f_damage3
+text_on <= text_display:inst7.text_on
 
 
 |GameDesign|VGA_SYNC:inst
@@ -228,13 +229,15 @@ heart => blue.OUTPUTSELECT
 heart => green.DATAA
 coin => red.OUTPUTSELECT
 coin => blue.OUTPUTSELECT
-text_on => green.OUTPUTSELECT
 text_on => red.OUTPUTSELECT
 text_on => green.OUTPUTSELECT
 text_on => blue.OUTPUTSELECT
 text_on => red.OUTPUTSELECT
 text_on => green.OUTPUTSELECT
 text_on => blue.OUTPUTSELECT
+text_on => red.DATAB
+text_on => green.DATAB
+text_on => blue.DATAB
 death <= f_death.DB_MAX_OUTPUT_PORT_TYPE
 coin_reset <= comb.DB_MAX_OUTPUT_PORT_TYPE
 heart_reset <= heart_reset.DB_MAX_OUTPUT_PORT_TYPE
@@ -1677,11 +1680,10 @@ pixel_column[9] => LessThan30.IN11
 pixel_column[9] => LessThan33.IN11
 pixel_column[9] => LessThan36.IN11
 pixel_column[9] => LessThan37.IN11
-start_screen => character_address[0].IN1
-start_screen => font_row[1].IN1
+start_screen => font_col[1].IN1
 stat_screen => ~NO_FANOUT~
 death_show => ~NO_FANOUT~
-text_on <= text_on.DB_MAX_OUTPUT_PORT_TYPE
+text_on <= char_rom:char_data.rom_mux_output
 
 
 |GameDesign|text_display:inst7|char_rom:char_data
@@ -1698,8 +1700,7 @@ font_col[0] => Mux0.IN2
 font_col[1] => Mux0.IN1
 font_col[2] => Mux0.IN0
 clock => altsyncram:altsyncram_component.clock0
-sw1 => rom_mux_output.OUTPUTSELECT
-rom_mux_output <= rom_mux_output.DB_MAX_OUTPUT_PORT_TYPE
+rom_mux_output <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |GameDesign|text_display:inst7|char_rom:char_data|altsyncram:altsyncram_component

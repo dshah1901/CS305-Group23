@@ -322,63 +322,6 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 136 224 336 368)
-	(text "text_display" (rect 5 0 65 12)(font "Arial" ))
-	(text "inst2" (rect 8 128 31 140)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "clk_25Mhz" (rect 0 0 50 12)(font "Arial" ))
-		(text "clk_25Mhz" (rect 21 27 71 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "pixel_row[9..0]" (rect 0 0 70 12)(font "Arial" ))
-		(text "pixel_row[9..0]" (rect 21 43 91 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48)(line_width 3))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "pixel_column[9..0]" (rect 0 0 89 12)(font "Arial" ))
-		(text "pixel_column[9..0]" (rect 21 59 110 71)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64)(line_width 3))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "start_screen" (rect 0 0 61 12)(font "Arial" ))
-		(text "start_screen" (rect 21 75 82 87)(font "Arial" ))
-		(line (pt 0 80)(pt 16 80))
-	)
-	(port
-		(pt 0 96)
-		(input)
-		(text "stat_screen" (rect 0 0 57 12)(font "Arial" ))
-		(text "stat_screen" (rect 21 91 78 103)(font "Arial" ))
-		(line (pt 0 96)(pt 16 96))
-	)
-	(port
-		(pt 0 112)
-		(input)
-		(text "death_show" (rect 0 0 57 12)(font "Arial" ))
-		(text "death_show" (rect 21 107 78 119)(font "Arial" ))
-		(line (pt 0 112)(pt 16 112))
-	)
-	(port
-		(pt 200 32)
-		(output)
-		(text "text_on" (rect 0 0 36 12)(font "Arial" ))
-		(text "text_on" (rect 149 27 185 39)(font "Arial" ))
-		(line (pt 200 32)(pt 184 32))
-	)
-	(drawing
-		(rectangle (rect 16 16 184 128))
-	)
-)
-(symbol
 	(rect 296 488 560 632)
 	(text "MOUSE" (rect 5 0 43 12)(font "Arial" ))
 	(text "inst4" (rect 8 128 31 140)(font "Arial" ))
@@ -457,6 +400,63 @@ applicable agreement for further details.
 		(line (pt 8 8)(pt 16 16))
 		(line (pt 16 16)(pt 24 8))
 		(line (pt 8 8)(pt 24 8))
+	)
+)
+(symbol
+	(rect 136 224 336 368)
+	(text "text_display" (rect 5 0 65 12)(font "Arial" ))
+	(text "inst2" (rect 8 128 31 140)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk_25Mhz" (rect 0 0 50 12)(font "Arial" ))
+		(text "clk_25Mhz" (rect 21 27 71 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "pixel_row[9..0]" (rect 0 0 70 12)(font "Arial" ))
+		(text "pixel_row[9..0]" (rect 21 43 91 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "pixel_column[9..0]" (rect 0 0 89 12)(font "Arial" ))
+		(text "pixel_column[9..0]" (rect 21 59 110 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "start_screen" (rect 0 0 61 12)(font "Arial" ))
+		(text "start_screen" (rect 21 75 82 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "stat_screen" (rect 0 0 57 12)(font "Arial" ))
+		(text "stat_screen" (rect 21 91 78 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "death_show" (rect 0 0 57 12)(font "Arial" ))
+		(text "death_show" (rect 21 107 78 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112))
+	)
+	(port
+		(pt 200 32)
+		(output)
+		(text "text_on" (rect 0 0 36 12)(font "Arial" ))
+		(text "text_on" (rect 149 27 179 39)(font "Arial" ))
+		(line (pt 200 32)(pt 184 32))
+	)
+	(drawing
+		(rectangle (rect 16 16 184 128))
 	)
 )
 (connector
@@ -556,10 +556,6 @@ applicable agreement for further details.
 	(pt 320 264)
 )
 (connector
-	(pt 320 256)
-	(pt 336 256)
-)
-(connector
 	(pt 464 240)
 	(pt 464 256)
 )
@@ -570,14 +566,6 @@ applicable agreement for further details.
 (connector
 	(pt 440 224)
 	(pt 440 256)
-)
-(connector
-	(pt 336 256)
-	(pt 440 256)
-)
-(connector
-	(pt 440 256)
-	(pt 464 256)
 )
 (connector
 	(pt 296 520)
@@ -654,6 +642,18 @@ applicable agreement for further details.
 (connector
 	(pt 632 576)
 	(pt 648 576)
+)
+(connector
+	(pt 320 256)
+	(pt 336 256)
+)
+(connector
+	(pt 336 256)
+	(pt 440 256)
+)
+(connector
+	(pt 440 256)
+	(pt 464 256)
 )
 (junction (pt 384 208))
 (junction (pt 336 256))
