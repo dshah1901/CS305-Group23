@@ -177,50 +177,32 @@ architecture behaviour of text_display is
 						end if;
 				end if;
 			elsif(stat_screen = '1') then
+				if(start_screen = '1') then
 					if ((128 <= pixel_row) and (pixel_row < 192) and (128 <= pixel_column) and (pixel_column < 512)) then -- TRAIN
-					   font_col <= pixel_column(5 downto 3); -- To change the font size
-						font_row <= pixel_row(5 downto 3);
-						if ((128 <= pixel_row) and (pixel_row < 192) and (128 <= pixel_column) and (pixel_column < 192)) then 
-							character_address <= conv_std_logic_vector(20,6); -- T
-							charOn <= '1';
-						elsif ((128 <= pixel_row) and (pixel_row < 192) and (192 <= pixel_column) and (pixel_column < 256)) then 
-							character_address <= conv_std_logic_vector(18,6); -- R
-							charOn <= '1';
-						elsif ((128 <= pixel_row) and (pixel_row < 192) and (256 <= pixel_column) and (pixel_column < 320)) then 
-							character_address <= conv_std_logic_vector(1,6); -- A
-							charOn <= '1';
-						elsif ((128 <= pixel_row) and (pixel_row < 192) and (320 <= pixel_column) and (pixel_column < 384)) then 
-							character_address <= conv_std_logic_vector(9,6); -- I
-							charOn <= '1';
-						elsif ((128 <= pixel_row) and (pixel_row < 192) and (384 <= pixel_column) and (pixel_column < 449)) then 
-							character_address <= conv_std_logic_vector(14,6); -- N
-							charOn <= '1';
-						else
-							character_address <= conv_std_logic_vector(32,6); -- Space 
-							charOn <= '0';
-						end if;	
-				end if;
-			elsif(death_show =  '1') then
-				if ((256 <= pixel_row) and (pixel_row < 320) and (128 <= pixel_column) and (pixel_column < 512)) then -- GAME
-					font_col <= pixel_column(5 downto 3); -- To change the font size
-					font_row <= pixel_row(5 downto 3);
-					if ((256 <= pixel_row) and (pixel_row < 320) and (128 <= pixel_column) and (pixel_column < 192)) then 
-						character_address <= conv_std_logic_vector(7,6); -- G
-						charOn <= '1';
-					elsif ((256 <= pixel_row) and (pixel_row < 320) and (192 <= pixel_column) and (pixel_column < 256)) then 
-						character_address <= conv_std_logic_vector(1,6); -- A
-						charOn <= '1';
-					elsif ((256 <= pixel_row) and (pixel_row < 320) and (256 <= pixel_column) and (pixel_column < 320)) then 
-						character_address <= conv_std_logic_vector(13,6); -- M
-						charOn <= '1';
-					elsif ((256 <= pixel_row) and (pixel_row < 320) and (320 <= pixel_column) and (pixel_column < 384))then 
-						character_address <= conv_std_logic_vector(5,6); -- E
-						charOn <= '1';
-					else
-						character_address <= conv_std_logic_vector(32,6); -- Space 
-						charOn <= '0';
+							font_col <= pixel_column(5 downto 3); -- To change the font size
+							font_row <= pixel_row(5 downto 3);
+							if ((128 <= pixel_row) and (pixel_row < 192) and (128 <= pixel_column) and (pixel_column < 192)) then 
+								character_address <= conv_std_logic_vector(20,6); -- T
+								charOn <= '1';
+							elsif ((128 <= pixel_row) and (pixel_row < 192) and (192 <= pixel_column) and (pixel_column < 256)) then 
+								character_address <= conv_std_logic_vector(18,6); -- R
+								charOn <= '1';
+							elsif ((128 <= pixel_row) and (pixel_row < 192) and (256 <= pixel_column) and (pixel_column < 320)) then 
+								character_address <= conv_std_logic_vector(1,6); -- A
+								charOn <= '1';
+							elsif ((128 <= pixel_row) and (pixel_row < 192) and (320 <= pixel_column) and (pixel_column < 384)) then 
+								character_address <= conv_std_logic_vector(9,6); -- I
+								charOn <= '1';
+							elsif ((128 <= pixel_row) and (pixel_row < 192) and (384 <= pixel_column) and (pixel_column < 449)) then 
+								character_address <= conv_std_logic_vector(14,6); -- N
+								charOn <= '1';
+							else
+								charOn <= '0';
+								character_address <= conv_std_logic_vector(32,6); -- Space
+							end if;	
 					end if;
 				end if;
+			--elsif(death_show =  '1') then
 			end if;
 		end process;
 
