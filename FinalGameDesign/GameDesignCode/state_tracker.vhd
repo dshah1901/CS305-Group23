@@ -51,7 +51,7 @@ begin
 				next_state <= death_screen;
 			end if ;
 		when others =>
-			if (pb1 = '1') then
+			if (pb1 = '0') then
 				next_state <= start ;
 			end if;
   		end case;
