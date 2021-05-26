@@ -1,4 +1,13 @@
 
+State Machine - |GameDesign|MOUSE:inst14|mouse_state
+Name mouse_state.INPUT_PACKETS mouse_state.WAIT_CMD_ACK mouse_state.WAIT_OUTPUT_READY mouse_state.LOAD_COMMAND2 mouse_state.LOAD_COMMAND mouse_state.INHIBIT_TRANS 
+mouse_state.INHIBIT_TRANS 0 0 0 0 0 0 
+mouse_state.LOAD_COMMAND 0 0 0 0 1 1 
+mouse_state.LOAD_COMMAND2 0 0 0 1 0 1 
+mouse_state.WAIT_OUTPUT_READY 0 0 1 0 0 1 
+mouse_state.WAIT_CMD_ACK 0 1 0 0 0 1 
+mouse_state.INPUT_PACKETS 1 0 0 0 0 1 
+
 State Machine - |GameDesign|state_tracker:inst5|state
 Name state.death_screen state.level3 state.level2 state.level1 state.training state.start 
 state.start 0 0 0 0 0 0 
@@ -16,12 +25,3 @@ next_state.level1 0 0 0 1 0 1
 next_state.level2 0 0 1 0 0 1 
 next_state.level3 0 1 0 0 0 1 
 next_state.death_screen 1 0 0 0 0 1 
-
-State Machine - |GameDesign|MOUSE:inst14|mouse_state
-Name mouse_state.INPUT_PACKETS mouse_state.WAIT_CMD_ACK mouse_state.WAIT_OUTPUT_READY mouse_state.LOAD_COMMAND2 mouse_state.LOAD_COMMAND mouse_state.INHIBIT_TRANS 
-mouse_state.INHIBIT_TRANS 0 0 0 0 0 0 
-mouse_state.LOAD_COMMAND 0 0 0 0 1 1 
-mouse_state.LOAD_COMMAND2 0 0 0 1 0 1 
-mouse_state.WAIT_OUTPUT_READY 0 0 1 0 0 1 
-mouse_state.WAIT_CMD_ACK 0 1 0 0 0 1 
-mouse_state.INPUT_PACKETS 1 0 0 0 0 1 

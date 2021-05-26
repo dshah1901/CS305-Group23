@@ -38,8 +38,8 @@ architecture behaviour of collision_detector is
 	
 process(clk)
 begin
-if (rising_edge(clk)) then
-	if( (gap1_lc < "00000101010") or ("00000101010" < gap1_lc + "00001001110" )) then
+if (rising_edge(vert_sync)) then
+	if( (gap1_lc < "00000101010") or ("00000101010" < gap1_lc + "00001001110" )) then --ga1_1c <
 		damage2 <='1';
 		if ( (gap1_br <= bird_br) or ( bird_br<= gap1_br-"00001010000")) then
 			damage1 <= '1';

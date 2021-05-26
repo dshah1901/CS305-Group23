@@ -1516,10 +1516,6 @@ applicable agreement for further details.
 	(pt 440 288)
 )
 (connector
-	(pt 224 304)
-	(pt 368 304)
-)
-(connector
 	(pt -40 272)
 	(pt -72 272)
 )
@@ -1601,14 +1597,6 @@ applicable agreement for further details.
 (connector
 	(pt 368 304)
 	(pt 368 384)
-)
-(connector
-	(pt 368 384)
-	(pt 368 448)
-)
-(connector
-	(pt 368 448)
-	(pt 496 448)
 )
 (connector
 	(pt 496 448)
@@ -1973,6 +1961,15 @@ applicable agreement for further details.
 	(pt 1520 704)
 	(bus)
 )
+(connector
+	(pt 368 304)
+	(pt 224 304)
+)
+(connector
+	(text "reset" (rect 378 432 402 444)(font "Arial" ))
+	(pt 368 448)
+	(pt 496 448)
+)
 (junction (pt 1624 128))
 (junction (pt 584 288))
 (junction (pt 584 432))
@@ -1995,7 +1992,6 @@ applicable agreement for further details.
 (junction (pt 1016 688))
 (junction (pt 600 704))
 (junction (pt 616 656))
-(junction (pt 368 384))
 (junction (pt 1040 704))
 (junction (pt 144 464))
 (junction (pt 408 576))

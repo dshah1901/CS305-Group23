@@ -1,5 +1,5 @@
 Analysis & Synthesis report for GameDesign
-Wed May 26 19:06:58 2021
+Wed May 26 19:47:25 2021
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
@@ -15,9 +15,9 @@ Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
   9. Analysis & Synthesis IP Cores Summary
- 10. State Machine - |GameDesign|state_tracker:inst5|state
- 11. State Machine - |GameDesign|state_tracker:inst5|next_state
- 12. State Machine - |GameDesign|MOUSE:inst14|mouse_state
+ 10. State Machine - |GameDesign|MOUSE:inst14|mouse_state
+ 11. State Machine - |GameDesign|state_tracker:inst5|state
+ 12. State Machine - |GameDesign|state_tracker:inst5|next_state
  13. User-Specified and Inferred Latches
  14. Registers Removed During Synthesis
  15. Removed Registers Triggering Further Register Optimizations
@@ -62,13 +62,13 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed May 26 19:06:58 2021       ;
+; Analysis & Synthesis Status        ; Successful - Wed May 26 19:47:25 2021       ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
 ; Revision Name                      ; GameDesign                                  ;
 ; Top-level Entity Name              ; GameDesign                                  ;
 ; Family                             ; Cyclone III                                 ;
-; Total logic elements               ; 862                                         ;
-;     Total combinational functions  ; 809                                         ;
+; Total logic elements               ; 857                                         ;
+;     Total combinational functions  ; 804                                         ;
 ;     Dedicated logic registers      ; 244                                         ;
 ; Total registers                    ; 244                                         ;
 ; Total pins                         ; 13                                          ;
@@ -224,17 +224,17 @@ applicable agreement for further details.
 +---------------------------------------------+-----------------------------+
 ; Resource                                    ; Usage                       ;
 +---------------------------------------------+-----------------------------+
-; Estimated Total logic elements              ; 862                         ;
+; Estimated Total logic elements              ; 857                         ;
 ;                                             ;                             ;
-; Total combinational functions               ; 809                         ;
+; Total combinational functions               ; 804                         ;
 ; Logic element usage by number of LUT inputs ;                             ;
-;     -- 4 input functions                    ; 260                         ;
-;     -- 3 input functions                    ; 276                         ;
-;     -- <=2 input functions                  ; 273                         ;
+;     -- 4 input functions                    ; 256                         ;
+;     -- 3 input functions                    ; 280                         ;
+;     -- <=2 input functions                  ; 268                         ;
 ;                                             ;                             ;
 ; Logic elements by mode                      ;                             ;
-;     -- normal mode                          ; 450                         ;
-;     -- arithmetic mode                      ; 359                         ;
+;     -- normal mode                          ; 448                         ;
+;     -- arithmetic mode                      ; 356                         ;
 ;                                             ;                             ;
 ; Total registers                             ; 244                         ;
 ;     -- Dedicated logic registers            ; 244                         ;
@@ -247,9 +247,9 @@ applicable agreement for further details.
 ;     -- PLLs                                 ; 1                           ;
 ;                                             ;                             ;
 ; Maximum fan-out node                        ; VGA_SYNC:inst|vert_sync_out ;
-; Maximum fan-out                             ; 121                         ;
-; Total fan-out                               ; 3210                        ;
-; Average fan-out                             ; 2.94                        ;
+; Maximum fan-out                             ; 123                         ;
+; Total fan-out                               ; 3197                        ;
+; Average fan-out                             ; 2.95                        ;
 +---------------------------------------------+-----------------------------+
 
 
@@ -258,20 +258,20 @@ applicable agreement for further details.
 +----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                              ; Library Name ;
 +----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------+--------------+
-; |GameDesign                                  ; 809 (1)           ; 244 (0)      ; 4096        ; 0            ; 0       ; 0         ; 13   ; 0            ; |GameDesign                                                                                                      ;              ;
-;    |MOUSE:inst14|                            ; 53 (53)           ; 65 (65)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GameDesign|MOUSE:inst14                                                                                         ;              ;
+; |GameDesign                                  ; 804 (1)           ; 244 (0)      ; 4096        ; 0            ; 0       ; 0         ; 13   ; 0            ; |GameDesign                                                                                                      ;              ;
+;    |MOUSE:inst14|                            ; 51 (51)           ; 65 (65)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GameDesign|MOUSE:inst14                                                                                         ;              ;
 ;    |VGA_SYNC:inst|                           ; 57 (57)           ; 48 (48)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GameDesign|VGA_SYNC:inst                                                                                        ;              ;
 ;    |altpll0:inst2|                           ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GameDesign|altpll0:inst2                                                                                        ;              ;
 ;       |altpll:altpll_component|              ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GameDesign|altpll0:inst2|altpll:altpll_component                                                                ;              ;
 ;          |altpll0_altpll:auto_generated|     ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GameDesign|altpll0:inst2|altpll:altpll_component|altpll0_altpll:auto_generated                                  ;              ;
-;    |bird:inst12|                             ; 76 (76)           ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GameDesign|bird:inst12                                                                                          ;              ;
+;    |bird:inst12|                             ; 75 (75)           ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GameDesign|bird:inst12                                                                                          ;              ;
 ;    |coin:inst11|                             ; 123 (123)         ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GameDesign|coin:inst11                                                                                          ;              ;
-;    |collision_detector:inst8|                ; 62 (62)           ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GameDesign|collision_detector:inst8                                                                             ;              ;
+;    |collision_detector:inst8|                ; 53 (53)           ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GameDesign|collision_detector:inst8                                                                             ;              ;
 ;    |heart:inst16|                            ; 109 (109)         ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GameDesign|heart:inst16                                                                                         ;              ;
-;    |pipes:inst13|                            ; 106 (106)         ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GameDesign|pipes:inst13                                                                                         ;              ;
+;    |pipes:inst13|                            ; 111 (111)         ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GameDesign|pipes:inst13                                                                                         ;              ;
 ;    |pipes:inst18|                            ; 63 (63)           ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GameDesign|pipes:inst18                                                                                         ;              ;
-;    |state_tracker:inst5|                     ; 6 (6)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GameDesign|state_tracker:inst5                                                                                  ;              ;
-;    |text_display:inst7|                      ; 153 (148)         ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |GameDesign|text_display:inst7                                                                                   ;              ;
+;    |state_tracker:inst5|                     ; 7 (7)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GameDesign|state_tracker:inst5                                                                                  ;              ;
+;    |text_display:inst7|                      ; 154 (149)         ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |GameDesign|text_display:inst7                                                                                   ;              ;
 ;       |char_rom:char_data|                   ; 5 (5)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |GameDesign|text_display:inst7|char_rom:char_data                                                                ;              ;
 ;          |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |GameDesign|text_display:inst7|char_rom:char_data|altsyncram:altsyncram_component                                ;              ;
 ;             |altsyncram_kt91:auto_generated| ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |GameDesign|text_display:inst7|char_rom:char_data|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated ;              ;
@@ -295,6 +295,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+---------------------------+---------------------------------------------------------------------------------------------------------+
 ; Altera ; ALTPLL       ; 13.0    ; N/A          ; N/A          ; |GameDesign|altpll0:inst2 ; //files.auckland.ac.nz/myhome/Documents/GitHub/CS305-Group23/FinalGameDesign/GameDesignCode/altpll0.vhd ;
 +--------+--------------+---------+--------------+--------------+---------------------------+---------------------------------------------------------------------------------------------------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |GameDesign|MOUSE:inst14|mouse_state                                                                                                                                                    ;
++-------------------------------+---------------------------+--------------------------+-------------------------------+---------------------------+--------------------------+---------------------------+
+; Name                          ; mouse_state.INPUT_PACKETS ; mouse_state.WAIT_CMD_ACK ; mouse_state.WAIT_OUTPUT_READY ; mouse_state.LOAD_COMMAND2 ; mouse_state.LOAD_COMMAND ; mouse_state.INHIBIT_TRANS ;
++-------------------------------+---------------------------+--------------------------+-------------------------------+---------------------------+--------------------------+---------------------------+
+; mouse_state.INHIBIT_TRANS     ; 0                         ; 0                        ; 0                             ; 0                         ; 0                        ; 0                         ;
+; mouse_state.LOAD_COMMAND      ; 0                         ; 0                        ; 0                             ; 0                         ; 1                        ; 1                         ;
+; mouse_state.LOAD_COMMAND2     ; 0                         ; 0                        ; 0                             ; 1                         ; 0                        ; 1                         ;
+; mouse_state.WAIT_OUTPUT_READY ; 0                         ; 0                        ; 1                             ; 0                         ; 0                        ; 1                         ;
+; mouse_state.WAIT_CMD_ACK      ; 0                         ; 1                        ; 0                             ; 0                         ; 0                        ; 1                         ;
+; mouse_state.INPUT_PACKETS     ; 1                         ; 0                        ; 0                             ; 0                         ; 0                        ; 1                         ;
++-------------------------------+---------------------------+--------------------------+-------------------------------+---------------------------+--------------------------+---------------------------+
 
 
 Encoding Type:  One-Hot
@@ -325,21 +340,6 @@ Encoding Type:  One-Hot
 ; next_state.level3       ; 0                       ; 1                 ; 0                 ; 0                 ; 0                   ; 1                ;
 ; next_state.death_screen ; 1                       ; 0                 ; 0                 ; 0                 ; 0                   ; 1                ;
 +-------------------------+-------------------------+-------------------+-------------------+-------------------+---------------------+------------------+
-
-
-Encoding Type:  One-Hot
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |GameDesign|MOUSE:inst14|mouse_state                                                                                                                                                    ;
-+-------------------------------+---------------------------+--------------------------+-------------------------------+---------------------------+--------------------------+---------------------------+
-; Name                          ; mouse_state.INPUT_PACKETS ; mouse_state.WAIT_CMD_ACK ; mouse_state.WAIT_OUTPUT_READY ; mouse_state.LOAD_COMMAND2 ; mouse_state.LOAD_COMMAND ; mouse_state.INHIBIT_TRANS ;
-+-------------------------------+---------------------------+--------------------------+-------------------------------+---------------------------+--------------------------+---------------------------+
-; mouse_state.INHIBIT_TRANS     ; 0                         ; 0                        ; 0                             ; 0                         ; 0                        ; 0                         ;
-; mouse_state.LOAD_COMMAND      ; 0                         ; 0                        ; 0                             ; 0                         ; 1                        ; 1                         ;
-; mouse_state.LOAD_COMMAND2     ; 0                         ; 0                        ; 0                             ; 1                         ; 0                        ; 1                         ;
-; mouse_state.WAIT_OUTPUT_READY ; 0                         ; 0                        ; 1                             ; 0                         ; 0                        ; 1                         ;
-; mouse_state.WAIT_CMD_ACK      ; 0                         ; 1                        ; 0                             ; 0                         ; 0                        ; 1                         ;
-; mouse_state.INPUT_PACKETS     ; 1                         ; 0                        ; 0                             ; 0                         ; 0                        ; 1                         ;
-+-------------------------------+---------------------------+--------------------------+-------------------------------+---------------------------+--------------------------+---------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------+
@@ -476,7 +476,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
 ; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |GameDesign|VGA_SYNC:inst|v_count[6]       ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |GameDesign|pipes:inst13|gap_y_pos[1]      ;
-; 3:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |GameDesign|pipes:inst13|pipes_x_pos[9]    ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |GameDesign|pipes:inst13|pipes_x_pos[6]    ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |GameDesign|pipes:inst18|gap_y_pos[4]      ;
 ; 3:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |GameDesign|pipes:inst18|pipes_x_pos[7]    ;
 ; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |GameDesign|coin:inst11|coin_x_pos[6]      ;
@@ -488,8 +488,8 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |GameDesign|pipes:inst18|send[2]           ;
 ; 5:1                ; 6 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; No         ; |GameDesign|text_display:inst7|font_row[1] ;
 ; 10:1               ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |GameDesign|state_tracker:inst5|Selector2  ;
-; 12:1               ; 2 bits    ; 16 LEs        ; 6 LEs                ; 10 LEs                 ; No         ; |GameDesign|state_tracker:inst5|Selector5  ;
-; 13:1               ; 2 bits    ; 16 LEs        ; 2 LEs                ; 14 LEs                 ; No         ; |GameDesign|state_tracker:inst5|Selector4  ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 6 LEs                ; 10 LEs                 ; No         ; |GameDesign|state_tracker:inst5|Selector0  ;
+; 13:1               ; 2 bits    ; 16 LEs        ; 2 LEs                ; 14 LEs                 ; No         ; |GameDesign|state_tracker:inst5|Selector3  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
 
 
@@ -1045,7 +1045,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
-    Info: Processing started: Wed May 26 19:06:52 2021
+    Info: Processing started: Wed May 26 19:47:20 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off GameDesign -c GameDesign
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file //files.auckland.ac.nz/myhome/documents/github/cs305-group23/stuff/phase 1 code/char_rom.vhd
@@ -1158,13 +1158,14 @@ Warning (10541): VHDL Signal Declaration warning at collision_detector.vhd(20): 
 Warning (10541): VHDL Signal Declaration warning at collision_detector.vhd(20): used implicit default value for signal "f_health" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Warning (10541): VHDL Signal Declaration warning at collision_detector.vhd(20): used implicit default value for signal "f_coin" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Warning (10541): VHDL Signal Declaration warning at collision_detector.vhd(22): used implicit default value for signal "score_tracker" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10492): VHDL Process Statement warning at collision_detector.vhd(41): signal "vert_sync" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "state_tracker" for hierarchy "state_tracker:inst5"
 Info (12128): Elaborating entity "MOUSE" for hierarchy "MOUSE:inst14"
 Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(25): object "CHARIN" assigned a value but never read
 Warning (10492): VHDL Process Statement warning at mouse.vhd(151): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at mouse.vhd(155): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at mouse.vhd(156): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at mouse.vhd(157): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Info (12128): Elaborating entity "state_tracker" for hierarchy "state_tracker:inst5"
 Info (12128): Elaborating entity "bird" for hierarchy "bird:inst12"
 Info (12128): Elaborating entity "heart" for hierarchy "heart:inst16"
 Info (12128): Elaborating entity "lfsr_generator" for hierarchy "heart:inst16|lfsr_generator:random"
@@ -1244,17 +1245,17 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 2 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 891 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 886 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 10 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 869 logic cells
+    Info (21061): Implemented 864 logic cells
     Info (21064): Implemented 8 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 42 warnings
-    Info: Peak virtual memory: 4672 megabytes
-    Info: Processing ended: Wed May 26 19:06:58 2021
-    Info: Elapsed time: 00:00:06
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 43 warnings
+    Info: Peak virtual memory: 4671 megabytes
+    Info: Processing ended: Wed May 26 19:47:25 2021
+    Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:04
 
 
