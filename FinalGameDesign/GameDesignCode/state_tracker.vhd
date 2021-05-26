@@ -6,7 +6,7 @@ USE  IEEE.STD_LOGIC_SIGNED.all;
 
 
 Entity state_tracker is 
-	port(clk, death, left_click, right_click 	: in std_logic;
+	port(clk, death, left_click, right_click, pb1 	: in std_logic;
 			score 										: in std_logic_vector(6 downto 0);
 			enable, reset,start_screen, stat_screen, death_show 								: out std_logic ;
 			difficulty 									: out std_logic_vector(1 downto 0));
@@ -32,7 +32,7 @@ begin
 			end if;
 		when training =>
 			if (death = '1') then 
-				next_state <= start;
+				next_state <= death_screen;
 			end if;
 		when level1 =>
 			if (death = '1') then 
@@ -50,12 +50,10 @@ begin
 			if (death = '1') then
 				next_state <= death_screen;
 			end if ;
-		when death_screen =>
-			if (left_click = '1' or right_click = '1') then
+		when others =>
+			if (pb1 = '1') then
 				next_state <= start ;
 			end if;
-		when others =>
-			next_state <= level1 ;
   		end case;
 		
 		state <= next_state;
@@ -101,8 +99,8 @@ begin
 			stat_screen <='1';
 			death_show  <= '0';
 		when others =>
-			enable <= '1';
-			reset <= '0';
+			enable <= '0';
+			reset <= '1';
 			difficulty <= "00";
 			start_screen <='0';
 			stat_screen <='0';
