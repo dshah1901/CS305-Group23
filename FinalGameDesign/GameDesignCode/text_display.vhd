@@ -189,19 +189,19 @@ architecture behaviour of text_display is
 						end if;	
 				end if;
 			elsif(death_show =  '1') then
-				if ((128 <= pixel_row) and (pixel_row < 192) and (128 <= pixel_column) and (pixel_column < 512)) then -- TRAIN
+				if ((128 <= pixel_row) and (pixel_row < 192) and (192 <= pixel_column) and (pixel_column < 512)) then -- TRAIN
 					   font_col <= pixel_column(5 downto 3); -- To change the font size
 						font_row <= pixel_row(5 downto 3);
-						if ((128 <= pixel_row) and (pixel_row < 192) and (128 <= pixel_column) and (pixel_column < 192)) then 
+						if ((128 <= pixel_row) and (pixel_row < 192) and (192 <= pixel_column) and (pixel_column < 256)) then 
 							character_address <= conv_std_logic_vector(7,6); -- G
 							charOn <= '1';
-						elsif ((128 <= pixel_row) and (pixel_row < 192) and (192 <= pixel_column) and (pixel_column < 256)) then 
+						elsif ((128 <= pixel_row) and (pixel_row < 192) and (256 <= pixel_column) and (pixel_column < 320)) then 
 							character_address <= conv_std_logic_vector(1,6); -- A
 							charOn <= '1';
-						elsif ((128 <= pixel_row) and (pixel_row < 192) and (256 <= pixel_column) and (pixel_column < 320)) then 
+						elsif ((128 <= pixel_row) and (pixel_row < 192) and (320 <= pixel_column) and (pixel_column < 384)) then 
 							character_address <= conv_std_logic_vector(13,6); -- M
 							charOn <= '1';
-						elsif ((128 <= pixel_row) and (pixel_row < 192) and (320 <= pixel_column) and (pixel_column < 384)) then 
+						elsif ((128 <= pixel_row) and (pixel_row < 192) and (384 <= pixel_column) and (pixel_column < 448)) then 
 							character_address <= conv_std_logic_vector(5,6); -- E
 							charOn <= '1';
 						else
@@ -209,13 +209,13 @@ architecture behaviour of text_display is
 							charOn <= '0';
 						end if;	
 				end if;
-				if ((192 <= pixel_row) and (pixel_row < 256) and (128 <= pixel_column) and (pixel_column < 512)) then -- GAME
+				if ((192 <= pixel_row) and (pixel_row < 256) and (192 <= pixel_column) and (pixel_column < 512)) then -- GAME
 					font_col <= pixel_column(5 downto 3); -- To change the font size
 					font_row <= pixel_row(5 downto 3);
-					if ((192 <= pixel_row) and (pixel_row < 256) and (128 <= pixel_column) and (pixel_column < 192)) then 
+					if ((192 <= pixel_row) and (pixel_row < 256) and (192 <= pixel_column) and (pixel_column < 256)) then 
 						character_address <= conv_std_logic_vector(15,6); -- O
 						charOn <= '1';
-					elsif ((192 <= pixel_row) and (pixel_row < 256) and (192 <= pixel_column) and (pixel_column < 256)) then 
+					elsif ((192 <= pixel_row) and (pixel_row < 256) and (256 <= pixel_column) and (pixel_column < 320)) then 
 						character_address <= conv_std_logic_vector(22,6); -- V
 						charOn <= '1';
 					elsif ((192 <= pixel_row) and (pixel_row < 256) and (256 <= pixel_column) and (pixel_column < 320)) then 
@@ -232,5 +232,5 @@ architecture behaviour of text_display is
 			end if;
 		end process;
 
-		text_on <= rom_mux_output;
+		text_on <= rom_mux_output and charOn;
 end architecture;
