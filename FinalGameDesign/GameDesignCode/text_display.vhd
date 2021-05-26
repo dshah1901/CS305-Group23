@@ -212,10 +212,10 @@ architecture behaviour of text_display is
 					elsif ((192 <= pixel_row) and (pixel_row < 256) and (256 <= pixel_column) and (pixel_column < 320)) then 
 						character_address <= conv_std_logic_vector(22,6); -- V
 						charOn <= '1';
-					elsif ((192 <= pixel_row) and (pixel_row < 256) and (256 <= pixel_column) and (pixel_column < 320)) then 
+					elsif ((192 <= pixel_row) and (pixel_row < 256) and (320 <= pixel_column) and (pixel_column < 384)) then 
 						character_address <= conv_std_logic_vector(5,6); -- E
 						charOn <= '1';
-					elsif ((192 <= pixel_row) and (pixel_row < 256) and (320 <= pixel_column) and (pixel_column < 384))then 
+					elsif ((192 <= pixel_row) and (pixel_row < 256) and (384 <= pixel_column) and (pixel_column < 448))then 
 						character_address <= conv_std_logic_vector(18,6); -- R
 						charOn <= '1';
 					else
@@ -250,7 +250,7 @@ architecture behaviour of text_display is
 							character_address <= conv_std_logic_vector(2,6); -- B
 							charOn <= '1';
 						elsif ((320 <= pixel_row) and (pixel_row < 352) and (448 <= pixel_column) and (pixel_column < 480)) then 
-							character_address <= conv_std_logic_vector(50,6); -- 2
+							character_address <= conv_std_logic_vector(49,6); -- 1
 							charOn <= '1';
 						else
 							charOn <= '0';
