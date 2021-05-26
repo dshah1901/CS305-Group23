@@ -23,7 +23,7 @@ SIGNAL heart_x_motion								: std_logic_vector(9 DOWNTO 0);
 Signal send											: std_logic_vector(3 downto 0) := "0011";
 signal lfsr1 										: std_logic_vector(3 downto 0);
 signal count										: std_logic_vector(9 downto 0);
-signal isheart										: std_logic_vector(9 downto 0);
+signal isheart										: std_logic;
 
 BEGIN           
 
@@ -34,7 +34,7 @@ port map (Clk => clk, reset => '1', seed => send, lfsr => lfsr1);
 -- pipe_x_pos and pipe_y_pos show the (x,y) for the centre of pipe
 
 heart_on <= '1' when ( (('0' & heart_x_pos <= pixel_column + radius) and ('0' & pixel_column <= heart_x_pos + radius) 	-- x_pos - radius <= pixel_column <= x_pos + radius
-					and ('0' & heart_y_pos <= pixel_row + radius) and ('0' & pixel_row <= heart_y_pos + radius) ) and (isheart = '1'))  else	-- y_pos - radius <= pixel_row <= y_pos + radius
+					and ('0' & heart_y_pos <= pixel_row + radius) and ('0' & pixel_row <= heart_y_pos + radius) ) and (isheart='1'))  else	-- y_pos - radius <= pixel_row <= y_pos + radius
 			'0';					
 			
 Move_heart: process (vert_sync) 
