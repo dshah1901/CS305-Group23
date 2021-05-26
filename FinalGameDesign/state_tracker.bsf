@@ -54,9 +54,16 @@ applicable agreement for further details.
 	(port
 		(pt 0 96)
 		(input)
+		(text "pb1" (rect 0 0 12 12)(font "Arial" ))
+		(text "pb1" (rect 21 91 33 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 1))
+	)
+	(port
+		(pt 0 112)
+		(input)
 		(text "score[6..0]" (rect 0 0 42 12)(font "Arial" ))
-		(text "score[6..0]" (rect 21 91 63 103)(font "Arial" ))
-		(line (pt 0 96)(pt 16 96)(line_width 3))
+		(text "score[6..0]" (rect 21 107 63 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 3))
 	)
 	(port
 		(pt 192 32)
