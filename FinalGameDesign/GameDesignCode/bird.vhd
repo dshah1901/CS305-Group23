@@ -9,7 +9,8 @@ ENTITY bird IS
 		( left_button, clk, vert_sync, reset						: IN std_logic;
 				pixel_row, pixel_column									: IN std_logic_vector(9 DOWNTO 0);
 				difficulty 													: in std_logic_vector(1 downto 0);
-				o_bird_on 													: OUT std_logic);
+				o_bird_on 													: OUT std_logic;
+				bird_br														: out std_logic_vector(10 downTO 0));
 END bird;
 
 architecture behavior of bird is
@@ -24,13 +25,13 @@ BEGIN
 
 size <= CONV_STD_LOGIC_VECTOR(8,10);
 -- bird_x_pos and bird_y_pos show the (x,y) for the centre of bird
-bird_x_pos <= CONV_STD_LOGIC_VECTOR(120,11);
+bird_x_pos <= CONV_STD_LOGIC_VECTOR(50,11);
 
 bird_on <= '1' when ( ('0' & bird_x_pos <= '0' & pixel_column + size) and ('0' & pixel_column <= '0' & bird_x_pos + size) 	-- x_pos - size <= pixel_column <= x_pos + size
 					and ('0' & bird_y_pos <= pixel_row + size) and ('0' & pixel_row <= bird_y_pos + size))  else	-- y_pos - size <= pixel_row <= y_pos + size
 			'0';
 o_bird_on <= not bird_on;
-
+bird_br <= '0' & bird_y_pos + 8;
 -- Colours for pixel data on video signal
 -- Changing the background and bird colour by pushbuttons
 Move_bird: process (vert_sync)  	

@@ -6,11 +6,12 @@ USE  IEEE.STD_LOGIC_UNSIGNED.all;
 
 
 ENTITY pipes IS
-	generic( pipe_num :   std_logic_vector(1 DOWNTO 0));
+	generic( pipe_num :   std_logic_vector(1 DOWNTO 0):= "00");
 	PORT
-		( clk, vert_sync, reset						: IN std_logic;
-		  pixel_row, pixel_column			: IN std_logic_vector(9 DOWNTO 0);
-		  pipe_on					 			: OUT std_logic);		
+		( clk, vert_sync, reset								: IN std_logic;
+		  pixel_row, pixel_column							: IN std_logic_vector(9 DOWNTO 0);
+		  pipe_on					 							: OUT std_logic;
+		  gap_bot_row, gap_left_col						: out std_logic_vector(10 downto 0));		
 END pipes;
 
 architecture behavior of pipes is
@@ -34,7 +35,7 @@ BEGIN
 random: LFSR_generator
 port map (Clk => clk, reset => '1', seed => send, lfsr => lfsr1);
 
-wedge <= CONV_STD_LOGIC_VECTOR(25,10);
+wedge <= CONV_STD_LOGIC_VECTOR(30,10);
 height <= CONV_STD_LOGIC_VECTOR(440,10);
 gap_height <= CONV_STD_LOGIC_VECTOR(80,10);
 -- pipe_x_pos and pipe_y_pos show the (x,y) for the centre of ball
@@ -49,7 +50,8 @@ gap_on <= '1' when (('0' & pipes_x_pos <= pixel_column+ wedge + wedge) and ('0' 
 					'0';
 
 pipe_on <= (pipes_on and not gap_on);
-
+gap_bot_row <= '0' & gap_y_pos;
+gap_left_col <= '0' & pipes_x_pos + wedge + wedge;
 
 
 
