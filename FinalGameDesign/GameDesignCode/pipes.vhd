@@ -10,6 +10,7 @@ ENTITY pipes IS
 	PORT
 		( clk, vert_sync, reset,pb2								: IN std_logic;
 		  pixel_row, pixel_column							: IN std_logic_vector(9 DOWNTO 0);
+		  difficulty											: in std_logic_vector(1 DOWNTO 0);
 		  pipe_on					 							: OUT std_logic;
 		  gap_bot_row, gap_left_col						: out std_logic_vector(10 downto 0));		
 END pipes;
@@ -60,7 +61,7 @@ Move_pipe: process (vert_sync)
 begin
 	-- Move pipe once every vertical sync
 	if (rising_edge(vert_sync) and pb2 = '1') then
-		pipe_x_motion <= CONV_STD_LOGIC_VECTOR(2,10);
+		pipe_x_motion <= CONV_STD_LOGIC_VECTOR(2,10) + ("00000000" & difficulty);
 		
 		if reset = '1' then
 			case pipe_num is

@@ -20,6 +20,7 @@ END collision_detector;
 architecture behaviour of collision_detector is
   signal f_death, f_health, f_coin, damage1, damage2, damage3, damage4										: std_logic;
   signal took_damage1,took_damage2																						: std_logic;
+  signal bird_passed, score_taken																						: std_logic := '0';
   signal health																												: std_logic_vector(1 downto 0);
   signal counter																												: std_logic_vector(4 downto 0);
   signal f_score					 																							: std_logic_vector(6 downto 0);
@@ -30,14 +31,12 @@ architecture behaviour of collision_detector is
 	 f_damage1 <= damage2;
 	 f_damage2 <= damage1;
 	 f_damage3 <= '0';
-	 death <= '0';
+	 death <= f_death;
 	 score <= f_score;
 	 score_ones <= f_score_ones;
 	 score_tens <= f_score_tens;
 	 heart_reset <= f_health;
 	 coin_reset <=f_coin;
-	
-	
 	
 	
 process(vert_sync) -- damage_detector
@@ -69,20 +68,35 @@ if (rising_edge(vert_sync)) then
 	else
 		damage4 <= '0';
 	end if;
-	f_death<= (damage2 and damage1) or(damage3 and damage4);
 	--Score functionality
-	
-	if ( ((gap2_lc <= CONV_STD_LOGIC_VECTOR(50,11)) or (gap1_lc <= CONV_STD_LOGIC_VECTOR(50,11))) and ((CONV_STD_LOGIC_VECTOR(51,11) <= gap2_lc) or ( CONV_STD_LOGIC_VECTOR(50,11)  <= gap1_lc))  ) then
-		f_score <= f_score + conV_STD_LOGIC_VECTOR(1,7);	
-		f_score_ones <= f_score_ones + "0001";
-		if (f_score_ones < "1010") then
+	if (CONV_STD_LOGIC_VECTOR(478,11) <= bird_br) then
+		f_death <= '1';
+	else
+		f_death<= (damage2 and damage1) or(damage3 and damage4);
+	end if;
+	if ( gap2_lc <= CONV_STD_LOGIC_VECTOR(50,11)   ) then
+		f_score <= f_score + conV_STD_LOGIC_VECTOR(1,7);
+		bird_passed <= '1';
+	else
+		score_taken <= '0';
+	end if;
+	if (bird_passed = '1' and score_taken = '0') then
+		if (f_score_ones > "1010") then
 			f_score_tens <= f_score_tens + "0001";
 			f_score_ones <= "0000";
-		elsif ((f_score_tens < "1010") and (f_score_ones < "1010")) then
+			bird_passed <= '0';
+			score_taken <= '1';
+		elsif ((f_score_tens > "1010") and (f_score_ones > "1010")) then
 			f_score_tens <= "0000";
 			f_score_ones <= "0000";
+			bird_passed <= '0';
+			score_taken <= '1';
+		else
+			f_score_ones <= f_score_ones + "0001";
+			bird_passed <= '0';
+			score_taken <= '1';
 		end if;
-		end if;
+	end if;
 end if;
 end process;
 	 
