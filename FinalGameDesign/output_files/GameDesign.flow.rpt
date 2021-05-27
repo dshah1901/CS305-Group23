@@ -1,5 +1,5 @@
 Flow report for GameDesign
-Thu May 27 12:59:30 2021
+Thu May 27 14:36:33 2021
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
@@ -40,22 +40,22 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu May 27 12:59:29 2021       ;
+; Flow Status                        ; Flow Failed - Thu May 27 14:36:33 2021      ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
 ; Revision Name                      ; GameDesign                                  ;
 ; Top-level Entity Name              ; GameDesign                                  ;
 ; Family                             ; Cyclone III                                 ;
 ; Device                             ; EP3C16F484C6                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 1,048                                       ;
-;     Total combinational functions  ; 993                                         ;
-;     Dedicated logic registers      ; 268                                         ;
-; Total registers                    ; 268                                         ;
-; Total pins                         ; 29                                          ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 4,096                                       ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 1                                           ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/27/2021 12:59:24 ;
+; Start date & time ; 05/27/2021 14:36:32 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; GameDesign          ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+---------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 251053327268158.162207716412336       ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 251053327268158.162208299208200       ; --            ; --          ; --         ;
 ; IP_TOOL_NAME                        ; ALTPLL                                ; --            ; --          ; --         ;
 ; IP_TOOL_VERSION                     ; 13.0                                  ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --         ;
@@ -97,8 +97,8 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:06     ; 1.0                     ; 4675 MB             ; 00:00:04                           ;
-; Total                ; 00:00:06     ; --                      ; --                  ; 00:00:04                           ;
+; Analysis & Synthesis ; 00:00:02     ; 1.0                     ; 4623 MB             ; 00:00:01                           ;
+; Total                ; 00:00:02     ; --                      ; --                  ; 00:00:01                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -68,6 +68,7 @@ applicable agreement for further details.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 200 -192 248 -176))
 )
 (pin
 	(output)
@@ -173,7 +174,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 432 488 608 504)
+	(rect 440 544 616 560)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "text_on" (rect 90 0 126 12)(font "Arial" ))
 	(pt 0 8)
@@ -186,11 +187,11 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 608 504 656 520))
+	(annotation_block (location)(rect 616 560 664 576))
 )
 (pin
 	(output)
-	(rect 1264 360 1440 376)
+	(rect 1360 344 1536 360)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "f_damage1" (rect 90 0 145 12)(font "Arial" ))
 	(pt 0 8)
@@ -203,11 +204,11 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 1440 376 1496 392))
+	(annotation_block (location)(rect 1536 360 1592 376))
 )
 (pin
 	(output)
-	(rect 1264 376 1440 392)
+	(rect 1360 368 1536 384)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "f_damage2" (rect 90 0 145 12)(font "Arial" ))
 	(pt 0 8)
@@ -220,11 +221,11 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 1440 392 1496 408))
+	(annotation_block (location)(rect 1536 384 1592 400))
 )
 (pin
 	(output)
-	(rect 1264 392 1440 408)
+	(rect 1368 384 1544 400)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "f_damage3" (rect 90 0 145 12)(font "Arial" ))
 	(pt 0 8)
@@ -237,7 +238,7 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 1440 408 1496 424))
+	(annotation_block (location)(rect 1544 400 1600 416))
 )
 (pin
 	(output)
@@ -1560,19 +1561,6 @@ applicable agreement for further details.
 	(pt 88 120)
 )
 (connector
-	(pt 1272 32)
-	(pt 1272 -88)
-)
-(connector
-	(pt 1280 32)
-	(pt 1272 32)
-)
-(connector
-	(text "clock" (rect 1226 -104 1251 -92)(font "Arial" ))
-	(pt 1272 -88)
-	(pt 1240 -88)
-)
-(connector
 	(pt 584 96)
 	(pt 632 96)
 )
@@ -1658,7 +1646,7 @@ applicable agreement for further details.
 	(pt 552 -80)
 )
 (connector
-	(text "clock" (rect 570 -96 595 -84)(font "Arial" ))
+	(text "clock" (rect 562 -96 587 -84)(font "Arial" ))
 	(pt 656 -80)
 	(pt 552 -80)
 )
@@ -1836,18 +1824,6 @@ applicable agreement for further details.
 	(pt 168 656)
 )
 (connector
-	(pt 408 576)
-	(pt 408 496)
-)
-(connector
-	(pt 408 496)
-	(pt 432 496)
-)
-(connector
-	(pt 400 576)
-	(pt 408 576)
-)
-(connector
 	(text "coin" (rect 864 -112 884 -100)(font "Arial" ))
 	(pt 872 -96)
 	(pt 856 -96)
@@ -1895,11 +1871,6 @@ applicable agreement for further details.
 (connector
 	(pt 136 496)
 	(pt 168 496)
-)
-(connector
-	(text "text" (rect 432 560 450 572)(font "Arial" ))
-	(pt 408 576)
-	(pt 456 576)
 )
 (connector
 	(text "reset" (rect 144 432 168 444)(font "Arial" ))
@@ -2460,11 +2431,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 640 -168)
-	(pt 648 -168)
-	(bus)
-)
-(connector
 	(pt 632 128)
 	(pt 456 128)
 )
@@ -2504,6 +2470,64 @@ applicable agreement for further details.
 	(pt 456 312)
 	(pt 456 464)
 )
+(connector
+	(pt 1272 368)
+	(pt 1272 352)
+)
+(connector
+	(pt 1264 368)
+	(pt 1272 368)
+)
+(connector
+	(pt 1272 352)
+	(pt 1360 352)
+)
+(connector
+	(pt 1272 384)
+	(pt 1272 376)
+)
+(connector
+	(pt 1264 384)
+	(pt 1272 384)
+)
+(connector
+	(pt 1272 376)
+	(pt 1360 376)
+)
+(connector
+	(pt 1272 400)
+	(pt 1272 392)
+)
+(connector
+	(pt 1264 400)
+	(pt 1272 400)
+)
+(connector
+	(pt 1272 392)
+	(pt 1368 392)
+)
+(connector
+	(text "clock" (rect 1234 16 1259 28)(font "Arial" ))
+	(pt 1248 32)
+	(pt 1280 32)
+)
+(connector
+	(pt 408 576)
+	(pt 408 552)
+)
+(connector
+	(pt 400 576)
+	(pt 408 576)
+)
+(connector
+	(text "text" (rect 432 560 450 572)(font "Arial" ))
+	(pt 408 576)
+	(pt 456 576)
+)
+(connector
+	(pt 408 552)
+	(pt 440 552)
+)
 (junction (pt 1624 128))
 (junction (pt 584 432))
 (junction (pt 496 448))
@@ -2532,7 +2556,6 @@ applicable agreement for further details.
 (junction (pt 616 480))
 (junction (pt 600 160))
 (junction (pt 616 144))
-(junction (pt 640 -168))
 (junction (pt 456 -200))
 (junction (pt 456 128))
 (junction (pt 456 -48))
