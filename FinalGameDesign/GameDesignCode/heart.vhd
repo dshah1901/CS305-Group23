@@ -4,9 +4,8 @@ USE  IEEE.STD_LOGIC_ARITH.all;
 USE  IEEE.STD_LOGIC_UNSIGNED.all;
 
 Entity heart is
-port (vert_sync, clk, reset 				:in std_logic;
+port (vert_sync, clk, reset,pb2 				:in std_logic;
 		  pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
-		  heart_br						:out std_logic_vector(10 downTO 0);
 		  heart_on 			: OUT std_logic);
 end heart;
 
@@ -37,13 +36,13 @@ port map (Clk => clk, reset => '1', seed => send, lfsr => lfsr1);
 heart_on <= '1' when ( (('0' & heart_x_pos <= pixel_column + radius) and ('0' & pixel_column <= heart_x_pos + radius) 	-- x_pos - radius <= pixel_column <= x_pos + radius
 					and ('0' & heart_y_pos <= pixel_row + radius) and ('0' & pixel_row <= heart_y_pos + radius) ) and (isheart='1'))  else	-- y_pos - radius <= pixel_row <= y_pos + radius
 			'0';					
-heart_br <= '0' & heart_y_pos + conv_STD_LOGIC_VECTOR(10,11);
+
 		
 Move_heart: process (vert_sync) 
  	
 begin
 	-- Move pipe once every vertical sync
-	if (rising_edge(vert_sync)) then
+	if (rising_edge(vert_sync) and pb2 = '1') then
 		heart_x_motion <= CONV_STD_LOGIC_VECTOR(2,10);
 		
 		if reset = '1' then

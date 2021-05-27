@@ -8,7 +8,7 @@ USE  IEEE.STD_LOGIC_UNSIGNED.all;
 ENTITY pipes IS
 	generic( pipe_num :   std_logic_vector(1 DOWNTO 0):= "00");
 	PORT
-		( clk, vert_sync, reset								: IN std_logic;
+		( clk, vert_sync, reset,pb2								: IN std_logic;
 		  pixel_row, pixel_column							: IN std_logic_vector(9 DOWNTO 0);
 		  pipe_on					 							: OUT std_logic;
 		  gap_bot_row, gap_left_col						: out std_logic_vector(10 downto 0));		
@@ -59,17 +59,17 @@ Move_pipe: process (vert_sync)
  	
 begin
 	-- Move pipe once every vertical sync
-	if (rising_edge(vert_sync)) then
+	if (rising_edge(vert_sync) and pb2 = '1') then
 		pipe_x_motion <= CONV_STD_LOGIC_VECTOR(2,10);
 		
 		if reset = '1' then
 			case pipe_num is
 				when "00" => 
-				pipes_x_pos <= CONV_STD_LOGIC_VECTOR(400,10);
+				pipes_x_pos <= CONV_STD_LOGIC_VECTOR(480,10);
 				gap_y_pos <= CONV_STD_LOGIC_VECTOR(400,10);
 				send <= "1000";
 				when "01" => 
-				pipes_x_pos <= CONV_STD_LOGIC_VECTOR(650,10);
+				pipes_x_pos <= CONV_STD_LOGIC_VECTOR(720,10);
 				gap_y_pos <= CONV_STD_LOGIC_VECTOR(300,10);
 				send <= "0101";
 				when "10" => 
@@ -104,7 +104,7 @@ begin
 			else
 				send <= send + "0001";
 			end if;
-			pipes_x_pos <= CONV_STD_LOGIC_VECTOR(700,10);
+			pipes_x_pos <= CONV_STD_LOGIC_VECTOR(720,10);
 		else 
 			pipes_x_pos <= pipes_x_pos - pipe_x_motion;
 		end if;

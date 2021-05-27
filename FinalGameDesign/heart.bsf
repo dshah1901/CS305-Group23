@@ -47,16 +47,23 @@ applicable agreement for further details.
 	(port
 		(pt 0 80)
 		(input)
-		(text "pixel_row[9..0]" (rect 0 0 56 12)(font "Arial" ))
-		(text "pixel_row[9..0]" (rect 21 75 77 87)(font "Arial" ))
-		(line (pt 0 80)(pt 16 80)(line_width 3))
+		(text "pb2" (rect 0 0 14 12)(font "Arial" ))
+		(text "pb2" (rect 21 75 35 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 1))
 	)
 	(port
 		(pt 0 96)
 		(input)
-		(text "pixel_column[9..0]" (rect 0 0 70 12)(font "Arial" ))
-		(text "pixel_column[9..0]" (rect 21 91 91 103)(font "Arial" ))
+		(text "pixel_row[9..0]" (rect 0 0 56 12)(font "Arial" ))
+		(text "pixel_row[9..0]" (rect 21 91 77 103)(font "Arial" ))
 		(line (pt 0 96)(pt 16 96)(line_width 3))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "pixel_column[9..0]" (rect 0 0 70 12)(font "Arial" ))
+		(text "pixel_column[9..0]" (rect 21 107 91 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 3))
 	)
 	(port
 		(pt 208 32)

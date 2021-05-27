@@ -44,23 +44,27 @@ architecture behaviour of collision_detector is
 process(vert_sync) -- damage_detector
 begin
 if (rising_edge(vert_sync)) then
-	if( (gap1_lc <= CONV_STD_LOGIC_VECTOR(58,11)) and (CONV_STD_LOGIC_VECTOR(42,11) <= gap1_lc + CONV_STD_LOGIC_VECTOR(60,11) )) then --ga1_1c 
+	if (reset <= '1') then
+		f_score_tens <= "0000";
+		f_score_ones <= "0000";
+	end if;
+	if( (gap1_lc <= CONV_STD_LOGIC_VECTOR(28,11)) and (CONV_STD_LOGIC_VECTOR(42,11) <= gap1_lc + CONV_STD_LOGIC_VECTOR(40,11) )) then --ga1_1c 
 		damage1 <='1';
 	else
 		damage1 <='0';
 	end if;
-	if ( (gap1_br + CONV_STD_LOGIC_VECTOR(80,11) <= bird_br) or ( bird_br + CONV_STD_LOGIC_VECTOR(176,11) <= gap1_br)) then -- turns on when bird touches outside rows
+	if ( (gap1_br + CONV_STD_LOGIC_VECTOR(40,11) <= bird_br) or ( bird_br + CONV_STD_LOGIC_VECTOR(136,11) <= gap1_br)) then -- turns on when bird touches outside rows
 		damage2 <= '1';
 	else
 		damage2 <= '0';
 	end if;	
 	
-	if( (gap2_lc <= CONV_STD_LOGIC_VECTOR(58,11)) and (CONV_STD_LOGIC_VECTOR(42,11) <= gap2_lc + CONV_STD_LOGIC_VECTOR(60,11) )) then --ga1_1c 
+	if( (gap2_lc <= CONV_STD_LOGIC_VECTOR(28,11)) and (CONV_STD_LOGIC_VECTOR(42,11) <= gap2_lc + CONV_STD_LOGIC_VECTOR(40,11) )) then --ga1_1c 
 		damage3 <='1';
 	else
 		damage3 <='0';
 	end if;
-	if ( (gap2_br + CONV_STD_LOGIC_VECTOR(80,11) <= bird_br) or ( bird_br + CONV_STD_LOGIC_VECTOR(176,11) <= gap2_br)) then -- turns on when bird touches outside rows
+	if ( (gap2_br + CONV_STD_LOGIC_VECTOR(40,11) <= bird_br) or ( bird_br + CONV_STD_LOGIC_VECTOR(136,11) <= gap2_br)) then -- turns on when bird touches outside rows
 		damage4 <= '1';
 	else
 		damage4 <= '0';
@@ -68,18 +72,17 @@ if (rising_edge(vert_sync)) then
 	f_death<= (damage2 and damage1) or(damage3 and damage4);
 	--Score functionality
 	
-	if ( ((gap2_lc <= CONV_STD_LOGIC_VECTOR(50,11)) or (gap1_lc <= CONV_STD_LOGIC_VECTOR(50,11))) and ((CONV_STD_LOGIC_VECTOR(51,11) <= gap2_lc) or ( CONV_STD_LOGIC_VECTOR(50,11)  <= gap1_lc))  ) then
-		f_score <= f_score + conV_STD_LOGIC_VECTOR(1,7); 
+	if ( (gap2_lc = CONV_STD_LOGIC_VECTOR(0,11)) or (gap1_lc = CONV_STD_LOGIC_VECTOR(0,11))  ) then
+		f_score <= f_score + conV_STD_LOGIC_VECTOR(1,7);
+		f_score_ones <= f_score_ones + "0001";	
+		if (f_score_ones > "1001") then
+			f_score_tens <= f_score_tens + "0001";
+			f_score_ones <= "0000";
+		elsif ((f_score_tens > "1001") and (f_score_ones > "1001")) then
+			f_score_tens <= "0000";
+			f_score_ones <= "0000";
 		end if;
-	if (f_score_ones > "1001") then
-		f_score_tens <= f_score_tens + "0001";
-		f_score_ones <= "0000";
-	elsif ((f_score_tens > "1001") and (f_score_ones > "1001")) then
-		f_score_tens <= "0000";
-		f_score_ones <= "0000";
-	else
-		f_score_ones <= f_score_ones + "0001";
-	end if;
+		end if;
 end if;
 end process;
 	 

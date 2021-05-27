@@ -64,52 +64,73 @@ architecture behaviour of text_display is
 							charOn <= '0';
 						end if;	
 				end if;
-				if ((192 <= pixel_row) and (pixel_row < 256) and (128 <= pixel_column) and (pixel_column < 608)) then -- [RIGHT CLICK]
+				if ((192 <= pixel_row) and (pixel_row < 224) and (128 <= pixel_column) and (pixel_column < 608)) then -- [RIGHT CLICK]
 						font_col <= pixel_column(4 downto 2); -- To change the font size
 						font_row <= pixel_row(4 downto 2);
-						if ((192 <= pixel_row) and (pixel_row < 256) and (192 <= pixel_column) and (pixel_column < 224)) then 
+						if ((192 <= pixel_row) and (pixel_row < 224) and (192 <= pixel_column) and (pixel_column < 224)) then 
 							character_address <= conv_std_logic_vector(91,6); -- [
 							charOn <= '1';
-						elsif ((192 <= pixel_row) and (pixel_row < 256) and (224 <= pixel_column) and (pixel_column < 256)) then 
+						elsif ((192 <= pixel_row) and (pixel_row < 224) and (224 <= pixel_column) and (pixel_column < 256)) then 
 							character_address <= conv_std_logic_vector(18,6); -- R
 							charOn <= '1';
-						elsif ((192 <= pixel_row) and (pixel_row < 256) and (256 <= pixel_column) and (pixel_column < 288)) then 
+						elsif ((192 <= pixel_row) and (pixel_row < 224) and (256 <= pixel_column) and (pixel_column < 288)) then 
 							character_address <= conv_std_logic_vector(9,6); -- I
 							charOn <= '1';
-						elsif ((192 <= pixel_row) and (pixel_row < 256) and (288 <= pixel_column) and (pixel_column < 320)) then 
+						elsif ((192 <= pixel_row) and (pixel_row < 224) and (288 <= pixel_column) and (pixel_column < 320)) then 
 							character_address <= conv_std_logic_vector(7,6); -- G
 							charOn <= '1';
-						elsif ((192 <= pixel_row) and (pixel_row < 256) and (320 <= pixel_column) and (pixel_column < 352)) then 
+						elsif ((192 <= pixel_row) and (pixel_row < 224) and (320 <= pixel_column) and (pixel_column < 352)) then 
 							character_address <= conv_std_logic_vector(8,6); -- H
 							charOn <= '1';
-						elsif ((192 <= pixel_row) and (pixel_row < 256) and (352 <= pixel_column) and (pixel_column < 384)) then 
+						elsif ((192 <= pixel_row) and (pixel_row < 224) and (352 <= pixel_column) and (pixel_column < 384)) then 
 							character_address <= conv_std_logic_vector(20,6); -- T
 							charOn <= '1';
-						elsif ((192 <= pixel_row) and (pixel_row < 256) and (384 <= pixel_column) and (pixel_column < 416)) then 
+						elsif ((192 <= pixel_row) and (pixel_row < 224) and (384 <= pixel_column) and (pixel_column < 416)) then 
 							character_address <= conv_std_logic_vector(32,6); -- Space
 							charOn <= '1';
-						elsif ((192 <= pixel_row) and (pixel_row < 256) and (416 <= pixel_column) and (pixel_column < 448)) then 
+						elsif ((192 <= pixel_row) and (pixel_row < 224) and (416 <= pixel_column) and (pixel_column < 448)) then 
 							character_address <= conv_std_logic_vector(3,6); -- C
 							charOn <= '1';
-						elsif ((192 <= pixel_row) and (pixel_row < 256) and (448 <= pixel_column) and (pixel_column < 480)) then 
+						elsif ((192 <= pixel_row) and (pixel_row < 224) and (448 <= pixel_column) and (pixel_column < 480)) then 
 							character_address <= conv_std_logic_vector(12,6); -- L
 							charOn <= '1';
-						elsif ((192 <= pixel_row) and (pixel_row < 256) and (480 <= pixel_column) and (pixel_column < 512)) then 
+						elsif ((192 <= pixel_row) and (pixel_row < 224) and (480 <= pixel_column) and (pixel_column < 512)) then 
 							character_address <= conv_std_logic_vector(9,6); -- I
 							charOn <= '1';
-						elsif ((192 <= pixel_row) and (pixel_row < 256) and (512 <= pixel_column) and (pixel_column < 544)) then 
+						elsif ((192 <= pixel_row) and (pixel_row < 224) and (512 <= pixel_column) and (pixel_column < 544)) then 
 							character_address <= conv_std_logic_vector(3,6); -- C
 							charOn <= '1';
-						elsif ((192 <= pixel_row) and (pixel_row < 256) and (544 <= pixel_column) and (pixel_column < 576)) then 
+						elsif ((192 <= pixel_row) and (pixel_row < 224) and (544 <= pixel_column) and (pixel_column < 576)) then 
 							character_address <= conv_std_logic_vector(11,6); -- K
 							charOn <= '1';
-						elsif ((192 <= pixel_row) and (pixel_row < 256) and (576 <= pixel_column) and (pixel_column < 608)) then 
+						elsif ((192 <= pixel_row) and (pixel_row < 224) and (576 <= pixel_column) and (pixel_column < 608)) then 
 							character_address <= conv_std_logic_vector(93,6); -- ]
 							charOn <= '1';
 						else
 							charOn <= '0';
+						end if;
+				end if;
+			
+				if ((256 <= pixel_row) and (pixel_row < 320) and (128 <= pixel_column) and (pixel_column < 512)) then -- GAME
+					font_col <= pixel_column(5 downto 3); -- To change the font size
+					font_row <= pixel_row(5 downto 3);
+					if ((256 <= pixel_row) and (pixel_row < 320) and (128 <= pixel_column) and (pixel_column < 192)) then 
+						character_address <= conv_std_logic_vector(7,6); -- G
+						charOn <= '1';
+					elsif ((256 <= pixel_row) and (pixel_row < 320) and (192 <= pixel_column) and (pixel_column < 256)) then 
+						character_address <= conv_std_logic_vector(1,6); -- A
+						charOn <= '1';
+					elsif ((256 <= pixel_row) and (pixel_row < 320) and (256 <= pixel_column) and (pixel_column < 320)) then 
+						character_address <= conv_std_logic_vector(13,6); -- M
+						charOn <= '1';
+					elsif ((256 <= pixel_row) and (pixel_row < 320) and (320 <= pixel_column) and (pixel_column < 384))then 
+						character_address <= conv_std_logic_vector(5,6); -- E
+						charOn <= '1';
+					else
+						charOn <= '0';
 					end if;
-				if ((320 <= pixel_row) and (pixel_row < 352) and (128 <= pixel_column) and (pixel_column < 576)) then -- [LEFT CLICK]
+				end if;
+					if ((320 <= pixel_row) and (pixel_row < 352) and (128 <= pixel_column) and (pixel_column < 576)) then -- [LEFT CLICK]
 						font_col <= pixel_column(4 downto 2); -- To change the font size
 						font_row <= pixel_row(4 downto 2);
 						if ((320 <= pixel_row) and (pixel_row < 352) and (192 <= pixel_column) and (pixel_column < 224)) then 
@@ -152,71 +173,6 @@ architecture behaviour of text_display is
 							charOn <= '0';
 						end if;
 				end if;
-				if ((256 <= pixel_row) and (pixel_row < 320) and (128 <= pixel_column) and (pixel_column < 512)) then -- GAME
-					font_col <= pixel_column(5 downto 3); -- To change the font size
-					font_row <= pixel_row(5 downto 3);
-					if ((256 <= pixel_row) and (pixel_row < 320) and (128 <= pixel_column) and (pixel_column < 192)) then 
-						character_address <= conv_std_logic_vector(7,6); -- G
-						charOn <= '1';
-					elsif ((256 <= pixel_row) and (pixel_row < 320) and (192 <= pixel_column) and (pixel_column < 256)) then 
-						character_address <= conv_std_logic_vector(1,6); -- A
-						charOn <= '1';
-					elsif ((256 <= pixel_row) and (pixel_row < 320) and (256 <= pixel_column) and (pixel_column < 320)) then 
-						character_address <= conv_std_logic_vector(13,6); -- M
-						charOn <= '1';
-					elsif ((256 <= pixel_row) and (pixel_row < 320) and (320 <= pixel_column) and (pixel_column < 384))then 
-						character_address <= conv_std_logic_vector(5,6); -- E
-						charOn <= '1';
-					else
-						charOn <= '0';
-					end if;
-				end if;
-				if ((320 <= pixel_row) and (pixel_row < 352) and (128 <= pixel_column) and (pixel_column < 608)) then -- [RIGHT CLICK]
-						font_col <= pixel_column(4 downto 2); -- To change the font size
-						font_row <= pixel_row(4 downto 2);
-						if ((320 <= pixel_row) and (pixel_row < 352) and (192 <= pixel_column) and (pixel_column < 224)) then 
-							character_address <= conv_std_logic_vector(91,6); -- [
-							charOn <= '1';
-						elsif ((320 <= pixel_row) and (pixel_row < 352) and (224 <= pixel_column) and (pixel_column < 256)) then 
-							character_address <= conv_std_logic_vector(18,6); -- R
-							charOn <= '1';
-						elsif ((320 <= pixel_row) and (pixel_row < 352) and (256 <= pixel_column) and (pixel_column < 288)) then 
-							character_address <= conv_std_logic_vector(9,6); -- I
-							charOn <= '1';
-						elsif ((320 <= pixel_row) and (pixel_row < 352) and (288 <= pixel_column) and (pixel_column < 320)) then 
-							character_address <= conv_std_logic_vector(7,6); -- G
-							charOn <= '1';
-						elsif ((320 <= pixel_row) and (pixel_row < 352) and (320 <= pixel_column) and (pixel_column < 352)) then 
-							character_address <= conv_std_logic_vector(8,6); -- H
-							charOn <= '1';
-						elsif ((320 <= pixel_row) and (pixel_row < 352) and (352 <= pixel_column) and (pixel_column < 384)) then 
-							character_address <= conv_std_logic_vector(20,6); -- T
-							charOn <= '1';
-						elsif ((320 <= pixel_row) and (pixel_row < 352) and (384 <= pixel_column) and (pixel_column < 416)) then 
-							character_address <= conv_std_logic_vector(32,6); -- Space
-							charOn <= '1';
-						elsif ((320 <= pixel_row) and (pixel_row < 352) and (416 <= pixel_column) and (pixel_column < 448)) then 
-							character_address <= conv_std_logic_vector(3,6); -- C
-							charOn <= '1';
-						elsif ((320 <= pixel_row) and (pixel_row < 352) and (448 <= pixel_column) and (pixel_column < 480)) then 
-							character_address <= conv_std_logic_vector(12,6); -- L
-							charOn <= '1';
-						elsif ((320 <= pixel_row) and (pixel_row < 352) and (480 <= pixel_column) and (pixel_column < 512)) then 
-							character_address <= conv_std_logic_vector(9,6); -- I
-							charOn <= '1';
-						elsif ((320 <= pixel_row) and (pixel_row < 352) and (512 <= pixel_column) and (pixel_column < 544)) then 
-							character_address <= conv_std_logic_vector(3,6); -- C
-							charOn <= '1';
-						elsif ((320 <= pixel_row) and (pixel_row < 352) and (544 <= pixel_column) and (pixel_column < 576)) then 
-							character_address <= conv_std_logic_vector(11,6); -- K
-							charOn <= '1';
-						elsif ((320 <= pixel_row) and (pixel_row < 352) and (576 <= pixel_column) and (pixel_column < 608)) then 
-							character_address <= conv_std_logic_vector(93,6); -- ]
-							charOn <= '1';
-						else
-							charOn <= '0';
-					end if;
-				end if;
 			elsif(stat_screen = '1') then
 					if ((128 <= pixel_row) and (pixel_row < 192) and (128 <= pixel_column) and (pixel_column < 512)) then -- TRAIN
 					   font_col <= pixel_column(5 downto 3); -- To change the font size
@@ -227,7 +183,7 @@ architecture behaviour of text_display is
 						else 
 							charOn <= '0';
 						end if;	
-				end if;
+					end if;
 			elsif(death_show =  '1') then
 				if ((128 <= pixel_row) and (pixel_row < 192) and (192 <= pixel_column) and (pixel_column < 512)) then -- TRAIN
 					   font_col <= pixel_column(5 downto 3); -- To change the font size
@@ -295,7 +251,7 @@ architecture behaviour of text_display is
 							character_address <= conv_std_logic_vector(2,6); -- B
 							charOn <= '1';
 						elsif ((320 <= pixel_row) and (pixel_row < 352) and (448 <= pixel_column) and (pixel_column < 480)) then 
-							character_address <= conv_std_logic_vector(50,6); -- 1
+							character_address <= conv_std_logic_vector(49,6); -- 1
 							charOn <= '1';
 						else
 							charOn <= '0';

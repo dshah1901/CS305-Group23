@@ -6,7 +6,7 @@ USE  IEEE.STD_LOGIC_SIGNED.all;
 
 ENTITY bird IS
 	PORT
-		( left_button, clk, vert_sync, reset						: IN std_logic;
+		( left_button, clk, vert_sync, reset,pb2						: IN std_logic;
 				pixel_row, pixel_column									: IN std_logic_vector(9 DOWNTO 0);
 				difficulty 													: in std_logic_vector(1 downto 0);
 				o_bird_on 													: OUT std_logic;
@@ -37,7 +37,7 @@ bird_br <= '0' & bird_y_pos + 8;
 Move_bird: process (vert_sync)  	
 begin
 	-- Move bird once every vertical sync
-	if (rising_edge(vert_sync)) then			
+	if (rising_edge(vert_sync) and pb2 = '1') then			
 		
 			if (bird_y_pos <= size) then
 				bird_y_motion <= CONV_STD_LOGIC_VECTOR(2,10)+ ("00000000" & difficulty);
