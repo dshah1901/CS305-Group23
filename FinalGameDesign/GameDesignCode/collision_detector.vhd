@@ -4,7 +4,6 @@ USE  IEEE.STD_LOGIC_ARITH.all;
 USE  IEEE.STD_LOGIC_UNSIGNED.all;
 
 
-
 ENTITY collision_detector IS
 	PORT
 		( clk, vert_sync, reset, enable,start_screen, stat_screen, death_show,bird, heart, coin, text_on										: IN std_logic;
@@ -73,7 +72,7 @@ if (rising_edge(vert_sync)) then
 	f_death<= (damage2 and damage1) or(damage3 and damage4);
 	--Score functionality
 	
-	if ( ((gap2_lc = CONV_STD_LOGIC_VECTOR(50,11)) or (gap1_lc = CONV_STD_LOGIC_VECTOR(50,11))) and ((conV_STD_LOGIC_VECTOR(51,11) <= gap2_lc) or (conv_STD_LOGIC_VECTOR(51.11) < gap1_lc))) then
+	if ( ((gap2_lc <= CONV_STD_LOGIC_VECTOR(50,11)) or (gap1_lc <= CONV_STD_LOGIC_VECTOR(50,11))) and ((CONV_STD_LOGIC_VECTOR(51,11) <= gap2_lc) or ( CONV_STD_LOGIC_VECTOR(50,11)  <= gap1_lc))  ) then
 		f_score <= f_score + conV_STD_LOGIC_VECTOR(1,7);	
 		f_score_ones <= f_score_ones + "0001";
 		if (f_score_ones < "1010") then
