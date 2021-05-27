@@ -1,7 +1,0 @@
-<?xml version="1.0" ?>
-<LOG_ROOT>
-	<PROJECT NAME="BallMovement">
-		<CBX_INST_ENTRY INSTANCE_NAME="|BallMovement|altpll0:inst|altpll:altpll_component" CBX_FILE_NAME="altpll0_altpll.v"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|BallMovement|char_rom:inst5|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_5v91.tdf"/>
-	</PROJECT>
-</LOG_ROOT>

@@ -1,6 +1,0 @@
-<?xml version="1.0" ?>
-<LOG_ROOT>
-	<PROJECT NAME="VGAExample">
-		<CBX_INST_ENTRY INSTANCE_NAME="|VGAExample|altpll0:inst|altpll:altpll_component" CBX_FILE_NAME="altpll0_altpll.v"/>
-	</PROJECT>
-</LOG_ROOT>
