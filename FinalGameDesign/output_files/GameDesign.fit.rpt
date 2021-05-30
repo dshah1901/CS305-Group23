@@ -1,6 +1,6 @@
 Fitter report for GameDesign
-Thu May 27 16:14:12 2021
-Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
+Sun May 30 19:51:52 2021
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -71,26 +71,26 @@ applicable agreement for further details.
 
 
 
-+----------------------------------------------------------------------------------+
-; Fitter Summary                                                                   ;
-+------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Thu May 27 16:14:12 2021       ;
-; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
-; Revision Name                      ; GameDesign                                  ;
-; Top-level Entity Name              ; GameDesign                                  ;
-; Family                             ; Cyclone III                                 ;
-; Device                             ; EP3C16F484C6                                ;
-; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 1,043 / 15,408 ( 7 % )                      ;
-;     Total combinational functions  ; 1,007 / 15,408 ( 7 % )                      ;
-;     Dedicated logic registers      ; 275 / 15,408 ( 2 % )                        ;
-; Total registers                    ; 275                                         ;
-; Total pins                         ; 29 / 347 ( 8 % )                            ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 4,096 / 516,096 ( < 1 % )                   ;
-; Embedded Multiplier 9-bit elements ; 0 / 112 ( 0 % )                             ;
-; Total PLLs                         ; 1 / 4 ( 25 % )                              ;
-+------------------------------------+---------------------------------------------+
++--------------------------------------------------------------------------------------+
+; Fitter Summary                                                                       ;
++------------------------------------+-------------------------------------------------+
+; Fitter Status                      ; Successful - Sun May 30 19:51:52 2021           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; GameDesign                                      ;
+; Top-level Entity Name              ; GameDesign                                      ;
+; Family                             ; Cyclone III                                     ;
+; Device                             ; EP3C16F484C6                                    ;
+; Timing Models                      ; Final                                           ;
+; Total logic elements               ; 1,043 / 15,408 ( 7 % )                          ;
+;     Total combinational functions  ; 1,007 / 15,408 ( 7 % )                          ;
+;     Dedicated logic registers      ; 275 / 15,408 ( 2 % )                            ;
+; Total registers                    ; 275                                             ;
+; Total pins                         ; 29 / 347 ( 8 % )                                ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 4,096 / 516,096 ( < 1 % )                       ;
+; Embedded Multiplier 9-bit elements ; 0 / 112 ( 0 % )                                 ;
+; Total PLLs                         ; 1 / 4 ( 25 % )                                  ;
++------------------------------------+-------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -153,22 +153,15 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+---------------------------------------+---------------------------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 6           ;
-; Maximum allowed            ; 6           ;
-;                            ;             ;
-; Average used               ; 2.64        ;
-; Maximum used               ; 6           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;  36.4%      ;
-;     Processors 5-6         ;  27.3%      ;
-+----------------------------+-------------+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 12     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
 
 
 +-------------------------------------------------------+
@@ -264,7 +257,7 @@ applicable agreement for further details.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in /Documents/GitHub/CS305-Group23/FinalGameDesign/output_files/GameDesign.pin.
+The pin-out file can be found in C:/Users/patel/Documents/GitHub/CS305-Group23/FinalGameDesign/output_files/GameDesign.pin.
 
 
 +-------------------------------------------------------------------------+
@@ -1040,25 +1033,25 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                   ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                                              ; Library Name ;
 +----------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------------------------------------------------------+--------------+
-; |GameDesign                                  ; 1043 (1)    ; 275 (0)                   ; 0 (0)         ; 4096        ; 1    ; 0            ; 0       ; 0         ; 29   ; 0            ; 768 (1)      ; 36 (0)            ; 239 (0)          ; |GameDesign                                                                                                      ;              ;
-;    |MOUSE:inst14|                            ; 77 (77)     ; 65 (65)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 12 (12)      ; 24 (24)           ; 41 (41)          ; |GameDesign|MOUSE:inst14                                                                                         ;              ;
-;    |VGA_SYNC:inst|                           ; 80 (80)     ; 48 (48)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 32 (32)      ; 8 (8)             ; 40 (40)          ; |GameDesign|VGA_SYNC:inst                                                                                        ;              ;
-;    |altpll0:inst2|                           ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |GameDesign|altpll0:inst2                                                                                        ;              ;
-;       |altpll:altpll_component|              ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |GameDesign|altpll0:inst2|altpll:altpll_component                                                                ;              ;
-;          |altpll0_altpll:auto_generated|     ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |GameDesign|altpll0:inst2|altpll:altpll_component|altpll0_altpll:auto_generated                                  ;              ;
-;    |bird:inst11|                             ; 77 (77)     ; 14 (14)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 62 (62)      ; 0 (0)             ; 15 (15)          ; |GameDesign|bird:inst11                                                                                          ;              ;
-;    |coin:inst12|                             ; 132 (132)   ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 96 (96)      ; 0 (0)             ; 36 (36)          ; |GameDesign|coin:inst12                                                                                          ;              ;
-;    |collision_detector:inst4|                ; 122 (122)   ; 25 (25)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 97 (97)      ; 0 (0)             ; 25 (25)          ; |GameDesign|collision_detector:inst4                                                                             ;              ;
-;    |heart:inst10|                            ; 116 (116)   ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 84 (84)      ; 0 (0)             ; 32 (32)          ; |GameDesign|heart:inst10                                                                                         ;              ;
-;    |pipes:inst13|                            ; 128 (128)   ; 25 (25)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 103 (103)    ; 2 (2)             ; 23 (23)          ; |GameDesign|pipes:inst13                                                                                         ;              ;
-;    |pipes:inst15|                            ; 81 (81)     ; 22 (22)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 59 (59)      ; 0 (0)             ; 22 (22)          ; |GameDesign|pipes:inst15                                                                                         ;              ;
-;    |seven_seg:inst1|                         ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |GameDesign|seven_seg:inst1                                                                                      ;              ;
-;    |seven_seg:inst8|                         ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |GameDesign|seven_seg:inst8                                                                                      ;              ;
-;    |state_tracker:inst5|                     ; 27 (27)     ; 12 (12)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 14 (14)      ; 2 (2)             ; 11 (11)          ; |GameDesign|state_tracker:inst5                                                                                  ;              ;
-;    |text_display:inst7|                      ; 206 (202)   ; 0 (0)                     ; 0 (0)         ; 4096        ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 194 (190)    ; 0 (0)             ; 12 (12)          ; |GameDesign|text_display:inst7                                                                                   ;              ;
-;       |char_rom:char_data|                   ; 4 (4)       ; 0 (0)                     ; 0 (0)         ; 4096        ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; |GameDesign|text_display:inst7|char_rom:char_data                                                                ;              ;
-;          |altsyncram:altsyncram_component|   ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 4096        ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |GameDesign|text_display:inst7|char_rom:char_data|altsyncram:altsyncram_component                                ;              ;
-;             |altsyncram_kt91:auto_generated| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 4096        ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |GameDesign|text_display:inst7|char_rom:char_data|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated ;              ;
+; |GameDesign                                  ; 1043 (1)    ; 275 (0)                   ; 0 (0)         ; 4096        ; 1    ; 0            ; 0       ; 0         ; 29   ; 0            ; 768 (1)      ; 36 (0)            ; 239 (0)          ; |GameDesign                                                                                                      ; work         ;
+;    |MOUSE:inst14|                            ; 77 (77)     ; 65 (65)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 12 (12)      ; 24 (24)           ; 41 (41)          ; |GameDesign|MOUSE:inst14                                                                                         ; work         ;
+;    |VGA_SYNC:inst|                           ; 80 (80)     ; 48 (48)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 32 (32)      ; 8 (8)             ; 40 (40)          ; |GameDesign|VGA_SYNC:inst                                                                                        ; work         ;
+;    |altpll0:inst2|                           ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |GameDesign|altpll0:inst2                                                                                        ; work         ;
+;       |altpll:altpll_component|              ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |GameDesign|altpll0:inst2|altpll:altpll_component                                                                ; work         ;
+;          |altpll0_altpll:auto_generated|     ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |GameDesign|altpll0:inst2|altpll:altpll_component|altpll0_altpll:auto_generated                                  ; work         ;
+;    |bird:inst11|                             ; 77 (77)     ; 14 (14)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 62 (62)      ; 0 (0)             ; 15 (15)          ; |GameDesign|bird:inst11                                                                                          ; work         ;
+;    |coin:inst12|                             ; 132 (132)   ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 96 (96)      ; 0 (0)             ; 36 (36)          ; |GameDesign|coin:inst12                                                                                          ; work         ;
+;    |collision_detector:inst4|                ; 122 (122)   ; 25 (25)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 97 (97)      ; 0 (0)             ; 25 (25)          ; |GameDesign|collision_detector:inst4                                                                             ; work         ;
+;    |heart:inst10|                            ; 116 (116)   ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 84 (84)      ; 0 (0)             ; 32 (32)          ; |GameDesign|heart:inst10                                                                                         ; work         ;
+;    |pipes:inst13|                            ; 128 (128)   ; 25 (25)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 103 (103)    ; 2 (2)             ; 23 (23)          ; |GameDesign|pipes:inst13                                                                                         ; work         ;
+;    |pipes:inst15|                            ; 81 (81)     ; 22 (22)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 59 (59)      ; 0 (0)             ; 22 (22)          ; |GameDesign|pipes:inst15                                                                                         ; work         ;
+;    |seven_seg:inst1|                         ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |GameDesign|seven_seg:inst1                                                                                      ; work         ;
+;    |seven_seg:inst8|                         ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |GameDesign|seven_seg:inst8                                                                                      ; work         ;
+;    |state_tracker:inst5|                     ; 27 (27)     ; 12 (12)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 14 (14)      ; 2 (2)             ; 11 (11)          ; |GameDesign|state_tracker:inst5                                                                                  ; work         ;
+;    |text_display:inst7|                      ; 206 (202)   ; 0 (0)                     ; 0 (0)         ; 4096        ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 194 (190)    ; 0 (0)             ; 12 (12)          ; |GameDesign|text_display:inst7                                                                                   ; work         ;
+;       |char_rom:char_data|                   ; 4 (4)       ; 0 (0)                     ; 0 (0)         ; 4096        ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; |GameDesign|text_display:inst7|char_rom:char_data                                                                ; work         ;
+;          |altsyncram:altsyncram_component|   ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 4096        ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |GameDesign|text_display:inst7|char_rom:char_data|altsyncram:altsyncram_component                                ; work         ;
+;             |altsyncram_kt91:auto_generated| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 4096        ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |GameDesign|text_display:inst7|char_rom:char_data|altsyncram:altsyncram_component|altsyncram_kt91:auto_generated ; work         ;
 +----------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -2748,13 +2741,14 @@ Note: This table only shows the top 100 path(s) that have the largest delay adde
 +-----------------+
 ; Fitter Messages ;
 +-----------------+
-Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (119006): Selected device EP3C16F484C6 for design "GameDesign"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Info (15535): Implemented PLL "altpll0:inst2|altpll:altpll_component|altpll0_altpll:auto_generated|pll1" as Cyclone III PLL type
     Info (15099): Implementing clock multiplication of 1, clock division of 2, and phase shift of 0 degrees (0 ps) for altpll0:inst2|altpll:altpll_component|altpll0_altpll:auto_generated|wire_pll1_clk[0] port
 Info (171003): Fitter is performing an Auto Fit compilation, which may decrease Fitter effort to reduce compilation time
+Warning (292013): Feature LogicLock is only available with a valid subscription license. You can purchase a software subscription to gain full access to this feature.
 Info (176444): Device migration not selected. If you intend to use device migration later, you may need to change the pin assignments as they may be incompatible with other devices
     Info (176445): Device EP3C40F484C6 is compatible
     Info (176445): Device EP3C55F484C6 is compatible
@@ -2810,37 +2804,37 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "sw7" is assigned to location or region, but does not exist in design
     Warning (15706): Node "sw8" is assigned to location or region, but does not exist in design
     Warning (15706): Node "sw9" is assigned to location or region, but does not exist in design
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:02
 Info (170189): Fitter placement preparation operations beginning
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:01
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:02
 Info (170193): Fitter routing operations beginning
 Info (170089): 5e+02 ns of routing delay (approximately 1.6% of available device routing delay) has been added to meet hold timing. For more information, refer to the Estimated Delay Added for Hold Timing section in the Fitter report.
 Info (170195): Router estimated average interconnect usage is 2% of the available device resources
     Info (170196): Router estimated peak interconnect usage is 15% of the available device resources in the region that extends from location X21_Y10 to location X30_Y19
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:05
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:09
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 1.08 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 1.41 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
-Info (144001): Generated suppressed messages file /Documents/GitHub/CS305-Group23/FinalGameDesign/output_files/GameDesign.fit.smsg
-Info: Quartus II 64-Bit Fitter was successful. 0 errors, 18 warnings
-    Info: Peak virtual memory: 5479 megabytes
-    Info: Processing ended: Thu May 27 16:14:14 2021
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:19
+Info (144001): Generated suppressed messages file C:/Users/patel/Documents/GitHub/CS305-Group23/FinalGameDesign/output_files/GameDesign.fit.smsg
+Info: Quartus II 64-Bit Fitter was successful. 0 errors, 20 warnings
+    Info: Peak virtual memory: 4913 megabytes
+    Info: Processing ended: Sun May 30 19:51:53 2021
+    Info: Elapsed time: 00:00:21
+    Info: Total CPU time (on all processors): 00:00:20
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in /Documents/GitHub/CS305-Group23/FinalGameDesign/output_files/GameDesign.fit.smsg.
+The suppressed messages can be found in C:/Users/patel/Documents/GitHub/CS305-Group23/FinalGameDesign/output_files/GameDesign.fit.smsg.
 
 

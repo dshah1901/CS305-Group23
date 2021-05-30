@@ -1,6 +1,6 @@
 TimeQuest Timing Analyzer report for GameDesign
-Thu May 27 16:14:29 2021
-Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
+Sun May 30 19:52:02 2021
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -148,34 +148,28 @@ applicable agreement for further details.
 
 
 
-+--------------------------------------------------------------------------+
-; TimeQuest Timing Analyzer Summary                                        ;
-+--------------------+-----------------------------------------------------+
-; Quartus II Version ; Version 13.0.0 Build 156 04/24/2013 SJ Full Version ;
-; Revision Name      ; GameDesign                                          ;
-; Device Family      ; Cyclone III                                         ;
-; Device Name        ; EP3C16F484C6                                        ;
-; Timing Models      ; Final                                               ;
-; Delay Model        ; Combined                                            ;
-; Rise/Fall Delays   ; Enabled                                             ;
-+--------------------+-----------------------------------------------------+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; GameDesign                                                        ;
+; Device Family      ; Cyclone III                                                       ;
+; Device Name        ; EP3C16F484C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Enabled                                                           ;
++--------------------+-------------------------------------------------------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 6           ;
-; Maximum allowed            ; 6           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 6           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-;     Processors 2-6         ; < 0.1%      ;
-+----------------------------+-------------+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 12     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1211,7 +1205,6 @@ HTML report is unavailable in plain text report export.
 ; 0.254 ; MOUSE:inst14|mouse_state.WAIT_OUTPUT_READY ; MOUSE:inst14|SHIFTOUT[1]     ; inst2|altpll_component|auto_generated|pll1|clk[0] ; MOUSE:inst14|MOUSE_CLK_FILTER ; -0.500       ; 2.236      ; 2.217      ;
 ; 0.254 ; MOUSE:inst14|mouse_state.WAIT_OUTPUT_READY ; MOUSE:inst14|MOUSE_DATA_BUF  ; inst2|altpll_component|auto_generated|pll1|clk[0] ; MOUSE:inst14|MOUSE_CLK_FILTER ; -0.500       ; 2.236      ; 2.217      ;
 ; 0.274 ; MOUSE:inst14|mouse_state.WAIT_OUTPUT_READY ; MOUSE:inst14|READ_CHAR       ; inst2|altpll_component|auto_generated|pll1|clk[0] ; MOUSE:inst14|MOUSE_CLK_FILTER ; -0.500       ; 2.237      ; 2.238      ;
-; 0.358 ; MOUSE:inst14|iready_set                    ; MOUSE:inst14|iready_set      ; MOUSE:inst14|MOUSE_CLK_FILTER                     ; MOUSE:inst14|MOUSE_CLK_FILTER ; 0.000        ; 0.062      ; 0.577      ;
 ; 0.358 ; MOUSE:inst14|INCNT[1]                      ; MOUSE:inst14|INCNT[1]        ; MOUSE:inst14|MOUSE_CLK_FILTER                     ; MOUSE:inst14|MOUSE_CLK_FILTER ; 0.000        ; 0.062      ; 0.577      ;
 ; 0.358 ; MOUSE:inst14|INCNT[2]                      ; MOUSE:inst14|INCNT[2]        ; MOUSE:inst14|MOUSE_CLK_FILTER                     ; MOUSE:inst14|MOUSE_CLK_FILTER ; 0.000        ; 0.062      ; 0.577      ;
 ; 0.358 ; MOUSE:inst14|INCNT[3]                      ; MOUSE:inst14|INCNT[3]        ; MOUSE:inst14|MOUSE_CLK_FILTER                     ; MOUSE:inst14|MOUSE_CLK_FILTER ; 0.000        ; 0.062      ; 0.577      ;
@@ -1222,6 +1215,7 @@ HTML report is unavailable in plain text report export.
 ; 0.358 ; MOUSE:inst14|send_char                     ; MOUSE:inst14|send_char       ; MOUSE:inst14|MOUSE_CLK_FILTER                     ; MOUSE:inst14|MOUSE_CLK_FILTER ; 0.000        ; 0.062      ; 0.577      ;
 ; 0.358 ; MOUSE:inst14|PACKET_COUNT[0]               ; MOUSE:inst14|PACKET_COUNT[0] ; MOUSE:inst14|MOUSE_CLK_FILTER                     ; MOUSE:inst14|MOUSE_CLK_FILTER ; 0.000        ; 0.062      ; 0.577      ;
 ; 0.358 ; MOUSE:inst14|PACKET_COUNT[1]               ; MOUSE:inst14|PACKET_COUNT[1] ; MOUSE:inst14|MOUSE_CLK_FILTER                     ; MOUSE:inst14|MOUSE_CLK_FILTER ; 0.000        ; 0.062      ; 0.577      ;
+; 0.358 ; MOUSE:inst14|iready_set                    ; MOUSE:inst14|iready_set      ; MOUSE:inst14|MOUSE_CLK_FILTER                     ; MOUSE:inst14|MOUSE_CLK_FILTER ; 0.000        ; 0.062      ; 0.577      ;
 ; 0.361 ; MOUSE:inst14|INCNT[0]                      ; MOUSE:inst14|INCNT[0]        ; MOUSE:inst14|MOUSE_CLK_FILTER                     ; MOUSE:inst14|MOUSE_CLK_FILTER ; 0.000        ; 0.062      ; 0.580      ;
 ; 0.364 ; MOUSE:inst14|mouse_state.WAIT_OUTPUT_READY ; MOUSE:inst14|PACKET_CHAR1[0] ; inst2|altpll_component|auto_generated|pll1|clk[0] ; MOUSE:inst14|MOUSE_CLK_FILTER ; -0.500       ; 2.238      ; 2.329      ;
 ; 0.364 ; MOUSE:inst14|mouse_state.WAIT_OUTPUT_READY ; MOUSE:inst14|PACKET_CHAR1[1] ; inst2|altpll_component|auto_generated|pll1|clk[0] ; MOUSE:inst14|MOUSE_CLK_FILTER ; -0.500       ; 2.238      ; 2.329      ;
@@ -3003,7 +2997,6 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; 0.213 ; MOUSE:inst14|mouse_state.WAIT_OUTPUT_READY ; MOUSE:inst14|send_char       ; inst2|altpll_component|auto_generated|pll1|clk[0] ; MOUSE:inst14|MOUSE_CLK_FILTER ; -0.500       ; 1.868      ; 1.795      ;
 ; 0.217 ; MOUSE:inst14|mouse_state.WAIT_OUTPUT_READY ; MOUSE:inst14|PACKET_COUNT[0] ; inst2|altpll_component|auto_generated|pll1|clk[0] ; MOUSE:inst14|MOUSE_CLK_FILTER ; -0.500       ; 1.868      ; 1.799      ;
 ; 0.217 ; MOUSE:inst14|mouse_state.WAIT_OUTPUT_READY ; MOUSE:inst14|PACKET_COUNT[1] ; inst2|altpll_component|auto_generated|pll1|clk[0] ; MOUSE:inst14|MOUSE_CLK_FILTER ; -0.500       ; 1.868      ; 1.799      ;
-; 0.312 ; MOUSE:inst14|iready_set                    ; MOUSE:inst14|iready_set      ; MOUSE:inst14|MOUSE_CLK_FILTER                     ; MOUSE:inst14|MOUSE_CLK_FILTER ; 0.000        ; 0.055      ; 0.511      ;
 ; 0.312 ; MOUSE:inst14|INCNT[1]                      ; MOUSE:inst14|INCNT[1]        ; MOUSE:inst14|MOUSE_CLK_FILTER                     ; MOUSE:inst14|MOUSE_CLK_FILTER ; 0.000        ; 0.055      ; 0.511      ;
 ; 0.312 ; MOUSE:inst14|INCNT[2]                      ; MOUSE:inst14|INCNT[2]        ; MOUSE:inst14|MOUSE_CLK_FILTER                     ; MOUSE:inst14|MOUSE_CLK_FILTER ; 0.000        ; 0.055      ; 0.511      ;
 ; 0.312 ; MOUSE:inst14|INCNT[3]                      ; MOUSE:inst14|INCNT[3]        ; MOUSE:inst14|MOUSE_CLK_FILTER                     ; MOUSE:inst14|MOUSE_CLK_FILTER ; 0.000        ; 0.055      ; 0.511      ;
@@ -3014,6 +3007,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; 0.312 ; MOUSE:inst14|send_char                     ; MOUSE:inst14|send_char       ; MOUSE:inst14|MOUSE_CLK_FILTER                     ; MOUSE:inst14|MOUSE_CLK_FILTER ; 0.000        ; 0.055      ; 0.511      ;
 ; 0.312 ; MOUSE:inst14|PACKET_COUNT[0]               ; MOUSE:inst14|PACKET_COUNT[0] ; MOUSE:inst14|MOUSE_CLK_FILTER                     ; MOUSE:inst14|MOUSE_CLK_FILTER ; 0.000        ; 0.055      ; 0.511      ;
 ; 0.312 ; MOUSE:inst14|PACKET_COUNT[1]               ; MOUSE:inst14|PACKET_COUNT[1] ; MOUSE:inst14|MOUSE_CLK_FILTER                     ; MOUSE:inst14|MOUSE_CLK_FILTER ; 0.000        ; 0.055      ; 0.511      ;
+; 0.312 ; MOUSE:inst14|iready_set                    ; MOUSE:inst14|iready_set      ; MOUSE:inst14|MOUSE_CLK_FILTER                     ; MOUSE:inst14|MOUSE_CLK_FILTER ; 0.000        ; 0.055      ; 0.511      ;
 ; 0.320 ; MOUSE:inst14|INCNT[0]                      ; MOUSE:inst14|INCNT[0]        ; MOUSE:inst14|MOUSE_CLK_FILTER                     ; MOUSE:inst14|MOUSE_CLK_FILTER ; 0.000        ; 0.055      ; 0.519      ;
 ; 0.329 ; MOUSE:inst14|SHIFTOUT[5]                   ; MOUSE:inst14|SHIFTOUT[4]     ; MOUSE:inst14|MOUSE_CLK_FILTER                     ; MOUSE:inst14|MOUSE_CLK_FILTER ; 0.000        ; 0.055      ; 0.528      ;
 ; 0.331 ; MOUSE:inst14|SHIFTOUT[9]                   ; MOUSE:inst14|SHIFTOUT[8]     ; MOUSE:inst14|MOUSE_CLK_FILTER                     ; MOUSE:inst14|MOUSE_CLK_FILTER ; 0.000        ; 0.055      ; 0.530      ;
@@ -4062,8 +4056,8 @@ No synchronizer chains to report.
 ; -1.375 ; pipes:inst13|pipes_x_pos[2] ; pipes:inst13|gap_y_pos[5]        ; VGA_SYNC:inst|vert_sync_out ; VGA_SYNC:inst|vert_sync_out ; 1.000        ; -0.053     ; 2.309      ;
 ; -1.375 ; pipes:inst13|pipes_x_pos[2] ; pipes:inst13|gap_y_pos[6]        ; VGA_SYNC:inst|vert_sync_out ; VGA_SYNC:inst|vert_sync_out ; 1.000        ; -0.053     ; 2.309      ;
 ; -1.375 ; pipes:inst13|pipes_x_pos[2] ; pipes:inst13|gap_y_pos[7]        ; VGA_SYNC:inst|vert_sync_out ; VGA_SYNC:inst|vert_sync_out ; 1.000        ; -0.053     ; 2.309      ;
-; -1.373 ; bird:inst11|bird_y_pos[5]   ; bird:inst11|bird_y_motion[1]     ; VGA_SYNC:inst|vert_sync_out ; VGA_SYNC:inst|vert_sync_out ; 1.000        ; -0.037     ; 2.323      ;
 ; -1.373 ; pipes:inst15|gap_y_pos[6]   ; collision_detector:inst4|damage4 ; VGA_SYNC:inst|vert_sync_out ; VGA_SYNC:inst|vert_sync_out ; 1.000        ; 0.149      ; 2.509      ;
+; -1.373 ; bird:inst11|bird_y_pos[5]   ; bird:inst11|bird_y_motion[1]     ; VGA_SYNC:inst|vert_sync_out ; VGA_SYNC:inst|vert_sync_out ; 1.000        ; -0.037     ; 2.323      ;
 ; -1.370 ; pipes:inst13|pipes_x_pos[9] ; pipes:inst13|gap_y_pos[4]        ; VGA_SYNC:inst|vert_sync_out ; VGA_SYNC:inst|vert_sync_out ; 1.000        ; -0.052     ; 2.305      ;
 ; -1.370 ; pipes:inst13|pipes_x_pos[9] ; pipes:inst13|gap_y_pos[5]        ; VGA_SYNC:inst|vert_sync_out ; VGA_SYNC:inst|vert_sync_out ; 1.000        ; -0.052     ; 2.305      ;
 ; -1.370 ; pipes:inst13|pipes_x_pos[9] ; pipes:inst13|gap_y_pos[6]        ; VGA_SYNC:inst|vert_sync_out ; VGA_SYNC:inst|vert_sync_out ; 1.000        ; -0.052     ; 2.305      ;
@@ -4071,8 +4065,8 @@ No synchronizer chains to report.
 ; -1.364 ; bird:inst11|bird_y_pos[1]   ; bird:inst11|bird_y_motion[1]     ; VGA_SYNC:inst|vert_sync_out ; VGA_SYNC:inst|vert_sync_out ; 1.000        ; -0.037     ; 2.314      ;
 ; -1.355 ; bird:inst11|bird_y_pos[0]   ; bird:inst11|bird_y_motion[1]     ; VGA_SYNC:inst|vert_sync_out ; VGA_SYNC:inst|vert_sync_out ; 1.000        ; -0.037     ; 2.305      ;
 ; -1.338 ; bird:inst11|bird_y_pos[5]   ; collision_detector:inst4|damage4 ; VGA_SYNC:inst|vert_sync_out ; VGA_SYNC:inst|vert_sync_out ; 1.000        ; 0.151      ; 2.476      ;
-; -1.327 ; bird:inst11|bird_y_pos[7]   ; bird:inst11|bird_y_motion[1]     ; VGA_SYNC:inst|vert_sync_out ; VGA_SYNC:inst|vert_sync_out ; 1.000        ; -0.037     ; 2.277      ;
 ; -1.327 ; heart:inst10|count[5]       ; heart:inst10|heart_y_pos[8]      ; VGA_SYNC:inst|vert_sync_out ; VGA_SYNC:inst|vert_sync_out ; 1.000        ; -0.033     ; 2.281      ;
+; -1.327 ; bird:inst11|bird_y_pos[7]   ; bird:inst11|bird_y_motion[1]     ; VGA_SYNC:inst|vert_sync_out ; VGA_SYNC:inst|vert_sync_out ; 1.000        ; -0.037     ; 2.277      ;
 ; -1.321 ; heart:inst10|count[5]       ; heart:inst10|heart_x_pos[1]      ; VGA_SYNC:inst|vert_sync_out ; VGA_SYNC:inst|vert_sync_out ; 1.000        ; -0.034     ; 2.274      ;
 ; -1.306 ; pipes:inst13|gap_y_pos[6]   ; collision_detector:inst4|damage2 ; VGA_SYNC:inst|vert_sync_out ; VGA_SYNC:inst|vert_sync_out ; 1.000        ; 0.146      ; 2.439      ;
 ; -1.305 ; pipes:inst13|pipes_x_pos[3] ; pipes:inst13|gap_y_pos[4]        ; VGA_SYNC:inst|vert_sync_out ; VGA_SYNC:inst|vert_sync_out ; 1.000        ; -0.052     ; 2.240      ;
@@ -4814,7 +4808,6 @@ No synchronizer chains to report.
 ; 0.170 ; MOUSE:inst14|mouse_state.WAIT_OUTPUT_READY ; MOUSE:inst14|SHIFTOUT[2]     ; inst2|altpll_component|auto_generated|pll1|clk[0] ; MOUSE:inst14|MOUSE_CLK_FILTER ; -0.500       ; 1.354      ; 1.178      ;
 ; 0.170 ; MOUSE:inst14|mouse_state.WAIT_OUTPUT_READY ; MOUSE:inst14|SHIFTOUT[1]     ; inst2|altpll_component|auto_generated|pll1|clk[0] ; MOUSE:inst14|MOUSE_CLK_FILTER ; -0.500       ; 1.354      ; 1.178      ;
 ; 0.170 ; MOUSE:inst14|mouse_state.WAIT_OUTPUT_READY ; MOUSE:inst14|MOUSE_DATA_BUF  ; inst2|altpll_component|auto_generated|pll1|clk[0] ; MOUSE:inst14|MOUSE_CLK_FILTER ; -0.500       ; 1.354      ; 1.178      ;
-; 0.185 ; MOUSE:inst14|iready_set                    ; MOUSE:inst14|iready_set      ; MOUSE:inst14|MOUSE_CLK_FILTER                     ; MOUSE:inst14|MOUSE_CLK_FILTER ; 0.000        ; 0.038      ; 0.307      ;
 ; 0.185 ; MOUSE:inst14|INCNT[1]                      ; MOUSE:inst14|INCNT[1]        ; MOUSE:inst14|MOUSE_CLK_FILTER                     ; MOUSE:inst14|MOUSE_CLK_FILTER ; 0.000        ; 0.038      ; 0.307      ;
 ; 0.185 ; MOUSE:inst14|INCNT[2]                      ; MOUSE:inst14|INCNT[2]        ; MOUSE:inst14|MOUSE_CLK_FILTER                     ; MOUSE:inst14|MOUSE_CLK_FILTER ; 0.000        ; 0.038      ; 0.307      ;
 ; 0.185 ; MOUSE:inst14|INCNT[3]                      ; MOUSE:inst14|INCNT[3]        ; MOUSE:inst14|MOUSE_CLK_FILTER                     ; MOUSE:inst14|MOUSE_CLK_FILTER ; 0.000        ; 0.038      ; 0.307      ;
@@ -4825,6 +4818,7 @@ No synchronizer chains to report.
 ; 0.185 ; MOUSE:inst14|send_char                     ; MOUSE:inst14|send_char       ; MOUSE:inst14|MOUSE_CLK_FILTER                     ; MOUSE:inst14|MOUSE_CLK_FILTER ; 0.000        ; 0.038      ; 0.307      ;
 ; 0.185 ; MOUSE:inst14|PACKET_COUNT[0]               ; MOUSE:inst14|PACKET_COUNT[0] ; MOUSE:inst14|MOUSE_CLK_FILTER                     ; MOUSE:inst14|MOUSE_CLK_FILTER ; 0.000        ; 0.038      ; 0.307      ;
 ; 0.185 ; MOUSE:inst14|PACKET_COUNT[1]               ; MOUSE:inst14|PACKET_COUNT[1] ; MOUSE:inst14|MOUSE_CLK_FILTER                     ; MOUSE:inst14|MOUSE_CLK_FILTER ; 0.000        ; 0.038      ; 0.307      ;
+; 0.185 ; MOUSE:inst14|iready_set                    ; MOUSE:inst14|iready_set      ; MOUSE:inst14|MOUSE_CLK_FILTER                     ; MOUSE:inst14|MOUSE_CLK_FILTER ; 0.000        ; 0.038      ; 0.307      ;
 ; 0.191 ; MOUSE:inst14|SHIFTIN[8]                    ; MOUSE:inst14|SHIFTIN[7]      ; MOUSE:inst14|MOUSE_CLK_FILTER                     ; MOUSE:inst14|MOUSE_CLK_FILTER ; 0.000        ; 0.038      ; 0.313      ;
 ; 0.191 ; MOUSE:inst14|SHIFTIN[2]                    ; MOUSE:inst14|SHIFTIN[1]      ; MOUSE:inst14|MOUSE_CLK_FILTER                     ; MOUSE:inst14|MOUSE_CLK_FILTER ; 0.000        ; 0.038      ; 0.313      ;
 ; 0.192 ; MOUSE:inst14|INCNT[0]                      ; MOUSE:inst14|INCNT[0]        ; MOUSE:inst14|MOUSE_CLK_FILTER                     ; MOUSE:inst14|MOUSE_CLK_FILTER ; 0.000        ; 0.038      ; 0.314      ;
@@ -5958,11 +5952,11 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 +------------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
-    Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
-    Info: Processing started: Thu May 27 16:14:21 2021
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sun May 30 19:51:57 2021
 Info: Command: quartus_sta GameDesign -c GameDesign
 Info: qsta_default_script.tcl version: #1
-Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Warning (335093): TimeQuest Timing Analyzer is analyzing 13 combinational loops as latches.
@@ -6103,10 +6097,10 @@ Info (332146): Worst-case minimum pulse width slack is -1.000
     Info (332119):    19.748         0.000 inst2|altpll_component|auto_generated|pll1|clk[0] 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
-Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4643 megabytes
-    Info: Processing ended: Thu May 27 16:14:29 2021
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:03
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 4597 megabytes
+    Info: Processing ended: Sun May 30 19:52:02 2021
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:05
 
 

@@ -1,6 +1,6 @@
 Flow report for GameDesign
-Thu May 27 16:14:28 2021
-Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
+Sun May 30 19:52:02 2021
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -37,26 +37,26 @@ applicable agreement for further details.
 
 
 
-+----------------------------------------------------------------------------------+
-; Flow Summary                                                                     ;
-+------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu May 27 16:14:20 2021       ;
-; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
-; Revision Name                      ; GameDesign                                  ;
-; Top-level Entity Name              ; GameDesign                                  ;
-; Family                             ; Cyclone III                                 ;
-; Device                             ; EP3C16F484C6                                ;
-; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 1,043 / 15,408 ( 7 % )                      ;
-;     Total combinational functions  ; 1,007 / 15,408 ( 7 % )                      ;
-;     Dedicated logic registers      ; 275 / 15,408 ( 2 % )                        ;
-; Total registers                    ; 275                                         ;
-; Total pins                         ; 29 / 347 ( 8 % )                            ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 4,096 / 516,096 ( < 1 % )                   ;
-; Embedded Multiplier 9-bit elements ; 0 / 112 ( 0 % )                             ;
-; Total PLLs                         ; 1 / 4 ( 25 % )                              ;
-+------------------------------------+---------------------------------------------+
++--------------------------------------------------------------------------------------+
+; Flow Summary                                                                         ;
++------------------------------------+-------------------------------------------------+
+; Flow Status                        ; Successful - Sun May 30 19:51:56 2021           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; GameDesign                                      ;
+; Top-level Entity Name              ; GameDesign                                      ;
+; Family                             ; Cyclone III                                     ;
+; Device                             ; EP3C16F484C6                                    ;
+; Timing Models                      ; Final                                           ;
+; Total logic elements               ; 1,043 / 15,408 ( 7 % )                          ;
+;     Total combinational functions  ; 1,007 / 15,408 ( 7 % )                          ;
+;     Dedicated logic registers      ; 275 / 15,408 ( 2 % )                            ;
+; Total registers                    ; 275                                             ;
+; Total pins                         ; 29 / 347 ( 8 % )                                ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 4,096 / 516,096 ( < 1 % )                       ;
+; Embedded Multiplier 9-bit elements ; 0 / 112 ( 0 % )                                 ;
+; Total PLLs                         ; 1 / 4 ( 25 % )                                  ;
++------------------------------------+-------------------------------------------------+
 
 
 +-----------------------------------------+
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/27/2021 16:13:52 ;
+; Start date & time ; 05/30/2021 19:51:25 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; GameDesign          ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+---------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 251053327268158.162208883211028       ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 83689957108810.162236108517700        ; --            ; --          ; --         ;
 ; IP_TOOL_NAME                        ; ALTPLL                                ; --            ; --          ; --         ;
 ; IP_TOOL_VERSION                     ; 13.0                                  ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --         ;
@@ -97,11 +97,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:06     ; 1.0                     ; 4694 MB             ; 00:00:04                           ;
-; Fitter                    ; 00:00:11     ; 2.6                     ; 5479 MB             ; 00:00:18                           ;
-; Assembler                 ; 00:00:01     ; 1.0                     ; 4548 MB             ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:07     ; 1.0                     ; 4643 MB             ; 00:00:02                           ;
-; Total                     ; 00:00:25     ; --                      ; --                  ; 00:00:25                           ;
+; Analysis & Synthesis      ; 00:00:06     ; 1.0                     ; 4650 MB             ; 00:00:06                           ;
+; Fitter                    ; 00:00:20     ; 1.0                     ; 4913 MB             ; 00:00:20                           ;
+; Assembler                 ; 00:00:03     ; 1.0                     ; 4545 MB             ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:05     ; 1.0                     ; 4597 MB             ; 00:00:05                           ;
+; Total                     ; 00:00:34     ; --                      ; --                  ; 00:00:33                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -110,10 +110,10 @@ applicable agreement for further details.
 +---------------------------+------------------+-----------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; EN403701         ; Windows 7 ; 6.2        ; x86_64         ;
-; Fitter                    ; EN403701         ; Windows 7 ; 6.2        ; x86_64         ;
-; Assembler                 ; EN403701         ; Windows 7 ; 6.2        ; x86_64         ;
-; TimeQuest Timing Analyzer ; EN403701         ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; DESKTOP-C0BN4UL  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; DESKTOP-C0BN4UL  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; DESKTOP-C0BN4UL  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; DESKTOP-C0BN4UL  ; Windows 7 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 
